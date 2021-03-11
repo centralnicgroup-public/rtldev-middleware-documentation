@@ -8,6 +8,8 @@ showtoc: 1
 
 # DNSControl
 
+[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://raw.githubusercontent.com/StackExchange/dnscontrol/master/LICENSE)
+
 A Domain-specific Language (DSL) for DNS as Code from StackOverflow.com.
 
 ## Introduction

@@ -8,10 +8,7 @@ showtoc: 1
 
 # Blesta
 
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Build Status](https://github.com/hexonet/blesta-ispapi-registrar/workflows/Release/badge.svg?branch=master)](https://github.com/hexonet/blesta-ispapi-registrar/workflows/Release/badge.svg?branch=master)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/hexonet/blesta-ispapi-registrar/blob/master/CONTRIBUTING.md)
+[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Blesta is an all-in-one domain provisioning, client management, billing/invoicing, and client support solution for any business selling through a website. By coupling Blesta with the HEXONET Registrar Module, anyone can start reselling hundreds of profitable domain name extensions (TLDs) quickly and in ease.
 

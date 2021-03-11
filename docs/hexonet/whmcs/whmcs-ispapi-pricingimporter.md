@@ -9,10 +9,7 @@ showtoc: 1
 
 # ISPAPI Pricing Importer
 
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Build Status](https://github.com/hexonet/whmcs-ispapi-pricingimporter/workflows/Release/badge.svg?branch=master)](https://github.com/hexonet/whmcs-ispapi-pricingimporter/workflows/Release/badge.svg?branch=master)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/hexonet/whmcs-ispapi-pricingimporter/blob/master/CONTRIBUTING.md)
+[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 > **DEPRECATION NOTICE: As of our Integration of the [`TLD & Pricing Sync`](https://github.com/hexonet/whmcs-ispapi-registrar/wiki/FAQs#55-do-you-support-tld--pricing-sync-mechanism-shipped-with-whmcs-710) Feature available since WHMCS 7.10, this project will no longer be maintained. Download the new version of our Registrar Module [here](https://github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip) to benefit of that new Feature.**
 
