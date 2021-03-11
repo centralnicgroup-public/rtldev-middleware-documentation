@@ -8,9 +8,9 @@ showtoc: 1
 
 # IDNA (UTS 46) for JavaScript
 
+[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![node](https://img.shields.io/node/v/idna-uts46-hx.svg)](https://www.npmjs.com/package/idna-uts46-hx)
 [![npm version](https://img.shields.io/npm/v/idna-uts46-hx.svg?style=flat)](https://www.npmjs.com/package/idna-uts46-hx)
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 This module is a IDNA UTS46 library for javascript.
 This is a maintained fork of the idna-uts46 library originally written by jcranmer.

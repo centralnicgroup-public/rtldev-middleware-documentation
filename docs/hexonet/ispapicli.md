@@ -9,6 +9,8 @@ showtoc: 1
 # Command Line Client
 
 [![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hexonet.ispapicli.svg)](https://www.python.org/)
+[![PyPI](https://img.shields.io/pypi/v/hexonet.ispapicli.svg)](https://pypi.org/project/hexonet.ispapicli/)
 
 aka. [**hexonet.ispapicli**](https://pypi.org/project/hexonet.ispapicli/)
 ## Introduction

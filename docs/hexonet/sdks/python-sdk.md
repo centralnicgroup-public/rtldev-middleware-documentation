@@ -11,9 +11,9 @@ showtoc: 1
 
 aka. [**hexonet.apiconnector**](https://pypi.org/project/hexonet.apiconnector/)
 
+[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hexonet.apiconnector.svg)](https://www.python.org/)
 [![PyPI](https://img.shields.io/pypi/v/hexonet.apiconnector.svg)](https://pypi.org/project/hexonet.apiconnector/)
-[![node](https://img.shields.io/node/v/@hexonet/ispapi-apiconnector.svg)](https://www.npmjs.com/package/@hexonet/ispapi-apiconnector)
 
 This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](http://hexonet.net) and do not hesitate to [contact us](https://www.hexonet.net/contact).
 
