@@ -43,15 +43,4 @@ Our Reputation is speaking - just check the WHMCS Community Board e.g. [here](ht
 
 We are doing our best to push your business to satisfaction. We don't care about your number of domains - customer is king!
 
-### RRPproxy / Key-Systems
-
-The Team at HEXONET also maintains its own version of the RRPproxy Registrar Module (aka. `Key-Systems`) which should be used _instead_ of the WHMCS built-in Module. The above information applies also here, except the availability of additional Modules and Widgets.
-
-### internet.bs
-
-The Team at internet.bs maintains its own version of the internet.bs Registrar Module (aka `ibs`) which should be used _instead_ of the WHMCS built-in Module. Find it [here](https://github.com/internetbs/whmcs-internetbs-registrar).
-
-### TPP WholeSale
-
-The TPP WholeSale Registrar Module is shipped with WHMCS. There's no self-maintained Module available.
 {: .fs-6 .fw-300 }

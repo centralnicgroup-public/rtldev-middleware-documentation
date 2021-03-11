@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ISPAPI SSL Certs
+title: SSL Certs
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 7

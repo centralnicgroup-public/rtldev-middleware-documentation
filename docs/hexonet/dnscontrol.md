@@ -25,4 +25,4 @@ Still, getting started comes with knowing about how. DNSControl has its own conf
 
 Find [here](https://stackexchange.github.io/dnscontrol/providers/hexonet) the documentation of our Provider Plugin.
 
-Find [here](https://github.com/hexonet/dnscontrol-dnsconfig) a basic example for the HEXONET Integration.
+Find [here](https://github.com/hexonet/dnscontrol-dnsconfig) a basic setup and example for the HEXONET Integration.

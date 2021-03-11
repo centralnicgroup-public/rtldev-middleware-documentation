@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ISPAPI Account Widget
+title: Account Widget
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 5

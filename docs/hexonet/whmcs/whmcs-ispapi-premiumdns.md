@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ~~ISPAPI Premium DNS~~
+title: ~~Premium DNS~~
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 11

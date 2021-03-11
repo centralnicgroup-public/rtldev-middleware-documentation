@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ISPAPI Registrar Module
+title: Registrar Module
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 2

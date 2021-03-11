@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RRPproxy Registrar Module
+title: Registrar Module
 parent: WHMCS
 grand_parent: RRPproxy
 nav_order: 2

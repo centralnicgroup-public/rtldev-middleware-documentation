@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ISPAPI Modules Widget
+title: Modules Widget
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 4

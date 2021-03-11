@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ISPAPI Domain Importer
+title: Domain Import
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 8

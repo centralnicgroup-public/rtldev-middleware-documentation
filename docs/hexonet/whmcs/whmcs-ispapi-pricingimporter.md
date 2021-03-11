@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ~~ISPAPI Pricing Importer~~
+title: ~~Pricing Import~~
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 10

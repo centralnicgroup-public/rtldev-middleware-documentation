@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ISPAPI Monitoring Widget
+title: Monitoring Widget
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 6

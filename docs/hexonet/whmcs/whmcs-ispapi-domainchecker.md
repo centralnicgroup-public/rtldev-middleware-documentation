@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ISPAPI Domain Search
+title: Domain Search
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 3

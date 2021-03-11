@@ -33,25 +33,10 @@ If you have not yet WHMCS set up, please follow their [Installation Guide](https
 
 Find further information [here](https://www.centralnicgroup.com/reseller/) and some notes about the WHMCS Integrations below:
 
-### HEXONET / ISPAPI
-
-The Team at HEXONET is the WHMCS Lead in the CentralNic Group and maintains its own version of the HEXONET Registrar Module (aka. `ISPAPI`) which should be used _instead_ of the WHMCS built-in Module. As we maintain this module, we can ensure that it covers the latest Patches and supports all WHMCS Features. In addition we offer a shorter Release Cycle than the one of WHMCS itself. This allows us to immediately work on Patches or new Features and to release independently of WHMCS.
-
-HEXONET offers additional Provisioning Modules for WHMCS that allow for reselling of further Products like SSL Certs, Premium DNS, and Domain Backorders. Also, we have Add-Ons and Widgets in our Portfolio which can be flexibly combined with each other and which offer a certain added value. Like Importing Domains, Module Version Overview etc.
-
-Our Reputation is speaking - just check the WHMCS Community Board e.g. [here](https://whmcs.community/topic/301180-who-is-the-best-domain-registrar-for-resellers-today/).
-
-We are doing our best to push your business to satisfaction. We don't care about your number of domains - customer is king!
-
 ### RRPproxy / Key-Systems
 
-The Team at HEXONET also maintains its own version of the RRPproxy Registrar Module (aka. `Key-Systems`) which should be used _instead_ of the WHMCS built-in Module. The above information applies also here, except the availability of additional Modules and Widgets.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-### internet.bs
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
-The Team at internet.bs maintains its own version of the internet.bs Registrar Module (aka `ibs`) which should be used _instead_ of the WHMCS built-in Module. Find it [here](https://github.com/internetbs/whmcs-internetbs-registrar).
-
-### TPP WholeSale
-
-The TPP WholeSale Registrar Module is shipped with WHMCS. There's no self-maintained Module available.
 {: .fs-6 .fw-300 }
