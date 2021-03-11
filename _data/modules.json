@@ -1,0 +1,50 @@
+[
+  {
+    "icon": "paper-plane",
+    "title": "Command Line Client",
+    "about": "Manage your account remotely; in addition to GUI and many useful features.",
+    "href": "/hexonet/ispapicli/index.html",
+    "gh": "https://github.com/hexonet/ispapicli",
+    "prio": 4
+  },
+  {
+    "icon": "puzzle-piece",
+    "title": "WHMCS",
+    "about": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+    "href": "#",
+    "gh": "https://github.com/hexonet?q=whmcs-&type=public",
+    "prio": 1
+  },
+  {
+    "icon": "wave-square",
+    "title": "Blesta",
+    "about": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+    "href": "#",
+    "gh": "https://github.com/hexonet/blesta-ispapi-registrar",
+    "prio": 2
+  },
+  {
+    "icon": "life-ring",
+    "title": "DNSControl",
+    "about": "Layout for FAQ page. Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+    "href": "#",
+    "gh": "https://github.com/stackexchange/dnscontrol",
+    "prio": 5
+  },
+  {
+    "icon": "atom",
+    "title": "SDKs",
+    "about": "Layout for showcase page. Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+    "href": "#",
+    "gh": "https://github.com/hexonet?q=SDK-&type=public",
+    "prio": 3
+  },
+  {
+    "icon": "gift",
+    "title": "API Docs",
+    "about": "Layout for license &amp; credits page. Consectetuer adipiscing elit.",
+    "href": "#",
+    "gh": "https://github.com/hexonet/hexonet-api-documentation",
+    "prio": 6
+  }
+]
