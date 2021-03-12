@@ -7,5 +7,7 @@ window.addEventListener('load', function () {
   }
   strikethrough();
 
-  $('body').scrollspy({ target: '#toc-nav', offset: 100 });
+  $(window).on('activate.bs.scrollspy', function () {
+    $('#site-nav .nav li a.active').get(0).scrollIntoView();
+  })
 });
