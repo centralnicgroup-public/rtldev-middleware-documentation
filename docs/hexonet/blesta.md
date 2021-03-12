@@ -14,7 +14,7 @@ Blesta is an all-in-one domain provisioning, client management, billing/invoicin
 
 If you have not yet Blesta set up, please follow their [Installation Guide](https://docs.blesta.com/display/user/Installing+Blesta) which explains the Installation Process completely and well. System Requirements can be found [here](https://docs.blesta.com/display/user/Requirements).
 
-## Registrar Module Installation
+## Module Installation
 
 Copy all files from our archive to your Blesta directory, while keeping the folder structure intact.
 
@@ -28,7 +28,7 @@ E.g.
 In order to automate tasks within Blesta, a cron job must be created.
 More information on how to set up the cron job, can be found here [(section 4)](https://docs.blesta.com/display/user/Installing+Blesta)
 
-## Registrar Module Configuration
+## Module Configuration
 
 **Reseller Credentials**:
 
@@ -149,7 +149,7 @@ Type your term, check TLDs from the selection and click on ‘Check Availability
 
 ![SearchExample]({{site.baseurl}}/assets/images/blesta/search_example.png)
 
-## Admin Area: Add/Transfer a Domain
+## Admin Area: Domain Transfer
 
 In the Admin Area, go to
 
