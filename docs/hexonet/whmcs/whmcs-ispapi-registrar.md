@@ -247,7 +247,7 @@ Both ways support import of IDN TLDs. WHMCS supports IDN TLD Import in `Registra
 
 NOTE: The Pricing Importer AddOn is marked as deprecated since a while, we highly suggest to upgrade your WHMCS Software and to start with the `Registrar TLD Sync` feature.
 
-## Internationalized Domain Names
+## IDN Support
 
 In order to support Internationalized Domain Names (IDN) (e.g. v-8.ευ or موقع.وزارة-الاتصالات.مصر), it is required to activate the ‘Allow IDN Domains’ option in the WHMCS Admin area under:
 
@@ -255,7 +255,7 @@ In order to support Internationalized Domain Names (IDN) (e.g. v-8.ευ or مو�
 
 NOTE: Even though IDN Domains were just officially fully supported since [WHMCS 8](https://docs.whmcs.com/International_Domain_Names), our module is already capable of IDN handling for earlier WHMCS versions.
 
-## Nameservers & DNS Management
+## NS & DNS Management
 
 If you want to use DNS, URL or Email forwarding, domains must resolve to the ISPAPI nameserver cluster (**ns1.ispapi.net, ns2.ispapi.net, ns3.ispapi.net**).
 
@@ -409,7 +409,7 @@ We suggest to select _ALL_ TLDs you want to offer, even if you are not offering 
 
 ![search_example]({{site.baseurl}}/assets/images/whmcs/ispapi-registrar/search_example.png)
 
-## Our Domain Search Add-On
+## Better Domain Search
 
 Even though this step is optional, it might be of interest for you!
 
@@ -434,25 +434,17 @@ NOTE: if you import domains with activated trustee service, be aware of that the
 
 An alternative Way for Importing is described [here](https://docs.whmcs.com/Migration_Guide#Adding_Domains).
 
-## Domain Name WHOIS Privacy
+## WHOIS Privacy Management
 
 The registrar module fully supports the WHOIS Privacy service WHOISTRUSTEE.com:
 
 ![whoistrustee]({{site.baseurl}}/assets/images/whmcs/ispapi-registrar/whois_trustee.gif)
 
-Support for WHOIS Privacy (aka ID Protection in WHMCS) has been integrated into two ways:
-
-### Toggle ID Protection
-
-Whenever the ID protection flag gets enabled or disabled in the WHMCS Admin area, the module synchronizes the new protection status to the domain.
-
-This functionality is compatible with the WHMCS API “domaintoggleidprotect” call.
+Whenever the `ID protection` flag gets enabled or disabled in the WHMCS Admin area, the module synchronizes the new protection status to the domain.
 
 > If the ID Protection flag gets disabled in the Admin area, clients will not be able to re-enable WHOIS Privacy themselves, it can only be re-enabled by an Administrator of your WHMCS Instance!
 
-### WHOIS Privacy Management
-
-The Registrar Module adds a new Menu Entry `WHOIS Privacy` that will show up on Client Area in the Domain Details Page.
+In addition, the Registrar Module adds a new Menu Entry `WHOIS Privacy` that will show up on Client Area in the Domain Details Page.
 
 ![whois_privacy_management]({{site.baseurl}}/assets/images/whmcs/ispapi-registrar/whois_privacy_management.png)
 
@@ -461,6 +453,12 @@ Using that Feature, a client can verify the current protection status, and enabl
 The new WHOIS Privacy page looks as follows (protection is enabled in the example):
 
 ![whois_privacy_page]({{site.baseurl}}/assets/images/whmcs/ispapi-registrar/whois_privacy_page.png)
+
+### .CA WHOIS Privacy
+
+The new Registrant related WHOIS Privacy for .CA domain names looks as follows (protection is enabled in the example):
+
+![ca_whois_privacy]({{site.baseurl}}/assets/images/whmcs/ispapi-registrar/ca_registrant_whois_privacy.png)
 
 ## Specials
 
@@ -476,23 +474,13 @@ In any case, the module is able to handle umlauts and special characters in whoi
 
 For registries that don't support umlauts, some characters will be mapped automatically, e.g. é to e, ö to oe and so on.
 
-### WHOIS Servers Configuration
+### WHOIS Servers
 
 WHMCS comes with a default configuration that is not covering all TLDs. We started gathering such cases, feel free to copy the contents of our [sample configuration file](https://raw.githubusercontent.com/hexonet/whmcs-ispapi-registrar/master/registrars/ispapi/sample_whois.json) to the [whois.json override file](https://docs.whmcs.com/WHOIS_Servers#Customising_WHOIS_Servers). Ensure the final json format is valid using [jsonlint.com](https://jsonlint.com)!
 
-### .CA Registrant WHOIS Privacy
+### Change of Registrant
 
-The new WHOIS Privacy page for .CA domain names looks as follows (protection is enabled in the example):
-
-![ca_whois_privacy]({{site.baseurl}}/assets/images/whmcs/ispapi-registrar/ca_registrant_whois_privacy.png)
-
-### .CA Change of Registrant
-
-The Change of Registrant page for .CA domain names are available under the Management Tools of a .CA domain.
-
-### .IT .CH .SE .SG .LI Change of Registrant
-
-The change of Registrant of these TLDs requires a special procedure called TRADE. This function is available under the Management Tools of the domain.
+The change of Registrant of .CA, .CH, .IT, .LI, .SE and .SG TLDs requires a special procedure called TRADE. This function is available under the Management Tools of the domain.
 
 ### .SWISS Registrations
 
