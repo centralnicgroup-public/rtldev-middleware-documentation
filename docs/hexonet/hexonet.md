@@ -12,7 +12,7 @@ Since 1999, HEXONET has been a leading developer and service provider of reselle
 
 Find here all documentation brought together regarding our 3rd-party Software Integrations and Tools.
 
-## Features Requests and Bug Reports
+## Feature Requests and Bug Reports
 
 Feature Requests and Bug Reports are always and warmly welcome! Just create an GitHub Issue in the related Module Repository and describe what you are looking for or you consider to not be working as expected or broken. If you're not a GitHub User, just reach out over a Support Ticket. See below. This helps us to improve and in general we are rolling Patches out in short!
 

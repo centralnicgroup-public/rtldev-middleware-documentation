@@ -1,0 +1,20 @@
+
+- name: HEXONET
+  features:
+    - name: "Leading WHMCS Intregration"
+      items:  
+        - Registrar Module
+        - Domain Search
+        - SSL Certs
+        - Migration Tool
+    - name: "Blesta Integration"
+    - name: "DNSControl Integration"
+  github: "https://github.com/hexonet/"
+
+- name: RRPproxy
+  features:
+    - name: "WHMCS Intregration"
+      items:  
+        - Registrar Module
+        - Migration Tool
+  github: "https://github.com/rrpproxy/"

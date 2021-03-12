@@ -7,6 +7,38 @@
       url("../fonts/notosans-regular-webfont.woff2") format("woff2"),
       url("../fonts/notosans-regular-webfont.woff") format("woff");
 }
+.brands {
+    margin:3rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.brands .card {
+    align-self: center;
+    text-align: center;
+    width: 18rem;
+    border: 1px $hx-dk-300 solid;
+    border-radius: 10px;
+    padding: 2rem;
+    margin:auto;
+    background-color: $sidebar-color;
+}
+.brands .card .brand-feature-list li {
+    line-height: 1rem;
+}
+.brands .card .card-logo-container {
+    height: 2.5rem;
+}
+.brands .card img.card-logo {
+    width: 10rem;
+}
+.brands .card .card-body {
+    text-align: left;
+    margin: 1rem 0;
+}
+.cb {
+    clear: both;
+}
 ul.aux-nav-list li a:hover {
     background:none;
 }

@@ -8,6 +8,9 @@ window.addEventListener('load', function () {
   strikethrough();
 
   $(window).on('activate.bs.scrollspy', function () {
-    $('#site-nav .nav li a.active').get(0).scrollIntoView();
+    const $eL = $('#site-nav .nav li a.active').get(0);
+    if ($eL){
+      $eL.scrollIntoView();
+    }
   })
 });
