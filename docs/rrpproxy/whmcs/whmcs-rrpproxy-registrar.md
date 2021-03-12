@@ -72,7 +72,7 @@ We are highly interested in helping you getting your domain portfolio migrated t
 
 **The customer is king**, is a principle to which we ascribe.
 
-### From WHMCS' Module
+### RRPproxy Module Migration
 
 Some of our customers started with the RRPproxy module as it is shipped with WHMCS. This Registrar Module is the maintained official version of the RRPproxy Module.
 The module configuration page will automatically detect the need for a migration and provide a button to get this covered with a single click. Ensure first to have that module correctly configured and to have it up and running!
@@ -180,7 +180,7 @@ Have a further read about IRTP [here](https://wiki.rrpproxy.net/domains/icann/ic
 
 IRTP handling is supported by this Module and in WHMCS since version 7.6.
 
-## WHMCS & Contact Data
+## WHOIS Contact Data
 
 Navigate to `Setup > General Settings > Domains` and activate the checkbox `Use Clients Details` or alternatively configure the input fields directly after that checkbox accordingly. This configures WHMCS to provide the appropriate contact data in the Domain Registration Process.
 If not configured, a registration attempt may fail as some of the Registries defined one or more such contacts as mandatory.

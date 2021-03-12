@@ -95,7 +95,7 @@ The creation of your account is completely free of charge.
 
 Once your Account is created, a confirmation email with connection information will be provided to you.
 
-## Default Domain Renewal Mode
+## Domain Renewal Mode
 
 Please visit our own Frontend that we offer our customers for free here: [LIVE System](https://account.hexonet.net) or [OT&E System](https://account-ote.hexonet.net/).
 
@@ -153,7 +153,7 @@ Feel free to add yourself as Watcher to our GitHub repository to get informed ab
 Simply click on the "Watch" Button, select "Custom" and there "Releases" and save. We also highly enjoy getting starred!
 Another solution is to use our [Modules Overview Widget](whmcs-ispapi-widget-modules.md).
 
-## Migrating from HEXONET Module
+## HEXONET Module Migration
 
 Some of our customers started with the HEXONET module as it is shipped with WHMCS. The ISPAPI Registrar Module is the maintained white-label version of the HEXONET Module. Migrating can be done by a single click:
 
@@ -232,7 +232,7 @@ Here some impressions:
 ![Web App Connecting]({{site.baseurl}}/assets/images/whmcs/ispapi-registrar/webapps2.png)
 ![Web App Disconnecting]({{site.baseurl}}/assets/images/whmcs/ispapi-registrar/webapps3.png)
 
-## Admin/Tech/Billing Contact Data
+## WHOIS Contact Data
 
 In WHMCS navigate to `Setup > General Settings > Domains` and activate the checkbox `Use Clients Details` or alternatively configure the input fields directly after that checkbox accordingly. This configures WHMCS to provide the appropriate contact data in the Domain Registration Process.
 If not configured, a registration attempt may fail as some of the Registries defined one or more such contacts as mandatory.
