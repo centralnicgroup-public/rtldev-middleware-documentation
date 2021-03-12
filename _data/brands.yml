@@ -1,7 +1,7 @@
 
 - name: HEXONET
   features:
-    - name: "Leading WHMCS Intregration"
+    - name: "Leading WHMCS Integration"
       items:  
         - Registrar Module
         - Domain Search
@@ -13,7 +13,7 @@
 
 - name: RRPproxy
   features:
-    - name: "WHMCS Intregration"
+    - name: "WHMCS Integration"
       items:  
         - Registrar Module
         - Migration Tool
