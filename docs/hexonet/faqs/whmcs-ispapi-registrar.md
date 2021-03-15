@@ -628,3 +628,15 @@ Promotions: We decided not to consider them in the Registrar TLD Sync Integratio
 Reason: Both of these processes don't update prices per background job and require manual interaction. Our Resellers could lose money if they miss syncing again prices after the end date of a promotion.
 
 You can check the start- and end date of your promotions by clicking on your username at the top left in our control panel (https://account.hexonet.net/). Then navigate to Billing > Prices and Costs. See the Screenshots. You'll find there two columns at the end of the table covering the start- and end date.
+
+### 62 Manual Domain Sync
+
+If you want to trigger your Domain Synchronisation Process manually, you can do that by
+
+```bash
+/usr/bin/php -q {PATH_TO_CRONS_FOLDER}/cron.php do --DomainExpirySync --DomainTransferSync
+```
+
+NOTE: The Path to your PHP Binary might be different. Find it out by `which php`. Replace `{PATH_TO_CRONS_FOLDER}` accordingly to fit your WHMCS installation.
+
+This covers the Domain Synchronisation including the Domain Transfers.
