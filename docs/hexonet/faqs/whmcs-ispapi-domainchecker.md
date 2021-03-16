@@ -12,7 +12,7 @@ showtoc: 1
 ### 1. I would like to use WHMCS whois service to check if a domain is premium or not. How I can use this service?
 
 It is not possible to get the information whether a domain is a premium or not via the WHOIS servers. Only a domainchecker connected to a registrar API is able to know if a domain is a premium or not.
-We are providing a High-Performance Domainchecker module that would do exactly what you need and much faster than the WHOIS. You can download it from the WHMCS Marketplace: https://marketplace.whmcs.com/product/1654
+We are providing a High-Performance Domainchecker module that would do exactly what you need and much faster than the WHOIS. You can download it from the WHMCS Marketplace [here](//marketplace.whmcs.com/product/1654)
 
 ### 2. Why are there search filters (`Available Only`, `No Premium`) on frontend-side that allow to change their configured settings on backend-side?
 
@@ -36,7 +36,7 @@ Please verify that you have the Six template in use (or at least one that is 100
 
 This is a module developed by ModulesGarden that is using a Geo-IP-DB for visitor localization to automatically switch the active currency to the configured/matching one for that region even though another currency is configured as default currency in WHMCS.
 The only thing you need to care about is to add the domainchecker.php and/or mydomainchecker.php to the allowed scripts configuration.
-Read [here](https://www.docs.modulesgarden.com/Geolocation_Hook_For_WHMCS), section `Configuration`, Head Line `5. Selecting Pages`.
+Read [here](//www.docs.modulesgarden.com/Geolocation_Hook_For_WHMCS), section `Configuration`, Head Line `5. Selecting Pages`.
 
 ### 7. Your availability Check is slow!
 
@@ -54,13 +54,13 @@ Add this to the /etc/resolv.conf file:
 
 `options single-request`
 
-c) If you have a lot currencies defined - this might be a historical reason related to our Pricing Importer Add-On, check if you can remove some of them. Hint: WHMCS >= 7.10 comes with a new feature, the so-called ["Registrar TLD Sync"](https://docs.whmcs.com/Registrar_TLD_Sync). Check our documentation [here](https://github.com/hexonet/whmcs-ispapi-registrar/wiki/Start-selling-domains-with-HEXONET-&-WHMCS#importing-prices) and the linked FAQ Entries.
+c) If you have a lot currencies defined - this might be a historical reason related to our Pricing Importer Add-On, check if you can remove some of them. Hint: WHMCS >= 7.10 comes with a new feature, the so-called ["Registrar TLD Sync"](//docs.whmcs.com/Registrar_TLD_Sync). Check our documentation [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar/#importing-prices' | relative_url }}) and the linked FAQ Entries.
 
-Page load shouldn't take longer than 1s average. The most pages are even faster: about 500 to 800 ms. Give the guide ["Maximising_Performance"](https://docs.whmcs.com/Maximising_Performance) a detailed read. Used Hard- and Software is definitely affecting performance. MySQL vs. Maria DB, Apache vs. Nginx.
+Page load shouldn't take longer than 1s average. The most pages are even faster: about 500 to 800 ms. Give the guide ["Maximising_Performance"](//docs.whmcs.com/Maximising_Performance) a detailed read. Used Hard- and Software is definitely affecting performance. MySQL vs. Maria DB, Apache vs. Nginx.
 
 ### 8. Why is Premium Renewal Cost Price shown as 0.00
 
-This had been a bug in WHMCS Core until they fixed it around v7.8. You can fix it by inserting "registrarRenewalCostPrice" for your domain name into table tbldomain_extra with the cost you would have to pay at HEXONET. You can find it out in our [Control Panel](https://account.hexonet.net) by navigating to "API Access" which is listed on your Dashboard. There just paste the below command for your domain name and execute it:
+This had been a bug in WHMCS Core until they fixed it around v7.8. You can fix it by inserting "registrarRenewalCostPrice" for your domain name into table tbldomain_extra with the cost you would have to pay at HEXONET. You can find it out in our [Control Panel](//account.hexonet.net) by navigating to "API Access" which is listed on your Dashboard. There just paste the below command for your domain name and execute it:
 
 ```
 COMMAND = QueryDomainList

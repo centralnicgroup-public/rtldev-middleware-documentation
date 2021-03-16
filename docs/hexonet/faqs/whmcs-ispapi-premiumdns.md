@@ -47,7 +47,7 @@ DNS Zones for domains managed by HEXONET our free of charge. We just charge for 
 #### 3. When a customer orders the service, will the customer need to make any manual changes to their DNS settings?
 
 No, not required any manual changes.
-Please see here for more information: https://github.com/hexonet/whmcs-ispapi-premiumdns/wiki/Usage-Guide
+Please read [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-premiumdns/' | relative_url }}) for more information.
 
 #### 4. Will the customer need to keep NS records as set by HEXONET, or will they be able to change them to their hosting provider?
 
@@ -83,7 +83,7 @@ If the domain is already using Hexonet nameservers, it is not necessary to make 
 
 #### 10. What happens when a client buys Premium DNS in WHMCS? + Does the GUI change and disable the Basic DNS?
 
-The following document gives a general idea about upgrading from Basic DNS to Premium DNS - https://wiki.hexonet.net/wiki/Premium_DNS#Upgrade_from_Basic_DNS_to_Premium_DNS
+[This Document](//wiki.hexonet.net/wiki/Premium_DNS#Upgrade_from_Basic_DNS_to_Premium_DNS) gives a general idea about upgrading from Basic DNS to Premium DNS.
 
 With our module, you will only be able to buy premium DNS if the domain exists in your WHMCS. For example: if you have a `test.com` domain in your WHMCS, then only you will be able to buy `test.com.` premium DNS zone. This is because in WHMCS there is no possibility to provide an option to upgrade from Basic to Premium DNS as our control panel does.
 Once you buy premium DNS in WHMCS, you will be able to manage it in the client area. More info can be found on the module's 'Usage guide'.

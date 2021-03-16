@@ -24,13 +24,12 @@ You can reissue cert with the new csr using the following command (if you leave 
        csr# = <TEXT>
        EOF
 
-All info available at https://wiki.hexonet.net/wiki/SSL#tab=Other_commands__28API_29
-
+All info available in our Wiki, [here](//wiki.hexonet.net/wiki/SSL#tab=Other_commands__28API_29).
 
 ### 3. The files .key and .ca are missing to install SSL. How can I obtain them?
 
 Please login to the control panel and execute the following command under 'API' :
- 
+
     COMMAND = StatusSSLCert
     SSLCERTID = <ID>
 

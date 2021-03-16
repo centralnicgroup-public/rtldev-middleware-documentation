@@ -9,7 +9,7 @@ showtoc: 1
 
 # ISPAPI Monitoring Widget
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
 This Repository covers the WHMCS "ISPAPI" Dashboard Widget "Monitoring". It provides the following features to WHMCS:
 
@@ -36,34 +36,34 @@ If there's something missing, let us know and we will extend.
 
 * Having Javascript activated in Browser.
 * WHMCS version 7.0 or higher
-* Latest **ISPAPI Registrar Module**. This module can be downloaded [here](https://github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Widget does not support the WHMCS built-in HEXONET provider module!
+* Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Widget does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
-  * [OT&E (Test System) Account](https://www.hexonet.net/signup-ote)
-  * [LIVE (Real World System) Account](https://www.hexonet.net/cart?signup=true)
+  * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
+  * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
 
-For the latest WHMCS minimum system requirements, please refer to the WHMCS System Requirements Documentation, [here](https://docs.whmcs.com/System_Requirements).
+For the latest WHMCS minimum system requirements, please refer to the WHMCS System Requirements Documentation, [here](//docs.whmcs.com/System_Requirements).
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](https://github.com/hexonet/whmcs-ispapi-widget-monitoring/raw/master/whmcs-ispapi-widget-monitoring-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/hexonet/whmcs-ispapi-widget-monitoring/raw/master/whmcs-ispapi-widget-monitoring-latest.zip).
 
 Extract the `ispapi_monitoring.php` into folder `/modules/widgets` of your WHMCS instance.
 
 ## Using this Widget
 
 This is how it looks like in case everything is fine:
-![allfine]({{site.baseurl}}/assets/images/whmcs/ispapi-widget-monitoring/preview_ok.png)
+![allfine]({{ 'assets/images/whmcs/ispapi-widget-monitoring/preview_ok.png' | relative_url }})
 
 Otherwise cases are listed accordingly and providing a wizard to get them fixed:
-![inactivetransferlock]({{site.baseurl}}/assets/images/whmcs/ispapi-widget-monitoring/preview_transferlock_missing.png)
-![wpissues]({{site.baseurl}}/assets/images/whmcs/ispapi-widget-monitoring/preview_idprotection_sync.png)
+![inactivetransferlock]({{ 'assets/images/whmcs/ispapi-widget-monitoring/preview_transferlock_missing.png' | relative_url }})
+![wpissues]({{ 'assets/images/whmcs/ispapi-widget-monitoring/preview_idprotection_sync.png' | relative_url }})
 
 Click on `Details!` to get more information:
-![wizard1]({{site.baseurl}}/assets/images/whmcs/ispapi-widget-monitoring/preview_transferlock_dialog1.png)
+![wizard1]({{ 'assets/images/whmcs/ispapi-widget-monitoring/preview_transferlock_dialog1.png' | relative_url }})
 
 By clicking on `Fix this!` the widget takes care of processing the items as described:
-![wizard2]({{site.baseurl}}/assets/images/whmcs/ispapi-widget-monitoring/preview_transferlock_dialog2.png)
-![wizard3]({{site.baseurl}}/assets/images/whmcs/ispapi-widget-monitoring/preview_transferlock_dialog3.png)
+![wizard2]({{ 'assets/images/whmcs/ispapi-widget-monitoring/preview_transferlock_dialog2.png' | relative_url }})
+![wizard3]({{ 'assets/images/whmcs/ispapi-widget-monitoring/preview_transferlock_dialog3.png' | relative_url }})
 
 Furthermore you can download the affected items as CSV list for your reference before processing (without results) and after processing (including results).
 NOTE: columns are separated by tab delimiter.

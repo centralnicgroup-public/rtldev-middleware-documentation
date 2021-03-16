@@ -123,7 +123,7 @@ Set ‘Type’ to ‘Domain and Other’ for selling domains in the order form.
 
 ### Template
 
-Select a template of your choice. Template selection and configuration of other available options are described [here](https://docs.blesta.com/display/user/Selling+Domains) in more details in the section ‘Create an order form > Basic’.
+Select a template of your choice. Template selection and configuration of other available options are described [here](//docs.blesta.com/display/user/Selling+Domains) in more details in the section ‘Create an order form > Basic’.
 
 ![OrderFormTemplate]({{ 'assets/images/blesta/order_form_template.png' | relative_url }})
 

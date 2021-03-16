@@ -12,8 +12,8 @@ showtoc: 1
 ### 1. **I have initiated a domain backorder using the backorder module. The backorder status is set from ACTIVE to PROCESSING. While this is the case, I am still able to search for the backordered domain and register it. Therefore this domain is available for registration. Does the module fail to catch my domain? What went wrong, can you please explain?**
 
 The backorder fails due to insufficient funds in your HEXONET account. When a backorder domain status set from ACTIVE to PROCESSING, our system tries to catch the domain provided enough funds available in your account.
-If the backorder is successful, the status is set to 'SUCCESSFUl'. 
-For more information about the process, have a look here: https://github.com/hexonet/whmcs-ispapi-backorder/wiki/Usage-Guide#1-functioning
+If the backorder is successful, the status is set to 'SUCCESSFUl'.
+For more information about the process, have a look [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-backorder/#1-functioning' | relative_url }}).
 
 ### 2. **" Server time should be set to UTC" - is this a must? We are set to UTC+4? Perhaps, in this case, I can adapt the cron job times +4 hours to adjust for this difference?**
 

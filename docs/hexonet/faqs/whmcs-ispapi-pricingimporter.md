@@ -11,11 +11,11 @@ showtoc: 1
 
 1. **I am using a restrictive role user. Which commands do I have to whitelist?**
 
-Find all such commands listed [here](https://github.com/hexonet/whmcs-ispapi-registrar/wiki/Usage-Guide#using-restrictive-role-user) per module.
+Find all such commands listed [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar/#create-a-role-user' | relative_url }}) per module.
 
 2. **Pricing importer does not upload TLDs over 3000. How can I fix this issue?**
 
-Please have look here: https://github.com/hexonet/whmcs-ispapi-pricingimporter/wiki/Usage-Guide#setting-max_input_vars
+Please have a look [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-pricingimporter/#setting-max_input_vars' | relative_url }}).
 A lower value of max_input_vars is the issue.
 
 3. **How can I import pricing for more than one year registration period?**

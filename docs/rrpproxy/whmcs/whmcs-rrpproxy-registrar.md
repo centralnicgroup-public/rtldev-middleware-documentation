@@ -9,7 +9,7 @@ showtoc: 1
 
 # RRPproxy Registrar Module
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
 This Repository covers the updated WHMCS Registrar Module of RRPproxy. Source code and latest package version are stable. Just the documentation is to be seen as WIP.
 
@@ -47,8 +47,7 @@ A Registrar Module connects WHMCS to the Domain Registrar's System.
 - WHMCS 7.6+ or 8.x
 - installed and working: curl, php-curl
 
-For the latest WHMCS minimum system requirements, please refer to
-[https://docs.whmcs.com/System_Requirements](https://docs.whmcs.com/System_Requirements)
+For the latest WHMCS minimum system requirements, please refer to [System_Requirements](//docs.whmcs.com/System_Requirements).
 
 ## Introduction
 
@@ -67,8 +66,8 @@ RRPproxy is one of the leading reseller platforms worldwide for domains and inte
 
 ### From another Registrar
 
-If you have doubts related to prices, please contact our [Sales Department](https://www.rrpproxy.net/Contact/Sales).
-We are highly interested in helping you getting your domain portfolio migrated to us - just get in touch with us [here](https://www.rrpproxy.net/Contact/Contact_Form). We are experienced with migrations and have tools ready for this.
+If you have doubts related to prices, please contact our [Sales Department](//www.rrpproxy.net/Contact/Sales).
+We are highly interested in helping you getting your domain portfolio migrated to us - just get in touch with us [here](//www.rrpproxy.net/Contact/Contact_Form). We are experienced with migrations and have tools ready for this.
 
 **The customer is king**, is a principle to which we ascribe.
 
@@ -82,7 +81,7 @@ It will do the following actions:
 - Reconfigure `rrpproxy` to `keysystems` of all domain names related to Registrar `RRPproxy`.
 - Deactivate the old module.
 
-![image]({{site.baseurl}}/assets/images/whmcs/rrpproxy-registrar/migrate.png)
+![image]({{ 'assets/images/whmcs/rrpproxy-registrar/migrate.png' | relative_url }})
 
 - Ensure to check the Additional Domain Fields setup for TLDs offered over us. Read more about that [here](#additional-domain-fields)
 
@@ -95,7 +94,7 @@ We have two systems:
 
 The OT&E system is thought for integration tests and everything you're doing there is for free - but ordered products are then also not existing in reality. With an OT&E account, all functionality and transactional processes can be tested thoroughly. The LIVE system corresponds to the real world system and comes with costs for ordered products and services.
 
-Signup can be done [here](https://www.rrpproxy.net/Register).
+Signup can be done [here](//www.rrpproxy.net/Register).
 
 Your account will then be used in WHMCS for ordering our products and services and for managing them.
 The creation of your account is completely free of charge.
@@ -104,7 +103,7 @@ Once your account is created, a confirmation email with connection information w
 
 ## Domain Renewal Mode
 
-Please visit our own Frontend that we offer our customers for free here: [LIVE System](https://wi.rrpproxy.net/) or [OT&E System](https://wi-ote.rrpproxy.net/).
+Please visit our own Frontend that we offer our customers for free here: [LIVE System](//wi.rrpproxy.net/) or [OT&E System](//wi-ote.rrpproxy.net/).
 
 Click on your user name at top right and navigate to `Settings > System > Account Policy > Renewalmode`. Here select 'Auto Expire' and press 'Save changes'.
 
@@ -121,7 +120,7 @@ E.g.
 
 ### Upgrading
 
-**IMPORTANT** Ensure to read the [Release Notes](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/releases) carefully before Upgrading! Our Release numbers follow [semantic versioning](https://semver.org/) and thus we follow the version syntax: MAJOR.MINOR.PATCH.
+**IMPORTANT** Ensure to read the [Release Notes](//github.com/rrpproxy/whmcs-rrpproxy-registrar/releases) carefully before Upgrading! Our Release numbers follow [semantic versioning](//semver.org/) and thus we follow the version syntax: MAJOR.MINOR.PATCH.
 
 You can always upgrade without worries if the PATCH or MINOR version have just changed.
 If the MAJOR version has changed, check the release notes to avoid unexpected issues as a new MAJOR version comes always with breaking changes or at least with a new module behavior.
@@ -132,7 +131,7 @@ If you're upgrading regularly and keeping all our modules / addons / widgets upd
 
 ### Installation
 
-Even though a `RRPproxy` Module is shipped with WHMCS, we highly recommend downloading and installing our white label module `RRPproxy/Key-Systems` which is the official maintained version and providing you latest features and patches. Available for download [here](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/releases).
+Even though a `RRPproxy` Module is shipped with WHMCS, we highly recommend downloading and installing our white label module `RRPproxy/Key-Systems` which is the official maintained version and providing you latest features and patches. Available for download [here](//github.com/rrpproxy/whmcs-rrpproxy-registrar/releases).
 
 - Download the ZIP archive and extract it to your HDD
 - Copy the contents of folder e.g. `whmcs-rrpproxy-registrar-1.0.0/install/modules/registrars` to the appropriate/matching folder of your WHMCS instance `modules/registrars`.
@@ -145,30 +144,30 @@ For non-technicians the above step covers in detail:
 4. Below that sub folder, you again find a sub folder named `registrars`. Go into that folder.
 5. Here you'll find a sub folder named `keysystems`. Copy that folder into the sub folder `/modules/registrars` of your WHMCS installation.
 
-For cPanel users: Use [this video](https://www.youtube.com/watch?v=SNtldWg_0gY) on how to upload and extract a ZIP archive using your cPanel. Use [this video](https://www.youtube.com/watch?v=T7OYIOwyWvU) on how to find the `public_html` folder in your cPanel. In there you'll find a subfolder `gwcorp` or `whmcs` containing again a subfolder `modules` and then the subfolder `registrars`. Please copy the above mentioned folder of our zip archive into that folder.
+For cPanel users: Use [this video](//www.youtube.com/watch?v=SNtldWg_0gY) on how to upload and extract a ZIP archive using your cPanel. Use [this video](//www.youtube.com/watch?v=T7OYIOwyWvU) on how to find the `public_html` folder in your cPanel. In there you'll find a subfolder `gwcorp` or `whmcs` containing again a subfolder `modules` and then the subfolder `registrars`. Please copy the above mentioned folder of our zip archive into that folder.
 
 For non cPanel users: check location `/var/www/whmcs` (default path) or eventually `/var/www/html/whmcs`.
 
-![cpanel 1]({{site.baseurl}}/assets/images/whmcs/rrpproxy-registrar/cpanel1.png)
-![cpanel 2]({{site.baseurl}}/assets/images/whmcs/rrpproxy-registrar/cpanel2.png)
+![cpanel 1]({{ 'assets/images/whmcs/rrpproxy-registrar/cpanel1.png' | relative_url }})
+![cpanel 2]({{ 'assets/images/whmcs/rrpproxy-registrar/cpanel2.png' | relative_url }})
 
 **NOTE: If you're upgrading** - please first delete the `modules/registrars/keysystems` folder in your WHMCS instance first.
 
 Note: Feel free to add yourself as Watcher to that github repository by clicking on the `Watch` button at the top of the page and then choose `Releases Only`.
 We are aware of that installation and upgrade effort of our module is something we need to minimize. We have projects in queue to achieve that and to cover a lot more.
-If you already used the RRPproxy Registrar Module, read [here](#migrating-from-the-bundled-module-shipped-with-whmcs) on how to migrate to the RRPproxy/Key-Systems Registrar Module.
+If you already used the RRPproxy Registrar Module, read [here](#rrpproxy-module-migration) on how to migrate to the RRPproxy/Key-Systems Registrar Module.
 
 ## Module Configuration
 
 Now, navigate in your WHMCS instance to `Setup > Products/Services > Domain Registrars`.
 Find the `RRPproxy/Key-Systems` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
 
-![configuration]({{site.baseurl}}/assets/images/whmcs/rrpproxy-registrar/config.png)
+![configuration]({{ 'assets/images/whmcs/rrpproxy-registrar/config.png' | relative_url }})
 
 Now, configure this Module by entering your credentials (OT&E or LIVE System Account).
 Activate `TestMode` by activating the checkbox in case you want to use the OT&E System - just ensure you don't mix it up with LIVE System Credentials or vice versa.
 
-If you want to offer secure DNS / DNSSec, feel also free to activate the checkbox for `DNSSEC`. Find further details documented [here](#nameservers--dns-management).
+If you want to offer secure DNS / DNSSec, feel also free to activate the checkbox for `DNSSEC`. Find further details documented [here](#ns--dns-management).
 
 Now, press Save and voilà.
 
@@ -176,7 +175,7 @@ Now, press Save and voilà.
 
 It governs the domain name transfers between ICANN registrars. The Inter-Registrar Transfer Policy (IRTP) includes changes to domain ownership. Small changes to a domain name’s registrar first name, last name, organization, and email address trigger the validation process.
 
-Have a further read about IRTP [here](https://wiki.rrpproxy.net/domains/icann/icann-ownerchange).
+Have a further read about IRTP [here](//wiki.rrpproxy.net/domains/icann/icann-ownerchange).
 
 IRTP handling is supported by this Module and in WHMCS since version 7.6.
 
@@ -187,7 +186,7 @@ If not configured, a registration attempt may fail as some of the Registries def
 
 ## Importing Prices
 
-For WHMCS >= 7.10: Use the [Registrar TLD Sync](https://docs.whmcs.com/Registrar_TLD_Sync) feature which you can find in the menu Utilities.
+For WHMCS >= 7.10: Use the [Registrar TLD Sync](//docs.whmcs.com/Registrar_TLD_Sync) feature which you can find in the menu Utilities.
 
 Both ways support import of IDN TLDs. WHMCS supports IDN TLD Import in `Registrar TLD Sync` since WHMCS 8.
 
@@ -197,7 +196,7 @@ In order to support Internationalized Domain Names (IDN) (e.g. v-8.ευ or مو�
 
 `Setup > General Settings > Domains > Allow IDN Domains`
 
-NOTE: Even though IDN Domains were just officially fully supported since [WHMCS 8](https://docs.whmcs.com/International_Domain_Names), our module is already capable of IDN handling for earlier WHMCS versions.
+NOTE: Even though IDN Domains were just officially fully supported since [WHMCS 8](//docs.whmcs.com/International_Domain_Names), our module is already capable of IDN handling for earlier WHMCS versions.
 
 ## NS & DNS Management
 
@@ -205,13 +204,13 @@ If you want to use DNS, URL or Email forwarding, domains must resolve to the RRP
 
 You can enter them in `Setup > General Settings > Domains` as **Default Nameservers** for your customers:
 
-![nameservers]({{site.baseurl}}/assets/images/whmcs/rrpproxy-registrar/dns.png)
+![nameservers]({{ 'assets/images/whmcs/rrpproxy-registrar/dns.png' | relative_url }})
 
 You can also create your own nameserver hostnames and use them, as long as they are registered and resolve to the correct IP addresses.
 
 If you plan to use RRPpoxys's KeyDNS, ensure to activate checkbox `DNS Management` for the appropriate TLDs in the Domain Pricing Section of WHMCS (System Settings > Domain Pricing).
 
-![dnsmanagement]({{site.baseurl}}/assets/images/whmcs/rrpproxy-registrar/pricing.png)
+![dnsmanagement]({{ 'assets/images/whmcs/rrpproxy-registrar/pricing.png' | relative_url }})
 
 When registering a domain name, a checkbox for this Domain Addon will then be offered to your customers. When used, it finally allows managing resource records for that domain name over WHMCS.
 
@@ -250,7 +249,7 @@ and activate the **DNSSEC** checkbox.
 In the domain details, a new “DNSSEC Management” section will be displayed.
 This feature allows your customers to add DS and KEY records and set the maxSigLife.
 
-![dnssec]({{site.baseurl}}/assets/images/whmcs/rrpproxy-registrar/dnssec_management_support.png)
+![dnssec]({{ 'assets/images/whmcs/rrpproxy-registrar/dnssec_management_support.png' | relative_url }})
 
 ## Additional Domain Fields
 
@@ -286,9 +285,9 @@ In case your clients provide their data, it will be pre-filled accordingly.
 
 FYI: When installing WHMCS 7.6 and above, it is already enabled by default - you can skip this section then.
 
-WHMCS comes with some background automation scripts that allow to synchronize data like expiry date and the domain status / transfer status with the one in the registrar system. Ensure to have the WHMCS [Post Installation Steps covered](https://docs.whmcs.com/Installing_WHMCS), especially the [Automation Settings](https://docs.whmcs.com/Automation_Settings) chapter.
+WHMCS comes with some background automation scripts that allow to synchronize data like expiry date and the domain status / transfer status with the one in the registrar system. Ensure to have the WHMCS [Post Installation Steps covered](//docs.whmcs.com/Installing_WHMCS), especially the [Automation Settings](//docs.whmcs.com/Automation_Settings) chapter.
 
-Find [here](https://docs.whmcs.com/Domain_Synchronisation) on how to set the **Domain Synchronization** up.
+Find [here](//docs.whmcs.com/Domain_Synchronisation) on how to set the **Domain Synchronization** up.
 
 If it is necessary for any reason, you can trigger the domain synchronization also manually from command line:
 
@@ -297,20 +296,20 @@ If it is necessary for any reason, you can trigger the domain synchronization al
 
 ... where `$YOUR_WHMCS_CRONS_PATH` is the path to the cron script folder of your WHMCS instance.
 
-Find [here](https://docs.whmcs.com/Crons) the full technical chapter about WHMCS Crons and their Options as reference.
+Find [here](//docs.whmcs.com/Crons) the full technical chapter about WHMCS Crons and their Options as reference.
 
 ## Lookup Provider
 
 The RRPproxy lookup provider yields high-performance availability checks of the domains using our fast API. For the domains that are not supported by RRPproxy, the lookup fallbacks to WHOIS. In order to utilize this feature, you just have to choose RRPproxy in the lookup provider suggestions.
 
-![rrpproxy_as_lookup]({{site.baseurl}}/assets/images/whmcs/rrpproxy-registrar/lookup.png)
+![rrpproxy_as_lookup]({{ 'assets/images/whmcs/rrpproxy-registrar/lookup.png' | relative_url }})
 
 **NOTE:** Since WHMCS 7.10, you can define a list of TLDs that have to be checked over the Lookup Provider.
 We suggest to select _ALL_ TLDs you want to offer, even if you are not offering them over RRPproxy.
 
 **Search example**:
 
-![search_example]({{site.baseurl}}/assets/images/whmcs/rrpproxy-registrar/search_example.png)
+![search_example]({{ 'assets/images/whmcs/rrpproxy-registrar/search_example.png' | relative_url }})
 
 ## Domain Name WHOIS Privacy
 
@@ -351,18 +350,18 @@ The change of Registrant of .IT .CH .SE .SG .LI TLDs requires a special procedur
   - If the application is **successful** the domain will be set to **ACTIVE** and the customer will be able to manage it.
   - If the application is **failed**, the domain will be set to **CANCELLED** and you will have to **refund the customer manually**.
 
-In order to work automatically the WHMCS Cron job has to be configured properly. Please have a look at this page: http://docs.whmcs.com/Crons
+In order to work automatically the WHMCS Cron job has to be configured properly. Please have a look at [this page](//docs.whmcs.com/Crons).
 
-Further information regarding .SWISS is available in our wiki: https://wiki.rrpproxy.net/domains/tlds/swiss
+Further information regarding .SWISS is available in our wiki, [here](//wiki.rrpproxy.net/domains/tlds/swiss).
 
 ## Securing WHMCS
 
 In order to secure your WHMCS installation, we recommend creating a role user only dedicated for WHMCS.
 This role user will only be able to execute the WHMCS needed commands.
 
-**Let's create this role user:**
+### Restrictive User Role
 
-- Login to the RRPproxy [Control Panel](https://wi.rrpproxy.net/)
+- Login to the RRPproxy [Control Panel](//wi.rrpproxy.net/)
 - Click on your username (top right)
 - Click on 'User management' from the dropdown menu
 - Create a new user by clicking on "Create new User"
@@ -381,16 +380,16 @@ This role user will only be able to execute the WHMCS needed commands.
 
 WHMCS itself does **not** support using 2-Factor Authentication (2FA) for Registrar Modules. So having 2FA activated for your user and using it in WHMCS simply does **not** work. If you've set up a restrictive role user as described above and you're using that one in your registrar configuration, then you can activate 2FA for your account (!!!not for your restrictive role user!!!).
 
-You can activate 2FA by logging in to our control panel ([OT&E](https://wi-ote.rrpproxy.net), [LIVE](https://wi.rrpproxy.net)). Then click on your user name at the top right of the page and then navigate to `Passwords and Security`. There, click on `Enable Two-Factor Authentication` and follow that wizard.
+You can activate 2FA by logging in to our control panel ([OT&E](//wi-ote.rrpproxy.net), [LIVE](//wi.rrpproxy.net)). Then click on your user name at the top right of the page and then navigate to `Passwords and Security`. There, click on `Enable Two-Factor Authentication` and follow that wizard.
 
 If you lost your 2FA device / code generator, contact our support - see the footer of this page.
 
 ### Activate IP Restrictions
 
-You can activate IP Restrictions for both: your account and the above described role user. Find instructions on how to do that for the restrictive role user as described [here](#create-a-restrictive-role-user).
+You can activate IP Restrictions for both: your account and the above described role user. Find instructions on how to do that for the restrictive role user as described [here](#restrictive-user-role).
 
-You can do that for your account by logging in to our control panel ([OT&E](https://wi-ote.rrpproxy.net), [LIVE](https://wi.rrpproxy.net)). Then click on your user name at the top right of the page and then navigate to `Passwords and Security`. There, click on `Restrict API Access to Whitelist` and fill out the form.
+You can do that for your account by logging in to our control panel ([OT&E](//wi-ote.rrpproxy.net), [LIVE](//wi.rrpproxy.net)). Then click on your user name at the top right of the page and then navigate to `Passwords and Security`. There, click on `Restrict API Access to Whitelist` and fill out the form.
 
 ## Final steps
 
-As the RRPproxy system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the RRPproxy Control Panel [LIVE System](https://wi.rrpproxy.net/)). Click on `Account Balance`, then `Charge your account`.
+As the RRPproxy system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the RRPproxy Control Panel [LIVE System](//wi.rrpproxy.net/). Click on `Account Balance`, then `Charge your account`.

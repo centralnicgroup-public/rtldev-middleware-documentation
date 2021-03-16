@@ -11,8 +11,8 @@ showtoc: 1
 
 ### **1. How can I add more TLDs than listed in the Blesta ISPAPI registrar module?**
 
-You can add more TLDs to the module. Please add in this file: <module>/config/ispapi.php
-These are the TLDs supported by HEXONET: https://www.hexonet.net/resellers/domains
+You can add more TLDs to the module. Please add in this file: `<module>/config/ispapi.php`
+[These](//www.hexonet.net/resellers/domains) are the TLDs supported by HEXONET.
 You can choose from this list.
 
 ### **2. I tried to register a domain name with my existing/in use nameserver. But the registrar module throws an error: Object does not exist. What is the reason for this issue?**
@@ -32,7 +32,7 @@ Now, you will be able to see the domain name under the 'Active' list.
 ### **4. How can I import domains from WHMCS to Blesta and manage them via Blesta?**
 
 Blesta provides a plugin called 'Import Manager'. Using this one can import domains from WHMCS to Blesta.
-More information about this plugin can be found here: https://docs.blesta.com/display/user/Import+Manager
+More information about this plugin can be found [here](//docs.blesta.com/display/user/Import+Manager).
 
 ### **5. How/Where can I find about the Blesta details such as version number?**
 
@@ -43,7 +43,7 @@ Navigate to Settings > System > Upgrade Options > click on 'About Blesta' => You
 I have transferred this domain to HEXONET recently. When I try to modify the owner contact, I receive the following error message:
 `[OWNERCONTACT (Missing required attribute; extended parameters for the registrant (organization) required)]` 
 
-Answer: The issue is due to IRTP (Inter-Registrar Transfer Policy) effect on the domain's ownership change. All gTLDs including nTLDs are effected by IRTP. At the moment Blest does not support IRTP handling. Therefore we cannot support through our registrar module as well. But we provide a way for customers to trigger the validation process. Please read [here](https://github.com/hexonet/blesta-ispapi-registrar/wiki/Usage-Guide#domain-contact-verification--irtp)
+Answer: The issue is due to IRTP (Inter-Registrar Transfer Policy) effect on the domain's ownership change. All gTLDs including nTLDs are effected by IRTP. At the moment Blest does not support IRTP handling. Therefore we cannot support through our registrar module as well. But we provide a way for customers to trigger the validation process. Please read [here]({{ 'docs/hexonet/blesta/#domain-contact-verification--irtp' | relative_url }}).
 
 Also, notice that the IRTP is effected on special TLDs like .FR, .RE ..
 

@@ -9,7 +9,7 @@ showtoc: 1
 
 # ISPAPI SSL Certs
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
 This Repository covers the WHMCS SSL Module of HEXONET. It provides the following features in WHMCS:
 
@@ -37,20 +37,19 @@ The ISPAPI SSL Module supports the following functions and features:
 ## Requirements
 
 - WHMCS version 8.0 or higher
-- Latest **ISPAPI Registrar Module**. This module can be downloaded [here](https://github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our SSL Cert Module does not support the WHMCS built-in HEXONET provider module!
+- Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our SSL Cert Module does not support the WHMCS built-in HEXONET provider module!
 - **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
-  - [OT&E (Test System) Account](https://www.hexonet.net/signup-ote)
-  - [LIVE (Real World System) Account](https://www.hexonet.net/cart?signup=true)
+  - [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
+  - [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
 - PHP 7.2 or higher
 
-For the latest WHMCS minimum system requirements, please refer to
-[https://docs.whmcs.com/System_Requirements](https://docs.whmcs.com/System_Requirements)
+For the latest WHMCS minimum system requirements, please refer to [System_Requirements](//docs.whmcs.com/System_Requirements).
 
-If you wish to use this module on older WHMCS versions, please use [Version 8.0](https://github.com/hexonet/whmcs-ispapi-ssl/releases) or earlier.
+If you wish to use this module on older WHMCS versions, please use [Version 8.0](//github.com/hexonet/whmcs-ispapi-ssl/releases) or earlier.
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](https://github.com/hexonet/whmcs-ispapi-ssl/raw/master/whmcs-ispapi-ssl-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/hexonet/whmcs-ispapi-ssl/raw/master/whmcs-ispapi-ssl-latest.zip).
 
 Copy files from the zip archive to your WHMCS installation root directory ($YOUR_WHMCS_ROOT), while keeping the folder structure intact.
 
@@ -70,7 +69,7 @@ e.g.
 
 Within the WHMCS Admin area, go to `Setup > Addon Modules`
 
-![Configuration]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/configuration.png)
+![Configuration]({{ 'assets/images/whmcs/ispapi-ssl/configuration.png' | relative_url }})
 
 Activate the ISPAPI SSL Addon, give the module “Full Administrator” Access Control right.
 
@@ -90,7 +89,7 @@ You can do so manually, or automatically by using our convenient addon.
 3. Tick the checkboxes on the products you wish to import or update
 4. Press the Import button
 
-![GUI]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/addon.gif)
+![GUI]({{ 'assets/images/whmcs/ispapi-ssl/addon.gif' | relative_url }})
 
 ### Manual Mode
 
@@ -101,34 +100,34 @@ Within the WHMCS Admin area, navigate to `Setup > Products/Services > Products/S
    - Set Product Type to "Other".
    - Set Product Group as desired.
    - Define a product name.
-     ![create new product]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/create_new_product.png)
+     ![create new product]({{ 'assets/images/whmcs/ispapi-ssl/create_new_product.png' | relative_url }})
 3. Open the `Details` tab.
    - Set a Product Description (optional).
    - Ensure the Welcome Email field is set to “None” as the module sends its own email.
    - Ensure the Required Domain field is unchecked.
-     ![details tab]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/details_tab.png)
+     ![details tab]({{ 'assets/images/whmcs/ispapi-ssl/details_tab.png' | relative_url }})
 4. Open the `Pricing` tab.
    - Set the Payment Type field to Recurring.
    - Set a price.
-     ![pricing tab]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/pricing_tab.png)
+     ![pricing tab]({{ 'assets/images/whmcs/ispapi-ssl/pricing_tab.png' | relative_url }})
 5. Open the `Module Settings` tab.
    - Choose `ISPAPI SSL Certificate` for the module Name field.
-   - Enter Certificate Class. For a list of possible certificate classes, please refer to [this article](https://wiki.hexonet.net/wiki/SSL).
+   - Enter Certificate Class. For a list of possible certificate classes, please refer to [this article](//wiki.hexonet.net/wiki/SSL).
    - Set “Automatically setup the product as soon as the first payment is received” to ensure the certificate is paid for before registration.
-     ![Module Settings]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/modulesettings_tab.png)
+     ![Module Settings]({{ 'assets/images/whmcs/ispapi-ssl/modulesettings_tab.png' | relative_url }})
 6. Click `Save changes`.
 
 ## Manage imported Prices
 
 Managing imported certificates can be done at `Setup > Products/Services > Products/Services`
 
-![manageimportedcerti]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/manage_imported_certificates.png)
+![manageimportedcerti]({{ 'assets/images/whmcs/ispapi-ssl/manage_imported_certificates.png' | relative_url }})
 
 ## Frontend overview
 
 `WHMCS client area > Store > SSL Certificates`
 
-![frontend-overview]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/frontend_overview.png)
+![frontend-overview]({{ 'assets/images/whmcs/ispapi-ssl/frontend_overview.png' | relative_url }})
 
 ## How to buy a certificate
 
@@ -137,19 +136,19 @@ Managing imported certificates can be done at `Setup > Products/Services > Produ
 3. Once the invoice is paid, you will receive an SSL certificate Configuration email, which contains a link to configure the new certificate.
 4. Click this link or to go to the bought SSL certificate product page and click the “Configure SSL Certificate” button.
 
-   ![buy-cert]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/buy_a_certificate.png)
+   ![buy-cert01]({{ 'assets/images/whmcs/ispapi-ssl/buy_a_certificate.png' | relative_url }})
 
 5. On this configuration page, the module will prefill the contact information and auto generate a CSR based on the domain provided and your client information. At this point, you are free to alter any information and replace the proposed CSR with your own if you wish.
 
-   ![buycert02]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/buy_a_certificate_02.png)
+   ![buycert02]({{ 'assets/images/whmcs/ispapi-ssl/buy_a_certificate_02.png' | relative_url }})
 
 6. On the subsequent configuration page, you will be asked for a Certificate Approver Email.
 
-   ![buycert3]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/buy_a_certificate_03.png)
+   ![buycert03]({{ 'assets/images/whmcs/ispapi-ssl/buy_a_certificate_03.png' | relative_url }})
 
 7. The configuration is now completed
 
-   ![cert04]({{site.baseurl}}/assets/images/whmcs/ispapi-ssl/buy_a_certificate_04.png)
+   ![cert04]({{ 'assets/images/whmcs/ispapi-ssl/buy_a_certificate_04.png' | relative_url }})
 
 8. Follow the instructions you will get via e-mail from the Certificate Authority to validate your purchase.
 9. It might take some minutes after validation until the certificate shows up in the client area

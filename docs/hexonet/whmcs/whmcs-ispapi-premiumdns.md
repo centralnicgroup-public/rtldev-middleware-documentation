@@ -9,7 +9,7 @@ showtoc: 1
 
 # ISPAPI Premium DNS
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
 This Repository covers the WHMCS Premium DNS Module of HEXONET.
 
@@ -72,16 +72,16 @@ More nodes available soon!
 ## Requirements
 
 * WHMCS version 7.0 or higher
-* Latest **ISPAPI Registrar Module**. This module can be downloaded [here](https://github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Premium DNS Module does not support the WHMCS built-in HEXONET provider module!
+* Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Premium DNS Module does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
-  * [OT&E (Test System) Account](https://www.hexonet.net/signup-ote)
-  * [LIVE (Real World System) Account](https://www.hexonet.net/cart?signup=true)
+  * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
+  * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
 
-For the latest WHMCS minimum system requirements, please refer to the WHMCS System Requirements Documentation, [here](https://docs.whmcs.com/System_Requirements).
+For the latest WHMCS minimum system requirements, please refer to the WHMCS System Requirements Documentation, [here](//docs.whmcs.com/System_Requirements).
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](https://github.com/hexonet/whmcs-ispapi-premiumdns/raw/master/whmcs-ispapi-premiumdns-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/hexonet/whmcs-ispapi-premiumdns/raw/master/whmcs-ispapi-premiumdns-latest.zip).
 
 Copy files from the zip to your WHMCS installation root directory ($YOUR_WHMCS_ROOT), while keeping the folder structure intact.
 
@@ -107,7 +107,7 @@ In order to receive email notifications on exceeding query usage and disable DNS
 
 Within the WHMCS Admin area, go to `Setup > Addon Modules`
 
-![addon01]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_01.png)
+![addon01]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_01.png' | relative_url }})
 
 Activate the ISPAPI Premium DNS Addon, give the module “Full Administrator” Access Control right.
 
@@ -133,7 +133,7 @@ Navigate to `Addons > ISPAPI Premium DNS`
 
 Select your product group, click and 'Load' button
 
-![dnsaddon02]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_02.png)
+![dnsaddon02]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_02.png' | relative_url }})
 
 **b) Step 2: Update prices and import Premium DNS plans**:
 
@@ -141,17 +141,17 @@ Make sure to import pricing for the default currency in your WHMCS. In the clien
 
 Add profit margin on your premium DNS plans (if applicable) by adding percentage in 'Profit margin' input field and clicking the 'add' button. Here you can see the comparison between the actual price(cost) and selling price(sale). Editing each individual price is available. You can select any currency that you configured in your WHMCS from drop down option under 'Currency' section. You can select all premium DNS plans by checking the checkbox on the top line or select individual plans. Click on 'Import' button to import plans into your WHMCS.
 
-![addon03]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_03.png)
+![addon03]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_03.png' | relative_url }})
 
 **c) Manage imported Premium DNS plans**:
 
 Managing imported premium DNS plans can be done at `Setup > Products/Services > Products/Services`
 
-![aadon04]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_04.png)
+![aadon04]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_04.png' | relative_url }})
 
 Update Premium DNS plan settings if required:
 
-![addon05]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_05.png)
+![addon05]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_addon_05.png' | relative_url }})
 
 ### Manual Mode
 
@@ -161,13 +161,13 @@ Within the WHMCS Admin area, navigate to `Setup > Products/Services > Products/S
 
 In this example, the new group is taken as “Premium DNS Plans”.
 
-![newgroup]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/create_new_group.png)
+![newgroup]({{ 'assets/images/whmcs/ispapi-premiumdns/create_new_group.png' | relative_url }})
 
 **b) Create a new product**:
 
 Select 'Product Type' as 'Other', 'Premium DNS Plan' as Product Group. Name your product name, eg: 'Premium DNS Plan 2M'. Select the module: 'ISPAPI Premium DNS'. Make sure the 'Create as Hidden' is OFF.
 
-![server01]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_01.png)
+![server01]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_01.png' | relative_url }})
 
 **On the “Details” tab:**
 
@@ -177,7 +177,7 @@ Ensure the Welcome Email field is set to “None”.
 
 Ensure the Required Domain field is unchecked.
 
-![server02]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_02.png)
+![server02]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_02.png' | relative_url }})
 
 **On the “Pricing” tab:**
 
@@ -185,7 +185,7 @@ Set the Payment Type field to Recurring and set a price.
 
 Make sure to set pricing for the default currency in your WHMCS. In the client area, only the products with the pricing of default currency will be displayed.
 
-![server03]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_03.png)
+![server03]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_03.png' | relative_url }})
 
 **On the “Module Settings” tab:**
 
@@ -193,20 +193,20 @@ Choose “ISPAPI Premium DNS” for the module Name field. Other fields “Years
 
 Enter Premium DNS plan Class. Please check the class name for each plan at HEXONET and enter the exactly matching class name for the plan. Otherwise, our API be not able to recognize the premium DNS plan to register. Set “Automatically setup the product as soon as the first payment is received” to ensure the premium DNS plan is paid for before registration. Save changes.
 
-![server04]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_04.png)
+![server04]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_04.png' | relative_url }})
 
 **On the “Custom Fields” tab:**
 
 Fill 'Field Name' as 'DNS Zone', select 'Field Type' as Text Box, enter 'Description' as 'Please enter DNS zone', and fill 'Validation' with /^(\w+\.\w+\.$)/ -> this regex expression validates if the correct format of a DNS zone entered by customer. Do not forget to check 'Required Field'. This option makes customer enter the DNS zone in text field otherwise he/she cannot proceed further. The DNS zone is important to buy a premium DNS plan. Check 'Show on Order Form' and 'Show on Invoice' if you want the premium DNS plan on your order form and invoice. Save Changes.
 
-![server05]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_05.png)
+![server05]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_05.png' | relative_url }})
 
 **On the “Upgrades” tab:**
 
 Select existing higher premium plans(if any) for the current plan. This will allow a customer to upgrade to a higher premium DNS plan and generate an invoice. Save Changes.
 In the current example, our premium DNS plan is 2M which is the lowest plan of all other. Therefore all the plans need to be selected.
 
-![server06]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_06.png)
+![server06]({{ 'assets/images/whmcs/ispapi-premiumdns/premium_DNS_server_06.png' | relative_url }})
 
 ## Frontend overview
 
@@ -214,7 +214,7 @@ In the current example, our premium DNS plan is 2M which is the lowest plan of a
 
 'Premium Comparison' template was selected when created a product group. Any other template can be selected as per your interest.
 
-![clientarea01]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/client_area_01.png)
+![clientarea01]({{ 'assets/images/whmcs/ispapi-premiumdns/client_area_01.png' | relative_url }})
 
 ## Buying a Premium DNS Plan
 
@@ -226,59 +226,59 @@ Step 1:
 
 Add your DNS zone in the order 'Configure' option that you would like to assign the premium DNS plan:
 
-![clientarea08]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/client_area_08.png)
+![clientarea08]({{ 'assets/images/whmcs/ispapi-premiumdns/client_area_08.png' | relative_url }})
 
 Step 2: Checkout the order
 
-![clientarea09]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/client_area_09.png)
+![clientarea09]({{ 'assets/images/whmcs/ispapi-premiumdns/client_area_09.png' | relative_url }})
 
 Once the invoice is paid, your premium DNS plan will be activated. On the client, area navigate to: 'Services > My Services > select your plan
 
 Activated premium DNS with details looks as follows:
 
-![clientarea02]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/client_area_02.png)
+![clientarea02]({{ 'assets/images/whmcs/ispapi-premiumdns/client_area_02.png' | relative_url }})
 
 Click on each view to reveal the information: 'DNS details', 'DNSSEC support', 'View analytics'
 
 **DNS details**:
 
-![clientarea04]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/client_area_04.png)
+![clientarea04]({{ 'assets/images/whmcs/ispapi-premiumdns/client_area_04.png' | relative_url }})
 
 **DNSSEC support**:
 
 **Enable DNSSEC**:
 
-![enablednssec01]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/enable_dnssec.png)
+![enablednssec01]({{ 'assets/images/whmcs/ispapi-premiumdns/enable_dnssec.png' | relative_url }})
 
 Once clicked on the button 'Enable DNSSEC', a confirmation text will be displayed. Click on the 'Confirm' button to enable DNSSEC support otherwise click on 'Cancel' button.
 
-![enablednssec02]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/enable_dnssec_02.png)
+![enablednssec02]({{ 'assets/images/whmcs/ispapi-premiumdns/enable_dnssec_02.png' | relative_url }})
 
 When successfully enabled DNSSEC, a success message will be displayed:
 
-![enablednssec02]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/enable_dnssec_03.png)
+![enablednssec02]({{ 'assets/images/whmcs/ispapi-premiumdns/enable_dnssec_03.png' | relative_url }})
 
 **Disable DNSSEC**:
 
-![disablednssec01]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/client_area_05.png)
+![disablednssec01]({{ 'assets/images/whmcs/ispapi-premiumdns/client_area_05.png' | relative_url }})
 
 Once clicked on the button 'Disable DNSSEC', a confirmation text will be displayed. Click on the 'Confirm' button to disable DNSSEC support otherwise click on 'Cancel' button.
 
-![disablednssec01]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/disable_dnssec_02.png)
+![disablednssec01]({{ 'assets/images/whmcs/ispapi-premiumdns/disable_dnssec_02.png' | relative_url }})
 
 DNSSEC will be successfully disabled after 10 days since the request. In order to avoid any failures of disabling DNSSEC, make sure to set up the cronjob in your system. On the successful first step of disabling DNSSEC, a message will be displayed:
 
-![disablednssec01]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/disable_dnssec_03.png)
+![disablednssec01]({{ 'assets/images/whmcs/ispapi-premiumdns/disable_dnssec_03.png' | relative_url }})
 
 **Re-enable DNSSEC**:
 
 Re-enable DNSSEC for your domain.
 
-![reenablednssce]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/re_enable_dnssec.png)
+![reenablednssce]({{ 'assets/images/whmcs/ispapi-premiumdns/re_enable_dnssec.png' | relative_url }})
 
 On successful reenabling of DNSSEC, a message will be displayed.
 
-![reenablednssce]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/re_enable_dnssec_02.png)
+![reenablednssce]({{ 'assets/images/whmcs/ispapi-premiumdns/re_enable_dnssec_02.png' | relative_url }})
 
 **View Analytics**:
 
@@ -286,7 +286,7 @@ Here you see the usage of queries history and a graphical illustration of succes
 
 Example view from a domain name:
 
-![viewanalytics]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/view_analytics.png)
+![viewanalytics]({{ 'assets/images/whmcs/ispapi-premiumdns/view_analytics.png' | relative_url }})
 
 **Request Cancellation**:
 
@@ -304,4 +304,4 @@ When the above changes are applied, a message is displayed on the product manage
 
 To upgrade premium DNS plan, click on 'Upgrade' on the sidebar. List of available higher tiered premium DNS plans will be shown: choose any plan and continue to check out the order.
 
-![clientarea07]({{site.baseurl}}/assets/images/whmcs/ispapi-premiumdns/client_area_07.png)
+![clientarea07]({{ 'assets/images/whmcs/ispapi-premiumdns/client_area_07.png' | relative_url }})

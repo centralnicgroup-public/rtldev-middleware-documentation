@@ -9,9 +9,9 @@ showtoc: 1
 
 # PHP SDK
 
-aka. [**hexonet/php-sdk**](https://packagist.org/packages/hexonet/php-sdk)
+aka. [**hexonet/php-sdk**](//packagist.org/packages/hexonet/php-sdk)
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 [![PHP from Packagist](//img.shields.io/packagist/php-v/hexonet/php-sdk.svg)](//packagist.org/packages/hexonet/php-sdk)
 [![Packagist](//img.shields.io/packagist/v/hexonet/php-sdk.svg)](//packagist.org/packages/hexonet/php-sdk)
 

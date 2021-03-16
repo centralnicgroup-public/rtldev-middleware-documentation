@@ -10,7 +10,7 @@ showtoc: 0
 
 ## Our Dev Setup
 
-* [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](//code.visualstudio.com/)
 * Git-SCM
 * We use [Virtual Environments](virtual Environments) where possible
 
@@ -33,7 +33,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 **NOTE:**
 
-* Please follow [these Commit Message Rules](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines). We suggest to use [commitizen](https://github.com/commitizen/cz-cli/blob/master/README.md) (nodejs setup required).
+* Please follow [these Commit Message Rules](//github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines). We suggest to use [commitizen](//github.com/commitizen/cz-cli/blob/master/README.md) (nodejs setup required).
 * Mark your PR as `Work in Progress` if you're still working on things. This can be achieved by prefixing your PR title with `WIP`.
 
 :thumbsup: **We care then about the rest. Thanks so much for your Contribution!**
@@ -156,12 +156,12 @@ the community.
 
 This Code of Conduct is adapted from the [Contributor Covenant][homepage],
 version 2.0, available at
-[https://www.contributor-covenant.org/version/2/0/code_of_conduct.html][v2.0].
+[//www.contributor-covenant.org/version/2/0/code_of_conduct.html][v2.0].
 
 Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder][Mozilla CoC].
 
 For answers to common questions about this code of conduct, see the FAQ at
-[https://www.contributor-covenant.org/faq][FAQ]. Translations are available at [https://www.contributor-covenant.org/translations][translations].
+[//www.contributor-covenant.org/faq][FAQ]. Translations are available at [//www.contributor-covenant.org/translations][translations].
 
 [homepage]: https://www.contributor-covenant.org
 [v2.0]: https://www.contributor-covenant.org/version/2/0/code_of_conduct.html
