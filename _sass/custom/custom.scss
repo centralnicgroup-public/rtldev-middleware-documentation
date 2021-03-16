@@ -1,101 +1,106 @@
 @font-face {
-    font-family: "noto_sansregular";
-    font-style: normal;
-    font-weight: normal;
-    src: url("../fonts/notosans-regular-webfont.eot?#iefix")
-        format("embedded-opentype"),
-      url("../fonts/notosans-regular-webfont.woff2") format("woff2"),
-      url("../fonts/notosans-regular-webfont.woff") format("woff");
+  font-family: "noto_sansregular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/notosans-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/notosans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/notosans-regular-webfont.woff") format("woff");
 }
 .brands {
-    margin:3rem 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+  margin: 3rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 .brands .card {
-    align-self: center;
-    text-align: center;
-    width: 18rem;
-    border: 1px $hx-dk-300 solid;
-    border-radius: 10px;
-    padding: 2rem;
-    margin:auto;
-    background-color: $sidebar-color;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  align-self: center;
+  text-align: center;
+  width: 18rem;
+  border: 1px $hx-dk-300 solid;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: auto;
+  background-color: $sidebar-color;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .brands .card:hover {
-    box-shadow: 0 10px 15px rgba(0,0,0,0.16), 0 10px 10px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.16), 0 10px 10px rgba(0, 0, 0, 0.23);
 }
 .brands .card .brand-feature-list li {
-    line-height: 1rem;
+  line-height: 1rem;
 }
 .brands .card .card-logo-container {
-    height: 2.5rem;
+  height: 2.5rem;
 }
 .brands .card img.card-logo {
-    width: 10rem;
+  width: 10rem;
 }
 .brands .card .card-body {
-    text-align: left;
-    margin: 1rem 0;
+  text-align: left;
+  margin: 1rem 0;
 }
 .cb {
-    clear: both;
+  clear: both;
 }
 ul.aux-nav-list li a:hover {
-    background:none;
+  background: none;
 }
 a:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 .search-input,
 .main-header,
 body {
-    background-color: $hx-lt-100 !important;
+  background-color: $hx-lt-100 !important;
 }
 .main-header {
-    border-bottom: 1px solid $hx-dk-300;
+  border-bottom: 1px solid $hx-dk-300;
 }
 .side-bar .site-title {
-    color: $body-heading-color !important;
-    font-weight: bold;
-    font-size: 18px !important;
+  color: $body-heading-color !important;
+  font-weight: bold;
+  font-size: 18px !important;
 }
 .side-bar .site-nav {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 .main-content {
-    text-align: justify;
+  text-align: justify;
 }
 .side-bar .toc-head {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 .side-bar .nav-list .nav-list-item {
-    font-size:13px !important;
+  font-size: 13px !important;
 }
 .side-bar .nav-list .nav-list-item .nav-list-link.active {
-    color: $hx-fc-000 !important;
-    font-weight: 600;
-    text-decoration: none;
+  color: $hx-fc-000 !important;
+  font-weight: 600;
+  text-decoration: none;
 }
 .side-bar .nav-list .nav-list-item .nav-list-link {
-    display: block;
-    min-height: 1.5rem;
-    line-height: 1.5rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    width:100%;
+  display: block;
+  min-height: 1.5rem;
+  line-height: 1.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  width: 100%;
 }
 .side-bar #toc-list {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 .side-bar #toc-list .nav-list-item > .nav-list {
-    display:block;
+  display: block;
 }
 .nav-list .nav-list-item .nav-list-link:hover,
 .nav-list .nav-list-item .nav-list-link.active {
-    background-image: linear-gradient(-90deg, #ebebeb 0%, rgba(200, 200, 200, 0.8) 80%, rgba(235, 235, 235, 0) 100%);
+  background-image: linear-gradient(
+    -90deg,
+    #ebebeb 0%,
+    rgba(200, 200, 200, 0.8) 80%,
+    rgba(235, 235, 235, 0) 100%
+  );
 }

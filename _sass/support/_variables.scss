@@ -2,8 +2,8 @@
 // Typography
 //
 
-$body-font-family: "noto_sansregular", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$body-font-family: "noto_sansregular", system-ui, -apple-system,
+  BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace !default;
 $root-font-size: 16px !default; // Base font-size for rems
 $body-line-height: 1.4 !default;
@@ -75,7 +75,6 @@ $hx-fc-000: #444 !default;
 $hx-dk-300: rgb(0, 51, 95) !default;
 $hx-lt-100: lighten($hx-fc-000, 60%) !default;
 
-
 $body-background-color: $white !default;
 $sidebar-color: darken($hx-lt-000, 5%) !default;
 $search-background-color: $white !default;
@@ -83,10 +82,10 @@ $table-background-color: $white !default;
 $code-background-color: lighten($hx-lt-100, 30%) !default;
 $feedback-color: darken($sidebar-color, 3%) !default;
 
-$body-text-color:  $hx-fc-000 !default;
+$body-text-color: $hx-fc-000 !default;
 $body-heading-color: $hx-dk-300 !default;
 $search-result-preview-color: darken($hx-lt-000, 5%) !default;
-$nav-child-link-color: #858585 !default;//lighten($hx-dk-300, 30%) !default;
+$nav-child-link-color: #858585 !default; //lighten($hx-dk-300, 30%) !default;
 $link-color: $hx-dk-300 !default;
 $btn-primary-color: $hx-dk-300 !default;
 $base-button-color: #f7f7f7 !default;
