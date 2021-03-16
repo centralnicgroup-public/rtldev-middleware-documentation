@@ -8,11 +8,11 @@ showtoc: 1
 
 # Command Line Client
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hexonet.ispapicli.svg)](https://www.python.org/)
-[![PyPI](https://img.shields.io/pypi/v/hexonet.ispapicli.svg)](https://pypi.org/project/hexonet.ispapicli/)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
+[![PyPI - Python Version](//img.shields.io/pypi/pyversions/hexonet.ispapicli.svg)](//www.python.org/)
+[![PyPI](//img.shields.io/pypi/v/hexonet.ispapicli.svg)](//pypi.org/project/hexonet.ispapicli/)
 
-aka. [**hexonet.ispapicli**](https://pypi.org/project/hexonet.ispapicli/)
+aka. [**hexonet.ispapicli**](//pypi.org/project/hexonet.ispapicli/)
 ## Introduction
 
 This site provides documentation for the ISPAPI Command Line Client. Here you will find documentation for installing on several operating systems, namely Windows, macOS / OS X, and Debian derivates like Ubuntu.
@@ -21,7 +21,7 @@ What is this tool about?
 
 This tool enables you to connect to our backend system API and to manage your account through GUI or Command Line Interface. In general, this tool consists of two major parts: Graphical User Interface (GUI) and Shell (or so-called command line interpreter).
 
-![Command Line Client GUI]({{site.baseurl}}/assets/images/ispapicli/gui.png)
+![Command Line Client GUI]({{ 'assets/images/ispapicli/gui.png' | relative_url }})
 
 ## How to use this tool?
 
@@ -37,7 +37,7 @@ Once you have downloaded the tool, you can run it from your Shell. First, you ma
 
 This will show you how to use the tool:
 
-![Help Page]({{site.baseurl}}/assets/images/ispapicli/help.png)
+![Help Page]({{ 'assets/images/ispapicli/help.png' | relative_url }})
 
 From this point on, you can follow the notes and run your desired command. However, here are few important notes for you:
 
@@ -71,15 +71,15 @@ This section provides you with a quick introduction to almost all the features i
 
 ### 1- Manage Your Account Remotely
 
-- You can execute any command of our backend system API, for more information read our [API Documentation](https://github.com/hexonet/hexonet-api-documentation).
+- You can execute any command of our backend system API, for more information read our [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }}).
 - For quick view of the command use the command: `--list` (see Fig.1)
 - To view how to use a specific command, run the command `--help = COMMAND-NAME`. e.g. `--help = querydomainlist`, the results as shown in Fig.2
 
-| ![List Commands]({{site.baseurl}}/assets/images/ispapicli/list.png) |
+| ![List Commands]({{ 'assets/images/ispapicli/list.png' | relative_url }}) |
 | :-----------------------------------------------------------------: |
 |                      Fig.1 - list all commands                      |
 
-| ![Command Help]({{site.baseurl}}/assets/images/ispapicli/helpc.png) |
+| ![Command Help]({{ 'assets/images/ispapicli/helpc.png' | relative_url }}) |
 | :-----------------------------------------------------------------: |
 |                    Fig.2 - show command details                     |
 
@@ -89,7 +89,7 @@ This section provides you with a quick introduction to almost all the features i
 - Each login session is valid for 60 minutes
 - Accessible from GUI and Shell
 
-![Login]({{site.baseurl}}/assets/images/ispapicli/login.png)
+![Login]({{ 'assets/images/ispapicli/login.png' | relative_url }})
 
 ### 3 - Graphical User Interface (GUI)
 
@@ -104,13 +104,13 @@ The GUI has the following features:
 
 Once you start typing the command, a dropdown list will be displayed to show all possible matches.
 
-![Command Auto-Completion]({{site.baseurl}}/assets/images/ispapicli/autocomplete.png)
+![Command Auto-Completion]({{ 'assets/images/ispapicli/autocomplete.png' | relative_url }})
 
 #### Command Minimum Parameters
 
 Some commands require a minimum number of parameters. This tool displays all required parameters once you have typed a command.
 
-![Command Minimum Parameters]({{site.baseurl}}/assets/images/ispapicli/minparams.png)
+![Command Minimum Parameters]({{ 'assets/images/ispapicli/minparams.png' | relative_url }})
 
 #### Copy the Results
 
@@ -130,7 +130,7 @@ This Tool is available for several operating systems: Windows, macOS / OS X, and
 
 ### Executable Version
 
-- To download a portable and executable version of this tool, check out the [Release Overview](https://github.com/hexonet/ispapicli/releases). _This option only available for Linux distributions_
+- To download a portable and executable version of this tool, check out the [Release Overview](//github.com/hexonet/ispapicli/releases). _This option only available for Linux distributions_
 - To create a portable/executable file on Windows or macOS, do the following steps:
 
   1. Install “pyinstaller”:

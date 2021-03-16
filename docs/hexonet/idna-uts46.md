@@ -8,24 +8,24 @@ showtoc: 1
 
 # IDNA (UTS 46) for JavaScript
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![node](https://img.shields.io/node/v/idna-uts46-hx.svg)](https://www.npmjs.com/package/idna-uts46-hx)
-[![npm version](https://img.shields.io/npm/v/idna-uts46-hx.svg?style=flat)](https://www.npmjs.com/package/idna-uts46-hx)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
+[![node](//img.shields.io/node/v/idna-uts46-hx.svg)](//www.npmjs.com/package/idna-uts46-hx)
+[![npm version](//img.shields.io/npm/v/idna-uts46-hx.svg?style=flat)](//www.npmjs.com/package/idna-uts46-hx)
 
 This module is a IDNA UTS46 library for javascript.
 This is a maintained fork of the idna-uts46 library originally written by jcranmer.
 
-The [JS Punycode converter library](https://github.com/bestiejs/punycode.js/) is
+The [JS Punycode converter library](//github.com/bestiejs/punycode.js/) is
 a great tool for handling Unicode domain names, but it only implements the
 Punycode encoding of domain labels, not the full IDNA algorithm. In simple
 cases, a mere conversion to lowercase text before input would seem sufficient,
 but the real mapping for strings is far more complex. This library implements
 the full mapping for these strings, as defined by
-[UTS #46](http://unicode.org/reports/tr46/).
+[UTS #46](//unicode.org/reports/tr46/).
 
 ## Requirements
 
-* Having Node.js >= 9.x set up and running, if you plan running it on webserver-side. We suggest using [nvm](https://github.com/creationix/nvm).
+* Having Node.js >= 9.x set up and running, if you plan running it on webserver-side. We suggest using [nvm](//github.com/creationix/nvm).
 
 ## Usage Instructions
 

@@ -16,7 +16,7 @@ Our Java/Node.js/PHP SDKs covers right now the most current and planned future s
 
 ## FWIW
 
-[![SDK]({{site.baseurl}}/assets/images/sdks/sdk.png)]({{site.baseurl}}/assets/images/sdks/sdk.png)
+[![SDK]({{ 'assets/images/sdks/sdk.png' | relative_url }})]({{ 'assets/images/sdks/sdk.png' | relative_url }})
 
 ## Features
 
@@ -36,7 +36,7 @@ Our Java/Node.js/PHP SDKs covers right now the most current and planned future s
 
 ## UML Diagram
 
-[![SDK]({{site.baseurl}}/assets/images/sdks/uml.png)]({{site.baseurl}}/assets/images/sdks/uml.png)
+[![SDK]({{ 'assets/images/sdks/uml.png' | relative_url }})]({{ 'assets/images/sdks/uml.png' | relative_url }})
 
 ## Ideas in Queue
 

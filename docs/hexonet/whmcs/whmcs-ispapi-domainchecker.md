@@ -9,7 +9,7 @@ showtoc: 1
 
 # ISPAPI Domain Search
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
 This Documentation covers the "ISPAPI" Domain Search Add-On for WHMCS.
 
@@ -24,7 +24,7 @@ The module connects to the configured ISPAPI registrar module to provide **high-
 
 For better performance, the module uses an Ajax-driven search and the search can be filtered by categories, available domain names and premium domain names. The search can also be triggered directly by the URL, which is particularly useful when you want to create landing pages.
 
-![intro]({{site.baseurl}}/assets/images/whmcs/ispapi-domainchecker/hx_search_800px_lossy.gif)
+![intro]({{ 'assets/images/whmcs/ispapi-domainchecker/hx_search_800px_lossy.gif' | relative_url }})
 
 ## Supported Features
 
@@ -33,14 +33,14 @@ The ISPAPI DomainChecker addon supports the following functions and features:
 * **NEW** Support WHMCS' TLD Group Labels `hot`, `new` and `sale`
 * **NEW** Supports several filters
 * **NEW** Administrative Interface now allows managing of categories by drag'n'drop and provides access to all useful configurations
-* **UPDATE** Search trigger over URL (helpful for landing pages, see [Usage Guide](https://github.com/hexonet/whmcs-ispapi-domainchecker/wiki/Usage-Guide))
+* **UPDATE** Search trigger over URL (helpful for landing pages, [Details](#search-by-get-request))
 * High-performance Domain Availability Checks using our registrar API
 * Support of Premium Domains (Aftermarket and Registry Premium Domains)
 * Domain Name Suggestion Engine integrated
 * Categorization of the TLDs for an improved user experience
   * **NEW** WHMCS' default categories can be imported
   * Search results based on the category selection
-* Backorder button in the search results (when having also our [whmcs backorder module](https://github.com/hexonet/whmcs-ispapi-backorder) installed)
+* Backorder button in the search results (when having also our [whmcs backorder module]({{ 'docs/hexonet/whmcs/whmcs-ispapi-backorder' | relative_url }}) installed)
   * Add or Remove backorders instantly in the search results
 * WHOIS information for taken domains
 * Featuring each domain with availability and type of premium domain name
@@ -61,12 +61,12 @@ us)
 In order to run the ISPAPI DomainChecker Add-On, your WHMCS installation must meet the following requirements:
 
 * **WHMCS version 7.2.0** or higher must be installed. (We recommend always using the latest version of WHMCS)
-* **ISPAPI Registrar Module** This module can be downloaded [here](https://github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Domain Search Addon does not support the WHMCS built-in HEXONET provider module!
+* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Domain Search Addon does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
-  * [OT&E (Test System) Account](https://www.hexonet.net/signup-ote)
-  * [LIVE (Real World System) Account](https://www.hexonet.net/cart?signup=true)
+  * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
+  * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
 * having URL Rewrite enabled in the web server and one of the url rewrite solutions applied (see section 3 e)
-* **ISPAPI Domainchecker Add-On**: downloadable [here](https://github.com/hexonet/whmcs-ispapi-domainchecker/raw/master/whmcs-ispapi-domainchecker-latest.zip).
+* **ISPAPI Domainchecker Add-On**: downloadable [here](//github.com/hexonet/whmcs-ispapi-domainchecker/raw/master/whmcs-ispapi-domainchecker-latest.zip).
 
 | Domainchecker version | ISPAPI Registrar Module version | WHMCS version |
 |-----------------------|---------------------------------|---------------|
@@ -93,7 +93,7 @@ We started gathering this information starting with v10.0.0 of the domainchecker
 
 Within the WHMCS Admin area, go to `Setup > Addon Modules`
 
-![configuration]({{site.baseurl}}/assets/images/whmcs/ispapi-domainchecker/configuration.png)
+![configuration]({{ 'assets/images/whmcs/ispapi-domainchecker/configuration.png' | relative_url }})
 
 Activate the ISPAPI DomainChecker Addon, give the module “Full Administrator” Access Control right.
 
@@ -103,9 +103,9 @@ Under `Setup > Products/Services > Domain Pricing`, you will be able to configur
 
 Be aware that high-performance domain availability checks using our registrar API will only be provided with the “Ispapi” registrar. Just in case we do not support a certain TLD, we fallback to the WHMCS' WHOIS Lookup.
 
-![domainpricing]({{site.baseurl}}/assets/images/whmcs/ispapi-domainchecker/regular_domain_pricing.png)
+Use the `Registrar TLD Sync` Feature to import our TLDs and Prices which is available since WHMCS v7.10.
 
-Note: We also provide a Pricing Importer Add-On that can be used to import your prices from HEXONET system into WHMCS. You can find it [here](https://www.hexonet.net/resellers/integration#whmcs).
+![domainpricing]({{ 'assets/images/whmcs/ispapi-domainchecker/regular_domain_pricing.png' | relative_url }})
 
 ### Manage your Settings
 
@@ -126,7 +126,7 @@ The module provides domain search results based on two different modes
 1. **Regular**: regular search with the configured TLDs (default)
 2. **Suggestions**: domain name suggestions provided by our API
 
-![settings-overview]({{site.baseurl}}/assets/images/whmcs/ispapi-domainchecker/aa.png)
+![settings-overview]({{ 'assets/images/whmcs/ispapi-domainchecker/aa.png' | relative_url }})
 
 ### Manage your Categories
 
@@ -138,9 +138,9 @@ In order to configure your Categories, go to `Addons > ISPAPI HP DomainChecker`
 This Import use the prices configured in the "Domain Pricing" page as base and considers the categories defined by WHMCS and also the configured order of the domain extensions. If you did not know about it: You can drag'n'drop the rows of the "Domain Pricing" page. Remember to configure each currency accordingly.
 Also note that IDN extensions have to be configured there in IDN format, not in punycode.
 
-If you want to customize the WHMCS default categories, read [this](https://docs.whmcs.com/Domain_Categories).
+If you want to customize the WHMCS default categories, read [this](//docs.whmcs.com/Domain_Categories).
 
-![backend-overview]({{site.baseurl}}/assets/images/whmcs/ispapi-domainchecker/aa_categories_800px_lossy.gif)
+![backend-overview]({{ 'assets/images/whmcs/ispapi-domainchecker/aa_categories_800px_lossy.gif' | relative_url }})
 
 In that overview you can:
 
@@ -161,7 +161,7 @@ For getting the native WHMCS Domain Search replaced with our Module, there are t
 > service apache2 restart
 ```
 
-NOTE: With Apache 2.4 things have changed. Please check [the Apache2 Upgrade Guide](https://httpd.apache.org/docs/current/upgrading.html) for differences between 2.2 and 2.4++ configurations and how to review / clean them up.
+NOTE: With Apache 2.4 things have changed. Please check [the Apache2 Upgrade Guide](//httpd.apache.org/docs/current/upgrading.html) for differences between 2.2 and 2.4++ configurations and how to review / clean them up.
 
 #### By Apache Configuration
 
@@ -194,7 +194,7 @@ Go to `Utilities > Logs > Module Log` and click the ”Enable Debug Logging” b
 
 Go to your homepage, fill the search field with a domain and click the “Go” button. If the result looks like the following screen-shot, your installation is a success and you are now ready to start selling domains with your new ISPAPI DomainChecker Addon.
 
-![testinstallation]({{site.baseurl}}/assets/images/whmcs/ispapi-domainchecker/ca_800px_lossy.gif)
+![testinstallation]({{ 'assets/images/whmcs/ispapi-domainchecker/ca_800px_lossy.gif' | relative_url }})
 
 ## Search by GET Request
 

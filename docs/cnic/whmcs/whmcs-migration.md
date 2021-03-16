@@ -29,17 +29,17 @@ NOTE: we changed the client email template's name to start with `MIGRATION_FIXED
 
 This tool is made for migrations at point of domain renewal to minimize costs and for optional customer communication within the migration process to avoid transfer rejections. Here a high-level process flow diagram on how it works:
 
-![processflow]({{site.baseurl}}/assets/images/whmcs/migration/processflow.png)
+![processflow]({{ 'assets/images/whmcs/migration/processflow.png' | relative_url }})
 
 ## Some Impressions
 
 Error output in Domain Details in Admin Area:
 
-![adminareaerror]({{site.baseurl}}/assets/images/whmcs/migration/domain_renewal_message.png)
+![adminareaerror]({{ 'assets/images/whmcs/migration/domain_renewal_message.png' | relative_url }})
 
 Entries in the System Activity log:
 
-![activitylog]({{site.baseurl}}/assets/images/whmcs/migration/activity_log.png)
+![activitylog]({{ 'assets/images/whmcs/migration/activity_log.png' | relative_url }})
 
 ## How does it exactly work
 
@@ -495,7 +495,7 @@ If you need something in addition, let us know.
 If you prefer renewing already expired domain names at the current registrar instead of migrating it to the new registrar, set the configuration key `renewIfExpired` to `true`.
 This covers expired domain names where the status still allows a renewal (`Expired` and `Grace Period (Expired)`). See this diagram that explains it the best:
 
-!['gtld lifecycle']({{site.baseurl}}/assets/images/whmcs/migration/gtld-lifecycle.jpg)
+!['gtld lifecycle']({{ 'assets/images/whmcs/migration/gtld-lifecycle.jpg' | relative_url }})
 
 ```json
 {

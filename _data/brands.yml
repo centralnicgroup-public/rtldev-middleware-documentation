@@ -9,7 +9,7 @@
         - Migration Tool
     - name: "Blesta Integration"
     - name: "DNSControl Integration"
-  github: "https://github.com/hexonet/"
+  github: "//github.com/hexonet/"
 
 - name: RRPproxy
   features:
@@ -17,4 +17,4 @@
       items:  
         - Registrar Module
         - Migration Tool
-  github: "https://github.com/rrpproxy/"
+  github: "//github.com/rrpproxy/"

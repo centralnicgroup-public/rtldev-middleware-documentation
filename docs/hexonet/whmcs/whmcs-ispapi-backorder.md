@@ -9,7 +9,7 @@ showtoc: 1
 
 # ISPAPI Backorder Module
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
 This Repository covers the WHMCS Backorder Module of HEXONET. It provides the following features in WHMCS:
 
@@ -22,7 +22,7 @@ The ISPAPI Backorder Addon for WHMCS allows any reseller to quickly and easily o
 ## Supported Features
 
 * High Performance Drop-Catching Technology
-* Supports gTLDs / nTLDs / ccTLDs listed [here](https://www.hexonet.net/de/backorder#backorder-list)
+* Supports gTLDs / nTLDs / ccTLDs listed [here](//www.hexonet.net/de/backorder#backorder-list)
 * Commissions paid to Resellers for successful Backorders
 * Backorders are free to place and the Backorder fee is paid only on successful Registration
 * Multiple Currencies supported
@@ -48,17 +48,17 @@ In order to run the ISPAPI Backorder Addon, your WHMCS installation must meet th
 
 * WHMCS version 7.0 or higher
 * PHP with ZIP Extension (php-zip)
-* **ISPAPI Registrar Module** This module can be downloaded [here](https://github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Backorder Module does not support the WHMCS built-in HEXONET provider module!
+* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Backorder Module does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
-  * [OT&E (Test System) Account](https://www.hexonet.net/signup-ote)
-  * [LIVE (Real World System) Account](https://www.hexonet.net/cart?signup=true)
+  * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
+  * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
 * Server timezone should be set to UTC
 
-For the latest WHMCS minimum System Requirements, please refer to the WHMCS System Requirements Documentation, [here](https://docs.whmcs.com/System_Requirements)
+For the latest WHMCS minimum System Requirements, please refer to the WHMCS System Requirements Documentation, [here](//docs.whmcs.com/System_Requirements)
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](https://github.com/hexonet/whmcs-ispapi-backorder/raw/master/whmcs-ispapi-backorder-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/hexonet/whmcs-ispapi-backorder/raw/master/whmcs-ispapi-backorder-latest.zip).
 
 Copy the whole “ispapibackorder” directory to the “modules/addons/” directory.
 
@@ -72,7 +72,7 @@ In the WHMCS Admin area, go to `Setup  =>  Addon Modules`
 
 Activate the ISPAPI Backorder Addon and give the module “Full Administrator” Access Control rights.
 
-![addonactivation]({{site.baseurl}}/assets/images/whmcs/ispapi-backorder/addon_activation.png)
+![addonactivation]({{ 'assets/images/whmcs/ispapi-backorder/addon_activation.png' | relative_url }})
 
 ### Addon Configuration
 
@@ -80,7 +80,7 @@ In the WHMCS Admin area, go to  `Addons  =>  ISPAPI Backorder`
 
 Select the “Pricing” tab and enter the desired prices you wish to charge your customers.  Please keep in mind the price you will be charged. (reseller prices are available on HEXONET’s web Control Panel).
 
-![addon-conf]({{site.baseurl}}/assets/images/whmcs/ispapi-backorder/addon_configuration.png)
+![addon-conf]({{ 'assets/images/whmcs/ispapi-backorder/addon_configuration.png' | relative_url }})
 
 ### Add Cron Jobs
 
@@ -160,7 +160,7 @@ The winning customer of the private auction, once the winning auction bid is pai
 
 ## Process Diagram for Backorders
 
-![process-diagram]({{site.baseurl}}/assets/images/whmcs/ispapi-backorder/process_diagram.png)
+![process-diagram]({{ 'assets/images/whmcs/ispapi-backorder/process_diagram.png' | relative_url }})
 
 ## Frontend
 
@@ -173,11 +173,11 @@ This new navigation item contains 2 pages:
 
 **Expiring Domains screenshot**:
 
-![expiring-domains]({{site.baseurl}}/assets/images/whmcs/ispapi-backorder/frontend_expiring_domains.png)
+![expiring-domains]({{ 'assets/images/whmcs/ispapi-backorder/frontend_expiring_domains.png' | relative_url }})
 
 **My Backorders screenshot**:
 
-![mybackorders]({{site.baseurl}}/assets/images/whmcs/ispapi-backorder/frontend_my_backorders.png)
+![mybackorders]({{ 'assets/images/whmcs/ispapi-backorder/frontend_my_backorders.png' | relative_url }})
 
 ## Backend
 
@@ -185,8 +185,8 @@ In the admin area of WHMCS a new item will be displayed under  `Addon  =>  ISPAP
 The backend part of this module contains 3 pages:
 
 * Manage - This page allows managing all the existing backorders.
-  ![manage-page]({{site.baseurl}}/assets/images/whmcs/ispapi-backorder/manage_page.png)
+  ![manage-page]({{ 'assets/images/whmcs/ispapi-backorder/manage_page.png' | relative_url }})
 * Pricing - This page allows managing the pricing of each TLDs. If a price is set to 0 or empty then the customer will not be able to backorder this TLD.
-  ![pricing page]({{site.baseurl}}/assets/images/whmcs/ispapi-backorder/pricing_page.png)
+  ![pricing page]({{ 'assets/images/whmcs/ispapi-backorder/pricing_page.png' | relative_url }})
 * Logs - This page allows to search for a domain and see all the status changes. This is very useful to see what happened exactly to a backorder.
-  ![logspage]({{site.baseurl}}/assets/images/whmcs/ispapi-backorder/logs_page.png)
+  ![logspage]({{ 'assets/images/whmcs/ispapi-backorder/logs_page.png' | relative_url }})

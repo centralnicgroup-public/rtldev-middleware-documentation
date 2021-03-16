@@ -11,23 +11,23 @@ showtoc: 1
 
 aka. **github.com/hexonet/go-sdk**
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GoDoc](https://godoc.org/github.com/hexonet/go-sdk?status.svg)](https://godoc.org/github.com/hexonet/go-sdk)
-[![Go Report Card](https://goreportcard.com/badge/github.com/hexonet/go-sdk)](https://goreportcard.com/report/github.com/hexonet/go-sdk)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
+[![GoDoc](//godoc.org/github.com/hexonet/go-sdk?status.svg)](//godoc.org/github.com/hexonet/go-sdk)
+[![Go Report Card](//goreportcard.com/badge/github.com/hexonet/go-sdk)](//goreportcard.com/report/github.com/hexonet/go-sdk)
 
-This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](http://hexonet.net) and do not hesitate to [contact us](https://www.hexonet.net/contact).
+This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](//hexonet.net) and do not hesitate to [contact us](//www.hexonet.net/contact).
 
 ## Resources
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
-* [UML Diagram]({{site.baseurl}}/docs/sdks/)
-* [Class Documenation](https://godoc.org/github.com/hexonet/go-sdk)
-* [API Documentation]({{site.baseurl}}/docs/api-documentation.md)
+* [UML Diagram]({{ 'docs/sdks' | relative_url }})
+* [Class Documenation](//godoc.org/github.com/hexonet/go-sdk)
+* [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_path }})
 
 ## Requirements
 
-* Installed [GO/GOLANG](https://golang.org/doc/install). Restart your machine after installing GO.
+* Installed [GO/GOLANG](//golang.org/doc/install). Restart your machine after installing GO.
 
 NOTE: Make sure you add the go binary path to your PATH environment variable. Add the below lines for a standard installation into your profile configuration file (~/.profile).
 
@@ -40,7 +40,7 @@ Then reload the profile configuration by `source ~/.profile`.
 
 ## Usage Instructions
 
-We have also a demo app available showing how to integrate and use our SDK. See [here](https://github.com/hexonet/go-sdk-demo). This module can be installed as a Go Module.
+We have also a demo app available showing how to integrate and use our SDK. See [here](//github.com/hexonet/go-sdk-demo). This module can be installed as a Go Module.
 
 ### OT&E System
 
@@ -154,7 +154,7 @@ NOTE: Find an example for a custom logger class implementation in `customlogger/
 
 ## Usage Examples
 
-Please have an eye on our [HEXONET Backend API documentation](https://github.com/hexonet/hexonet-api-documentation/tree/master/API). Here you can find information on available Commands and their response data.
+Please have an eye on our [API documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }}). Here you can find information on available Commands and their response data.
 
 ### API Communication, Session
 

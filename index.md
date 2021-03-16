@@ -14,7 +14,8 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
   {% for brand in site.data.brands %}
   <div class="card">
     <div class="card-logo-container">
-      <img class="card-logo" src="{{ site.baseurl }}/assets/images/brands/{{ brand.name | downcase }}.png" alt="{{ brand.name }}" />
+      {% capture logo %}assets/images/brands/{{ brand.name | downcase }}.png{% endcapture %}
+      <img class="card-logo" src="{{ logo | relative_url }}" alt="{{ brand.name }}" />
     </div>
     <div class="card-body">
       {% for feat in brand.features %}
@@ -29,7 +30,8 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       {% endfor %}
     </div>
     <div class="card-footer">
-      <a href="{{ site.baseurl }}/docs/{{ brand.name | downcase }}" class="btn btn-primary">Read More</a>
+      {% capture brandlink %}docs/{{ brand.name | downcase }}{% endcapture %}
+      <a href="{{ brandlink | relative_url }}" class="btn btn-primary">Read More</a>
       <a href="{{ brand.github }}" class="btn btn-primary" target="_blank">@GitHub</a>
     </div>
   </div>

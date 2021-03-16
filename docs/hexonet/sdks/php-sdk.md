@@ -11,30 +11,30 @@ showtoc: 1
 
 aka. [**hexonet/php-sdk**](https://packagist.org/packages/hexonet/php-sdk)
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/hexonet/php-sdk.svg)](https://packagist.org/packages/hexonet/php-sdk)
-[![Packagist](https://img.shields.io/packagist/v/hexonet/php-sdk.svg)](https://packagist.org/packages/hexonet/php-sdk)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
+[![PHP from Packagist](//img.shields.io/packagist/php-v/hexonet/php-sdk.svg)](//packagist.org/packages/hexonet/php-sdk)
+[![Packagist](//img.shields.io/packagist/v/hexonet/php-sdk.svg)](//packagist.org/packages/hexonet/php-sdk)
 
-This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](http://hexonet.net) and do not hesitate to [contact us](https://www.hexonet.net/contact).
+This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](//hexonet.net) and do not hesitate to [contact us](//www.hexonet.net/contact).
 
 ## Resources
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
-* [UML Diagram]({{site.baseurl}}/docs/sdks/)
-* [Class Documenation](https://rawgit.com/hexonet/php-sdk/master/build/api/index.html)
-* [API Documentation]({{site.baseurl}}/docs/api-documentation.md)
+* [UML Diagram]({{ 'docs/sdks/' | relative_url }})
+* [Class Documenation](//rawgit.com/hexonet/php-sdk/master/build/api/index.html)
+* [API Documentation]({{ 'docs/hexonet/api-documentation' | relative_url }})
 
 ## Requirements
 
 * Installed php (>= v5.6.0) and php-curl
-* Installed [composer](https://getcomposer.org/download/).
+* Installed [composer](//getcomposer.org/download/).
 
 ## Usage Instructions
 
-We have also a demo app available showing how to integrate and use our SDK. See [here](https://github.com/hexonet/php-sdk-demo).
+We have also a demo app available showing how to integrate and use our SDK. See [here](//github.com/hexonet/php-sdk-demo).
 
-This module is available on the [PHP Package Registry](https://packagist.org/packages/hexonet/php-sdk).
+This module is available on the [PHP Package Registry](//packagist.org/packages/hexonet/php-sdk).
 
 Run `composer require "hexonet/php-sdk"` to get the latest version downloaded and added to composer.json.
 In your script simply use `require 'vendor/autoload.php';` or `require 'vendor/hexonet/php-sdk';`
@@ -124,7 +124,7 @@ NOTE: Find an example for a custom logger class implementation in `src/CustomLog
 
 ## Usage Examples
 
-Please have an eye on our [HEXONET Backend API documentation](https://github.com/hexonet/hexonet-api-documentation/tree/master/API). Here you can find information on available Commands and their response data.
+Please have an eye on our [API documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }}). Here you can find information on available Commands and their response data.
 
 ### API Communication, Session
 

@@ -1,30 +1,30 @@
 - name: Command Line Client
   icon: paper-plane
   about: Manage your account remotely; in addition to GUI and many useful features.
-  github: https://github.com/hexonet/ispapicli
+  github: //github.com/hexonet/ispapicli
   prio: 4
 - name: WHMCS
   icon: puzzle-piece
   about: Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-  github: https://github.com/hexonet?q=whmcs-&type=public
+  github: //github.com/hexonet?q=whmcs-&type=public
   prio: 1
 - name: Blesta
   icon: wave-square
   about: Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-  github: https://github.com/hexonet/blesta-ispapi-registrar
+  github: //github.com/hexonet/blesta-ispapi-registrar
   prio: 2
 - name: DNSControl
   icon: life-ring
   about: Layout for FAQ page. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-  github: https://github.com/stackexchange/dnscontrol
+  github: //github.com/stackexchange/dnscontrol
   prio: 5
 - name: SDKs
   icon: atom
   about: Layout for showcase page. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-  github: https://github.com/hexonet?q=SDK-&type=public
+  github: //github.com/hexonet?q=SDK-&type=public
   prio: 3
 - name: API Docs
   icon": gift
   about: Layout for license &amp; credits page. Consectetuer adipiscing elit.
-  github: https://github.com/hexonet/hexonet-api-documentation
+  github: //github.com/hexonet/hexonet-api-documentation
   prio: 6

@@ -9,19 +9,19 @@ showtoc: 1
 
 # Perl SDK
 
-aka. [**WebService::Hexonet::Connector**](https://metacpan.org/release/HEXONET/WebService-Hexonet-Connector-v2.10.2)
+aka. [**WebService::Hexonet::Connector**](//metacpan.org/release/HEXONET/WebService-Hexonet-Connector-v2.10.2)
 
-[![License: MIT]({{site.baseurl}}/assets/images/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
-This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](http://hexonet.net) and do not hesitate to [contact us](https://www.hexonet.net/contact).
+This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](//hexonet.net) and do not hesitate to [contact us](//www.hexonet.net/contact).
 
 ## Resources
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
-* [UML Diagram]({{site.baseurl}}/docs/sdks/)
-* [Class Documenation](https://rawgit.com/hexonet/perl-sdk/master/docs/hexonet.html)
-* [API Documentation]({{site.baseurl}}/docs/api-documentation.md)
+* [UML Diagram]({{ 'docs/sdks/' | relative_url }})
+* [Class Documenation](//rawgit.com/hexonet/perl-sdk/master/docs/hexonet.html)
+* [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }})
 
 ## Requirements
 
@@ -30,7 +30,7 @@ Our Classes provide further useful Methods for getting the connection configured
 
 ## Usage Instructions
 
-We have also a demo app available showing how to integrate and use our SDK. See [here](https://github.com/hexonet/perl-sdk-demo).
+We have also a demo app available showing how to integrate and use our SDK. See [here](//github.com/hexonet/perl-sdk-demo).
 
 ### OT&E System
 
@@ -51,7 +51,7 @@ cpanm HEXONET/WebSservice-Hexonet-Connector-v2.0.0.tar.gz
 ```
 
 NOTE: I got this only working by sudo'ing these commands.
-In case you install by filename, please check the [release overview](https://github.com/hexonet/perl-sdk/releases) for the most current release and use that version instead.
+In case you install by filename, please check the [release overview](//github.com/hexonet/perl-sdk/releases) for the most current release and use that version instead.
 
 ## High Performance Proxy Setup
 
@@ -138,7 +138,7 @@ NOTE: Find an example for a logger class implementation plus POD documentation i
 
 ## Usage Examples
 
-Please have an eye on our [HEXONET Backend API documentation](https://github.com/hexonet/hexonet-api-documentation/tree/master/API). Here you can find information on available Commands and their response data.
+Please have an eye on our [API documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }}). Here you can find information on available Commands and their response data.
 
 ### API Communication, Session
 
