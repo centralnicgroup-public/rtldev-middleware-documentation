@@ -80,6 +80,8 @@ In the WHMCS Admin area, go to  `Addons  =>  ISPAPI Backorder`
 
 Select the “Pricing” tab and enter the desired prices you wish to charge your customers.  Please keep in mind the price you will be charged. (reseller prices are available on HEXONET’s web Control Panel).
 
+**Where to find the pricing**: Log in to your account at https://account.hexonet.net and then click on your username at top right. Then Navigate to "Billing" > "Prices & Costs" > Tab "Domains" > Tab "Backorders", check column Application and column Currency.
+
 ![addon-conf]({{ 'assets/images/whmcs/ispapi-backorder/addon_configuration.png' | relative_url }})
 
 ### Add Cron Jobs
