@@ -13,112 +13,114 @@ showtoc: 1
 
 A Registrar Module connects WHMCS to the Domain Registrar's System. This Documentation covers the HEXONET/ispapi WHMCS Registrar Module maintained by HEXONET's 3rd-party Software Integrations Team.
 
-NOTE: If you experience any issue when using this module, please take a look at the [FAQs]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/' | relative_url }}). If you can't find help in there, feel free to contact our Support team.
+NOTE: If you experience any issue when using this module, please take a look at the [FAQs]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/' | relative_url }}) or get in touch with our [Support team](#contact-us).
 
 ## Introduction
 
 Firstly, we want to welcome you on board. We are always interested in making our WHMCS integration and documentation better. So, in case you want to provide us some feedback, you're welcome.
 We have a very short release cycle and can release patches and new features quickly, if necessary.
 
-Back to topic, here the steps described in short about how to start with us using WHMCS.
+Back to topic, here the steps describing how to start with us using WHMCS.
 
 ## Supported Features
 
-- 1-Click Migration from HEXONET registrar module
-- Web Apps: G Suite supported
-- Registrar TLD Sync / Pricing Import (WHMCS 7.10)
-- Domain Registration
-  - Additional domain fields (default configurations integrated!)
-- Domain Transfer (with AuthInfo code support)
-- Domain Management
-  - Domain locking
-  - Update Contact Information (with UTF-8 support)
-  - Change Nameservers
-  - Nameserver Registration (Add, Modify, Delete)
-  - Explicit Deletions supported in Admin panel
+- [Registrar TLD Sync / Pricing Import](#importing-prices) (WHMCS 7.10)
+- [Domain & Transfer Synchronization](#automation-settings)
+- Transfer-Out Automation
+- [Internationlized Domain Names](#idn-support) (IDNs)
+- [Additional Domain Fields](#additional-domain-fields)
+- [Premium Domains](#premium-domains)
+- Domain Registration (feat. [.SWISS](#swiss-registrations)!)
 - Domain Renewal
-  - Special handling for registries without explicit renewals (many ccTLDs)
-- DNS Management
-  - Record-Types: A, AAAA, MX, MXE, CNAME, TXT
+- Domain Transfer
+- Domain Management
+  - [Automatic Registrar Lock](#module-configuration)
+  - WHOIS Update (UTF-8 capable)
+  - Nameserver Registration & Management
+  - Get EPP Code
+- Domain Release / Explicit Deletions
+- [DNS Management](#ns--dns-management)
+  - Record-Types: A, AAAA, MX, MXE, CNAME, TXT, [SRV](#srv-records)
   - Allows user defined TTL values and MX priorities
-- Email forwarding
-- URL forwarding
+- [Email Forwarding](#ns--dns-management)
+- [URL Forwarding](#ns--dns-management)
   - Redirect using HTTP
   - Forward using HTML Frame
-- Optional TLS/SSL for API connection
-  - Supports proxy server for accelerated API access
-- Support for testing environment
-- WHOIS Privacy management of .CA domain names
-- Change of Registrant for .CA / .IT domain names
-- Support for WHOIS Privacy / ID Protection
-  - Uses privacy service WHOISTRUSTEE.com
-  - ID Protection toggle in Admin area gets synchronized
-  - Client area WHOIS Privacy management
-- Support for all bulk update operations
-- Support for IDNs
-  - automatically selects IDNA2008 if supported by TLD (e.g. .de)
-  - uses API based IDN conversion in background
-- Support for new domain sync method (\_Sync)
-  - Workaround for ccTLDs that need to get renewed before expiration
-- Support for .SWISS registrations
-- Support for SRV records
-- Support for DNSSEC Management
-- Auto-Prefill additional domain fields
-  - VAT ID
-  - DK Hostmaster User ID
-  - Contact Language (.ca)
+- [WHOIS Privacy / ID Protection](#whois-privacy-management)
 
-... and MORE!
+<details>
+  <summary><strong>... AND MORE!</strong>
+</summary>
+
+<ul>
+  <li><a href="#module-configuration">Testing / Sandbox Environment</a></li>
+  <li><a href="#hexonet-module-migration">1-Click Migration from HEXONET Registrar Module</a></li>
+  <li><a href="#web-apps-support">Web Apps</a></li>
+  <li><a href="#auto-prefill-fields">Auto-prefill of Additional Domain Fields</a></li>
+  <li>Automatic Contact Data and <a href="#module-configuration">NS Update after Transfer</a></li>
+  <li><a href="#dnssec-management">DNSSEC / SecDNS Management</a></li>
+  <li><a href="#module-configuration">Proxy Server Configuration for API Communication</a></li>
+  <li>Special: <a href="#ca-whois-privacy">WHOIS Privacy management of .CA domain names</a></li>
+  <li>Special: <a href="#change-of-registrant">Change of Registrant / Trade</a></li>
+  <li>Support for all bulk update operations</li>
+</ul>
+
+</details>
 
 ## Requirements
 
-* WHMCS 7.6+ or 8.x
-* installed and working: curl, php-curl
+We encourage our Resellers to stick on the latest WHMCS release for security reasons and to benefit of latest features and patches.
+
+- WHMCS 7.6+ or 8.x
+- Installed and working: curl, php-curl
 
 For the latest WHMCS minimum system requirements, please refer to
 [//docs.whmcs.com/System_Requirements](//docs.whmcs.com/System_Requirements)
 
 ## Create your Account
 
-We have two systems:
+We have two System Environments:
 
 - an Operational Test & Evaluation (OT&E) system and
 - a LIVE system ("the real world")
 
-The OT&E system is thought for integration tests and everything you're doing there is for free - but ordered products are then also not existing in real. With an OT&E account, all functionality and transactional processes can be tested thoroughly.The LIVE system corresponds to the real world system and comes with costs for ordered products and services.
+The OT&E system is thought for Integration Tests and everything you're doing there is for free - but ordered products are then also not existing in real. With an OT&E account, all functionality and transactional processes can be tested thoroughly. The LIVE system corresponds to the real world system and comes with costs for ordered products and services.
 
 LIVE System Signup can be done [here](//www.hexonet.net/cart?signup=true).
 OT&E System Signup can be done [here](//www.hexonet.net/signup-ote).
 
-Your account will then be used in WHMCS for ordering our products and services and for managing them.
-The creation of your account is completely free of charge.
+The creation of your account is completely free of charge. Your account will be used in WHMCS for ordering our products and services and for managing them.
 
-Once your Account is created, a confirmation email with connection information will be provided to you.
+Once your Account is created, a confirmation email with connection information will be provided to you by mail.
 
 ## Domain Renewal Mode
 
-Please visit our own Frontend that we offer our customers for free here: [LIVE System](//account.hexonet.net) or [OT&E System](//account-ote.hexonet.net/).
+By default the Domain Renewal Mode in our Systems is set to "Automatic Renewal". WHMCS comes with its own logic and processes regarding domain management and that's why it is important to change this default behavior accordingly. This is necessary to avoid domains are getting automatically renewed and causing costs for you if your customer is not interested in a renewal. Your customer wouldn't renew then over WHMCS, but our API would do so.
+Please follow the below instructions to get this covered:
 
-Click on your user name at top right and navigate to `Products > Domain Name Settings > Renewal Mode for New Domains`. Here select 'Expire Domain' and press 'Save'.
+- Login to your account here: [LIVE System](//account.hexonet.net) or [OT&E System](//account-ote.hexonet.net/).
+- Click on your user name at top right
+- Navigate to `Products > Domain Name Settings > Renewal Mode for New Domains`
+- Select 'Expire Domain' and press 'Save'
 
-Note: The renewal mode setting is only applied to new domain registrations in your account. If you already have domains registered in your account, but not available in WHMCS - use our domain importer addon, but ensure to reconfigure also the renewal mode of all such domains to `expire` too.
-
-This is necessary to avoid domains are getting automatically renewed and causing costs for you if your customer is not interested in renewing.
+Note: The renewal mode setting is only applied to new domain registrations in your account. If you already have domains registered previously in your account, ensure to reconfigure also their renewal mode to `expire`.
 
 ## Upgrading our Module
 
 **IMPORTANT** Ensure to read the [Release Notes](//github.com/hexonet/whmcs-ispapi-registrar/releases) carefully before Upgrading! Our Release numbers follow [semantic versioning](//semver.org/) and thus we follow the version syntax: MAJOR.MINOR.PATCH.
 
+![Semantic Versioning]({{ 'assets/images/semver.png' | relative_url }})
+
 You can always upgrade without worries if the PATCH or MINOR version have just changed.
 If the MAJOR version has changed, check the release notes to avoid unexpected issues as a new MAJOR version comes always with breaking changes or at least with a new module behavior.
 
-Follow the installations steps below and consider the provided release notes for the MAJOR version upgrade. In detail: if you're upgrading from 1.x.y to 4.x.y, ensure to check ALL major version release notes up to the version you're upgrading too. In this example, check the release notes for 2.0.0, 3.0.0 and 4.0.0.
+Follow the installations steps below and consider the provided release notes for the MAJOR version upgrade. In detail: if you're upgrading from 1.x.y to 4.x.y, ensure to check **ALL Major Version Release Notes** up to the version you're upgrading too. In this example, check the release notes for 2.0.0, 3.0.0 and 4.0.0.
 
 If you're upgrading regularly and keeping all our modules / addons / widgets updated, you run in less upgrade effort than doing multiple major version number steps. You can add/subscribe  yourself to release notifications in our github repositories to get informed about new releases.
 
 ## Installing our Module
 
-Even though a `HEXONET` Module is shipped with WHMCS, we highly recommend downloading and installing our white label module `HEXONET/ispapi` which is the maintained version and providing you latest features and patches. Available for download [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip).
+The `HEXONET` Module that is shipped with WHMCS is maintained by the WHMCS Core Team and as Change Request took to long, we decided to work on our own Module Version. We highly recommend downloading and installing our white label module `HEXONET/ispapi` which is our maintained version and providing you latest features and patches. Available for download [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip).
 
 - Download the ZIP archive and extract it to your HDD
 - Copy the contents of folder e.g. `modules/registrars` to the appropriate/matching folder of your WHMCS instance `modules/registrars`.
@@ -252,7 +254,7 @@ In order to support Internationalized Domain Names (IDN) (e.g. v-8.ευ or مو�
 
 `Setup > General Settings > Domains > Allow IDN Domains`
 
-NOTE: Even though IDN Domains were just officially fully supported since [WHMCS 8](//docs.whmcs.com/International_Domain_Names), our module is already capable of IDN handling for earlier WHMCS versions.
+NOTE: Even though WHMCS officially supported IDNs since [WHMCS 8](//docs.whmcs.com/International_Domain_Names), our module is already capable of IDN handling for earlier WHMCS versions.
 
 ## NS & DNS Management
 
@@ -366,10 +368,9 @@ WHMCS comes with some background automation scripts that allow to synchronize da
 
 Find [here](//docs.whmcs.com/Domain_Synchronisation) on how to set the **Domain Synchronization** up.
 
-If it is necessary for any reason, you can trigger the domain synchronization also manually from command line:
+If necessary, you can trigger the Domain and Transfer Synchronization also manually from Command Line:
 
-`/usr/bin/php -q $YOUR_WHMCS_CRONS_PATH/cron.php do --DomainStatusSync` (domain status sync)
-`/usr/bin/php -q $YOUR_WHMCS_CRONS_PATH/cron.php do --DomainTransferSync` (domain transfer status sync)
+`/usr/bin/php -q $YOUR_WHMCS_CRONS_PATH/cron.php do --DomainTransferSync --DomainExpirySync`
 
 ... where `$YOUR_WHMCS_CRONS_PATH` is the path to the cron script folder of your WHMCS instance.
 
@@ -393,7 +394,16 @@ The Suggestion Engine provides fast domain suggestions based on the searched dom
 
 HEXONET is now providing Aftermarket and Registry premium domains support. (Without having to install our ISPAPI High-Performance DomainChecker Module)
 
-In order to see premium domains suggestions in the search results, configure the “Premium Domains” section in WHMCS.
+**NOTE:** Since WHMCS 7.10, you can define a list of TLDs that have to be checked over the Lookup Provider.
+We suggest to select _ALL_ TLDs you want to offer, even if you are not offering them over HEXONET / ISPAPI.
+
+**Search example**:
+
+![search_example]({{ 'assets/images/whmcs/ispapi-registrar/search_example.png' | relative_url }})
+
+## Premium Domains
+
+In order to see premium domain name suggestions in the search results, configure the “Premium Domains” section in WHMCS.
 
 ![premium_domains]({{ 'assets/images/whmcs/ispapi-registrar/premium_domains.png' | relative_url }})
 
@@ -401,12 +411,6 @@ In order to configure your price markups for premium domains, you can use the �
 
 ![premium_conf]({{ 'assets/images/whmcs/ispapi-registrar/premium_domains_configuration.png' | relative_url }})
 
-**NOTE:** Since WHMCS 7.10, you can define a list of TLDs that have to be checked over the Lookup Provider.
-We suggest to select _ALL_ TLDs you want to offer, even if you are not offering them over HEXONET / ISPAPI.
-
-**Search example**:
-
-![search_example]({{ 'assets/images/whmcs/ispapi-registrar/search_example.png' | relative_url }})
 
 ## Better Domain Search
 
@@ -439,9 +443,9 @@ The registrar module fully supports the WHOIS Privacy service WHOISTRUSTEE.com:
 
 ![whoistrustee]({{ 'assets/images/whmcs/ispapi-registrar/whois_trustee.gif' | relative_url }})
 
-Whenever the `ID protection` flag gets enabled or disabled in the WHMCS Admin area, the module synchronizes the new protection status to the domain.
+Whenever the `ID protection` flag gets enabled or disabled in the WHMCS Admin Area, the module synchronizes the new protection status to the domain.
 
-> If the ID Protection flag gets disabled in the Admin area, clients will not be able to re-enable WHOIS Privacy themselves, it can only be re-enabled by an Administrator of your WHMCS Instance!
+> If the ID Protection flag gets disabled in the Admin Area, clients will not be able to re-enable WHOIS Privacy themselves, it can only be re-enabled by an Administrator of your WHMCS Instance!
 
 In addition, the Registrar Module adds a new Menu Entry `WHOIS Privacy` that will show up on Client Area in the Domain Details Page.
 

@@ -69,14 +69,12 @@ Ideas that may get added:
 
 ## Known Problems
 
-Find here some cases brought up to our hands that are known to be not working, but are out of our hands as being an issue of WHMCS Core or the underlying losing registrar's module:
+Find here some cases brought up to our hands:
 
-* `ERR4: Request is not available; DOMAIN TRANSFER IS PROHIBITED BY WRONG AUTH`. Looks like there's an issue when dealing with Authorization/EPP Codes that contain special characters like < > & \` \#. Our modules have been checked and we ensure we submit all EPP Codes correctly. This issue has to be seen somewhere in WHMCS Core or in the losing registrar's module. Nothing we can do on our end to get this fixed. Workaround: Add such epp codes to the DB as described [here](#configure-epp-authorization-codes) or change such codes at the losing registrar in advance. Reported for the following modules: resellerclubcrm, opensrs.
-* Some domains require additional domain fields to get the transfer process initiated. This is not yet covered. This might affect the following TLDs: .ca, .cat, .pt. If you need such domains also to be migrated in bulk, let us know.
-* Some TLDs like .es, .qa, .ae etc. can be migrated for free at any point of time as they support a 0Y transfer period. Right now, the migration tool covers the migration always at the point of the domain renewal. We have to find better possibilities for exactly these TLDs.
+* Some TLDs like .es, .qa, .ae etc. can be migrated for free at any point of time as they support a 0Y transfer period (excluding a renewal). Right now, the migration tool covers the migration always at the point of the domain renewal and if they support also a 1Y period, that one is then used over the 0Y period. We have to find better possibilities getting these TLDs migrated using WHMCS at any point of time in bulk.
 * **resellerclubcrm** module ending in an PHP Error - backtrace is pointing to language files.
   Even though this got escalated to the Module Devs, they just provided a workaround and not a new release. So fyi:
-  Edit the file /home/pjs32/public_html/modules/addons/resellerclubmods_core/modlang/English_admin_lcdrm.php and insert above the line 25 the below code:
+  Edit the file `$YOUR_WHMCS_INSTANCE/modules/addons/resellerclubmods_core/modlang/English_admin_lcdrm.php` and insert above the line 25 the below code:
 
     ```php
     $_ADMINLANG = array();
