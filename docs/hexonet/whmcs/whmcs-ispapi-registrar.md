@@ -550,7 +550,7 @@ AddDomain():ALLOW
 AddDomainApplication():ALLOW
 AddNameserver():ALLOW
 CheckAuthentication():ALLOW
-CheckAuthorization(): ALLOW
+CheckAuthorization():ALLOW
 CheckDomains():ALLOW
 CheckDomainTransfer():ALLOW
 ConvertIDN():ALLOW
@@ -559,14 +559,14 @@ CreateSSLCert():ALLOW
 DeleteDomain():ALLOW
 DeleteNameserver():ALLOW
 DENIC_CreateAuthInfo1():ALLOW
-EndSession(): ALLOW
+EndSession():ALLOW
 ExecuteOrder():ALLOW
 GetEnvironment():ALLOW
-GetUserIndex(): ALLOW
+GetUserIndex():ALLOW
 ModifyContact():ALLOW
 ModifyDomain():ALLOW
 ModifyNameserver():ALLOW
-ModifyUserPassword(): ALLOW
+ModifyUserPassword():ALLOW
 PayDomainRenewal():ALLOW
 PayPremiumDNSRenewal():ALLOW
 PushDomain():ALLOW
@@ -578,7 +578,8 @@ QueryDomainPendingRegistrantVerificationList():ALLOW
 QueryDomainRepositoryInfo():ALLOW
 QueryDomainSuggestionList():ALLOW
 QueryDomainWhoisInfo():ALLOW
-QueryEnvironmentList(): ALLOW
+QueryEnvironmentList():ALLOW
+QueryObjectList():ALLOW
 QueryObjectLogList():ALLOW
 QueryOrderList():ALLOW
 QuerySSLCertDCVEmailAddressList():ALLOW
@@ -589,7 +590,7 @@ RequestDomainAuthInfo():ALLOW
 ResendDomainTransferConfirmationEmails():ALLOW
 ResendSSLCertEmail():ALLOW
 SetEnvironment():ALLOW
-StartSession(): ALLOW
+StartSession():ALLOW
 StatusAccount():ALLOW
 StatusContact():ALLOW
 StatusDNSZone():ALLOW
@@ -599,7 +600,7 @@ StatusDomainTrade():ALLOW
 StatusDomainTransfer():ALLOW
 StatusObjectLog():ALLOW
 StatusPremiumDNS():ALLOW
-StatusRoleUser(): ALLOW
+StatusRoleUser():ALLOW
 StatusSSLCert():ALLOW
 StatusUser():ALLOW
 TradeDomain():ALLOW
@@ -611,17 +612,17 @@ UpgradePremiumDNS():ALLOW
 Commands you need to login for our HEXONET frontend / Control Panel. Of course you can exclude the below commands, but note that some of them are also required for some of our modules, so double check first before simply excluding them.
 
 ```text
-GetUserIndex(): ALLOW
-GetEnvironment(): ALLOW
-SetEnvironment(): ALLOW
-QueryEnvironmentList(): ALLOW
-StatusUser(): ALLOW
-CheckAuthorization(): ALLOW
-StatusAccount(): ALLOW
-StartSession(): ALLOW
-EndSession(): ALLOW
-StatusRoleUser(): ALLOW
-ModifyUserPassword(): ALLOW
+GetUserIndex():ALLOW
+GetEnvironment():ALLOW
+SetEnvironment():ALLOW
+QueryEnvironmentList():ALLOW
+StatusUser():ALLOW
+CheckAuthorization():ALLOW
+StatusAccount():ALLOW
+StartSession():ALLOW
+EndSession():ALLOW
+StatusRoleUser():ALLOW
+ModifyUserPassword():ALLOW
 ```
 
 **whmcs-ispapi-premiumdns**:
@@ -678,7 +679,9 @@ QueryDNSZoneRRList():ALLOW
 QueryDomainList():ALLOW
 QueryDomainOptions():ALLOW
 QueryDomainPendingRegistrantVerificationList():ALLOW
+QueryDomainRepositoryInfo():ALLOW
 QueryDomainSuggestionList():ALLOW
+QueryObjectList():ALLOW
 QueryObjectLogList():ALLOW
 RenewDomain():ALLOW
 RequestDomainAuthInfo():ALLOW
