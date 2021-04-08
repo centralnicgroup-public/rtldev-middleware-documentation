@@ -2,19 +2,31 @@
 - name: HEXONET
   features:
     - name: "Leading WHMCS Integration"
+      url: whmcs/
       items:  
-        - Registrar Module
-        - Domain Search
-        - SSL Certs
-        - Migration Tool
+        - name: Registrar Module
+          url: whmcs-ispapi-registrar/
+        - name: Domain Search
+          url: whmcs-ispapi-domainchecker/
+        - name: SSL Certs
+          url: whmcs/whmcs-ispapi-ssl/
+        - name: Migration Tool
+          url: /cnic/whmcs/whmcs-migration/
     - name: "Blesta Integration"
+      url: "blesta/"
     - name: "DNSControl Integration"
+      url: "dnscontrol/"
+    - name: "Self-Development Kits"
+      url: "sdks/"
   github: "//github.com/hexonet/"
 
 - name: RRPproxy
   features:
     - name: "WHMCS Integration"
+      url: whmcs/
       items:  
-        - Registrar Module
-        - Migration Tool
+        - name: Registrar Module
+          url: whmcs-rrpproxy-registrar/
+        - name: Migration Tool
+          url: /cnic/whmcs/whmcs-migration/
   github: "//github.com/rrpproxy/"

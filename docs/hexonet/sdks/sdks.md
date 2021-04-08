@@ -4,7 +4,7 @@ title: SDKs
 parent: HEXONET
 nav_order: 5
 has_children: true
-permalink: /docs/sdks
+permalink: /docs/hexonet/sdks
 showtoc: 0
 ---
 

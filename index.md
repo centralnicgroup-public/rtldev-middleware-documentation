@@ -7,7 +7,7 @@ permalink: /
 
 # CentralNic Group PLC
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools.
 
 <!-- markdownlint-disable -->
 <div class="brands">
@@ -19,13 +19,22 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
     </div>
     <div class="card-body">
       {% for feat in brand.features %}
-        <span class="brand-feature">{{ feat.name }}</span>
         {% if feat.items %}
+        <span class="brand-feature">{{ feat.name }}</span>
         <ul class="brand-feature-list">
           {% for item in feat.items %}
-          <li>{{ item }}</li>
+            {% capture fc %}{{ item.url | slice: 0 }}{% endcapture %}
+            {% if fc == "/" %}
+            {% capture item_url %}docs{{ item.url }}{% endcapture %}
+            {% else %}
+            {% capture item_url %}docs/{{ brand.name | downcase }}/{{ feat.url }}{{ item.url }}{% endcapture %}
+            {% endif %}
+            <li><a href="{{ item_url | relative_url }}">{{ item.name }}</a></li>
           {% endfor %}
         </ul>
+        {% else %}
+        {% capture feat_url %}docs/{{ brand.name | downcase }}/{{ feat.url }}{% endcapture %}
+        <span class="brand-feature"><a href="{{ feat_url }}">{{ feat.name }}</a></span>
         {% endif %}
       {% endfor %}
     </div>
