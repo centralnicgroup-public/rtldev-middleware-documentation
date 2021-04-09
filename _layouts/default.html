@@ -148,17 +148,26 @@ layout: table_wrappers
           </ul>
         {% endif %}
 
-        {% capture footer_custom %}
+        {% capture footer_custom %} 
           {% if page.grand_parent %}
-            {%- include footer_{{ page.grand_parent | downcase | replace: " ", "" }}.html -%}
+            {% assign path = page.grand_parent | downcase | replace: " ", "" | prepend: "footer_" | append: ".html" %}
           {% elsif page.parent %}
-            {%- include footer_{{ page.parent | downcase | replace: " ", "" }}.html -%}
+            {% assign path = page.parent | downcase | replace: " ", "" | prepend: "footer_" | append: ".html" %}
           {% elsif page.has_children %}
-            {%- include footer_{{ page.title | downcase | replace: " ", "" }}.html -%}
+            {% assign path = page.title | downcase | replace: " ", "" | prepend: "footer_" | append: ".html" %}
           {% else %}
-            {%- include footer_custom.html -%}
+            {% assign path = "footer_custom.html" %}
+          {% endif %}
+          
+          {% capture fExists %}{% file_exists {{ path | prepend: "_includes/" }} %}{% endcapture %}
+          
+          {% if fExists == "true" and path %}
+            {% include {{ path }} %}
+          {% else %}
+            {% include footer_custom.html %}
           {% endif %}
         {% endcapture %}
+
         {% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
           <hr>
           <footer>
