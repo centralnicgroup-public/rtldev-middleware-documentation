@@ -21,6 +21,7 @@
   border-radius: 10px;
   padding: 2rem;
   margin: auto;
+  margin-bottom: 2rem;
   background-color: $sidebar-color;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -28,7 +29,7 @@
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.16), 0 10px 10px rgba(0, 0, 0, 0.23);
 }
 .brands .card .brand-feature-list li {
-  line-height: 1rem;
+  line-height: 1.5rem;
 }
 .brands .card .card-logo-container {
   height: 2.5rem;
@@ -39,6 +40,13 @@
 .brands .card .card-body {
   text-align: left;
   margin: 1rem 0;
+}
+.brands .card .card-footer .btn {
+  display:inline;
+}
+.brands .card .card-footer .btn:disabled {
+  background-color: lightgray;
+  color: darkgray;
 }
 .cb {
   clear: both;

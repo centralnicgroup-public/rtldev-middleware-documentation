@@ -13,6 +13,20 @@ WHMCS-based automatic Domain Migration and Consolidation Tool.
 We cover the development over a private github repository and the download is therefore not (yet) available in public.
 Get in touch with us, if you are interested in this Tool to get your Domain Portfolio migrated over.
 
+## Introduction
+
+This tool is made for migrations at point of domain renewal to minimize costs and for optional customer communication within the migration process to avoid transfer rejections.
+
+It cancels the domain renewal and instead initiates the Migration / Transfer. Still, the domain renewal order itself is left in WHMCS and is used for invoicing the transfer. **Only Domains in Status `Active`, `Expired` and `Grace Period (Expired)` are considered by the migration tool.** For all other cases the renewal will be processed. You can  [configure](#configure-renew-if-expired) if you want to migrate or to renew domains with status `Expired` and `Grace Period (Expired)`.
+
+Our Migration Tool will load the EPP / Authorization Code from db table `mig_domains` with fallback to the losing registrar's module. Lookup from DB Table is useful in case a losing registrar doesn't provide it in real time over `GetEPPCode` method e.g. Enom. So, for such registrars ensure that this table exists and is prefilled with EPP Codes accordingly, see [this section](#configure-epp-authorization-codes).
+Last step is to initiate the transfer using the gaining registrar's module.
+In addition this tool can care about informing your clients by mail about the process, see below. If a domain is locked, it will be unlocked for the transfer process automatically.
+
+Here a high-level process flow diagram on how it works:
+
+[![processflow]({{ 'assets/images/whmcs/migration/processflow.png' | relative_url }})]({{ 'assets/images/whmcs/migration/processflow.png' | relative_url }})
+
 ## Changelog
 
 * [TLDList](#configure-list-of-tlds-to-migrate) @ 13th October 2020
@@ -24,13 +38,6 @@ Get in touch with us, if you are interested in this Tool to get your Domain Port
 * [Blacklisting for TLDList](#configure-list-of-tlds-to-migrate) @ 12th January 2021
 
 NOTE: we changed the client email template's name to start with `MIGRATION_FIXED_` as the initial module version had been buggy in regards to client mail-out.
-
-## Introduction
-
-This tool is made for migrations at point of domain renewal to minimize costs and for optional customer communication within the migration process to avoid transfer rejections. Here a high-level process flow diagram on how it works:
-
-![processflow]({{ 'assets/images/whmcs/migration/processflow.png' | relative_url }})
-
 ## Some Impressions
 
 Error output in Domain Details in Admin Area:
@@ -40,14 +47,6 @@ Error output in Domain Details in Admin Area:
 Entries in the System Activity log:
 
 ![activitylog]({{ 'assets/images/whmcs/migration/activity_log.png' | relative_url }})
-
-## How does it exactly work
-
-It cancels the domain renewal and instead initiates the Migration / Transfer. Still, the domain renewal order itself is left in WHMCS and is used for invoicing the transfer. **Only Domains in Status `Active`, `Expired` and `Grace Period (Expired)` are considered by the migration tool.** For all other cases the renewal will be processed. You can  [configure](#configure-renew-if-expired) if you want to migrate or to renew domains with status `Expired` and `Grace Period (Expired)`.
-
-Our Migration Tool will load the EPP / Authorization Code from db table `mig_domains` with fallback to the losing registrar's module. Lookup from DB Table is useful in case a losing registrar doesn't provide it in real time over `GetEPPCode` method e.g. Enom. So, for such registrars ensure that this table exists and is prefilled with EPP Codes accordingly, see [this section](#configure-epp-authorization-codes).
-Last step is to initiate the transfer using the gaining registrar's module.
-In addition this tool can care about informing your clients by mail about the process, see below. If a domain is locked, it will be unlocked for the transfer process automatically.
 
 ## Features
 

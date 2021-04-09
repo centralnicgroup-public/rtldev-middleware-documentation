@@ -30,3 +30,47 @@
         - name: Migration Tool
           url: /cnic/whmcs/whmcs-migration/
   github: "//github.com/rrpproxy/"
+
+- name: TPP Wholesale
+  url: "tppw/"
+  features:
+    - name: "WHMCS Integration"
+      url: whmcs/
+      items:  
+        - name: Registrar Module
+          url: whmcs-tppw-registrar/
+        - name: Migration Tool
+          url: /cnic/whmcs/whmcs-migration/
+
+- name: internet.bs
+  url: "ibs/"
+  features:
+    - name: "WHMCS Integration"
+      url: whmcs/
+      items:  
+        - name: Registrar Module
+          url: whmcs-tppw-registrar/
+        - name: Migration Tool
+          url: /cnic/whmcs/whmcs-migration/
+  github: "//github.com/internetbs/"
+
+- name: Instra
+  url: "insta/"
+  features:
+    - name: "WHMCS Integration"
+      url: whmcs/
+      items:  
+        - name: Registrar Module
+          url: whmcs-tppw-registrar/
+        - name: Migration Tool
+          url: /cnic/whmcs/whmcs-migration/
+
+- name: TOWeb
+  url: "toweb/"
+  features:
+    - name: "WHMCS Integration"
+      url: whmcs/
+      items:  
+        - name: Registrar Module
+          url: whmcs-tppw-registrar/
+  github: "//github.com/toweb/"

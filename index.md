@@ -7,14 +7,14 @@ permalink: /
 
 # CentralNic Group PLC
 
-Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools.
+Find below CNIC Brands listed offering custom 3rd-party Software Integrations and Tools.
 
 <!-- markdownlint-disable -->
 <div class="brands">
   {% for brand in site.data.brands %}
   <div class="card">
     <div class="card-logo-container">
-      {% capture logo %}assets/images/brands/{{ brand.name | downcase }}.png{% endcapture %}
+      {% capture logo %}assets/images/brands/{{ brand.name | downcase | remove:" " }}.png{% endcapture %}
       <img class="card-logo" src="{{ logo | relative_url }}" alt="{{ brand.name }}" />
     </div>
     <div class="card-body">
@@ -41,7 +41,11 @@ Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools
     <div class="card-footer">
       {% capture brandlink %}docs/{{ brand.name | downcase }}{% endcapture %}
       <a href="{{ brandlink | relative_url }}" class="btn btn-primary">Read More</a>
+      {% if brand.github %}
       <a href="{{ brand.github }}" class="btn btn-primary" target="_blank">@GitHub</a>
+      {% else %}
+      <button type="button" class="btn btn-primary" disabled>@GitHub</button>
+      {% endif %}
     </div>
   </div>
   {% endfor %}
