@@ -98,6 +98,7 @@ color_scheme: light
 
 plugins:
   - jekyll-seo-tag
+  - jemoji
 
 markdown: kramdown
 kramdown:

@@ -13,6 +13,7 @@ showtoc: 1
 [![PyPI](//img.shields.io/pypi/v/hexonet.ispapicli.svg)](//pypi.org/project/hexonet.ispapicli/)
 
 aka. [**hexonet.ispapicli**](//pypi.org/project/hexonet.ispapicli/)
+
 ## Introduction
 
 This site provides documentation for the ISPAPI Command Line Client. Here you will find documentation for installing on several operating systems, namely Windows, macOS / OS X, and Debian derivates like Ubuntu.
@@ -42,13 +43,13 @@ This will show you how to use the tool:
 From this point on, you can follow the notes and run your desired command. However, here are few important notes for you:
 
 - Note that you can either use the equal sign "=" e.g. `--command = querydomainlist`, or
-- You can use spaces as a separator e.g. `--command querydomainlist"
+- You can use spaces as a separator e.g. `--command querydomainlist`
 - You may also use shortcuts, e.g. `-c` instead of `--command`, refer to the tool help command for more information about other commands
 
 You must login first in order to requrest a command, you can login by running the command:
 
 ```bash
-> ispapi -u = YOUR ID -p = YOUR PASSWORD -e = {ote,live}
+> ispapi -u YOUR ID -p YOUR PASSWORD -e {ote,live}
 ```
 
 ### 2 - Run it via GUI
@@ -73,7 +74,7 @@ This section provides you with a quick introduction to almost all the features i
 
 - You can execute any command of our backend system API, for more information read our [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }}).
 - For quick view of the command use the command: `--list` (see Fig.1)
-- To view how to use a specific command, run the command `--help = COMMAND-NAME`. e.g. `--help = querydomainlist`, the results as shown in Fig.2
+- To view how to use a specific command, run the command `--help COMMAND-NAME`. e.g. `--help querydomainlist`, the results as shown in Fig.2
 
 | ![List Commands]({{ 'assets/images/ispapicli/list.png' | relative_url }}) |
 | :-----------------------------------------------------------------: |
