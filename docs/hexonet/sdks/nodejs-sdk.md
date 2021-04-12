@@ -21,7 +21,7 @@ This module is a connector library for the insanely fast HEXONET Backend API. Fo
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
-* [UML Diagram]({{ 'docs/sdks/' | relative_url }})
+* [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
 * [SDK Documenation](//rawgit.com/hexonet/node-sdk/master/docs/typedoc/index.html)
 * [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }})
 

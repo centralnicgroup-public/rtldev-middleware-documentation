@@ -19,7 +19,7 @@ This module is a connector library for the insanely fast HEXONET Backend API. Fo
 
 ## Resources
 
-* [UML Diagram]({{ 'docs/sdks/' | relative_url }})
+* [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
 * [Class Documentation](//hexonet-python-sdk.readthedocs.io/en/latest/#sdk-documentation)
 * [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }})
 
