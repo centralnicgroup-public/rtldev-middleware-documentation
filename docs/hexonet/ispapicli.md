@@ -131,25 +131,28 @@ This Tool is available for several operating systems: Windows, macOS / OS X, and
 
 ### Executable Version
 
-- To download a portable and executable version of this tool, check out the [Release Overview](//github.com/hexonet/ispapicli/releases). _This option only available for Linux distributions_
+- To download a portable and executable version of this tool, check out the [Release Overview](//github.com/hexonet/ispapicli/releases). 
 - To create a portable/executable file on Windows or macOS, do the following steps:
 
-  1. Install “pyinstaller”:
+  1. Go to your cloned folder
+  2. Update “pyinstaller”:
+  
+     ```bash
+     > pip install --upgrade pyinstaller
+     ```
 
-  ```bash
-  > pip install --upgrade pyinstaller
-  ```
+  3. Install our dependecies:
+  
+     ```bash
+     > pip install --upgrade -e
+     ```
 
-  2. Go to your cloned folder and install the requirements:
+  4. Run:
 
-  ```bash
-  > pip install --upgrade -e
-  ```
+     ```bash
+      > cd hexonet/ispapicli
+      > pyinstaller --onefile ispapicli.py
+      > cd ../..
+     ```
 
-  3. Go to your cloned folder and navigate to directory `hexonet/ispapicli`, then run the following command:
-
-  ```bash
-  > pyinstaller --onefile ispapicli.py
-  ```
-
-  4. A folder called “dist” will be created in which the excutable file is located.
+This will create a folder called “dist” where you'll find the generated excutable.
