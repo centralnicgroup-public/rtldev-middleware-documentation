@@ -7,7 +7,7 @@ permalink: /
 
 # CentralNic Group PLC
 
-Find below CNIC Brands listed offering custom 3rd-party Software Integrations and Tools.
+Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools.
 
 <!-- markdownlint-disable -->
 <div class="brands">
