@@ -81,8 +81,7 @@ You can cover this as described [here](//docs.whmcs.com/Domains_Management#Movin
 
 ### 12. I am using WHMCS 7.6.*. I have configured correct credentials in the ISPAPI registrar module config settings. Still, it shows an error: "Disconnected". How can I fix this issue?
 
-WHMCS version 7.6 has a bug in the registrar module configuration page. You are already connected to our API even though WHMCS shows 'Disconnected'. In order to make sure that the connection was established, you can try to register a domain name with your account or you can use a test account if you have one.
-To avoid this issue, you need to upgrade your WHMCS to the newest version.
+WHMCS version 7.6 has a bug in the registrar module configuration page. You are already connected to our API even though WHMCS shows 'Disconnected'. To avoid this issue, you need to upgrade your WHMCS to the newest version.
 
 ### 13. I have registered the domain test.icu, but every time I see the Domain details, I get this warning:
 
@@ -478,7 +477,10 @@ There can be several issues for this:
   ```
 
   If this works, you should see a similar response as shown in the previous point.
-* WHMCS 7.6? Check [this FAQ entry]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#12-i-am-using-whmcs-76-i-have-configured-correct-credentials-in-the-ispapi-registrar-module-config-settings-still-it-shows-an-error-disconnected-how-can-i-fix-this-issue' | relative_url }})!
+* WHMCS 7.6?
+
+  WHMCS version 7.6 has a bug in the registrar module configuration page. You are already connected to our API even though WHMCS shows 'Disconnected'. To avoid this issue, you need to upgrade your WHMCS System.
+
 * username or password could be wrong
 * you probably mixup using OT&E system (TestMode checked) with using your production system credentials or vice versa. if you use your production account, ensure to have TestMode unchecked (and vice versa).
 * 2-Factor authentication is active - which can't be supported in WHMCS. detailed read [here](//github.com/hexonet/whmcs-ispapi-registrar/issues/128). Deactivate it, or better create a restrictive role user as described [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar/#hexonet-account-hardening' | relative_url }}).
