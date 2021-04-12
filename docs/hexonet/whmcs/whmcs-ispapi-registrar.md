@@ -74,8 +74,7 @@ We encourage our Resellers to stick on the latest WHMCS release for security rea
 - WHMCS 7.6+ or 8.x
 - Installed and working: curl, php-curl
 
-For the latest WHMCS minimum system requirements, please refer to
-[//docs.whmcs.com/System_Requirements](//docs.whmcs.com/System_Requirements)
+For the latest WHMCS minimum system requirements, please refer to [System_Requirements](//docs.whmcs.com/System_Requirements).
 
 ## Create your Account
 
