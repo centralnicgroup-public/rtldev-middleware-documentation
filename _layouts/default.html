@@ -150,21 +150,13 @@ layout: table_wrappers
 
         {% capture footer_custom %} 
           {% if page.grand_parent %}
-            {% assign path = page.grand_parent | downcase | replace: " ", "" | prepend: "footer_" | append: ".html" %}
+            {%- include footer_{{ page.grand_parent | downcase | replace: " ", "" }}.html -%}
           {% elsif page.parent %}
-            {% assign path = page.parent | downcase | replace: " ", "" | prepend: "footer_" | append: ".html" %}
+            {%- include footer_{{ page.parent | downcase | replace: " ", "" }}.html -%}
           {% elsif page.has_children %}
-            {% assign path = page.title | downcase | replace: " ", "" | prepend: "footer_" | append: ".html" %}
+            {%- include footer_{{ page.title | downcase | replace: " ", "" }}.html -%}
           {% else %}
-            {% assign path = "footer_custom.html" %}
-          {% endif %}
-          
-          {% capture fExists %}{% file_exists {{ path | prepend: "_includes/" }} %}{% endcapture %}
-          
-          {% if fExists == "true" and path %}
-            {% include {{ path }} %}
-          {% else %}
-            {% include footer_custom.html %}
+            {%- include footer_custom.html -%}
           {% endif %}
         {% endcapture %}
 
