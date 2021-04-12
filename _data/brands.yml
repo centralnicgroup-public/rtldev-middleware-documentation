@@ -11,7 +11,7 @@
         - name: SSL Certs
           url: whmcs/whmcs-ispapi-ssl/
         - name: Migration Tool
-          url: /cnic/whmcs/whmcs-migration/
+          url: whmcs-migration/
     - name: "Blesta Integration"
       url: "blesta/"
     - name: "DNSControl Integration"
@@ -28,7 +28,7 @@
         - name: Registrar Module
           url: whmcs-rrpproxy-registrar/
         - name: Migration Tool
-          url: /cnic/whmcs/whmcs-migration/
+          url: whmcs-migration/
   github: "//github.com/rrpproxy/"
 
 - name: TPP Wholesale
@@ -38,7 +38,7 @@
       url: whmcs/
       items:  
         - name: Registrar Module
-          url: whmcs-tppw-registrar/
+          url: /cnic/whmcs/#tpp-wholesale
         - name: Migration Tool
           url: /cnic/whmcs/whmcs-migration/
 
@@ -49,7 +49,7 @@
       url: whmcs/
       items:  
         - name: Registrar Module
-          url: whmcs-tppw-registrar/
+          url: /cnic/whmcs/#internetbs
         - name: Migration Tool
           url: /cnic/whmcs/whmcs-migration/
   github: "//github.com/internetbs/"
@@ -61,7 +61,7 @@
       url: whmcs/
       items:  
         - name: Registrar Module
-          url: whmcs-tppw-registrar/
+          url: /cnic/whmcs/#instra
         - name: Migration Tool
           url: /cnic/whmcs/whmcs-migration/
 
@@ -72,5 +72,7 @@
       url: whmcs/
       items:  
         - name: Registrar Module
-          url: whmcs-tppw-registrar/
+          url: /cnic/whmcs/#toweb
+        - name: Migration Tool
+          url: /cnic/whmcs/whmcs-migration/
   github: "//github.com/toweb/"

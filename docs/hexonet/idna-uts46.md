@@ -130,4 +130,6 @@ set of valid domain names. Since registrars shouldn't be accepting these names
 in the first place, a domain that violates these rules will simply fail to
 resolve.
 
-As the build process has been realized based on Python 2 - we were not able to upgrade the Unicode Standard to the latest one. Porting this to Python 3 or even Node.js, is a big and hard project - any help: very appreciated.
+## We need your help
+
+The original author wrote the build process based on Python 2 which makes it hard to upgrade the Unicode Standard to the latest one. Porting this process to Python 3 or even better Node.js, is a big and hard project - any help: very appreciated.
