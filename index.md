@@ -27,7 +27,7 @@ Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools
             {% if fc == "/" %}
             {% capture item_url %}docs{{ item.url }}{% endcapture %}
             {% else %}
-            {% capture item_url %}docs/{{ brand.name | downcase }}/{{ feat.url }}{{ item.url }}{% endcapture %}
+            {% capture item_url %}docs/{{ brand.name | downcase | replace: " ", "" }}/{{ feat.url }}{{ item.url }}{% endcapture %}
             {% endif %}
             <li><a href="{{ item_url | relative_url }}">{{ item.name }}</a></li>
           {% endfor %}
@@ -39,7 +39,14 @@ Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools
       {% endfor %}
     </div>
     <div class="card-footer">
-      {% capture brandlink %}docs/{{ brand.name | downcase }}{% endcapture %}
+      {% capture isprotocol %}{{ brand.url | slice: 0, 8 }}{% endcapture %}
+      {% if isprotocol == "https://" %}
+        {% capture brandlink %}{{ brand.url }}{% endcapture %}
+      {% elsif brand.url %}
+        {% capture brandlink %}docs/{{ brand.url }}/{% endcapture %}
+      {% else %}
+        {% capture brandlink %}docs/{{ brand.name | downcase | replace: " ", "" }}/{% endcapture %}
+      {% endif %}      
       <a href="{{ brandlink | relative_url }}" class="btn btn-primary">Read More</a>
       {% if brand.github %}
       <a href="{{ brand.github }}" class="btn btn-primary" target="_blank">@GitHub</a>

@@ -32,7 +32,7 @@
   github: "//github.com/rrpproxy/"
 
 - name: TPP Wholesale
-  url: "tppw/"
+  url: "https://www.tppwholesale.com.au/"
   features:
     - name: "WHMCS Integration"
       url: whmcs/
@@ -43,7 +43,7 @@
           url: /cnic/whmcs/whmcs-migration/
 
 - name: internet.bs
-  url: "ibs/"
+  url: "https://internetbs.net/"
   features:
     - name: "WHMCS Integration"
       url: whmcs/
@@ -55,7 +55,7 @@
   github: "//github.com/internetbs/"
 
 - name: Instra
-  url: "insta/"
+  url: "https://www.instra.com/"
   features:
     - name: "WHMCS Integration"
       url: whmcs/
@@ -66,7 +66,7 @@
           url: /cnic/whmcs/whmcs-migration/
 
 - name: TOWeb
-  url: "toweb/"
+  url: "https://toweb.ch/"
   features:
     - name: "WHMCS Integration"
       url: whmcs/
