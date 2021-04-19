@@ -30,7 +30,8 @@
         - name: Migration Tool
           url: whmcs-migration/
     - name: "cPanel Integration"
-  github: "//github.com/rrpproxy/cpanel"
+      url: cpanel/    
+  github: "//github.com/rrpproxy/"
 
 - name: TPP Wholesale
   url: "https://www.tppwholesale.com.au/"
