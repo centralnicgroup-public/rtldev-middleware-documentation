@@ -13,4 +13,6 @@ showtoc: 0
 We have a [cPanel](https://cpanel.net/) module available, please ask for it.
 It will be in future available as OpenSource Project on GitHub too.
 
+[Features and FAQs](https://wiki.rrpproxy.net/hosting/cpanel).
+
 [This related article](https://docs.whmcs.com/CPanel/WHM) might be of interest for WHMCS Resellers.
