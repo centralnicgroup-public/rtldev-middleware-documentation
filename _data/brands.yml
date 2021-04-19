@@ -29,7 +29,8 @@
           url: whmcs-rrpproxy-registrar/
         - name: Migration Tool
           url: whmcs-migration/
-  github: "//github.com/rrpproxy/"
+    - name: "cPanel Integration"
+  github: "//github.com/rrpproxy/cpanel"
 
 - name: TPP Wholesale
   url: "https://www.tppwholesale.com.au/"
