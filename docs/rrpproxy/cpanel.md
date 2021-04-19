@@ -4,7 +4,7 @@ title: cPanel
 nav_order: 2
 has_children: false
 parent: RRPproxy
-permalink: /docs/rrpproxy/cpanel
+permalink: /docs/rrpproxy/cpanel/
 showtoc: 0
 ---
 
