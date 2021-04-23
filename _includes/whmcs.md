@@ -43,7 +43,13 @@ The RRPproxy Registrar Module does **not** support Premium Domain Names right no
 
 ### TPP WholeSale
 
-The TPP WholeSale Registrar Module is shipped with WHMCS. There's no self-maintained Module available.
+The TPP WholeSale Registrar Module is shipped with WHMCS. The Team at TPP maintains its own version of this Registrar Module which should be used _instead_ of the WHMCS built-in Module. Find it [here](//tppwholesale.com.au/download/tppwregistrar.zip).
+
+### PartnerGate
+
+PartnerGate is a specialist for domain management on a global scale. PartnerGate is selected by wholesale clients as their premium professional internet partner. With PartnerGate’s domain management system, resellers of all sizes can administer and manage domains under all available top-level domains in a fully automated manner.
+
+The Team at PartnerGate maintains its a custom Registrar Module for WHMCS. Contact their Support to receive it.
 
 ### internet.bs
 
