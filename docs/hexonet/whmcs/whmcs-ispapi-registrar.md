@@ -39,6 +39,7 @@ Back to topic, here the steps describing how to start with us using WHMCS.
   - Nameserver Registration & Management
   - Get EPP Code
 - Domain Release / Explicit Deletions
+- Domain Restore
 - [DNS Management](#ns--dns-management)
   - Record-Types: A, AAAA, MX, MXE, CNAME, TXT, [SRV](#srv-records)
   - Allows user defined TTL values and MX priorities
