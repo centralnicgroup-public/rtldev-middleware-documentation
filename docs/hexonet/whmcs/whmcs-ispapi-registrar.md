@@ -39,7 +39,7 @@ Back to topic, here the steps describing how to start with us using WHMCS.
   - Nameserver Registration & Management
   - Get EPP Code
 - Domain Release / Explicit Deletions
-- Domain Restore
+- [Domain Restore](#domain-restore)
 - [DNS Management](#ns--dns-management)
   - Record-Types: A, AAAA, MX, MXE, CNAME, TXT, [SRV](#srv-records)
   - Allows user defined TTL values and MX priorities
@@ -325,6 +325,23 @@ This feature allows your customers to add DS and KEY records and set the maxSigL
 
 ![dnssec]({{ 'assets/images/whmcs/ispapi-registrar/dnssec_management_support.png' | relative_url }})
 
+## Domain Restore
+
+We introduced the support of Domain Restores with v4.8.0 of our Registrar Module. As Domain Restores are very poorly documented, here some additional information about how this works.
+
+Read the article ["Domain Grace and Redemption Grace Periods"](https://docs.whmcs.com/Domain_Grace_and_Redemption_Grace_Periods) of the WHMCS Documentation.
+
+So, Domain Restores are in WHMCS covered over Renewals. Whenever a Domain is in Redemption Grace Periods, we will display it as follows:
+
+![Domain in Redemption Grace Period]({{ 'assets/images/whmcs/ispapi-registrar/restore_domainstatus.png' | relative_url }})
+
+If you trigger a Renewal for such a Domain, WHMCS will include additional Redemption Fees in the related invoice:
+
+[![Domain Restore Invoice]({{ 'assets/images/whmcs/ispapi-registrar/restore_invoice.png' | relative_url }})]({{ 'assets/images/whmcs/ispapi-registrar/restore_invoice.png' | relative_url }})
+
+After Payment, WHMCS will then invoke the Registrar Module accordingly. We execute the Restore and if necessary also followed by a Renewal.
+This might be necessary in case of multi-year Restores where the Restore Period our System uses differs from the Renewal Period provided by WHMCS.
+
 ## Additional Domain Fields
 
 The registration of some domain extensions requires sometimes additional domain fields (e.g. Legal Type and CIRA Agreement for .CA domain).
@@ -410,7 +427,6 @@ In order to see premium domain name suggestions in the search results, configure
 In order to configure your price markups for premium domains, you can use the “Configure” button.
 
 ![premium_conf]({{ 'assets/images/whmcs/ispapi-registrar/premium_domains_configuration.png' | relative_url }})
-
 
 ## Better Domain Search
 
