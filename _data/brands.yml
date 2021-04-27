@@ -34,17 +34,6 @@
   github: "//github.com/rrpproxy/"
 
 - name: TPP Wholesale
-  url: "https://www.partnergate.com/"
-  features:
-    - name: "WHMCS Integration"
-      url: whmcs/
-      items:  
-        - name: Registrar Module
-          url: /cnic/whmcs#partnergate
-        - name: Migration Tool
-          url: /cnic/whmcs/whmcs-migration/
-
-- name: PartnerGate
   url: "https://www.tppwholesale.com.au/"
   features:
     - name: "WHMCS Integration"
@@ -52,6 +41,17 @@
       items:  
         - name: Registrar Module
           url: /cnic/whmcs#tpp-wholesale
+        - name: Migration Tool
+          url: /cnic/whmcs/whmcs-migration/
+
+- name: PartnerGate
+  url: "https://www.partnergate.com/"
+  features:
+    - name: "WHMCS Integration"
+      url: whmcs/
+      items:  
+        - name: Registrar Module
+          url: /cnic/whmcs#partnergate
         - name: Migration Tool
           url: /cnic/whmcs/whmcs-migration/
 
