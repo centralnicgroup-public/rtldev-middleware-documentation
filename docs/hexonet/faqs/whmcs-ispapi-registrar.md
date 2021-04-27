@@ -402,6 +402,7 @@ To cover this in a semi-automated way we have recently applied changes to the IS
 That said, it is not a WHMCS issue in general, just something that affects the transfer process because of introduced GDPR (at registry side, probably enforced by ICANN).
 
 ### 46. I've noticed that while testing, my DNS Zone wasn't created for the purchased domain. WHMCS register the domain but stopped showing the DNS  link. On Hexonet side, the nameservers are being identified as External.
+
 I'm using different names for the nameserver (ns5.test.network, ns6.test.network and ns7.test.network), but it matches the same IPs os ns1, ns2 and ns3. hexonet.net.
 What could be the problem? Previously it was working fine.
 
@@ -412,7 +413,6 @@ from a source code point of view, it might just be an issue that you have not ac
 The DNS Management addon finally adds the parameter INTERNALDNS with value 1 to the AddDomain command which is finally processed by our backend system.
 
 This parameter cares about creating an internal DNS zone.
-
 
 ### 47. I registered a new domain (test.com & testq.com) with DNS Management Addon, but still, the DNS Zone wasn't created. The same happens if I enable DNS management on the domain (blup.com) which was off.
 
@@ -437,7 +437,21 @@ Once you've created the zone, you will be able to update the nameservers for you
 
 ### 49. Login failed in registrar module
 
-There can be several issues for this:
+The easiest way to solve this, is probably to create a new User Role under your Account and to use it in the registrar module configuration. This removes the debug effort completely and helps you in short.
+
+Login to our Frontend here: [LIVE System](https://account.hexonet.net/) or [OT&E System](https://account-ote.hexonet.net/).
+Then click on your User Name in the upper right and navigate to "Settings > Share Access".
+In the upper right, you'll find a button for adding a new Role User - click it. Provide your data as follows:
+
+[![Create User Role]({{ 'assets/images/whmcs/ispapi-registrar/role_user.png' | relative_url }})]({{ 'assets/images/whmcs/ispapi-registrar/role_user.png' | relative_url }})
+
+Then skip the next Steps by just confirming using Button "Next". Now, reconfigure our Registrar Module as follows:
+
+[![Use a User Role in WHMCS]({{ 'assets/images/whmcs/ispapi-registrar/role_user_whmcs.png' | relative_url }})]({{ 'assets/images/whmcs/ispapi-registrar/role_user_whmcs.png' | relative_url }})
+
+NOTE: Ensure to separate your account id and the user role id by "!" as shown in the screenshot.
+
+**Voilà! Connection successfully estabilished.** You can stop here. If you were not able to establish a connection, reach out to us and ask for help or go through the steps below:
 
 * Ensure a ping is going through - otherwise, there's a network or setup error (firewall etc.).
 
