@@ -63,10 +63,4 @@ Instra focuses on resellers and self-serve mid-cap corporate customers. It provi
 
 The instra Registrar Module for WHMCS can be obtained from the [instra team](//www.instra.com/).
 
-### toweb
-
-Toweb is focused on the Latin American market and has emerged as one of the leading Brazilian companies for the distribution and management of domains. Many of the world’s largest registrars use the Toweb service, which is ideal for registrars and resellers wishing to differentiate themselves from competitors by offering a much larger portfolio.
-
-The toweb Registrar Module can be downloaded over the WHMCS Marketplace [here](https://marketplace.whmcs.com/product/1934-toweb).
-
 {: .fs-6 .fw-300 }
