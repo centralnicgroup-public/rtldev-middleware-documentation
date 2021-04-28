@@ -77,15 +77,3 @@
           url: /cnic/whmcs#instra
         - name: Migration Tool
           url: /cnic/whmcs/whmcs-migration/
-
-- name: TOWeb
-  url: "https://toweb.ch/"
-  features:
-    - name: "WHMCS Integration"
-      url: whmcs/
-      items:  
-        - name: Registrar Module
-          url: /cnic/whmcs#toweb
-        - name: Migration Tool
-          url: /cnic/whmcs/whmcs-migration/
-  github: "//github.com/toweb/"
