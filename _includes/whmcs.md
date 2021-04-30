@@ -49,7 +49,7 @@ The TPP WholeSale Registrar Module is shipped with WHMCS. The Team at TPP mainta
 
 PartnerGate is a specialist for domain management on a global scale. PartnerGate is selected by wholesale clients as their premium professional internet partner. With PartnerGate’s domain management system, resellers of all sizes can administer and manage domains under all available top-level domains in a fully automated manner.
 
-The Team at PartnerGate maintains its a custom Registrar Module for WHMCS. Contact their Support to receive it.
+The Team at PartnerGate has its custom Registrar Module for WHMCS. Contact their Support to receive it "as it is", compatibel wit WHMCS < v7.0.
 
 ### internet.bs
 
