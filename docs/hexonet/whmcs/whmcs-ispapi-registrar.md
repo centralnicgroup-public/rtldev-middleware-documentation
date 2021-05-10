@@ -176,9 +176,11 @@ Find the `HEXONET/ispapi` Module in the list and activate it. If you're not able
 Now, configure this Module by entering your credentials (OT&E or LIVE System Account).
 Activate `TestMode` by activating the checkbox in case you want to use the OT&E System - just ensure you don't mix it up with LIVE System Credentials or vice versa.
 
-Activate `Automatic Transfer Lock` setting by using the appropriate checkbox to ensure outgoing transfers can't be initiated in ease. We suggest that setting not because it could be better for us as registrar - it helps securing your domain names from getting transferred out in ease.
+Activate `Automatic Transfer Lock` setting by using the appropriate checkbox to ensure outgoing transfers can't be initiated in ease. We suggest that setting as it helps securing your domain names from getting transferred out in ease.
 
 Activate `Automatic NS Update` setting in case you want our module to update domain's nameservers automatically after successful transfer. Just a little note: WHMCS itself by default suggests your configured default nameservers. This setting will automatically update the nameservers after successful transfer without knowing if the customer set these nameservers or if WHMCS did it. Removing all nameservers from input fields in step Configure in WHMCS' Shopping Cart won't change anything as WHMCS keeps then using the default nameservers. So, be aware of that design issue of WHMCS for Transfer Orders when using that feature. Read [FAQ Entry #25]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#25-nameservers-not-updated-after-transfer' | relative_url }}) for more details.
+
+Activate `Automatic Contact Update` setting in case you want our module to update your .com/.net/.cc/.tv domain's contact details automatically after successful transfer. The mechanism will care about updating the related registrant contact details to the data of the client who initiated the transfer. It also cares about updating admin/tech/billing contact details as configured in WHMCS. This mechanism will only be updating domain names where we were not able to parse Contact Details out of WHOIS Data after successful transfer because of active WHOIS Privacy / id protection service (Hint: "Redacted for Privacy").
 
 At `IRTP (Inter-Registrar Transfer Policy)` setting, we suggest using `Option 1` to activate the default WHMCS way of the IRTP integration. Find further details documented below.
 
