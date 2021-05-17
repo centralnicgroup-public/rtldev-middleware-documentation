@@ -244,7 +244,7 @@ Read [here](https://docs.whmcs.com/Domains_Configuration#Customising_Domain_Name
 Add the below code snippet to your `configuration.php`:
 
 ```php
-// generated on 2021-05-13
+// generated on 2021-05-17
 $DomainRenewalMinimums[".amsterdam"] = "61";
 $DomainRenewalMinimums[".at"] = "61";
 $DomainRenewalMinimums[".be"] = "61";
