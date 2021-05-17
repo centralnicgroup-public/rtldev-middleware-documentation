@@ -190,6 +190,50 @@ If you want to offer our Web Apps to your customers, activate the `Offer Web App
 
 Now, press Save and voilà. If you're getting a green message - you're connected. Otherwise, you have to investigate further as described [here]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#49-login-failed-in-registrar-module' | relative_url }}).
 
+### Domain Renewal Restrictions
+
+NOTE: This step is mandatory!
+
+Read [here](https://docs.whmcs.com/Domains_Configuration#Customising_Domain_Name_Length_Restrictions) about how to customize the Domain Renewal Restrictions.
+
+Add the below code snippet to your `configuration.php`:
+
+```php
+// generated on 2021-05-13
+$DomainRenewalMinimums[".amsterdam"] = "61";
+$DomainRenewalMinimums[".at"] = "61";
+$DomainRenewalMinimums[".be"] = "61";
+$DomainRenewalMinimums[".ch"] = "61";
+$DomainRenewalMinimums[".co.at"] = "61";
+$DomainRenewalMinimums[".com.ar"] = "61";
+$DomainRenewalMinimums[".com.lv"] = "61";
+$DomainRenewalMinimums[".com.ru"] = "61";
+$DomainRenewalMinimums[".com.ve"] = "61";
+$DomainRenewalMinimums[".co.ve"] = "61";
+$DomainRenewalMinimums[".de"] = "61";
+$DomainRenewalMinimums[".dk"] = "61";
+$DomainRenewalMinimums[".info.ve"] = "61";
+$DomainRenewalMinimums[".it"] = "61";
+$DomainRenewalMinimums[".jp"] = "61";
+$DomainRenewalMinimums[".li"] = "61";
+$DomainRenewalMinimums[".lu"] = "61";
+$DomainRenewalMinimums[".lv"] = "61";
+$DomainRenewalMinimums[".net.lv"] = "61";
+$DomainRenewalMinimums[".net.ru"] = "61";
+$DomainRenewalMinimums[".net.ve"] = "61";
+$DomainRenewalMinimums[".nl"] = "61";
+$DomainRenewalMinimums[".no"] = "61";
+$DomainRenewalMinimums[".or.at"] = "61";
+$DomainRenewalMinimums[".org.lv"] = "61";
+$DomainRenewalMinimums[".org.ru"] = "61";
+$DomainRenewalMinimums[".org.ve"] = "61";
+$DomainRenewalMinimums[".pp.ru"] = "61";
+$DomainRenewalMinimums[".ru"] = "61";
+$DomainRenewalMinimums[".web.ve"] = "61";
+```
+
+The registries behind these TLDs do not support explicit renewals. We start accepting their renewal orders 61 days prior to expiration and we will forward the renewal to their systems as soon as they allow for it.
+
 ### Domain Contact Verification
 
 It governs the domain name transfers between ICANN registrars. The Inter-Registrar Transfer Policy (IRTP) includes changes to domain ownership. Small changes to a domain name’s registrar first name, last name, organization, and email address trigger the validation process.
