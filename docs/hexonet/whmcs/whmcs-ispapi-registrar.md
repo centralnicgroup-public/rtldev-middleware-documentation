@@ -171,7 +171,7 @@ Now, navigate in your WHMCS instance to `Setup > Products/Services > Domain Regi
 There, ensure to have the `HEXONET` module **deactivated**.
 Find the `HEXONET/ispapi` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
 
-![configuration]({{ 'assets/images/whmcs/ispapi-registrar/config.png' | relative_url }})
+[![configuration]({{ 'assets/images/whmcs/ispapi-registrar/config.png' | relative_url }})]({{ 'assets/images/whmcs/ispapi-registrar/config.png' | relative_url }})
 
 Now, configure this Module by entering your credentials (OT&E or LIVE System Account).
 Activate `TestMode` by activating the checkbox in case you want to use the OT&E System - just ensure you don't mix it up with LIVE System Credentials or vice versa.
@@ -189,6 +189,16 @@ If you want to offer secure DNS / DNSSEC / Secure DNS, feel also free to activat
 If you want to offer our Web Apps to your customers, activate the `Offer Web Apps` checkbox. Find further details documented below.
 
 Now, press Save and voilà. If you're getting a green message - you're connected. Otherwise, you have to investigate further as described [here]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#49-login-failed-in-registrar-module' | relative_url }}).
+
+Activate `Transfer Checkout Pre-Checks` setting in case you want to have Domain Transfer Orders pre-checked. We validate if initiating the Transfer would succeed - so, if:
+
+- the given eppcode / Authorization Code is correct,
+- the Domain Name is unlocked
+- etc.
+
+If something fails, it would look like shown below:
+
+![Transfer Checkout Pre-Checks]({{ 'assets/images/whmcs/ispapi-registrar/transferprecheck.png' | relative_url }})
 
 ### Domain Contact Verification
 
@@ -231,6 +241,7 @@ This feature can be enabled in the Registrar Module configuration. When enabled,
 For now, we only have integrated `G Suite`, just let us know if further Web Apps are of high demand for you. Here the ones HEXONET in general supports on API-side: [Web Apps](//www.hexonet.net/products/webapps).
 
 Here some impressions:
+
 ![Web App Overview]({{ 'assets/images/whmcs/ispapi-registrar/webapps1.png' | relative_url }})
 ![Web App Connecting]({{ 'assets/images/whmcs/ispapi-registrar/webapps2.png' | relative_url }})
 ![Web App Disconnecting]({{ 'assets/images/whmcs/ispapi-registrar/webapps3.png' | relative_url }})
