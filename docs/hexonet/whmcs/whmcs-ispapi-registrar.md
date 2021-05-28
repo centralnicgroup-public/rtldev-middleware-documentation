@@ -339,35 +339,17 @@ If you want to use your own branded nameservers, but our DNS behind the scenes, 
 
 ### SRV Records
 
-WHMCS doesn't allow SRV records. Our module makes it possible!
+WHMCS doesn't allow SRV records. Our module makes it possible! We have WHMCS templates customized to introduce the SRV Resource Record to WHMCS.
 
-In order to activate that you have to update the clientareadomaindns.tpl file in your template directory.
+Find the Template File for
 
-In this file you will find 2 `<select>` tags. In the first you will have to add the following code:
+- the Six Theme [here](https://raw.githubusercontent.com/hexonet/whmcs-ispapi-registrar/master/modules/registrars/ispapi/templates/six/clientareadomaindns.tpl)
+- the Twenty-One [here](https://raw.githubusercontent.com/hexonet/whmcs-ispapi-registrar/master/modules/registrars/ispapi/templates/twenty-one/clientareadomaindns.tpl).
 
-```php
-<option value="SRV"{if $dnsrecord.type eq "SRV"} selected="selected"{/if} >SRV</option>
-```
+First make a backup of the `clientaredomaindns.tpl` template file of your current theme in use.
+Then replace it with our template file.
 
-In the second you should add:
-
-```php
-<option value="SRV">SRV</option>
-```
-
-Between the 2 tags, there is an if statement, here you have to replace
-
-```php
-{if $dnsrecord.type eq "MX"}
-```
-
-with
-
-```php
-{if $dnsrecord.type eq "MX" || $dnsrecord.type eq "SRV"}
-```
-
-Now you are ready to support SRV records!
+Voilà, now you are ready to support SRV records!
 
 ### DNSSEC Management
 
