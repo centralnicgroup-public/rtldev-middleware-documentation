@@ -33,6 +33,7 @@ The ISPAPI SSL Module supports the following functions and features:
   - Load available SSL certificates and import them under a product group
   - Bulk price update by using a profit margin
   - Multicurrency support
+  - Import product logos and descriptions
 
 ## Requirements
 
@@ -84,10 +85,17 @@ You can do so manually, or automatically by using our convenient addon.
 
 ### Wizard Mode
 
-1. Open the `ISPAPI SSL` Addon in the WHMCS Admin Area
-2. Configure price margin, rounding and further settings to your liking
-3. Tick the checkboxes on the products you wish to import or update
-4. Press the Import button
+1. Open the `ISPAPI SSL` Addon in the WHMCS Admin Area.
+2. Fill out the form to your liking.
+   - `Margin type`: Percentage or Fixed Amount.
+   - `Profit margin`: percentage value or amount in your default currency.
+   - `Round to Next`: select the desired rounding value.
+   - `Apply rounding to all currencies`: if active, the rounding will be applied to the prices for currencies.
+   - `Automatic Registration`: select the desired automatic registration behavior for the products.
+   - `Generate product descriptions`: this will add provider logos and feature highlights to the imported products. The recommended Order Form Template to leverage this information is Supreme Comparison.
+   - `Generate product groups`: this will create one product group per provider with group features. If disabled, all products will be assigned to the same product group. Existing products are not affected.
+3. Tick the checkboxes on the products you wish to import or update.
+4. Press the Import button. Existing products will be updated, missing products will be automatically created.
 
 ![GUI]({{ 'assets/images/whmcs/ispapi-ssl/addon.gif' | relative_url }})
 
