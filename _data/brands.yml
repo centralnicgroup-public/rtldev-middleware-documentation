@@ -12,6 +12,8 @@
           url: whmcs/whmcs-ispapi-ssl/
         - name: Migration Tool
           url: whmcs-migration/
+        - name: DNS Addon
+          url: whmcs-dns/
     - name: "Blesta Integration"
       url: "blesta/"
     - name: "DNSControl Integration"
@@ -29,6 +31,8 @@
           url: whmcs-rrpproxy-registrar/
         - name: Migration Tool
           url: whmcs-migration/
+        - name: DNS Addon
+          url: whmcs-dns/
     - name: "cPanel Integration"
       url: cpanel/    
   github: "//github.com/rrpproxy/"
