@@ -107,7 +107,7 @@ Note: The renewal mode setting is only applied to new domain registrations in yo
 
 ## Upgrading our Module
 
-**IMPORTANT** Ensure to read the [Release Notes](//github.com/hexonet/whmcs-ispapi-registrar/releases) carefully before Upgrading! Our Release numbers follow [semantic versioning](//semver.org/) and thus we follow the version syntax: MAJOR.MINOR.PATCH.
+**IMPORTANT** Ensure to read the [Release Notes](//github.com/hexonet/whmcs-ispapi-registrar/releases) carefully before Upgrading! Our Release numbers follow [semantic versioning](//semver.org/) and thus we follow the version syntax: MAJOR.MINOR.PATCH. Please ensure to backup your current version's folder to have a fallback possibility you can use, just in case there's something wrong with our new version.
 
 ![Semantic Versioning]({{ 'assets/images/semver.png' | relative_url }})
 
@@ -120,17 +120,13 @@ If you're upgrading regularly and keeping all our modules / addons / widgets upd
 
 ## Installing our Module
 
-The `HEXONET` Module that is shipped with WHMCS is maintained by the WHMCS Core Team and as Change Request took to long, we decided to work on our own Module Version. We highly recommend downloading and installing our white label module `HEXONET/ispapi` which is our maintained version and providing you latest features and patches. Available for download [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip).
+The `HEXONET` Module that is shipped with WHMCS is maintained by the WHMCS Core Team and as Pull Requests took to long, we decided to work on our own Module Version. We highly recommend downloading and installing our white label module `HEXONET/ispapi` which is our maintained version and providing you latest features and patches. Available for download [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip).
 
+- When upgrading: Backup your current module version (folder `modules/registrars/ispapi`) and then delete that folder
 - Download the ZIP archive and extract it to your HDD
-- Copy the contents of folder e.g. `modules/registrars` to the appropriate/matching folder of your WHMCS instance `modules/registrars`.
-
-For non-technicians the above step covers in detail:
-
-1. Navigate to the extracted folder of that zip archive. Go into that folder.
-2. Below that sub folder, you again find a sub folder named `modules`. Go into that folder.
-3. Below that sub folder, you again find a sub folder named `registrars`. Go into that folder.
-4. Here you'll find a subfolder named `ispapi`. Copy that folder with all its contents into the sub folder `/modules/registrars` of your WHMCS installation.
+- Copy the folder `modules` into the root directory of your WHMCS instance
+- If you want to use our Transliteration, please copy the folder `includes` into the root directory of your WHMCS instance. Our Transliteration just cares about replacing Greek characters with Greeklish ones in contact data and replacing HTML Entities with their related character pendant.
+- Copy the folder `lang` into the root directory of your WHMCS instance. First check if you have language override files there already in place and if our files would override them. If so, please merge our translations into the existing files.
 
 For cPanel users: Use [this video](//www.youtube.com/watch?v=SNtldWg_0gY) on how to upload and extract a ZIP archive using your cPanel. Use [this video](//www.youtube.com/watch?v=T7OYIOwyWvU) on how to find the `public_html` folder in your cPanel. In there you'll find a subfolder `gwcorp` or `whmcs` containing again a subfolder `modules` and then the subfolder `registrars`. Please copy the above mentioned folder of our zip archive into that folder.
 
@@ -138,8 +134,6 @@ For non cPanel users: check location `/var/www/whmcs` (default path) or eventual
 
 ![cPanel, ZIP file structure]({{ 'assets/images/whmcs/ispapi-registrar/cpanel1.png' | relative_url }})
 ![cPanel, WHMCS folder structure]({{ 'assets/images/whmcs/ispapi-registrar/cpanel2.png' | relative_url }})
-
-**NOTE: If you're upgrading** - please first delete the `modules/registrars/ispapi` folder in your WHMCS instance first.
 
 Note: Feel free to add yourself as Watcher to that github repository by clicking on the `Watch` button at the top of the page and then choose `Releases Only`.
 We are aware of that installation and upgrade effort of our module is something we need to minimize. We have projects in queue to achieve that and to cover a lot more.
@@ -383,6 +377,8 @@ This might be necessary in case of multi-year Restores where the Restore Period 
 
 ## Additional Domain Fields
 
+**NOTE**: Since Version 6 of our Registrar Module, no need to worry about this configuration section any longer.
+
 The registration of some domain extensions requires sometimes additional domain fields (e.g. Legal Type and CIRA Agreement for .CA domain).
 
 In order to provide this additional fields on the registration page and map them with our module, you have to  inject our HEXONET specific configuration in the **$additionaldomainfields** array.
@@ -494,6 +490,8 @@ An alternative manual Way of Importing is described [here](//docs.whmcs.com/Migr
 
 ## WHOIS Privacy Management
 
+(Deprecated)
+
 The registrar module fully supports the WHOIS Privacy service WHOISTRUSTEE.com:
 
 ![whoistrustee]({{ 'assets/images/whmcs/ispapi-registrar/whois_trustee.gif' | relative_url }})
@@ -514,23 +512,27 @@ The new WHOIS Privacy page looks as follows (protection is enabled in the exampl
 
 ### .CA WHOIS Privacy
 
+(Deprecated)
+
 The new Registrant related WHOIS Privacy for .CA domain names looks as follows (protection is enabled in the example):
 
 ![ca_whois_privacy]({{ 'assets/images/whmcs/ispapi-registrar/ca_registrant_whois_privacy.png' | relative_url }})
 
 ## Specials
 
-### UTF-8 Support
+### Translations
 
-For **WHMCS < 5**, if the system charset for WHMCS is set to utf8, the ISPAPI module will enable some workarounds to support UTF-8 for domain registrations, transfers, and contact updates.
+With v6 of our Registrar Module, we have introduced a Translation Mechanism that is allowing us to translate our Module's Texts in Client Area.
 
-For **WHMCS >= 5**, it uses the original unmodified parameters as provided by the system.
+Find our translation files in the `lang` folder of our ZIP Archive. As long as you don't have language override files already in use in your system, just copy that folder into your WHMCS System's root directory. Otherwise, please merge our translations into the existing ones. Please cover this step after each module upgrade.
 
-**WHMCS >= 6** decided to strip the umlauts in domain names and contacts. This module is able to fix this issue and will keep the umlauts.
+### Transliteration
 
-In any case, the module is able to handle umlauts and special characters in whois data, as long as the respective registry supports it.
+Since Version 6 of our Registrar Module we started considering WHMCS' transliterated data for contact data in Registrations, Transfers and Contact Information Updates.
 
-For registries that don't support umlauts, some characters will be mapped automatically, e.g. é to e, ö to oe and so on.
+We ignored this in the past as WHMCS in Version < v7 had a lot trouble regarding Transliterations. Our Module offers a ready-to-use transliteration approach that replaces HTML Entities with their UTF-8 Pendants and maps Greek Characters to so-called Greeklish ones. Copy folder `includes` from our ZIP Archive to your WHMCS System's root directory. Please cover this step after each module upgrade.
+
+Read [here](https://docs.whmcs.com/Custom_Transliteration) for further Details.
 
 ### WHOIS Servers
 
@@ -540,17 +542,19 @@ NOTE: The above provided configuration is just an example how it might work. We 
 
 ### Change of Registrant
 
-The change of Registrant of .CA, .CH, .IT, .LI, .SE and .SG TLDs requires a special procedure called TRADE. This function is available under the Management Tools of the domain.
+Will be automatically executed when Contact Information has changed accordingly.
+If there are costs for this process, we will output them in the WHMCS Activity Log for Reference.
+WHMCS is not invoicing this as it is completely incompatible with Domain Trades.
+
+We are looking for a solution to get this improved, but probably impossible as long WHMCS Core isn't support this natively.
 
 ### .SWISS Registrations
 
-Our registrar module is now supporting .SWISS registrations. (This function requires WHMCS 6.x)
+Our registrar module is supporting .SWISS registrations. This function requires WHMCS 6.x and has been reviewed from scratch in our Registrar Module Version 6.
 
-.SWISS domain names are different and cannot be registered with the normal **AddDomain** command.
+When using our Module in Version < 6:
 
-In order to apply for a .SWISS domain name it is always required to request a domain application with the **AddDomainApplication** command and to provide the class 'GOLIVE'.
-
-Moreover .SWISS registrations require 2 additional domain fields. Please add the following code at the end of the **/resources/domains/additionalfields.php** file:
+.SWISS registrations require 2 additional domain fields. Please add the following code at the end of the **/resources/domains/additionalfields.php** file:
 
 ```php
 ## .SWISS DOMAIN REQUIREMENTS ##
@@ -570,18 +574,14 @@ $additionaldomainfields[".swiss"][] = array(
 );
 ```
 
-This function uses HOOKS and in order to activate these hooks you have to go to:
+**.SWISS registration process:**
 
-`Setup > Products/Services > Domain registrars`, click the “Configure” button in the ISPAPI module line and finally click “Save Changes”.
-
-**Example of a .SWISS registration:**
-
-- Customer register a .SWISS domain (like he will register a normal domain)
-- Once the invoice paid, the domain application will be sent
-- The domain will be set to **PENDING** until the application process has been completed
+- Customer registers a .SWISS domain (like he will register a normal domain)
+- Once the invoice paid, the domain registration will be sent
+- The domain will be set to **Pending Registration** until the application process has been completed
 - A cronjob is checking the application status once a day
-  - If the application is **successful** the domain will be set to **ACTIVE** and the customer will be able to manage it.
-  - If the application is **failed**, the domain will be set to **CANCELLED** and you will have to **refund the customer manually**.
+  - If the Registration **succeeded** the domain will be set to **Active** and the customer will be able to manage it.
+  - If the Registration **failed**, the domain will be set to **Cancelled** and you will have to **refund the customer manually**.
 
 In order to work automatically the WHMCS Cron job has to be configured properly. Please have a look at [this page](//docs.whmcs.com/Crons).
 
