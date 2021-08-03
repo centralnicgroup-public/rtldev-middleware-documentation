@@ -24,7 +24,9 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 
 In case you have domains with active **Trustee Service** / **Local Presence Service**, be aware of that WHMCS itself doesn't support this Domain Addon. This finally means that such costs can't be invoiced in WHMCS. There's an open feature request you can upvote [here](//requests.whmcs.com/topic/integrate-trustee-service-as-generic-domain-add-on) to get it finally considered for integration in WHMCS.
 
-Still, these domains are included into the import.
+Still, these domains are included in the import, but highlighted as follows:
+
+![Local Presence Service]({{ 'assets/images/whmcs/cnic-domainimporter/trusteeservice.png' | relative_url }})
 
 ## Preparatory Work
 
