@@ -28,7 +28,6 @@ This tool enables you to connect to our backend system API and to manage your ac
 
 Having
 
-* Python
 * git
 
 installed and working.
