@@ -24,6 +24,15 @@ This tool enables you to connect to our backend system API and to manage your ac
 
 ![Command Line Client GUI]({{ 'assets/images/ispapicli/gui.png' | relative_url }})
 
+## Requirements
+
+Having
+
+* Python
+* git
+
+installed and working.
+
 ## How to use this tool?
 
 Basically this tool can be used in two ways: The GUI and Shell as shown below:
