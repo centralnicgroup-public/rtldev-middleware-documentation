@@ -126,7 +126,45 @@ The `HEXONET` Module that is shipped with WHMCS is maintained by the WHMCS Core 
 - Download the ZIP archive and extract it to your HDD
 - Copy the folder `modules` into the root directory of your WHMCS instance
 - If you want to use our Transliteration, please copy the folder `includes` into the root directory of your WHMCS instance. Our Transliteration just cares about replacing Greek characters with Greeklish ones in contact data and replacing HTML Entities with their related character pendant.
-- Copy the folder `lang` into the root directory of your WHMCS instance. First check if you have language override files there already in place and if our files would override them. If so, please merge our translations into the existing files.
+- Care about creating language override files for our translation files or just include them in existing files.
+
+So, check `/lang/overrides` if these files exist there: arabic.php, english.php, french.php, german.php.
+
+If not - please create these files.
+
+`/lang/overrides/arabic.php`:
+
+```php
+<?php
+
+include(implode(DIRECTORY_SEPARATOR, [ ROOTDIR, "modules", "registrars", "ispapi", "lang", "overrides", "arabic.php"]));
+```
+
+`/lang/overrides/english.php`:
+
+```php
+<?php
+
+include(implode(DIRECTORY_SEPARATOR, [ ROOTDIR, "modules", "registrars", "ispapi", "lang", "overrides", "english.php"]));
+```
+
+`/lang/overrides/german.php`:
+
+```php
+<?php
+
+include(implode(DIRECTORY_SEPARATOR, [ ROOTDIR, "modules", "registrars", "ispapi", "lang", "overrides", "german.php"]));
+```
+
+`/lang/overrides/french.php`:
+
+```php
+<?php
+
+include(implode(DIRECTORY_SEPARATOR, [ ROOTDIR, "modules", "registrars", "ispapi", "lang", "overrides", "french.php"]));
+```
+
+If these files already exist, please just copy'n'paste the above related include statements at the end of them.
 
 For cPanel users: Use [this video](//www.youtube.com/watch?v=SNtldWg_0gY) on how to upload and extract a ZIP archive using your cPanel. Use [this video](//www.youtube.com/watch?v=T7OYIOwyWvU) on how to find the `public_html` folder in your cPanel. In there you'll find a subfolder `gwcorp` or `whmcs` containing again a subfolder `modules` and then the subfolder `registrars`. Please copy the above mentioned folder of our zip archive into that folder.
 
