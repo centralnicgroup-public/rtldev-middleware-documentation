@@ -22,16 +22,16 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 
 ## Registrar Matrix
 
-| Registrar         | Supported |Import Add. Fields | Import idnLanguage |
-|-------------------|-----------|-------------------|
-| [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip)           | YES       | YES               | NO |
-| [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip)          | YES       | NO                | NO |
-| ~~TPP Wholesale~~ | NO        | NO                | NO |
-| ~~internet.bs~~   | NO        | NO                | NO |
-| ~~PartnerGate~~   | NO        | NO                | NO |
-| ~~Instra Corp.~~  | NO        | NO                | NO |
+| Registrar | Supported | Add. Fields | IDNs | Premium Domains |
+|---|---|---|---|---|
+| [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip) | YES | YES | YES | YES |
+| [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) | YES | NO | YES | NO |
+| ~~TPP Wholesale~~ | NO | NO | NO | NO |
+| ~~internet.bs~~   | NO | NO | NO | NO |
+| ~~PartnerGate~~   | NO | NO | NO | NO |
+| ~~Instra Corp.~~  | NO | NO | NO | NO |
 
-NOTE: Import of idnLanuage is uncritical, nice to have. This also applies to additional domain fields.
+NOTE: Import of additional domain fields is uncritical, nice to have.
 
 ## Incompatibility Notice
 
