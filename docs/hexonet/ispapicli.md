@@ -128,6 +128,35 @@ Once you start typing the command, a dropdown list will be displayed to show all
 - You can copy the command and the results using the copy button located on the toolbar or the one from the menu bar.
 - Tip: You can also use the shortcut `CTRL + C` to copy the results to the clipboard.
 
+#### Update Current Commands
+
+You can always update your current commands to have the latest version from github.
+Simply use the button highlighted in red:
+
+![Update Commands]({{ 'assets/images/ispapicli/updateCommands.png' | relative_url }})
+
+#### Update The Tool
+
+You can also update the tool to the latest version by clicking on the button highlighted in red:
+
+![Update Tool]({{ 'assets/images/ispapicli/update.png' | relative_url }})
+
+![Update Finished]({{ 'assets/images/ispapicli/updateDone.png' | relative_url }})
+
+![Current Version]({{ 'assets/images/ispapicli/version.png' | relative_url }})
+
+#### Subuser Option
+
+The tool also offer a subuse fucntionality where you can provide a username for the entered command.
+
+![Current Version]({{ 'assets/images/ispapicli/subuser.png' | relative_url }})
+
+#### Batch Functionality
+
+Batch option (highlighted in red) enables you to run the command for multiple entries, as shown in the figure below:
+
+![Current Version]({{ 'assets/images/ispapicli/batch.png' | relative_url }})
+
 ## Download and Installation
 
 This Tool is available for several operating systems: Windows, macOS / OS X, and Debian derivates like Ubuntu.
