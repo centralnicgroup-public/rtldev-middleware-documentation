@@ -3,7 +3,7 @@ layout: default
 title: Blesta
 parent: FAQs
 grand_parent: HEXONET
-nav_order: 8
+nav_order: 6
 showtoc: 1
 ---
 

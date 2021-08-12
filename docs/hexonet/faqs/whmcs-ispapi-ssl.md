@@ -43,5 +43,3 @@ Unfortunately, there is no possibility to import an order from control panel to 
 I would recommend that you buy and initiate the configuration of the certificate from WHMCS itself.
 
 I also suggest that you wait for your current order to automatically be canceled and triggered refund process. It will take at least 2 weeks of time(its normal procedure when the certificate is not activated with in two weeks time period). Your order is not submitted(not activated). Therefore immediate cancellation is not possible.
-
-

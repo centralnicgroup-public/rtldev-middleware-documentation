@@ -12,7 +12,7 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 
 * Domain Import from [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip) / [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) Registrar System
 * Regular Domain Imports
-* IDN Domain Imports (IDN Language missing)
+* IDN Domain Imports (IDN Language auto-detection, if supported)
 * Premium Domain Imports
 * Bulk Import into specified existing WHMS Client Account
 * Bulk Import by auto-creating Client Accounts based on Registrant Data
@@ -25,13 +25,15 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 | Registrar | Supported | Add. Fields | IDNs | Premium Domains |
 |---|---|---|---|---|
 | [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip) | YES | YES | YES | YES |
-| [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) | YES | NO | YES | NO |
+| [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) | YES | NO | YES* | NO |
 | ~~TPP Wholesale~~ | NO | NO | NO | NO |
 | ~~internet.bs~~   | NO | NO | NO | NO |
 | ~~PartnerGate~~   | NO | NO | NO | NO |
 | ~~Instra Corp.~~  | NO | NO | NO | NO |
 
 NOTE: Import of additional domain fields is uncritical, nice to have.
+
+*Import of idnLanguage not supported.
 
 ## Incompatibility Notice
 
@@ -48,7 +50,7 @@ Care about:
 * Domain Pricing Configuration
 * if you offer Premium Domains: Premium Domain Configuration (incl. Pricing)
 * Domain Add-On Pricing Configuration
-* Assign Domain Add-Ons to the TLDs of interest / that are supported them
+* Assign Domain Add-Ons to the TLDs of interest that support them
 
 ## Installation
 
