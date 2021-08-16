@@ -647,7 +647,6 @@ CheckAuthorization():ALLOW
 CheckDomains():ALLOW
 CheckDomainTransfer():ALLOW
 ConvertIDN():ALLOW
-CreatePremiumDNS():ALLOW
 CreateSSLCert():ALLOW
 DeleteDomain():ALLOW
 DeleteNameserver():ALLOW
@@ -661,7 +660,6 @@ ModifyDomain():ALLOW
 ModifyNameserver():ALLOW
 ModifyUserPassword():ALLOW
 PayDomainRenewal():ALLOW
-PayPremiumDNSRenewal():ALLOW
 PushDomain():ALLOW
 QueryDNSZoneRRList():ALLOW
 QueryDNSZoneStats():ALLOW
@@ -692,14 +690,12 @@ StatusDomainApplication():ALLOW
 StatusDomainTrade():ALLOW
 StatusDomainTransfer():ALLOW
 StatusObjectLog():ALLOW
-StatusPremiumDNS():ALLOW
 StatusRoleUser():ALLOW
 StatusSSLCert():ALLOW
 StatusUser():ALLOW
 TradeDomain():ALLOW
 TransferDomain():ALLOW
 UpdateDNSZone():ALLOW
-UpgradePremiumDNS():ALLOW
 ```
 
 Commands you need to login for our HEXONET frontend / Control Panel. Of course you can exclude the below commands, but note that some of them are also required for some of our modules, so double check first before simply excluding them.
@@ -716,24 +712,6 @@ StartSession():ALLOW
 EndSession():ALLOW
 StatusRoleUser():ALLOW
 ModifyUserPassword():ALLOW
-```
-
-**whmcs-ispapi-premiumdns**:
-
-Commands for our [Premium DNS Add-on]({{ 'docs/hexonet/whmcs/whmcs-ispapi-premiumdns' | relative_url }}):
-
-```text
-CreatePremiumDNS():ALLOW
-ModifyDomain():ALLOW
-PayPremiumDNSRenewal():ALLOW
-QueryDNSZoneStats():ALLOW
-QueryDomainRepositoryInfo():ALLOW
-StatusDomain():ALLOW
-StatusDNSZone():ALLOW
-StatusPremiumDNS():ALLOW
-StatusUser():ALLOW
-UpdateDNSZone():ALLOW
-UpgradePremiumDNS():ALLOW
 ```
 
 **whmcs-ispapi-pricingimporter**:

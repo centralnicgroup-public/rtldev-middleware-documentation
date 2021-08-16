@@ -38,8 +38,7 @@ You can find the duration of the redemption period on our wiki for each TLD. For
 ### 3. Do you provide these: ID Protection, DNS Management, and Email Forwarding? and their Fees?
 
 Yes, HEXONET provides the Add-On services. Pricing for ID protection you can find on Control panel by navigating through: BILLING > Prices & costs > Add-ons.
-DNS Mangement and Email forwarding are free if the DNS zone is managed by us otherwise they will be charged. If the DNS zone is not managed by HEXONET, it will run as a premium DNS zone. Therefore, costs of premium DNS zone includes for DNS Management and Email Forwarding.
-
+DNS Mangement and Email forwarding are free if the DNS Zone is managed by us.
 
 ### 4. How do I add my own nameserver via WHMCS?
 
@@ -225,30 +224,17 @@ WHMCS has to change this behavior.
 
 ### 29. As far as I know, the price of any registration/renewal for more than one year is multiplied by the number of that year. For example, registering a .com domain for one year is 10.89 USD, so 5 years is 10.89*5. Does this rule apply to all of the domains accepting more than one year process? are there any exceptions?
 
-Prices must be calculated based on relations.
+In our Frontend aka. [Control Panel](https://account.hexonet.net), access your pricing details by clicking on your username at the top right and than navigate to "Billing > Prices & Costs".
 
-On the control panel please execute 'StatusUser' command to see the pricing relations.
-
-      COMMAND = StatusUser
-
-For any product (Domain, SSL, PremiumDNS) registration prices are calculated by considering Setup + Annual Price.
+Domain registration prices are calculated by considering Setup + Annual Price Price Portions.
 Renewal price is nothing but 'Annual price' here.
 
-This is for one-year registration and renewal price calculation.
+This is basically how the calculation formula looks like.
 
-For two year registration period=> 2*(Setup + Annual prices). The same procedure of calculation, of course, for the rest of the years (3,4,5..10)
+    price = setup + (term * annual)
 
-There are exceptions. If you find the price relation particularly for any year, you need to take that price (setup+annual). For example,  PRICE_CLASS_DOMAIN_COM_ANNUAL2, meaning, this is a price relation for 2years. Condition for this kind of relation is that SETUP relation should be also as follows: PRICE_CLASS_DOMAIN_COM_SETUP2. Otherwise, this kind of pricing relation should be ignored and apply the above-explained calculation.
-
-If you would like to check the supported registration periods by any domain, please execute the 'QueryDomainOptions' command on the control panel.
-
-(For example, .DE domains only support 1Y and 1M registration periods).
-
-     COMMAND = QueryDomainOptions
-     DOMAIN0 = example.com
-
-You can use the control panel to calculate pricing for different registration periods. It may be helpful for you.
-Control Panel > Bottom left "Reseller Controls" > "Reseller Settings" > "Price Plan"> "Plan Editor"
+In the most cases the setup portion is 0.00 and is therefore not influencing all this.
+In corner cases this pricing model is of course not as compatible with WHMCS - we are working on that. We are leaving such corner cases out in the Registrar TLD Sync for now.
 
 ### 30. We have customers who are using o365 for mails and the would often contact us to add some more entries on their DNS. Can you please let us know how can we add the SRV option?
 
@@ -524,9 +510,13 @@ Read the [WHMCS Docs](//docs.whmcs.com/Crons) for additional information.
 
 ### 52. HEXONET default registrar (vs) ISPAPI registrar module
 
-HEXONET registrar module comes by default with WHMCS installation.
-We highly recommend using our ISPAPI registrar module since it is easier to provide our customers with new features and improvements through the module ASAP. With the HEXONET default registrar, the changes would be available only when the WHMCS releases a new version of itself.
-In addition, all our addon modules are linked with ISPAPI registrar module to establish a connection between our API and WHMCS. So that you can register and manage HEXONET products in the WHMCS. For example, SSL certificates and Premium DNS plans.
+The HEXONET registrar module is natively shipped with the WHMCS Software and maintained by the WHMCS.com Team.
+
+The ISPAPI registrar module is not shipped with the WHMCS Software, but available for download at [github](https://github.com/hexonet/whmcs-ispapi-registrar#readme). It is maintained by HEXONET and coming with the latest features and patches.
+
+We therefore highly recommend using our ISPAPI registrar module.
+
+In addition, all our addon modules are linked to the ISPAPI registrar module to establish a connection between our API and WHMCS. So that you can register and manage HEXONET products in WHMCS. For example, SSL certificates and DNS Zones and RRs, etc.
 
 ### 53 .Dk domains
 
