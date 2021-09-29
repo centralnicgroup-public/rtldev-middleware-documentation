@@ -282,12 +282,11 @@ When initiating a transfer, the migration addon will first check if any EPP code
 
 We have worked on a JSON Schema that is used for validation at runtime. Whenever a domain renewal reaches our migration tool, `migration/configuration.json` is being validated. If invalid, you'll see the appropriate error output in domain details.
 
-## After Migration Steps
+## Uninstall
 
 After Migration has finished - this might take a while of course, cleanup as follows:
 
 * Disable the addon in the WHMCS Admin Area under `System Settings > Addon Modules`
 * Delete the folder `modules/addons/cnicmigration`
-* [Optional] Cleanup table `tblemailtemplates`. Check for entries where `name` is starting with `MIGRATION_` and being flagged as `custom` (value `1`) and being of `type` `domain`. You can also delete them over WHMCS' "Email Templates" Interface.
 
 ... et voila!
