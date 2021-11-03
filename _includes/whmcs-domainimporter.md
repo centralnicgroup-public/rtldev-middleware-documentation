@@ -10,30 +10,30 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 
 ## Features
 
-* Domain Import from [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip) / [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) Registrar System
-* Regular Domain Imports
-* IDN Domain Imports (IDN Language auto-detection, if supported)
-* Premium Domain Imports
-* Bulk Import into specified existing WHMS Client Account
-* Bulk Import by auto-creating Client Accounts based on Registrant Data
-* Import of additional domain field settings (if supported by Registrar Module)
+- Domain Import from [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip) / [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) Registrar System
+- Regular Domain Imports
+- IDN Domain Imports (IDN Language auto-detection, if supported)
+- Premium Domain Imports
+- Bulk Import into specified existing WHMS Client Account
+- Bulk Import by auto-creating Client Accounts based on Registrant Data
+- Import of additional domain field settings (if supported by Registrar Module)
 
 ... and MORE!
 
 ## Registrar Matrix
 
-| Registrar | Supported | Add. Fields | IDNs | Premium Domains |
-|---|---|---|---|---|
-| [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip) | YES | YES | YES | YES |
-| [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) | YES | NO | YES* | NO |
-| ~~TPP Wholesale~~ | NO | NO | NO | NO |
-| ~~internet.bs~~   | NO | NO | NO | NO |
-| ~~PartnerGate~~   | NO | NO | NO | NO |
-| ~~Instra Corp.~~  | NO | NO | NO | NO |
+| Registrar                                                                                                       | Supported | Add. Fields | IDNs  | Premium Domains |
+| --------------------------------------------------------------------------------------------------------------- | --------- | ----------- | ----- | --------------- |
+| [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip)             | YES       | YES         | YES   | YES             |
+| [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) | YES       | NO          | YES\* | NO              |
+| ~~TPP Wholesale~~                                                                                               | NO        | NO          | NO    | NO              |
+| ~~internet.bs~~                                                                                                 | NO        | NO          | NO    | NO              |
+| ~~PartnerGate~~                                                                                                 | NO        | NO          | NO    | NO              |
+| ~~Instra Corp.~~                                                                                                | NO        | NO          | NO    | NO              |
 
 NOTE: Import of additional domain fields is uncritical, nice to have.
 
-*Import of idnLanguage not supported.
+\*Import of idnLanguage not supported.
 
 ## Incompatibility Notice
 
@@ -47,21 +47,21 @@ Still, these domains are included in the import, but highlighted as follows:
 
 Care about:
 
-* Domain Pricing Configuration
-* if you offer Premium Domains: Premium Domain Configuration (incl. Pricing)
-* Domain Add-On Pricing Configuration
-* Assign Domain Add-Ons to the TLDs of interest that support them
+- Domain Pricing Configuration
+- if you offer Premium Domains: Premium Domain Configuration (incl. Pricing)
+- Domain Add-On Pricing Configuration
+- Assign Domain Add-Ons to the TLDs of interest that support them
 
 ## Installation
 
 ### Requirements
 
-* WHMCS version 8.0 or higher
-* Find the supported Registrar Modules linked above.
+- WHMCS version 8.0 or higher
+- Find the supported Registrar Modules linked above.
 
 ### Download & Unpack
 
-Download the ZIP archive including the latest release version [here](//github.com/centralnic-reseller/whmcs-domainimporter/raw/master/whmcs-cnic-domainimporter-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/centralnic-reseller/whmcs-domainimporter/raw/master/whmcs-cnic-domainimport-latest.zip).
 
 Copy the zip archive's contents to your WHMCS System's root folder.
 
