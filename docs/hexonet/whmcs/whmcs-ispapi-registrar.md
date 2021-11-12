@@ -116,7 +116,7 @@ If the MAJOR version has changed, check the release notes to avoid unexpected is
 
 Follow the installations steps below and consider the provided release notes for the MAJOR version upgrade. In detail: if you're upgrading from 1.x.y to 4.x.y, ensure to check **ALL Major Version Release Notes** up to the version you're upgrading too. In this example, check the release notes for 2.0.0, 3.0.0 and 4.0.0.
 
-If you're upgrading regularly and keeping all our modules / addons / widgets updated, you run in less upgrade effort than doing multiple major version number steps. You can add/subscribe  yourself to release notifications in our github repositories to get informed about new releases.
+If you're upgrading regularly and keeping all our modules / addons / widgets updated, you run in less upgrade effort than doing multiple major version number steps. You can add/subscribe yourself to release notifications in our github repositories to get informed about new releases.
 
 ## Installing our Module
 
@@ -375,8 +375,8 @@ WHMCS doesn't allow SRV records. Our module makes it possible! We have WHMCS tem
 
 Find the Template File for
 
-- the Six Theme [here](https://raw.githubusercontent.com/hexonet/whmcs-ispapi-registrar/master/modules/registrars/ispapi/templates/six/clientareadomaindns.tpl)
-- the Twenty-One [here](https://raw.githubusercontent.com/hexonet/whmcs-ispapi-registrar/master/modules/registrars/ispapi/templates/twenty-one/clientareadomaindns.tpl).
+- the Six Theme [here](https://raw.githubusercontent.com/centralnic-reseller/templates-six/master/clientareadomaindns.tpl)
+- the Twenty-One [here](https://raw.githubusercontent.com/centralnic-reseller/templates-twenty-one/master/clientareadomaindns.tpl).
 
 First make a backup of the `clientaredomaindns.tpl` template file of your current theme in use.
 Then replace it with our template file.
@@ -419,7 +419,7 @@ This might be necessary in case of multi-year Restores where the Restore Period 
 
 The registration of some domain extensions requires sometimes additional domain fields (e.g. Legal Type and CIRA Agreement for .CA domain).
 
-In order to provide this additional fields on the registration page and map them with our module, you have to  inject our HEXONET specific configuration in the **$additionaldomainfields** array.
+In order to provide this additional fields on the registration page and map them with our module, you have to inject our HEXONET specific configuration in the **$additionaldomainfields** array.
 
 > Prior to WHMCS 7.0, this file was located at /includes/additionaldomainfields.php
 > From WHMCS 7.0 on, to add new additional domains fields, create a new file named additionalfields.php within the /resources/domains/ directory.
@@ -843,9 +843,9 @@ Create a restrictive Role User by:
 - Fill in the necessary input fields:
 
   ```text
-  Role ID: whmcs 
-  Password: ********** 
-  Default Access: Deny 
+  Role ID: whmcs
+  Password: **********
+  Default Access: Deny
   Status: Active
   ```
 
