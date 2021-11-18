@@ -29,8 +29,6 @@ Back to topic, here the steps describing how to start with us using WHMCS.
   - include EPP Code Requirement Setting
   - ... and Domain Restore related Data
 - [Transliteration](#transliteration) Support
-- [Domain & Transfer Synchronization](#automation-settings)
-  - Configurable: [Auto-Suspension after Expiration](#module-configuration)
 - [Internationlized Domain Names](#idn-support) (IDNs)
 - Better [Additional Domain Fields](#additional-domain-fields)
   - [Fully Translated](#installing-our-module) (AR, DE, EN, FR)
@@ -38,6 +36,8 @@ Back to topic, here the steps describing how to start with us using WHMCS.
   - Automatic [Pre-Fill](#auto-prefill-fields) and Completion
   - Built-in, No Configurations required!
 - [Premium Domains](#premium-domains)
+- [Domain & Transfer Synchronization](#automation-settings)
+  - Configurable: [Auto-Suspension after Expiration](#module-configuration)
 - Domain Registration (feat. [.SWISS](#swiss-registrations)!)
 - Domain Transfer, plus
   - Cancel Transfer
@@ -59,13 +59,13 @@ Back to topic, here the steps describing how to start with us using WHMCS.
   - Private Nameserver Registration & Management
   - Get EPP Code
   - [TLD-specific free Whois Privacy for Individuals](#tld-specific-whois-privacy) (.ca, .se, .nz)
-- [DNS Management](#ns--dns-management)
-  - Record-Types: A, AAAA, MX, MXE, CNAME, TXT, [SRV](#srv-records)
-  - [DNSSEC / SecDNS Management](#dnssec-management)
 - Domain Addons
   - [Email Forwarding](#ns--dns-management)
   - [URL Forwarding](#ns--dns-management)
   - [WHOIS Privacy / ID Protection](#whois-privacy-management)
+- [DNS Management](#ns--dns-management)
+  - Record-Types: A, AAAA, MX, MXE, CNAME, TXT, [SRV](#srv-records)
+  - [DNSSEC / SecDNS Management](#dnssec-management)
 - [Translation Support](#installing-our-module)
 - [Sandbox Environment Support](#module-configuration)
 - [Web Apps](#web-apps-support) (G Suite, ...)
@@ -249,38 +249,34 @@ Now, press Save and voilà. If you're getting a green message - you're connected
 
 It governs the domain name transfers between ICANN registrars. The Inter-Registrar Transfer Policy (IRTP) includes changes to domain ownership. Small changes to a domain name’s registrar first name, last name, organization, and email address trigger the validation process.
 
-Have a further read about IRTP [here](//wiki.hexonet.net/wiki/IRTP).
+IRTP handling is supported in WHMCS since version 7.6. We have adapted our ISPAPI registrar module to support this accordingly. Read more [here](//docs.whmcs.com/Domain_Contact_Verification) about IRTP handling via WHMCS.
 
-IRTP handling is supported in WHMCS since version 7.6. We have adapted our ISPAPI registrar module to support this accordingly.
+Our own related guide about IRTP and how our Backend System API is supporting it, can be found [here](//wiki.hexonet.net/wiki/IRTP).
 
 We have introduced two options in the registrar module configuration settings. (`<WHMCS admin area> Setup > Products/Services > Domain Registrars > ISPAPI > Configure`)
 
 - Options One: Check to act as Designated Agent for all contact changes. Ensure you understand your role and responsibilities before checking this option. (SUGGESTED!)
-- Options Two: Check to use IRTP feature from our API.
+- Options Two: Check to use IRTP feature from our API. (DEPRECATED)
 
-**Option One**:
+**Option One** (SUGGESTED):
 
-This is the default and suggested setting.
-By checking this option you will be automatically acting as Designated Agent(DA) for the new and old registrant.
-Our registrar module confirms the DA status by sending the following additional domain fields automatically with the TradeDomain command:
+This is the default and suggested setting. By checking this option you confirm to have obtained verifiable DA (Designated Agent) status. You will be automatically acting as Designated Agent(DA) for the new and old registrant. Our registrar module confirms the DA status by sending the following additional domain fields automatically with the TradeDomain command:
 
 ```text
 "X-CONFIRM-DA-OLD-REGISTRANT" => 1,
 "X-CONFIRM-DA-NEW-REGISTRANT" => 1
 ```
 
-Read more [here](//docs.whmcs.com/Domain_Contact_Verification) about IRTP handling via WHMCS.
+Note: Ensure to have the "gTLD Inter-Registrar Transfer Policy" settings deactivated/removed in our [control panel](//account.hexonet.net/token=qYDCIxFn/#/domain-admin). If you haven't configured this in the past, no worries.
 
-Note: Ensure to have the "gTLD Inter-Registrar Transfer Policy" settings deactivated/removed in our [control panel](//account.hexonet.net/token=qYDCIxFn/#/domain-admin). If you haven't configured this in the past, no need to worry.
+**Option Two** (DEPRECATED):
 
-**Option Two**:
-
-In order to handle the IRTP process over our API, you have to obtain verifiable DA (Designated Agent) status to act on behalf of the new registrant of a domain name.
+By checking this option you confirm to have obtained verifiable DA (Designated Agent) status to act on behalf of the new registrant of a domain name.
 
 - navigate on the [control panel](//account.hexonet.net/token=qYDCIxFn/#/domain-admin): `Reseller Controls > Product Settings > Domain Settings`. Under the "gTLD Inter-Registrar Transfer Policy" section first read the terms, implement the legal changes, and finally verify your Designated Agent status and your wish to alter the ModifyDomain command for IRTP compliance.
 - Whenever your customer evokes a material change of registrant, the Reseller must submit the change as the DA for the new registrant.
 - The prior (old) registrant will always be sent an authorization email, and they will have fourteen (14) days to confirm the change.
-- The opt-out of the sixty (60) transfer lock is enabled for module Resellers by default. However, if a Reseller wishes to opt-IN (disable the automatic opt-out) to the registrar transfer lock so that they can immediately process Change of Registrant requests with added security (for Change of Registrant when email addresses are not working), resellers can simply enable the checkbox stating "Disable the automatic opt-out. Registrant changes are processed in realtime, but domains will also get transfer-locked for 60 days. Dependant on fallback being enabled.
+- The opt-out of the sixty (60) days transfer lock is enabled for module Resellers by default. However, if a Reseller wishes to opt-IN (disable the automatic opt-out) to the registrar transfer lock so that they can immediately process Change of Registrant requests with added security (for Change of Registrant when email addresses are not working), resellers can simply enable the checkbox stating "Disable the automatic opt-out. Registrant changes are processed in realtime, but domains will also get transfer-locked for 60 days. Dependant on fallback being enabled.
 
 ### Web Apps Support
 
@@ -585,9 +581,15 @@ The new WHOIS Privacy page looks as follows (protection is enabled in the exampl
 TLDs like .ca, .se, .nz offer a free Whois Privacy Service for Individuals provided by the Registry Provider.
 This Service is by default active and therefore protects Whois Data, but it can also be disclosed.
 
-This is accessible in WHMCS' Client-Area over Menu Entry "WHOIS Privacy".
+This is accessible in WHMCS' Client-Area over Menu Entry "WHOIS Privacy". The regular ID Protection Service is accessible over Menu Entry `Addons`, if in offered and mainly available for gTLDs/nTLDs.
 
-![ca_whois_privacy]({{ 'assets/images/whmcs/ispapi-registrar/ca_registrant_whois_privacy.png' | relative_url }})
+Again, the Registry Provider's Whois Privacy Service is only available for Individuals and by default activated:
+
+![.CA Whois Privacy Service supported for Individuals]({{ 'assets/images/whmcs/ispapi-registrar/ca_registrant_whois_privacy.png' | relative_url }})
+
+Therefore, unavailable for Organizations:
+
+![.CA Whois Privacy Service unsupported for Organizations]({{ 'assets/images/whmcs/ispapi-registrar/ca_registrant_whois_privacy2.png' | relative_url }})
 
 ## Specials
 
