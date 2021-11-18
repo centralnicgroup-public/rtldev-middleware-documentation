@@ -8,16 +8,6 @@
 .main-content {
   line-height: $content-line-height;
 
-  ol,
-  ul,
-  dl,
-  pre,
-  address,
-  blockquote,
-  .table-wrapper {
-    margin-top: 0.5em;
-  }
-
   a {
     overflow: hidden;
     text-overflow: ellipsis;

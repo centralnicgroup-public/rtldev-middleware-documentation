@@ -24,49 +24,53 @@ Back to topic, here the steps describing how to start with us using WHMCS.
 
 ## Supported Features
 
-- [Registrar TLD Sync / Pricing Import](#importing-prices) (WHMCS 7.10)
+- [Registrar TLD Sync / Pricing Import](#importing-prices) (WHMCS 7.10 ++)
+  - [include ID Protection Setting](#module-configuration)
+  - include EPP Code Setting
+  - ... and Domain Restore related Data
+- [Transliteration](#transliteration) Support
 - [Domain & Transfer Synchronization](#automation-settings)
-- Transfer-Out Automation
+  - Configurable: [Auto-Suspension after Expiration](#module-configuration)
 - [Internationlized Domain Names](#idn-support) (IDNs)
-- [Additional Domain Fields](#additional-domain-fields)
+- Better [Additional Domain Fields](#additional-domain-fields)
+  - [Fully Translated](#installing-our-module) (AR, DE, EN, FR)
+  - [Customizable Translations](#installing-our-module)
+  - Automatic [Pre-Fill](#auto-prefill-fields) and Completion
+  - Built-in, No Configurations required!
 - [Premium Domains](#premium-domains)
 - Domain Registration (feat. [.SWISS](#swiss-registrations)!)
+- Domain Transfer, plus
+  - Cancel Transfer
+  - Resend Transfer Confirmation Email
+  - Status Details accessible
+  - [Post-Transfer NS Update](#module-configuration)
+  - [Post-Transfer Contact Update](#module-configuration)
 - Domain Renewal
-- Domain Transfer
+- [Domain Restore](#domain-restore)
+- Domain Release / Explicit Deletions
+- Domain Suspension / Unsuspension
 - Domain Management
   - [Automatic Registrar Lock](#module-configuration)
-  - WHOIS Update (UTF-8 capable)
-  - Nameserver Registration & Management
+  - Contact Data / WHOIS Update (UTF-8 capable)
+  - [Change of Registrant / Trade](#change-of-registrant)
+  - [IRTP / Domain Contact Verification](#domain-contact-verification)
+  - [Whois Output Settings](#whois-output-settings)
+  - [ERRP Settings](#errp-settings)
+  - Private Nameserver Registration & Management
   - Get EPP Code
-- Domain Release / Explicit Deletions
-- [Domain Restore](#domain-restore)
+  - [TLD-specific free Whois Privacy for Individuals](#tld-specific-whois-privacy) (.ca, .se, .nz)
 - [DNS Management](#ns--dns-management)
   - Record-Types: A, AAAA, MX, MXE, CNAME, TXT, [SRV](#srv-records)
-  - Allows user defined TTL values and MX priorities
-- [Email Forwarding](#ns--dns-management)
-- [URL Forwarding](#ns--dns-management)
-  - Redirect using HTTP
-  - Forward using HTML Frame
-- [WHOIS Privacy / ID Protection](#whois-privacy-management)
-
-<details>
-  <summary><strong>... AND MORE!</strong>
-</summary>
-
-<ul>
-  <li><a href="#module-configuration">Testing / Sandbox Environment</a></li>
-  <li><a href="#hexonet-module-migration">1-Click Migration from HEXONET Registrar Module</a></li>
-  <li><a href="#web-apps-support">Web Apps</a></li>
-  <li><a href="#auto-prefill-fields">Auto-prefill of Additional Domain Fields</a></li>
-  <li>Automatic Contact Data and <a href="#module-configuration">NS Update after Transfer</a></li>
-  <li><a href="#dnssec-management">DNSSEC / SecDNS Management</a></li>
-  <li><a href="#module-configuration">Proxy Server Configuration for API Communication</a></li>
-  <li>Special: <a href="#ca-whois-privacy">WHOIS Privacy management of .CA domain names</a></li>
-  <li>Special: <a href="#change-of-registrant">Change of Registrant / Trade</a></li>
-  <li>Support for all bulk update operations</li>
-</ul>
-
-</details>
+  - [DNSSEC / SecDNS Management](#dnssec-management)
+- Domain Addons
+  - [Email Forwarding](#ns--dns-management)
+  - [URL Forwarding](#ns--dns-management)
+  - [WHOIS Privacy / ID Protection](#whois-privacy-management)
+- [Translation Support](#installing-our-module)
+- [Sandbox Environment Support](#module-configuration)
+- [Web Apps](#web-apps-support) (G Suite, ...)
+- [Proxy Server Support](#module-configuration)
+- [1-Click Migration](#hexonet-module-migration) from WHMCS' built-in HEXONET Module
 
 ## Requirements
 
@@ -126,7 +130,7 @@ The `HEXONET` Module that is shipped with WHMCS is maintained by the WHMCS Core 
 - Download the ZIP archive and extract it to your HDD
 - Copy the folder `modules` into the root directory of your WHMCS instance
 - If you want to use our Transliteration, please copy the folder `includes` into the root directory of your WHMCS instance. Our Transliteration just cares about replacing Greek characters with Greeklish ones in contact data and replacing HTML Entities with their related character pendant.
-- Care about creating language override files for our translation files or just include them in existing files.
+- Care about creating language override files for our translation files or just include them in existing files - read below.
 
 So, check `/lang/overrides` if these files exist there: arabic.php, english.php, french.php, german.php.
 
@@ -165,6 +169,7 @@ include(implode(DIRECTORY_SEPARATOR, [ ROOTDIR, "modules", "registrars", "ispapi
 ```
 
 If these files already exist, please just copy'n'paste the above related include statements at the end of them.
+If you want to translate into a language that is not yet built-in in our module, we suggest to copy the `/modules/registrars/ispapi/lang/overrides/english.php` to `/lang/overrides/<language>.php` of your WHMCS System, where `<language>` corresponds to the language identifier e.g. `danish` or `dutch` etc. Then translate the contents of that file into the desired language. Just in case a translation is missing, we'll be falling back to english.
 
 For cPanel users: Use [this video](//www.youtube.com/watch?v=SNtldWg_0gY) on how to upload and extract a ZIP archive using your cPanel. Use [this video](//www.youtube.com/watch?v=T7OYIOwyWvU) on how to find the `public_html` folder in your cPanel. In there you'll find a subfolder `gwcorp` or `whmcs` containing again a subfolder `modules` and then the subfolder `registrars`. Please copy the above mentioned folder of our zip archive into that folder.
 
@@ -206,7 +211,13 @@ Find the `HEXONET/ispapi` Module in the list and activate it. If you're not able
 [![configuration]({{ 'assets/images/whmcs/ispapi-registrar/config.png' | relative_url }})]({{ 'assets/images/whmcs/ispapi-registrar/config.png' | relative_url }})
 
 Now, configure this Module by entering your credentials (OT&E or LIVE System Account).
-Activate `TestMode` by activating the checkbox in case you want to use the OT&E System - just ensure you don't mix it up with LIVE System Credentials or vice versa.
+Activate `Use Test Environment` by activating the checkbox in case you want to use the OT&E System - just ensure you don't mix it up with LIVE System Credentials or vice versa.
+
+> NOTE: We highly recommend to have two Sytems set up - An Integration Test / Demo System connected to our OT&E System and your Production System connected to our Live System. Switching this in one System may lead to bad experiences later on e.g. Registrar TLD Sync related, Domain Portfolio Mixup etc. You can request a free Developer License at whmcs.com that you can use for an internal hosted WHMCS Installation.
+
+You may configure a `Proxy Server` to use for connecting. This configuration setting is optional.
+
+At `IRTP (Inter-Registrar Transfer Policy)` setting, we suggest using `Option 1` to activate the default WHMCS way of the IRTP integration. Find further details documented below.
 
 Activate `Automatic Transfer Lock` setting by using the appropriate checkbox to ensure outgoing transfers can't be initiated in ease. We suggest that setting as it helps securing your domain names from getting transferred out in ease.
 
@@ -214,13 +225,7 @@ Activate `Automatic NS Update` setting in case you want our module to update dom
 
 Activate `Automatic Contact Update` setting in case you want our module to update your .com/.net/.cc/.tv domain's contact details automatically after successful transfer. The mechanism will care about updating the related registrant contact details to the data of the client who initiated the transfer. It also cares about updating admin/tech/billing contact details as configured in WHMCS. This mechanism will only be updating domain names where we were not able to parse Contact Details out of WHOIS Data after successful transfer because of active WHOIS Privacy / id protection service (Hint: "Redacted for Privacy").
 
-At `IRTP (Inter-Registrar Transfer Policy)` setting, we suggest using `Option 1` to activate the default WHMCS way of the IRTP integration. Find further details documented below.
-
-If you want to offer secure DNS / DNSSEC / Secure DNS, feel also free to activate the checkbox `Offer DNSSEC / Secure DNS`. Find further details documented [here](#ns--dns-management).
-
-If you want to offer our Web Apps to your customers, activate the `Offer Web Apps` checkbox. Find further details documented below.
-
-Now, press Save and voilà. If you're getting a green message - you're connected. Otherwise, you have to investigate further as described [here]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#49-login-failed-in-registrar-module' | relative_url }}).
+If you want to offer secure DNS / `DNSSEC / Secure DNS`, feel also free to activate the checkbox `Offer DNSSEC / Secure DNS`. Find further details documented [here](#ns--dns-management).
 
 Activate `Transfer Checkout Pre-Checks` setting in case you want to have Domain Transfer Orders pre-checked. We validate if initiating the Transfer would succeed - so, if:
 
@@ -231,6 +236,14 @@ Activate `Transfer Checkout Pre-Checks` setting in case you want to have Domain 
 If something fails, it would look like shown below:
 
 ![Transfer Checkout Pre-Checks]({{ 'assets/images/whmcs/ispapi-registrar/transferprecheck.png' | relative_url }})
+
+Activate `Sync Id Protection` to include synchronizing this Domain Add-Ons checkboxes within the Registrar TLD Sync. We just Sync it for TLDs configured with us as Registrar in Auto Registration (see Domain Pricing Overview).
+
+Activate `Suspend after Expiration` if you want to suspend domain name automatically after expiration. This option is useful if you're faced with clients who are used to pay their domain renewals very late and you want to pressure a bit. Worst case such clients would lose domains when accidentally forgetting about the renewal. You can unsuspend domains over Client Profile > Tab Domains using the Button `Unsuspend`.
+
+If you want to offer our Web Apps to your customers, activate the `Offer Web Apps` checkbox. Find further details documented below.
+
+Now, press Save and voilà. If you're getting a green message - you're connected. Otherwise, you have to investigate further as described [here]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#49-login-failed-in-registrar-module' | relative_url }}).
 
 ### Domain Contact Verification
 
@@ -251,8 +264,10 @@ This is the default and suggested setting.
 By checking this option you will be automatically acting as Designated Agent(DA) for the new and old registrant.
 Our registrar module confirms the DA status by sending the following additional domain fields automatically with the TradeDomain command:
 
-            "X-CONFIRM-DA-OLD-REGISTRANT" => 1,
-            "X-CONFIRM-DA-NEW-REGISTRANT" => 1
+```text
+"X-CONFIRM-DA-OLD-REGISTRANT" => 1,
+"X-CONFIRM-DA-NEW-REGISTRANT" => 1
+```
 
 Read more [here](//docs.whmcs.com/Domain_Contact_Verification) about IRTP handling via WHMCS.
 
@@ -395,6 +410,23 @@ In the domain details, a new “DNSSEC Management” section will be displayed.
 This feature allows your customers to add DS and KEY records and set the maxSigLife.
 
 ![dnssec]({{ 'assets/images/whmcs/ispapi-registrar/dnssec_management_support.png' | relative_url }})
+
+## Domain Transfer
+
+### Transfer Pre-Checks
+
+Activate our Registrar Module's Configuration Setting [Transfer Checkout Pre-Checks](#module-configuration), if validating Transfer Orders on Shopping Cart Checkout is something you consider as useful. We'll be prechecking then basic blockers like wrong Auth/EPP Code or the Domain being still locked.
+
+### Pending Transfer
+
+For Pending Transfers, we offer special buttons like "Cancel Domain Transfer" and "Resend Transfer Approval Mail".
+In addition we provide the full Transfer Log for your Reference.
+
+![Pending Transfer]({{ 'assets/images/whmcs/ispapi-registrar/pending-transfer.png' | relative_url }})
+
+### Post-Transfer Updates
+
+Activate our Registrar Module's Configuration Settings [Automatic NS Update](#module-configuration) [Automatic Contact Update](#module-configuration), if these Features are of interest. Find them well explained in the Module Configuration Section.
 
 ## Domain Restore
 
@@ -548,11 +580,12 @@ The new WHOIS Privacy page looks as follows (protection is enabled in the exampl
 
 ![whois_privacy_page]({{ 'assets/images/whmcs/ispapi-registrar/whois_privacy_page.png' | relative_url }})
 
-### .CA WHOIS Privacy
+### TLD-specific WHOIS Privacy
 
-(Deprecated)
+TLDs like .ca, .se, .nz offer a free Whois Privacy Service for Individuals provided by the Registry Provider.
+This Service is by default active and therefore protects Whois Data, but it can also be disclosed.
 
-The new Registrant related WHOIS Privacy for .CA domain names looks as follows (protection is enabled in the example):
+This is accessible in WHMCS' Client-Area over Menu Entry "WHOIS Privacy".
 
 ![ca_whois_privacy]({{ 'assets/images/whmcs/ispapi-registrar/ca_registrant_whois_privacy.png' | relative_url }})
 
@@ -560,15 +593,15 @@ The new Registrant related WHOIS Privacy for .CA domain names looks as follows (
 
 ### Translations
 
-With v6 of our Registrar Module, we have introduced a Translation Mechanism that is allowing us to translate our Module's Texts in Client Area.
+Since Version 6 of our Registrar Module, we have introduced a Translation Mechanism that is allowing us to translate our Module's Texts in Client Area.
 
 Find our translation files in the `lang` folder of our ZIP Archive. As long as you don't have language override files already in use in your system, just copy that folder into your WHMCS System's root directory. Otherwise, please merge our translations into the existing ones. Please cover this step after each module upgrade.
 
 ### Transliteration
 
-Since Version 6 of our Registrar Module we started considering WHMCS' transliterated data for contact data in Registrations, Transfers and Contact Information Updates.
+Since Version 6 of our Registrar Module, we started considering WHMCS' transliterated data for contact data in Registrations, Transfers and Contact Information Updates.
 
-We ignored this in the past as WHMCS in Version < v7 had a lot trouble regarding Transliterations. Our Module offers a ready-to-use transliteration approach that replaces HTML Entities with their UTF-8 Pendants and maps Greek Characters to so-called Greeklish ones. Copy folder `includes` from our ZIP Archive to your WHMCS System's root directory. Please cover this step after each module upgrade.
+We ignored this in the past as WHMCS in Version < 7 had a lot trouble regarding Transliterations. Our Module offers a ready-to-use transliteration approach that replaces HTML Entities with their UTF-8 Pendants and maps Greek Characters to so-called Greeklish ones. Copy folder `includes` from our ZIP Archive to your WHMCS System's root directory. Please cover this step after each module upgrade.
 
 Read [here](https://docs.whmcs.com/Custom_Transliteration) for further Details.
 
@@ -585,6 +618,7 @@ If there are costs for this process, we will output them in the WHMCS Activity L
 WHMCS is not invoicing this as it is completely incompatible with Domain Trades.
 
 We are looking for a solution to get this improved, but probably impossible as long WHMCS Core isn't support this natively.
+At least our Module is logging Trade Costs into the Activity Log and allows some very basic Controlling.
 
 ### .SWISS Registrations
 
