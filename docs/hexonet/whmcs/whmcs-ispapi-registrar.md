@@ -26,7 +26,7 @@ Back to topic, here the steps describing how to start with us using WHMCS.
 
 - [Registrar TLD Sync / Pricing Import](#importing-prices) (WHMCS 7.10 ++)
   - [include ID Protection Setting](#module-configuration)
-  - include EPP Code Setting
+  - include EPP Code Requirement Setting
   - ... and Domain Restore related Data
 - [Transliteration](#transliteration) Support
 - [Domain & Transfer Synchronization](#automation-settings)
@@ -514,7 +514,7 @@ The TLD List selection field is provided by WHMCS itself and can't be influenced
 
 The Suggestion Engine provides fast domain suggestions based on the searched domain or keyword.
 
-HEXONET is now providing Aftermarket and Registry premium domains support. (Without having to install our ISPAPI High-Performance DomainChecker Module)
+HEXONET is providing Registry premium domains support. (Without having to install our ISPAPI High-Performance DomainChecker Module)
 
 **NOTE:** Since WHMCS 7.10, you can define a list of TLDs that have to be checked over the Lookup Provider.
 We suggest to select _ALL_ TLDs you want to offer, even if you are not offering them over HEXONET / ISPAPI.
