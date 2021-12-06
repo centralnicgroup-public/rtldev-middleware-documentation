@@ -358,7 +358,7 @@ NOTE: Even though WHMCS officially supported IDNs since [WHMCS 8](//docs.whmcs.c
 
 ## NS & DNS Management
 
-If you want to use DNS, URL or Email forwarding, domains must resolve to the ISPAPI nameserver cluster (**ns1.ispapi.net, ns2.ispapi.net, ns3.ispapi.net**).
+If you want to use DNS, URL or Email forwarding, domains must resolve to the ISPAPI nameserver cluster (**ns1.ispapi.net, ns2.ispapi.net, ns3.ispapi.net**). Alternatively: your Nameservers, but pointing to the ip addresses of our nameservers, we will explain this in the next steps.
 
 You can enter them in `Setup > General Settings > Domains` as **Default Nameservers** for your customers:
 
@@ -366,7 +366,7 @@ You can enter them in `Setup > General Settings > Domains` as **Default Nameserv
 
 You can also create your own nameserver hostnames and use them, as long as they are registered and resolve to the correct IP addresses.
 
-If you plan to use HEXONET's DNS, ensure to activate checkbox `DNS Management` for the appropriate TLDs in the Domain Pricing Section of WHMCS (System Settings > Domain Pricing).
+If you plan to use HEXONET's DNS, ensure to activate checkbox `DNS Management` for the appropriate TLDs in the Domain Pricing Section of WHMCS (System Settings > Domain Pricing). This Domain Addon, when ordered, leads to getting an internal DNS Zone created at HEXONET, ready to use with the related domain name and the domain itself will be connected to it. This service is totally for free, no worries. Reminder: If you want to use a 3rd-party DNS, nothing you should start offering.
 
 ![dnsmanagement]({{ 'assets/images/whmcs/ispapi-registrar/tldpricing.png' | relative_url }})
 
@@ -378,7 +378,41 @@ NOTE: If you plan to offer .DK Domains, please ensure to have your custom namese
 
 ### White-label DNS
 
-If you want to use your own branded nameservers, but our DNS behind the scenes, modify the A resource records of your custom nameservers to point to our nameserver ip addresses. You can find out our ip addresses by: `ping ns1.ispapi.net`, `ping ns2.ispapi.net` and `ping ns3.ispapi.net`.
+If you want to use HEXONET's DNS and Nameservers, but you're looking for a way to keep them branded? Then, this section covers what you need.
+
+#### Our NS IP Addresses
+
+Our nameservers use the below ip addresses:
+
+```text
+ns1.hexonet.net -> 194.50.187.134
+ns2.hexonet.net -> 194.0.182.1
+ns3.hexonet.net -> 193.227.117.124
+```
+
+These are also alternatively known as ns1/ns2/ns3.ispapi.net.
+
+#### Nameserver Settings
+
+In WHMCS' Client Area, please navigate to the domain name under which you want to have you nameservers registered and managed.
+e.g. if you want to have the nameservers "ns1.anthony.com", "ns2.anthony.com" and "ns3.anthony.com", then navigate to the detailed overview of the domain "mydomain.com" and then to `Private Nameservers`.
+
+![Register Private Nameservers]({{ 'assets/images/whmcs/ispapi-registrar/ns_branded_0.png' | relative_url }})
+
+![Registered Private Nameservers]({{ 'assets/images/whmcs/ispapi-registrar/ns_branded_1.png' | relative_url }})
+
+Here, you either Register new Nameservers or Modify existing Nameservers accordingly. If you don't remember the current ip addresses of existing nameservers, well then delete and recreate them just with the new ip address.
+
+Finally ensure to have this set of nameservers configured as Default Nameservers in WHMCS (read above) so that your clients are getting them suggested in the order process at the shopping cart level. In addition care about having the `DNS Management` Addon configured accordingly (read above).
+
+**NOTE:**
+
+- WHMCS is nowhere listing already existing private nameservers, still you recognize such a list in the screenshots.
+  This is something our ISPAPI Registrar Module is injecting which is working with the Six and the Twenty-One Template.
+  Let us know, if it is incompatible with your custom template, we will extend then (or temporarily switch to twenty-one).
+- It may take a while until these changes have been announced. Please be a bit patient.
+
+If this is still not working as expected, please reach out to us.
 
 ### SRV Records
 
