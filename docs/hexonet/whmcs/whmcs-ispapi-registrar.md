@@ -378,7 +378,26 @@ NOTE: If you plan to offer .DK Domains, please ensure to have your custom namese
 
 ### White-label DNS
 
-If you want to use HEXONET's DNS and Nameservers, but you're looking for a way to keep them branded? Then, this section covers what you need.
+aka. `Vanity Name Servers`.
+
+Vanity name servers allow you to create name servers that reflect your organization. If you want to use HEXONET's DNS and Nameservers, but you're looking for a way to keep them branded? Then, this section covers what you need.
+
+So, instead of using our name server set,
+
+```text
+ns1.hexonet.net
+ns2.hexonet.net
+ns3.hexonet.net
+// aka. ns1/ns2/ns3.ispapi.net.
+```
+
+Vanity Name Servers allow for your branded name server set:
+
+```text
+ns1.myorganization.com
+ns2.myorganization.com
+ns3.myorganization.com
+```
 
 #### Our NS IP Addresses
 
@@ -390,12 +409,10 @@ ns2.hexonet.net -> 194.0.182.1
 ns3.hexonet.net -> 193.227.117.124
 ```
 
-These are also alternatively known as ns1/ns2/ns3.ispapi.net.
-
 #### Nameserver Settings
 
 In WHMCS' Client Area, please navigate to the domain name under which you want to have you nameservers registered and managed.
-e.g. if you want to have the nameservers "ns1.anthony.com", "ns2.anthony.com" and "ns3.anthony.com", then navigate to the detailed overview of the domain "mydomain.com" and then to `Private Nameservers`.
+e.g. if you want to have the nameservers "ns1.anthony.com", "ns2.anthony.com" and "ns3.anthony.com", then navigate to the detailed overview of the domain "myorganization.com" and then to `Private Nameservers`.
 
 ![Register Private Nameservers]({{ 'assets/images/whmcs/ispapi-registrar/ns_branded_0.png' | relative_url }})
 
@@ -403,14 +420,14 @@ e.g. if you want to have the nameservers "ns1.anthony.com", "ns2.anthony.com" an
 
 Here, you either Register new Nameservers or Modify existing Nameservers accordingly. If you don't remember the current ip addresses of existing nameservers, well then delete and recreate them just with the new ip address.
 
-Finally ensure to have this set of nameservers configured as Default Nameservers in WHMCS (read above) so that your clients are getting them suggested in the order process at the shopping cart level. In addition care about having the `DNS Management` Addon configured accordingly (read above).
+Finally ensure to have this set of nameservers configured as Default Nameservers in WHMCS (read above) so that your clients are getting them suggested in the order process at the shopping cart level. In addition care about having the `DNS Management` Domain Addon configured accordingly (read above).
 
 **NOTE:**
 
 - WHMCS is nowhere listing already existing private nameservers, still you recognize such a list in the screenshots.
   This is something our ISPAPI Registrar Module is injecting which is working with the Six and the Twenty-One Template.
   Let us know, if it is incompatible with your custom template, we will extend then (or temporarily switch to twenty-one).
-- It may take a while until these changes have been announced. Please be a bit patient.
+- It may take a while (few hours) until these changes have been announced. Please be a bit patient.
 
 If this is still not working as expected, please reach out to us.
 
