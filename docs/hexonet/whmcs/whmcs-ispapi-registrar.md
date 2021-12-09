@@ -380,7 +380,7 @@ NOTE: If you plan to offer .DK Domains, please ensure to have your custom namese
 
 aka. `Vanity Name Servers`.
 
-Vanity name servers allow you to create name servers that reflect your organization. If you want to use HEXONET's DNS and Nameservers, but you're looking for a way to keep them branded? Then, this section covers what you need.
+Vanity name servers allow you to create name servers that reflect your organization (in this example "anthony.com"). If you want to use HEXONET's DNS and Nameservers, but you're looking for a way to keep them branded? Then, this section covers what you need.
 
 So, instead of using our name server set,
 
@@ -394,9 +394,9 @@ ns3.hexonet.net
 Vanity Name Servers allow for your branded name server set:
 
 ```text
-ns1.myorganization.com
-ns2.myorganization.com
-ns3.myorganization.com
+ns1.anthony.com
+ns2.anthony.com
+ns3.anthony.com
 ```
 
 #### Our NS IP Addresses
@@ -412,13 +412,13 @@ ns3.hexonet.net -> 193.227.117.124
 #### Nameserver Settings
 
 In WHMCS' Client Area, please navigate to the domain name under which you want to have you nameservers registered and managed.
-e.g. if you want to have the nameservers "ns1.anthony.com", "ns2.anthony.com" and "ns3.anthony.com", then navigate to the detailed overview of the domain "myorganization.com" and then to `Private Nameservers`.
+e.g. if you want to have the nameservers "ns1.anthony.com", "ns2.anthony.com" and "ns3.anthony.com", then navigate to the detailed overview of the domain "anthony.com" and then to `Private Nameservers`.
 
 ![Register Private Nameservers]({{ 'assets/images/whmcs/ispapi-registrar/ns_branded_0.png' | relative_url }})
 
 ![Registered Private Nameservers]({{ 'assets/images/whmcs/ispapi-registrar/ns_branded_1.png' | relative_url }})
 
-Here, you either Register new Nameservers or Modify existing Nameservers accordingly. If you don't remember the current ip addresses of existing nameservers, well then delete and recreate them just with the new ip address.
+Here, you either Register new Nameservers or Modify existing Nameservers accordingly. If you don't remember the current ip addresses of existing nameservers, well then delete and recreate them just with the new ip address. Just in case adding or modifying Nameservers is resulting into errors, be aware of that some registry providers are doing nameserver checks. So ensure the provided nameserver ip addresses are reachable - which should of course be the case for our nameservers. Also, sometimes it might be necessary to have the DNS Management Addon activated, if the underlying registry provider of a TLD covers private Nameservers through Glue Records.
 
 Finally ensure to have this set of nameservers configured as Default Nameservers in WHMCS (read above) so that your clients are getting them suggested in the order process at the shopping cart level. In addition care about having the `DNS Management` Domain Addon configured accordingly (read above).
 
