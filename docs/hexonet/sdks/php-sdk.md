@@ -21,14 +21,14 @@ This module is a connector library for the insanely fast HEXONET Backend API. Fo
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
-* [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
-* [Class Documenation](//rawgit.com/hexonet/php-sdk/master/build/api/index.html)
-* [API Documentation]({{ 'docs/hexonet/api-documentation' | relative_url }})
+- [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
+- [Class Documenation](//rawgit.com/hexonet/php-sdk/master/build/api/index.html)
+- [API Documentation]({{ 'docs/hexonet/api-documentation' | relative_url }})
 
 ## Requirements
 
-* Installed php (>= v5.6.0) and php-curl
-* Installed [composer](//getcomposer.org/download/).
+- Installed php (>= v5.6.0) and php-curl
+- Installed [composer](//getcomposer.org/download/).
 
 ## Usage Instructions
 
@@ -36,8 +36,8 @@ We have also a demo app available showing how to integrate and use our SDK. See 
 
 This module is available on the [PHP Package Registry](//packagist.org/packages/hexonet/php-sdk).
 
-Run `composer require "hexonet/php-sdk"` to get the latest version downloaded and added to composer.json.
-In your script simply use `require 'vendor/autoload.php';` or `require 'vendor/hexonet/php-sdk';`
+Run `composer require "centralnic-reseller/php-sdk"` to get the latest version downloaded and added to composer.json.
+In your script simply use `require 'vendor/autoload.php';` or `require 'vendor/centralnic-reseller/php-sdk';`
 
 ### OT&E System
 
@@ -53,7 +53,7 @@ Long distances to our main data center in Germany may result in high network lat
 
 ### 1 - Apache Modules
 
-*At least Apache version 2.2.9* is required.
+_At least Apache version 2.2.9_ is required.
 
 The following Apache2 modules must be installed and activated:
 
@@ -87,10 +87,18 @@ An example Apache configuration with binding to localhost:
 
 After saving your configuration changes please restart the Apache webserver.
 
+NOTE: Find the registrar systems url (e.g. https://api.ispapi.net/api/call.cgi) out over the related configuration file.
+Find it in `vendor/centralnic-reseller/php-sdk/src/<REGISTRAR>/config.json`.
+
 ### 3 - Implementation
 
+In the below example, please specify your registrar of interest.
+Actually supported: RRPproxy, HEXONET
+
 ```php
-$cl = new \HEXONET\APIClient();
+$cl = CF::getClient([
+    "registrar" => "HEXONET"
+]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->useHighPerformanceConnectionSetup()//Default Connection Setup would be used otherwise by default
    ->setCredentials("test.user", "test.passw0rd");
@@ -112,7 +120,9 @@ When having the debug mode activated \HEXONET\Logger will be used for doing outp
 Of course it could be of interest for integrators to look for a way of getting this replaced by a custom mechanism like forwarding things to a 3rd-party software, logging into file or whatever.
 
 ```php
-$cl = new \HEXONET\APIClient();
+$cl = CF::getClient([
+    "registrar" => "HEXONET"
+]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->enableDebugMode()//activate debug outputs
    ->setCustomLogger(new MyCustomerLogger())//provide your mechanism here
@@ -120,7 +130,7 @@ $cl->useOTESystem()//LIVE System would be used otherwise by default
 $r = $cl->request(["COMMAND" => "StatusAccount"]);
 ```
 
-NOTE: Find an example for a custom logger class implementation in `src/CustomLogger.php`. If you have questions, feel free to open a github issue.
+NOTE: Find an interface for your custom logger class implementation in by implenting `\CNIC\LoggerInterface.php`. If you have questions, feel free to open a github issue.
 
 ## Usage Examples
 
@@ -128,10 +138,12 @@ Please have an eye on our [API documentation]({{ 'docs/hexonet/api-documentation
 
 ### API Communication, Session
 
-Available since version 4.x!
+Available since version 4.x! Actually not working for RRPproxy!
 
 ```php
-$cl = new \HEXONET\APIClient();
+$cl = CF::getClient([
+    "registrar" => "HEXONET"
+]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->setCredentials("test.user", "test.passw0rd");
 $r = $cl->login();
@@ -182,7 +194,9 @@ $cl->reuseSession($_SESSION);
 require __DIR__ . '/vendor/autoload.php';
 
 // --- SESSIONLESS API COMMUNICATION ---
-$cl = new \HEXONET\APIClient();
+$cl = CF::getClient([
+    "registrar" => "HEXONET"
+]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    // ->setRemoteIPAddress("1.2.3.4:80"); // provide ip address used for active ip filter
    ->setCredentials("test.user", "test.passw0rd");
@@ -199,7 +213,9 @@ Use the below to improve code a bit:
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-$cl = new \HEXONET\APIClient();
+$cl = CF::getClient([
+    "registrar" => "HEXONET"
+]);
 $cl->useOTESystem()
    ->setCredentials("test.user", "test.passw0rd");
 $r = $cl->request([
@@ -214,7 +230,9 @@ instead of:
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-$cl = new \HEXONET\APIClient();
+$cl = CF::getClient([
+    "registrar" => "HEXONET"
+]);
 $cl->useOTESystem()
    ->setCredentials("test.user", "test.passw0rd");
 $r = $cl->request([
