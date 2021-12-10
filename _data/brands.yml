@@ -39,6 +39,8 @@
           url: whmcs-dns/
     - name: "cPanel Integration"
       url: cpanel/    
+    - name: "Self-Development Kits"
+      url: "sdks/"
   github: "//github.com/rrpproxy/"
 
 - name: TPP Wholesale
