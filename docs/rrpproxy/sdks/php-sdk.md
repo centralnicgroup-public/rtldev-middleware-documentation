@@ -217,8 +217,8 @@ $cl = CF::getClient([
 $cl->useOTESystem()
    ->setCredentials("<your account id>", "<your password>");
 $r = $cl->request([
-    "COMMAND" => "QueryDomainOptions"
-    "DOMAIN" => ["example1.com", "example2.com"]
+    "command" => "CheckDomains"
+    "domain" => ["example1.com", "example2.com"]
 ]);
 echo "<pre>" . htmlspecialchars(print_r($r->getHash(), true)) . "</pre>";
 ```
@@ -234,9 +234,9 @@ $cl = CF::getClient([
 $cl->useOTESystem()
    ->setCredentials("<your account id>", "<your password>");
 $r = $cl->request([
-    "COMMAND" => "QueryDomainOptions"
-    "DOMAIN0" => "example1.com",
-    "DOMAIN1" => "example2.com"
+    "command" => "CheckDomains"
+    "domain0" => "example1.com",
+    "domain1" => "example2.com"
 ]);
 echo "<pre>" . htmlspecialchars(print_r($r->getHash(), true)) . "</pre>";
 ```
