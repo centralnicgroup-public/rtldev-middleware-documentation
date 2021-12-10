@@ -12,7 +12,7 @@ showtoc: 0
 
 Here you'll find further information about our realized SDKs and their usage. They cover the API Communication Best Practives and easy ways to request and access data.
 
-Our Java/Node.js/PHP SDKs covers right now the most current and planned future structure. UML Diagram will be reviewed when ALL the SDKs are following that new approach. Reason for the changes are know programming language differences that lead to writing workarounds to support the below shown version of the UML diagram.
+Our Java/Node.js/PHP SDKs cover right now the most current and planned future structure. UML Diagram will be reviewed when ALL the SDKs are following that new approach. Reason for the changes are know programming language differences that lead to writing workarounds to support the below shown version of the UML diagram.
 
 ## FWIW
 
@@ -37,11 +37,5 @@ Our Java/Node.js/PHP SDKs covers right now the most current and planned future s
 ## UML Diagram
 
 [![SDK]({{ 'assets/images/sdks/uml.png' | relative_url }})]({{ 'assets/images/sdks/uml.png' | relative_url }})
-
-## Ideas in Queue
-
-- Class `Paginator` that covers methods first, count, limit, last, total, page, pages, prevpage, nextpage, hasnextpage, hasprevpage.
-  .. and it might cover also html button generation logic.
-- Class `Table` and `HTMLTable` as simple ways to output List Queries accordingly in ease
 
 {: .fs-6 .fw-300 }
