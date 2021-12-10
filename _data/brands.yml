@@ -21,7 +21,7 @@
     - name: "DNSControl Integration"
       url: "dnscontrol/"
     - name: "Self-Development Kits"
-      url: "sdks"
+      url: "sdks/"
   github: "//github.com/hexonet/"
 
 - name: RRPproxy
@@ -40,7 +40,7 @@
     - name: "cPanel Integration"
       url: cpanel/    
     - name: "Self-Development Kits"
-      url: "sdks"
+      url: "sdks/"
   github: "//github.com/rrpproxy/"
 
 - name: TPP Wholesale

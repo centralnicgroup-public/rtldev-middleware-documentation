@@ -4,7 +4,7 @@ title: SDKs
 parent: RRPproxy
 nav_order: 5
 has_children: true
-permalink: /docs/rrpproxy/sdks
+permalink: /docs/rrpproxy/sdks/
 showtoc: 0
 ---
 
