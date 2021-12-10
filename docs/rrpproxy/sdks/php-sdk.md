@@ -2,8 +2,8 @@
 layout: default
 title: PHP SDK
 parent: SDKs
-grand_parent: HEXONET
-nav_order: 3
+grand_parent: RRPproxy
+nav_order: 2
 showtoc: 1
 ---
 
@@ -21,13 +21,13 @@ This module is a connector library for the insanely fast HEXONET and RRPproxy Ba
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
-- [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
+- [UML Diagram]({{ 'docs/rrpproxy/sdks#uml-diagram' | relative_url }})
 - [Class Documenation](//rawgit.com/centralnic-reseller/php-sdk/master/build/api/index.html)
-- [API Documentation]({{ 'docs/hexonet/api-documentation' | relative_url }})
+- [API Documentation]({{ 'docs/rrpproxy/api-documentation' | relative_url }})
 
 ## Requirements
 
-- Installed php (>= v5.6.0) and php-curl
+- Installed php (>= v7.4.0) and php-curl
 - Installed [composer](//getcomposer.org/download/).
 
 ## Usage Instructions
@@ -67,7 +67,7 @@ ssl.load # for HTTPs connection to our API server
 
 ### 2 - Apache Configuration
 
-An example Apache configuration with binding to localhost (example for HEXONET!):
+An example Apache configuration with binding to localhost (example for RRPproxy!):
 
 ```bash
 <VirtualHost 127.0.0.1:80>
@@ -76,7 +76,7 @@ An example Apache configuration with binding to localhost (example for HEXONET!)
     ServerSignature Off
 
     SSLProxyEngine on
-    ProxyPass /api/call.cgi https://api.ispapi.net/api/call.cgi min=1 max=2
+    ProxyPass /api/call.cgi https://api.rrpproxy.net/api/call.cgi min=1 max=2
     <Proxy *>
         Order Deny,Allow
         Deny from none
@@ -86,6 +86,7 @@ An example Apache configuration with binding to localhost (example for HEXONET!)
 ```
 
 After saving your configuration changes please restart the Apache webserver.
+If you want to connect to the OT&E System, please use "https://api-ote.rrpproxy.net/api/call.cgi".
 
 ### 3 - Implementation
 
@@ -94,7 +95,7 @@ Actually supported: RRPproxy, HEXONET
 
 ```php
 $cl = CF::getClient([
-    "registrar" => "HEXONET"
+    "registrar" => "RRPproxy"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->useHighPerformanceConnectionSetup()//Default Connection Setup would be used otherwise by default
@@ -102,23 +103,23 @@ $cl->useOTESystem()//LIVE System would be used otherwise by default
 $r = $cl->request(["COMMAND" => "StatusAccount"]);
 ```
 
-So, what happens in code behind the scenes? We communicate with localhost (so our proxy setup) that passes the requests to the HEXONET API.
+So, what happens in code behind the scenes? We communicate with localhost (so our proxy setup) that passes the requests to the RRPproxy API.
 Of course we can't activate this setup by default as it is based on Steps 1 and 2. Otherwise connecting to our API wouldn't work.
 
 Just in case the above port or ip address can't be used, use function setURL instead to set a different URL / Port.
 `http://127.0.0.1/api/call.cgi` is the default URL for the High Performance Proxy Setup.
 e.g. `$cl->setURL("http://127.0.0.1:8765/api/call.cgi");` would change the port. Configure that port also in the Apache Configuration (-> Step 2)!
 
-Don't use `https` for that setup as it leads to slowing things down as of the https `overhead` of securing the connection. In this setup we just connect to localhost, so no direct outgoing network traffic using `http`. The apache configuration finally takes care passing it to `https` for the final communication to the HEXONET API.
+Don't use `https` for that setup as it leads to slowing things down as of the https `overhead` of securing the connection. In this setup we just connect to localhost, so no direct outgoing network traffic using `http`. The apache configuration finally takes care passing it to `https` for the final communication to the RRPproxy API.
 
 ## Customize Logging / Outputs
 
-When having the debug mode activated \HEXONET\Logger will be used for doing outputs.
+When having the debug mode activated \CNIC\RRPproxy\Logger will be used for doing outputs.
 Of course it could be of interest for integrators to look for a way of getting this replaced by a custom mechanism like forwarding things to a 3rd-party software, logging into file or whatever.
 
 ```php
 $cl = CF::getClient([
-    "registrar" => "HEXONET"
+    "registrar" => "RRPproxy"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->enableDebugMode()//activate debug outputs
@@ -127,11 +128,11 @@ $cl->useOTESystem()//LIVE System would be used otherwise by default
 $r = $cl->request(["COMMAND" => "StatusAccount"]);
 ```
 
-NOTE: Find an interface for your custom logger class implementation in by implenting `\CNIC\LoggerInterface.php`. If you have questions, feel free to open a github issue.
+NOTE: Find an interface for your custom logger class implementation under `\CNIC\LoggerInterface.php`. If you have questions, feel free to open a github issue.
 
 ## Usage Examples
 
-Please have an eye on our [API documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }}). Here you can find information on available Commands and their response data.
+Please have an eye on our [API documentation]({{ 'docs/rrpproxy/api-documentation/' | relative_url }}). Here you can find information on available Commands and their response data.
 
 ### API Communication, Session
 
@@ -139,7 +140,7 @@ Available since version 4.x! Actually not working for RRPproxy!
 
 ```php
 $cl = CF::getClient([
-    "registrar" => "HEXONET"
+    "registrar" => "RRPproxy"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->setCredentials("<your account id>", "<your password>");
@@ -192,7 +193,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 // --- SESSIONLESS API COMMUNICATION ---
 $cl = CF::getClient([
-    "registrar" => "HEXONET"
+    "registrar" => "RRPproxy"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    // ->setRemoteIPAddress("1.2.3.4:80"); // provide ip address used for active ip filter
@@ -211,7 +212,7 @@ Use the below to improve code a bit:
 require __DIR__ . '/vendor/autoload.php';
 
 $cl = CF::getClient([
-    "registrar" => "HEXONET"
+    "registrar" => "RRPproxy"
 ]);
 $cl->useOTESystem()
    ->setCredentials("<your account id>", "<your password>");
@@ -228,7 +229,7 @@ instead of:
 require __DIR__ . '/vendor/autoload.php';
 
 $cl = CF::getClient([
-    "registrar" => "HEXONET"
+    "registrar" => "RRPproxy"
 ]);
 $cl->useOTESystem()
    ->setCredentials("<your account id>", "<your password>");
