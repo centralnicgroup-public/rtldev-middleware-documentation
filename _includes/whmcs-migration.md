@@ -8,7 +8,7 @@ Get in touch with us, if you are interested in this Tool to get your Domain Port
 
 This tool is made for migrations at point of domain renewal to minimize costs and for optional customer communication within the migration process to avoid transfer rejections.
 
-It cancels the domain renewal and instead initiates the Migration / Transfer. Still, the domain renewal order itself is left in WHMCS and is used for invoicing the transfer. **Only Domains in Status `Active`, `Expired` and `Grace Period (Expired)` are considered by the migration tool.** For all other cases the renewal will be processed. You can  [configure](#configure-renew-if-expired) if you want to migrate or to renew domains with status `Expired` and `Grace Period (Expired)`.
+It cancels the domain renewal and instead initiates the Migration / Transfer. Still, the domain renewal order itself is left in WHMCS and is used for invoicing the transfer. **Only Domains in Status `Active`, `Expired` and `Grace Period (Expired)` are considered by the migration tool.** For all other cases the renewal will be processed. You can [configure](#configure-renew-if-expired) if you want to migrate or to renew domains with status `Expired` and `Grace Period (Expired)`.
 
 Our Migration Tool will load the EPP / Authorization Code from db table `mig_domains` with fallback to the losing registrar's module. Lookup from DB Table is useful in case a losing registrar doesn't provide it in real time over `GetEPPCode` method e.g. Enom. So, for such registrars ensure that this table exists and is prefilled with EPP Codes accordingly, see [this section](#configure-epp-authorization-codes).
 Last step is to initiate the transfer using the gaining registrar's module.
@@ -18,11 +18,12 @@ Here a high-level process flow diagram on how it works:
 
 [![processflow]({{ 'assets/images/whmcs/migration/processflow.png' | relative_url }})]({{ 'assets/images/whmcs/migration/processflow.png' | relative_url }})
 
-## Changelog
+## Current Version
 
-|Date|Description|
-| --- | --- |
-|2021-09-28|Complete rewrite as an Addon with configuration and management UI|
+We won't offer our module in public actually to avoid unwanted access.
+So, please have regularly an eye on this section to identify if there's an update available.
+
+_Latest version_: v1.1.1
 
 ## Some Impressions
 
@@ -32,32 +33,32 @@ Error output in Domain Details in Admin Area:
 
 ## Features
 
-* User Interface for configuration and management of domain migrations
-* Using default WHMCS logging mechanisms
-* Support for WHMCS Notification System allows for flexible notifications
-* Email Notifications to your WHMCS Administrators (or custom email address) about the migration process
-* Migrate from different registrars to one or multiple registrar brands of the CentralNic Group PLC (HEXONET, RRPproxy, TPP Wholesale, internet.bs) in parallel
-* Migrate all TLDs or just a subset of TLDs per losing registrar
-* Saving costs: Migrate at the point of domain renewal
-* Fully automated, you just need to spend time on installation, configuration and checking logs
-* Fully customizable Customer Notification over Email - language and tld-specific Email-Templates supported!
-* Configurable Option: Renew expired domains at the current registrar instead of migrating them
-* Customizable error / success messages
+- User Interface for configuration and management of domain migrations
+- Using default WHMCS logging mechanisms
+- Support for WHMCS Notification System allows for flexible notifications
+- Email Notifications to your WHMCS Administrators (or custom email address) about the migration process
+- Migrate from different registrars to one or multiple registrar brands of the CentralNic Group PLC (HEXONET, RRPproxy, TPP Wholesale, internet.bs) in parallel
+- Migrate all TLDs or just a subset of TLDs per losing registrar
+- Saving costs: Migrate at the point of domain renewal
+- Fully automated, you just need to spend time on installation, configuration and checking logs
+- Fully customizable Customer Notification over Email - language and tld-specific Email-Templates supported!
+- Configurable Option: Renew expired domains at the current registrar instead of migrating them
+- Customizable error / success messages
+- Bulk transfer for domains that can be transferred for free (0Y period) e.g. .qa, .ae, .es, .au, ...
 
 ## Known Problems
 
 Find here some cases brought up to our hands:
 
-* Some TLDs like .es, .qa, .ae etc. can be migrated for free at any point of time as they support a 0Y transfer period (excluding a renewal). Right now, the migration tool covers the migration always at the point of the domain renewal and if they support also a 1Y period, that one is then used over the 0Y period. We have to find better possibilities getting these TLDs migrated using WHMCS at any point of time in bulk.
-* **resellerclubcrm** module ending in an PHP Error - backtrace is pointing to language files.
+- **resellerclubcrm** module ending in an PHP Error - backtrace is pointing to language files.
   Even though this got escalated to the Module Devs, they just provided a workaround and not a new release. So fyi:
   Edit the file `$YOUR_WHMCS_INSTANCE/modules/addons/resellerclubmods_core/modlang/English_admin_lcdrm.php` and insert above the line 25 the below code:
 
-    ```php
-    $_ADMINLANG = array();
-    ```
+  ```php
+  $_ADMINLANG = array();
+  ```
 
-  Such manual changes will be lost when upgrading your resellerclub core parts.  
+  Such manual changes will be lost when upgrading your resellerclub core parts.
 
 ## Migration Best Practices
 
@@ -79,8 +80,8 @@ Premium Domains: As of a bug WHMCS solved with v7.8, any premium domain register
 
 Re-Configure WHMCS in direction of the gaining registrar:
 
-* ensure the gaining registrar's registrar module is installed, activated, configured and working!
-* ensure the Configuration in Domain Pricing Section is already re-configured in direction of the gaining registrar. Ensure ALL TLDs that are assigned to the losing registrar and [whitelisted for migration](#configure-list-of-tlds-to-migrate) are reassigned to the gaining registrar!
+- ensure the gaining registrar's registrar module is installed, activated, configured and working!
+- ensure the Configuration in Domain Pricing Section is already re-configured in direction of the gaining registrar. Ensure ALL TLDs that are assigned to the losing registrar and [whitelisted for migration](#configure-list-of-tlds-to-migrate) are reassigned to the gaining registrar!
 
 ### Installation / Upgrade
 
@@ -89,21 +90,22 @@ Copy the `modules` folder into your WHMCS root.
 In your WHMCS Admin Area, go to `Configuration > System Settings > Addon Modules`, then click on `Activate` next to the `CentralNic Migration Wizard` listing.
 
 ## Configuration
+
 ### Addon configuration
 
 In the WHMCS `Addon Modules` page, you can configure some basic settings for the addon.
 
-|Setting|Default|Description|
-|--- | --- | ---|
-|**Send mails to admins**|`Enabled`|Notify WHMCS admins about transfer activity. We recommend leaving this enabled.|
-|**Send mails to clients**|`Disabled`|Notify clients about transfer activity.|
-|**Log activity**|`Enabled`|We recommend leaving this enabled for easier diagnostics.|
-|**WHMCS Instance ID**|`WHMCS`|Used for distinguishing different WHMCS instances in logging.|
-|**Renew if expired**|`Enabled`|Renew expired domains at current registrar instead of migrating.|
-|**Reseler name**|`Company Name` from WHMCS General Settings|This will be used in notification e-mails.|
-|**Reseler URL**|`URL` from WHMCS General Settings|This will be used in notification e-mails.|
-|**Reseler email**|`Email Address` from WHMCS General Settings|This will be used in notification e-mails.|
-|**Access Control**|`None`|Set this to the admin groups that should have access to the addon.|
+| Setting                   | Default                                     | Description                                                                     |
+| ------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------- |
+| **Send mails to admins**  | `Enabled`                                   | Notify WHMCS admins about transfer activity. We recommend leaving this enabled. |
+| **Send mails to clients** | `Disabled`                                  | Notify clients about transfer activity.                                         |
+| **Log activity**          | `Enabled`                                   | We recommend leaving this enabled for easier diagnostics.                       |
+| **WHMCS Instance ID**     | `WHMCS`                                     | Used for distinguishing different WHMCS instances in logging.                   |
+| **Renew if expired**      | `Enabled`                                   | Renew expired domains at current registrar instead of migrating.                |
+| **Reseler name**          | `Company Name` from WHMCS General Settings  | This will be used in notification e-mails.                                      |
+| **Reseler URL**           | `URL` from WHMCS General Settings           | This will be used in notification e-mails.                                      |
+| **Reseler email**         | `Email Address` from WHMCS General Settings | This will be used in notification e-mails.                                      |
+| **Access Control**        | `None`                                      | Set this to the admin groups that should have access to the addon.              |
 
 ### Define mappings
 
@@ -155,11 +157,11 @@ $_ADDONLANG = [
 
 The migration tool will append an error identifier to make it more transparent which kind of error might have happened, e.g. `Domain Migration to the new subcontractor. Don't renew the domain.[ERROR_CONFIG]`.
 
-* `[ERROR_CONFIG:...some reason...]`: Configuration file `migration/configuration.json` couldn't be loaded (missing or invalid json). Further Details provided.
-* `[ERROR_DOMAIN_DATA]`: Domain Data couldn't be loaded over WHMCS - should never happen
-* `[ERROR_AUTH_CODE:...some reason...]`: Getting the EPP/Authorization code of the domain did not work. Further Details provided.
-* `[ERROR_REG_MODULE]`: Loading the gaining registrar's registrar module failed or the module is not activated or not integrating the `TransferDomain` method
-* `[ERROR_TRANSFER_FAIL:...some reason...]`: Initiating the Transfer failed. Further Details provided.
+- `[ERROR_CONFIG:...some reason...]`: Configuration file `migration/configuration.json` couldn't be loaded (missing or invalid json). Further Details provided.
+- `[ERROR_DOMAIN_DATA]`: Domain Data couldn't be loaded over WHMCS - should never happen
+- `[ERROR_AUTH_CODE:...some reason...]`: Getting the EPP/Authorization code of the domain did not work. Further Details provided.
+- `[ERROR_REG_MODULE]`: Loading the gaining registrar's registrar module failed or the module is not activated or not integrating the `TransferDomain` method
+- `[ERROR_TRANSFER_FAIL:...some reason...]`: Initiating the Transfer failed. Further Details provided.
 
 ### Transfer initiated
 
@@ -172,7 +174,8 @@ $_ADDONLANG = [
 ```
 
 In our logs it will show like:
-* `[INIT_TRANSFER_SUCCESS]`: Initiating the Transfer succeeded.
+
+- `[INIT_TRANSFER_SUCCESS]`: Initiating the Transfer succeeded.
 
 Even though we are talking about a success message here, it will still be displayed as an Error Result by WHMCS. We can't change this.
 
@@ -192,9 +195,9 @@ Add customized messages to the `migration/templates` folder by creating a copy o
 
 What does that mean? Navigate to folder `migration/templates` and create a copy of each standard file e.g.
 
-* `dist.tpl_client_default_english.tpl ----> tpl_client_default_english.tpl`
-* `dist.tpl_client_com_english.tpl ----> tpl_client_com_english.tpl`
-* etc.
+- `dist.tpl_client_default_english.tpl ----> tpl_client_default_english.tpl`
+- `dist.tpl_client_com_english.tpl ----> tpl_client_com_english.tpl`
+- etc.
 
 This is to avoid upgrade issues in future as upgrading will just overwrite the `dist.*` files and not your custom files.
 In the `file` configuration settings, do not provide a path - just the filename.
@@ -207,36 +210,39 @@ The `default` configuration entry is always used as fallback, see below. **Impor
 
 ```json
 {
-    "templates": {
-        "default": { // <-- the default configuration entry
-            "": { // <-- this one is important, just reuse the english template
-                "subject": "{$resellerLabel}: Change of domain provider for your domain {$domain_name}",
-                "file": "tpl_client_default_english.tpl"
-            },
-            "english": {
-                "subject": "{$resellerLabel}: Change of domain provider for your domain {$domain_name}",
-                "file": "tpl_client_default_english.tpl"
-            },
-            "french": {
-                "subject": "{$resellerLabel}: Changement de fournisseur de domaine pour votre domaine {$domain_name}",
-                "file": "tpl_client_default_french.tpl"
-            }
-        },
-        "com": {
-            "": { // <-- this one is important, just reuse the english template
-                "subject": "{$resellerLabel}: Change of domain provider for your .COM domain {$domain_name}",
-                "file": "tpl_client_com_english.tpl"
-            },
-            "english": {
-                "subject": "{$resellerLabel}: Change of domain provider for your .COM domain {$domain_name}",
-                "file": "tpl_client_com_english.tpl"
-            },
-            "french": {
-                "subject": "{$resellerLabel}: Changement de fournisseur de domaine pour votre .COM domaine {$domain_name}",
-                "file": "tpl_client_com_french.tpl"
-            }
-        }
+  "templates": {
+    "default": {
+      // <-- the default configuration entry
+      "": {
+        // <-- this one is important, just reuse the english template
+        "subject": "{$resellerLabel}: Change of domain provider for your domain {$domain_name}",
+        "file": "tpl_client_default_english.tpl"
+      },
+      "english": {
+        "subject": "{$resellerLabel}: Change of domain provider for your domain {$domain_name}",
+        "file": "tpl_client_default_english.tpl"
+      },
+      "french": {
+        "subject": "{$resellerLabel}: Changement de fournisseur de domaine pour votre domaine {$domain_name}",
+        "file": "tpl_client_default_french.tpl"
+      }
+    },
+    "com": {
+      "": {
+        // <-- this one is important, just reuse the english template
+        "subject": "{$resellerLabel}: Change of domain provider for your .COM domain {$domain_name}",
+        "file": "tpl_client_com_english.tpl"
+      },
+      "english": {
+        "subject": "{$resellerLabel}: Change of domain provider for your .COM domain {$domain_name}",
+        "file": "tpl_client_com_english.tpl"
+      },
+      "french": {
+        "subject": "{$resellerLabel}: Changement de fournisseur de domaine pour votre .COM domaine {$domain_name}",
+        "file": "tpl_client_com_french.tpl"
+      }
     }
+  }
 }
 ```
 
@@ -246,15 +252,15 @@ Even though the templates are HTML files, they are finally processed in WHMCS as
 
 The following variable names are available for the client email templates:
 
-* `{$id}`: The internal ID of your domain in WHMCS (indexed no.)
-* `{$domain_name}`: The Internationalized Domain Name
-* `{$gainingRegistrarLabel}`: A speaking label of the gaining registrar
-* `{$losingRegistrarLabel}`: A speaking label of the gaining registrar
-* `{$resellerLabel}`: Your/Reseller's Label e.g. Reseller Pty Ltd
-* `{$resellerContactEmail}`: Your/Reseller's contact email address
-* `{$resellerContactURL}`: Your/Reseller's web page URL for a contact form or similar
-* `{$client_name}`: Name of your client
-* `{$signature}`: Your/Reseller's signature
+- `{$id}`: The internal ID of your domain in WHMCS (indexed no.)
+- `{$domain_name}`: The Internationalized Domain Name
+- `{$gainingRegistrarLabel}`: A speaking label of the gaining registrar
+- `{$losingRegistrarLabel}`: A speaking label of the gaining registrar
+- `{$resellerLabel}`: Your/Reseller's Label e.g. Reseller Pty Ltd
+- `{$resellerContactEmail}`: Your/Reseller's contact email address
+- `{$resellerContactURL}`: Your/Reseller's web page URL for a contact form or similar
+- `{$client_name}`: Name of your client
+- `{$signature}`: Your/Reseller's signature
 
 If you need something in addition, let us know.
 
@@ -286,7 +292,7 @@ We have worked on a JSON Schema that is used for validation at runtime. Whenever
 
 After Migration has finished - this might take a while of course, cleanup as follows:
 
-* Disable the addon in the WHMCS Admin Area under `System Settings > Addon Modules`
-* Delete the folder `modules/addons/cnicmigration`
+- Disable the addon in the WHMCS Admin Area under `System Settings > Addon Modules`
+- Delete the folder `modules/addons/cnicmigration`
 
 ... et voila!
