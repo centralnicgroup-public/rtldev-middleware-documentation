@@ -768,6 +768,7 @@ RenewDomain():ALLOW
 RequestDomainAuthInfo():ALLOW
 ResendDomainTransferConfirmationEmails():ALLOW
 ResendSSLCertEmail():ALLOW
+RestoreDomain():ALLOW
 SetEnvironment():ALLOW
 StartSession():ALLOW
 StatusAccount():ALLOW
@@ -846,6 +847,7 @@ QueryObjectLogList():ALLOW
 RenewDomain():ALLOW
 RequestDomainAuthInfo():ALLOW
 ResendDomainTransferConfirmationEmails():ALLOW
+RestoreDomain():ALLOW
 SetEnvironment():ALLOW
 StatusAccount():ALLOW
 StatusContact():ALLOW
