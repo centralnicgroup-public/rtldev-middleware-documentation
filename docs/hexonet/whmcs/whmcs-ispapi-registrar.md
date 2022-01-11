@@ -733,6 +733,7 @@ CheckAuthentication():ALLOW
 CheckAuthorization():ALLOW
 CheckDomains():ALLOW
 CheckDomainTransfer():ALLOW
+CheckIDNLanguage():ALLOW
 ConvertIDN():ALLOW
 CreateSSLCert():ALLOW
 DeleteDomain():ALLOW
@@ -823,6 +824,7 @@ AddNameserver():ALLOW
 CheckAuthentication():ALLOW
 CheckDomains():ALLOW
 CheckDomainTransfer():ALLOW
+CheckIDNLanguage():ALLOW
 ConvertIDN():ALLOW
 DeleteDomain():ALLOW
 DeleteNameserver():ALLOW
