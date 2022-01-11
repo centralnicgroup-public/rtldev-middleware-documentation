@@ -747,6 +747,7 @@ ModifyContact():ALLOW
 ModifyDomain():ALLOW
 ModifyNameserver():ALLOW
 ModifyUserPassword():ALLOW
+ParseSSLCertCSR():ALLOW
 PayDomainRenewal():ALLOW
 PushDomain():ALLOW
 QueryDNSZoneRRList():ALLOW
@@ -758,12 +759,12 @@ QueryDomainRepositoryInfo():ALLOW
 QueryDomainSuggestionList():ALLOW
 QueryDomainWhoisInfo():ALLOW
 QueryEnvironmentList():ALLOW
+QueryExchangeRates():ALLOW
 QueryObjectList():ALLOW
 QueryObjectLogList():ALLOW
 QueryOrderList():ALLOW
 QuerySSLCertDCVEmailAddressList():ALLOW
 QueryUserObjectStatistics():ALLOW
-ParseSSLCertCSR():ALLOW
 RenewDomain():ALLOW
 RequestDomainAuthInfo():ALLOW
 ResendDomainTransferConfirmationEmails():ALLOW
@@ -842,6 +843,7 @@ QueryDomainOptions():ALLOW
 QueryDomainPendingRegistrantVerificationList():ALLOW
 QueryDomainRepositoryInfo():ALLOW
 QueryDomainSuggestionList():ALLOW
+QueryExchangeRates():ALLOW
 QueryObjectList():ALLOW
 QueryObjectLogList():ALLOW
 RenewDomain():ALLOW
