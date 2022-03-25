@@ -409,6 +409,10 @@ ns2.hexonet.net -> 194.0.182.1
 ns3.hexonet.net -> 193.227.117.124
 ```
 
+In addition to the below private Nameserver Settings, please do not forget to add A records to the related domain name's DNSZone (in this example "anthony.com") via DNS Management:
+
+![A Records for Nameservers]({{ 'assets/images/whmcs/ispapi-registrar/ns_branded_2.png' | relative_url }})
+
 #### Nameserver Settings
 
 In WHMCS' Client Area, please navigate to the domain name under which you want to have you nameservers registered and managed.
