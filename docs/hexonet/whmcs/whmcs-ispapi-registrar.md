@@ -241,9 +241,46 @@ Activate `Sync Id Protection` to include synchronizing this Domain Add-Ons check
 
 Activate `Suspend after Expiration` if you want to suspend domain name automatically after expiration. This option is useful if you're faced with clients who are used to pay their domain renewals very late and you want to pressure a bit. Worst case such clients would lose domains when accidentally forgetting about the renewal. You can unsuspend domains over Client Profile > Tab Domains using the Button `Unsuspend`.
 
+Activate `High-Performance Setup` if you want to activate the High-Performance Proxy Setup. Please read this section about the technical requirements and necessary configuration steps first.
+
 If you want to offer our Web Apps to your customers, activate the `Offer Web Apps` checkbox. Find further details documented below.
 
 Now, press Save and voilà. If you're getting a green message - you're connected. Otherwise, you have to investigate further as described [here]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#49-login-failed-in-registrar-module' | relative_url }}).
+
+### High-Performance Setup
+
+In case you are experiencing network latency issues (long node path to our data center), this setup may help improving the situation.
+After activation your WHMCS is requesting ALL our API requests via HTTP to localhost / 127.0.0.1 and there, a Proxy Mechanism cares for forwarding these requests to our API endpoint using HTTPS. This mechanism improves the performance as it is keeping the connections persistent and avoids a bit of reccuring connection handling overhead.
+
+_At least Apache version 2.2.9_ is required.
+
+An example Apache configuration with binding to localhost:
+
+```bash
+<VirtualHost 127.0.0.1:80>
+    ServerAdmin webmaster@localhost
+
+    ServerSignature Off
+
+    SSLProxyEngine on
+    ProxyPass /api/call.cgi https://api.ispapi.net/api/call.cgi min=1 max=2
+    ProxyPass /api-ote/call.cgi https://api-ote.ispapi.net/api/call.cgi min=1 max=2
+    <Proxy *>
+        Order Deny,Allow
+        Deny from none
+        Allow from all
+    </Proxy>
+</VirtualHost>
+```
+
+The following Apache2 modules must be installed and activated:
+
+```bash
+sudo a2enmod http_proxy ssl
+sudo service apache2 restart
+```
+
+Voilà!
 
 ### Domain Contact Verification
 

@@ -58,16 +58,13 @@ _At least Apache version 2.2.9_ is required.
 The following Apache2 modules must be installed and activated:
 
 ```bash
-proxy.conf
-proxy.load
-proxy_http.load
-ssl.conf # for HTTPs connection to our API server
-ssl.load # for HTTPs connection to our API server
+sudo a2enmod http_proxy ssl
+sudo service apache2 restart
 ```
 
 ### 2 - Apache Configuration
 
-An example Apache configuration with binding to localhost (example for RRPproxy!):
+An example Apache configuration with binding to localhost,  example for **RRPproxy**:
 
 ```bash
 <VirtualHost 127.0.0.1:80>
@@ -85,8 +82,31 @@ An example Apache configuration with binding to localhost (example for RRPproxy!
 </VirtualHost>
 ```
 
+Example for **HEXONET**:
+
+```bash
+<VirtualHost 127.0.0.1:80>
+    ServerAdmin webmaster@localhost
+
+    ServerSignature Off
+
+    SSLProxyEngine on
+    ProxyPass /api/call.cgi https://api.ispapi.net/api/call.cgi min=1 max=2
+    <Proxy *>
+        Order Deny,Allow
+        Deny from none
+        Allow from all
+    </Proxy>
+</VirtualHost>
+```
+
 After saving your configuration changes please restart the Apache webserver.
-If you want to connect to the OT&E System, please use "https://api-ote.rrpproxy.net/api/call.cgi".
+If you want to connect to the OT&E System, please use the below URLs
+
+- RRPproxy: "https://api-ote.rrpproxy.net/api/call.cgi"
+- HEXONET: "https://api-ote.ispapi.net/api/call.cgi"
+
+respectively.
 
 ### 3 - Implementation
 
