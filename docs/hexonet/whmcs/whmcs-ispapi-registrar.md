@@ -285,7 +285,48 @@ sudo service apache2 restart
 Basically, LiteSpeed is a Drop-in Replacement for Apache and very compatible with Apache Configuration Settings.
 Still, we did not yet had time to identify if the above mechanism can be supported.
 
-Initial Research wasn't that promising. We'll keep this section updated.
+Some Feedback in advance: ProxyPass is said to be fully supported by LiteSpeed v6.
+Still, through the Admin UI, I wasn't able to configure a Proxy as necessary.
+
+My expectation: **UNTESTED**
+Having a Virtual Host with defined External Apps - one for our Production Environment and one for our OT&E Environment - plus RewriteRules, might do it.
+Please, if you want to give this a try, please do it in a test environment and not in production!
+
+If you got it up and running, please let us know - very appreciated!
+
+##### Virtual Host
+
+  Virtual Host Name: 127.0.0.1
+  Notes: HEXONET High Performance Proxy Setup
+  Max Keep-Alive Requests: 2
+
+Unsure about the best Security Settings.
+
+##### External Apps
+
+  hexonetapi (Web Server)
+    Address: 93.190.235.100
+    Max Connections: 2
+    Initial Request Timeout: 5
+    Retry Timeout: 5
+    Response Buffering: No
+
+  hexonetapiote (Web Server)
+    Address: 109.234.111.141
+    Max Connections: 2
+    Initial Request Timeout: 5
+    Retry Timeout: 5
+    Response Buffering: No
+
+##### RewriteRules
+
+Not sure if the line `RewriteCond %{HTTPS} !=on` is necessary.
+
+```text
+RewriteCond %{HTTPS} !=on
+RewriteRule /api/call.cgi https://hexonetapi/api/call.cgi [L,P]
+RewriteRule /api-ote/call.cgi https://hexonetapiote/api/call.cgi [L,P]
+```
 
 ### Domain Contact Verification
 
