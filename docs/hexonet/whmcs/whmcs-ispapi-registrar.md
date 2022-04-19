@@ -302,30 +302,14 @@ If you got it up and running, please let us know - very appreciated!
 
 Unsure about the best Security Settings.
 
-##### External Apps
-
-  hexonetapi (Web Server)
-    Address: 93.190.235.100
-    Max Connections: 2
-    Initial Request Timeout: 5
-    Retry Timeout: 5
-    Response Buffering: No
-
-  hexonetapiote (Web Server)
-    Address: 109.234.111.141
-    Max Connections: 2
-    Initial Request Timeout: 5
-    Retry Timeout: 5
-    Response Buffering: No
-
 ##### RewriteRules
 
 Not sure if the line `RewriteCond %{HTTPS} !=on` is necessary.
 
 ```text
 RewriteCond %{HTTPS} !=on
-RewriteRule /api/call.cgi https://hexonetapi/api/call.cgi [L,P]
-RewriteRule /api-ote/call.cgi https://hexonetapiote/api/call.cgi [L,P]
+RewriteRule /api/call.cgi https://api.ispapi.net/api/call.cgi [L,P]
+RewriteRule /api-ote/call.cgi https://api-ote.hexonet.net/api/call.cgi [L,P]
 ```
 
 ### Domain Contact Verification
