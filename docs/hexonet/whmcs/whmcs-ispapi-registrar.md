@@ -124,6 +124,8 @@ If you're upgrading regularly and keeping all our modules / addons / widgets upd
 
 ## Installing our Module
 
+Firstly, we want to point you to the setting `max_input_vars` of your php.ini. You need to update this setting to `10000` to get WHMCS' Registrar TLD Sync / Pricing Import up and working. This is not something special related to our integration but of WHMCS Core. Let me point to the [PHP Docs](https://www.php.net/manual/en/info.configuration.php#ini.max-input-vars) and [this feature request](https://requests.whmcs.com/idea/do-not-use-post-form-data-on-pages-that-could-have-large-amout-of-data) addressed to WHMCS as well.
+
 The `HEXONET` Module that is shipped with WHMCS is maintained by the WHMCS Core Team and as Pull Requests took to long, we decided to work on our own Module Version. We highly recommend downloading and installing our white label module `HEXONET/ispapi` which is our maintained version and providing you latest features and patches. Available for download [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip).
 
 - When upgrading: Backup your current module version (folder `modules/registrars/ispapi`) and then delete that folder
