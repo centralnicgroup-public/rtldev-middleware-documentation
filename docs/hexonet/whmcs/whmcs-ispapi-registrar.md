@@ -217,7 +217,7 @@ Activate `Use Test Environment` by activating the checkbox in case you want to u
 
 > NOTE: We highly recommend to have two Sytems set up - An Integration Test / Demo System connected to our OT&E System and your Production System connected to our Live System. Switching this in one System may lead to bad experiences later on e.g. Registrar TLD Sync related, Domain Portfolio Mixup etc. You can request a free Developer License at whmcs.com that you can use for an internal hosted WHMCS Installation.
 
-You may configure a `Proxy Server` to use for connecting. This configuration setting is optional.
+You may configure a `Proxy Server` to use for connecting. This configuration setting is optional. But this might be the entry point for performance improvements. I you have a Reverse Proxy set up, communication will be sent to this server. It could care for keeping connections open for a while (connection keep-alive) to improve HTTP communication performance. This is similar to what we offer via the high-performance proxy setup, but a way working for other web servers than Apache. This setting does not work together with the High-Performance Proxy Setup!
 
 At `IRTP (Inter-Registrar Transfer Policy)` setting, we suggest using `Option 1` to activate the default WHMCS way of the IRTP integration. Find further details documented below.
 
@@ -243,7 +243,7 @@ Activate `Sync Id Protection` to include synchronizing this Domain Add-Ons check
 
 Activate `Suspend after Expiration` if you want to suspend domain name automatically after expiration. This option is useful if you're faced with clients who are used to pay their domain renewals very late and you want to pressure a bit. Worst case such clients would lose domains when accidentally forgetting about the renewal. You can unsuspend domains over Client Profile > Tab Domains using the Button `Unsuspend`.
 
-Activate `High-Performance Setup` if you want to activate the High-Performance Proxy Setup. Please read [this section](#high-performance-setup) about the technical requirements and necessary configuration steps first.
+Activate `High-Performance Setup` if you want to activate the High-Performance Proxy Setup. Please read [this section](#high-performance-setup) about the technical requirements and necessary configuration steps first. This mechanism is only compatible to Apache - still, you might try to work out a similar configuration for your Web-Server. We were not successful for LiteSpeed.
 
 If you want to offer our Web Apps to your customers, activate the `Offer Web Apps` checkbox. Find further details documented below.
 
