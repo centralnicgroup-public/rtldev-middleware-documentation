@@ -25,7 +25,7 @@ the full mapping for these strings, as defined by
 
 ## Requirements
 
-* Having Node.js >= 9.x set up and running, if you plan running it on webserver-side. We suggest using [nvm](//github.com/creationix/nvm).
+* Having Node.js >= 14.x set up and running, if you plan running it on webserver-side. We suggest using [nvm](//github.com/creationix/nvm).
 
 ## Usage Instructions
 
@@ -120,7 +120,7 @@ uts46.convert(['öbb.at', 'xn--fa-hia.de']) // { IDN: ['öbb.at', 'faß.de'], PC
 
 ### Using it in-browser
 
-Use file `uts46bundle.js` as JavaScript include. The Tool will then be available as ispapiIdnconverter object in Javascript.
+Use file `uts46bundle.js` (or the minified variant) as JavaScript include. The Tool will then be available as ispapiIdnconverter object in Javascript.
 
 ## Known issues
 
@@ -129,7 +129,3 @@ these do not affect any mapping of the domain names; instead, they restrict the
 set of valid domain names. Since registrars shouldn't be accepting these names
 in the first place, a domain that violates these rules will simply fail to
 resolve.
-
-## We need your help
-
-The original author wrote the build process based on Python 2 which makes it hard to upgrade the Unicode Standard to the latest one. Porting this process to Python 3 or even better Node.js, is a big and hard project - any help: very appreciated.
