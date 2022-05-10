@@ -916,7 +916,7 @@ When it comes to a change of owner while updating whois contact information of a
 
 ### 2. IDN Conversion
 
-Reported to and confirmed by WHMCS (-> #CORE-17342). When it comes to IDNs, WHMCS is doing the conversion to punycode incorrect. There are different standards - IDNA2003, IDNA2008, UTS46. It depends on the underlying TLD provider / registry which one to support. e.g. when searching for `fußball`, `fussball.com` is the right way for .com and `fußball.de` the right one for .de, but WHMCS is converting it to `fussball.de` which is still supported and valid, but probably not the domain you were looking for (`fußball.de`).
+Reported to and confirmed by WHMCS (-> #CORE-17342). When it comes to IDNs, WHMCS is doing the conversion to punycode incorrect. There are different standards - IDNA2003, IDNA2008, UTS46. It depends on the underlying TLD provider / registry which one to support. e.g. when searching for `fußball`, `fussball.com` is the right way for .com and `fußball.de` the right one for .de, but WHMCS is converting it to `fussball.de` which is still supported and valid, but probably not the domain you were looking for (`fußball.de`). This is affecting all registrar integrations.
 
 ### 3. EPP Codes
 
