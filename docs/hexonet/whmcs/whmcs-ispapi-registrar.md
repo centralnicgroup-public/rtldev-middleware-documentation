@@ -935,4 +935,3 @@ Reported to and confirmed by WHMCS (-> #CORE-16920). This API Command is not ret
 ### 6. localAPI DomainRequestEPP
 
 Reported to WHMCS, but not confirmed as bug. So let us see it as strange behavior. The epp code returned has to be html decoded. Not affecting our Integration.
-
