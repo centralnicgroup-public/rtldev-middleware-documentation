@@ -905,3 +905,22 @@ IMPORTANT: If you're doing something wrong here, like just white-listing your in
 ## Final steps
 
 As the HEXONET system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the HEXONET Control Panel [LIVE System](//account.hexonet.net/). Click on your account name at the top right and then press the button `Add Funds`. If you need funds to be added to your [OT&E Account](//account-ote.hexonet.net), let us know.
+
+## Known Issues
+
+Find below some collection of incompatibilities of / with WHMCS.
+
+### 1. Change of Registrant
+
+When it comes to a change of owner while updating whois contact information of a domain, this might lead to a so-called `Trade`. This is in general for free, except at some ccTLD providers. In case this results into costs, we log such costs to the System Activity Log for transparency. WHMCS is by design totally incompatible to this process and can't therefore automatically generate an invoice for this (and to process the update after payment). We are trying to figure a better solution out.
+
+### 2. IDN Conversion
+
+Reported to and confirmed by WHMCS. When it comes to IDNs, WHMCS is doing the conversion to punycode incorrect. There are different standards - IDNA2003, IDNA2008, UTS46.
+It depends on the underlying TLD provider / registry which one to support. e.g. when searching for `fußball`, `fussball.com` is the right way for .com and `fußball.de` the right one for .de, but WHMCS is converting it to `fussball.de` which is still supported and valid, but probably not the domain you were looking for (`fußball.de`).
+
+### 3. EPP Codes
+
+Some TLDs like .DK, .AT, etc. do not require an epp / authorization code for transfers. That's why we automatically disable the "epp code" checkbox for such TLDs within the "Registrar TLD Sync" (WHMCS' pricing import). But when it comes to a system-internal transfer in the HEXONET System, so from customer A to customer B, our Backend System is enforcing the epp / authorization code which is not compatible to the global configuration setting.
+Workaround: Deactivation of the global configuration. Which is then enforcing the authcode for all transfer cases of the underlying TLD and therefore also not what we are looking for. If a transfer is failing, check the Module Queue (find it under utilities) if there's an error message including "Authorization failed; USERTRANSFER - AUTH CODE REQUIRED". If so, please ask the current owner for the epp code and then reach out to our support department.
+We have addressed a feature request to WHMCS to get this solved.
