@@ -928,14 +928,22 @@ Some TLDs like .DK, .AT, etc. do not require an epp / authorization code for tra
 Workaround: Deactivation of the global configuration. Which is then enforcing the authcode for all transfer cases of the underlying TLD and therefore also not what we are looking for. If a transfer is failing, check the Module Queue (find it under utilities) if there's an error message including "Authorization failed; USERTRANSFER - AUTH CODE REQUIRED". If so, please ask the current owner for the epp code and then reach out to our support department.
 We have addressed a [feature request](https://requests.whmcs.com/idea/hook-for-enabling-epp-code-field-for-transfer-on-demand-per-domain) to WHMCS to get this solved.
 
-### 5. Function Deprecations
+### 5. Local Presence Service
+
+WHMCS isn't offering a Domain Add-On to cover Local Presence Services. This would definitely increase selling. Furthermore, if you're manually importing Domains to WHMCS with activated Local Persence Service on Registrar-side, it won't get invoiced in WHMCS. A [Feature Request](https://requests.whmcs.com/idea/integrate-trustee-service-as-generic-domain-add-on) has been addressed to WHMCS.
+
+### 6. Registrar TLD Sync Automation
+
+Importing TLD Settings and Prices using WHMCS' Feature "Registrar TLD Sync" got released, but without the option to automatically schedule it via cron. A [Feature Request](https://requests.whmcs.com/idea/make-registrar-tld-sync-tool-automatable-with-cron-job) has been addressed to WHMCS.
+
+### 7. Function Deprecations
 
 Reported to and confirmed by WHMCS (-> #CORE-17038). The [developer documentation for Registrar Modules](https://developers.whmcs.com/domain-registrars/domain-information/) is pointing out function `GetDomainInformation` to be integrated instead of the deprecated functions `GetNameservers` and `GetRegistrarLock`. We just run into issues after removing these deprecated functions and re-alived them again. Find the whole related issues and topic documented here. This isn't affecting you as reseller or your customers. But, when patched by WHMCS, would increase the performance of our integration.
 
-### 6. localAPI GetTLDPricing
+### 8. localAPI GetTLDPricing
 
 Reported to and confirmed by WHMCS (-> #CORE-16920). This API Command is not returning prices that are set to 0.00. Not affecting our Integration, just something we addressed to WHMCS.
 
-### 7. localAPI DomainRequestEPP
+### 9. localAPI DomainRequestEPP
 
 Reported to WHMCS, but not confirmed as bug. So let us see it as strange behavior. The epp code returned has to be html decoded. Not affecting our Integration.
