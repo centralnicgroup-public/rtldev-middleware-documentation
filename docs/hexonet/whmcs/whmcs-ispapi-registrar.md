@@ -940,6 +940,8 @@ Importing TLD Settings and Prices using WHMCS' Feature "Registrar TLD Sync" got 
 
 WHMCS and its Pricing Import are not flexible enough. Registrars distinguish between supported Registration Terms, Renewal Terms and Transfer Terms where the Pricing Import is only allowing for specifying a single list of supported terms. So, what to import in case these lists differ completely? A [Feature Request](https://requests.whmcs.com/idea/registrar-tld-sync-to-support-different-list-of-terms) has been addressed to WHMCS.
 
+The only way of getting around this would be to manually reconfigure such "problematic" cases after import.
+
 ### 8. Function Deprecations
 
 Reported to and confirmed by WHMCS (-> #CORE-17038). The [developer documentation for Registrar Modules](https://developers.whmcs.com/domain-registrars/domain-information/) is pointing out function `GetDomainInformation` to be integrated instead of the deprecated functions `GetNameservers` and `GetRegistrarLock`. We just run into issues after removing these deprecated functions and re-alived them again. Find the whole related issues and topic documented here. This isn't affecting you as reseller or your customers. But, when patched by WHMCS, would increase the performance of our integration.
