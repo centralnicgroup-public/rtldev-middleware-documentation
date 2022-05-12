@@ -940,7 +940,7 @@ Importing TLD Settings and Prices using WHMCS' Feature "Registrar TLD Sync" got 
 
 WHMCS and its Pricing Import are not flexible enough. Registrars distinguish between supported Registration Terms, Renewal Terms and Transfer Terms where the Pricing Import is only allowing for specifying a single list of supported terms. So, what to import in case these lists differ completely? A [Feature Request](https://requests.whmcs.com/idea/registrar-tld-sync-to-support-different-list-of-terms) has been addressed to WHMCS.
 
-The only way of getting around this would be to manually reconfigure such "problematic" cases after import.
+This issue isn't actually affecting the HEXONET integration, just fyi.
 
 ### 8. Function Deprecations
 

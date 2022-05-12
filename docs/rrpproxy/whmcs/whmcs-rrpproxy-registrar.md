@@ -393,3 +393,55 @@ You can do that for your account by logging in to our control panel ([OT&E](//wi
 ## Final steps
 
 As the RRPproxy system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the RRPproxy Control Panel [LIVE System](//wi.rrpproxy.net/). Click on `Account Balance`, then `Charge your account`.
+
+## Known Issues
+
+Find below some collection of incompatibilities of / with WHMCS.
+
+### 1. Change of Registrant
+
+When it comes to a change of owner while updating whois contact information of a domain, this might lead to a so-called `Trade`. This is in general for free, except at some ccTLD providers. WHMCS is by design totally incompatible to this process and can't therefore automatically generate an invoice for this (and to process the update after payment). We are trying to figure a better solution out. A [Feature Request](https://requests.whmcs.com/idea/change-of-registrant-trades) has been addressed to WHMCS as well.
+
+### 2. Registrar-Lock Configuration
+
+Registrar-Lock isn't supported by all TLDs/TLD providers. Registrars have therefore to implement a manual workaround for getting the menu item removed and the warning about the domain being unlocked removed. This should be better covered by a TLD-based configuration setting (like the one for epp code). A [Feature Request](https://requests.whmcs.com/idea/option-for-registrar-lock#comments) has been addressed to WHMCS.
+
+### 3. IDN Conversion
+
+Reported to and confirmed by WHMCS (-> #CORE-17342). When it comes to IDNs, WHMCS is doing the conversion to punycode incorrect. There are different standards - IDNA2003, IDNA2008, UTS46. It depends on the underlying TLD provider / registry which one to support. e.g. when searching for `fußball`, `fussball.com` is the right way for .com and `fußball.de` the right one for .de, but WHMCS is converting it to `fussball.de` which is still supported and valid, but probably not the domain you were looking for (`fußball.de`). This is affecting all registrar integrations.
+
+### 4. Local Presence Service
+
+WHMCS isn't offering a Domain Add-On to cover Local Presence Services. This would definitely increase selling. Furthermore, if you're manually importing Domains to WHMCS with activated Local Persence Service on Registrar-side, it won't get invoiced in WHMCS. A [Feature Request](https://requests.whmcs.com/idea/integrate-trustee-service-as-generic-domain-add-on) has been addressed to WHMCS.
+
+### 5. Registrar TLD Sync Automation
+
+Importing TLD Settings and Prices using WHMCS' Feature "Registrar TLD Sync" got released, but without the option to automatically schedule it via cron. A [Feature Request](https://requests.whmcs.com/idea/make-registrar-tld-sync-tool-automatable-with-cron-job) has been addressed to WHMCS.
+
+### 6. Registrar TLD Sync Imports
+
+WHMCS and its Pricing Import are not flexible enough. Registrars distinguish between supported Registration Terms, Renewal Terms and Transfer Terms where the Pricing Import is only allowing for specifying a single list of supported terms. So, what to import in case these lists differ completely? A [Feature Request](https://requests.whmcs.com/idea/registrar-tld-sync-to-support-different-list-of-terms) has been addressed to WHMCS.
+
+The only way of getting around this would be to manually reconfigure such "problematic" cases after import.
+
+```bash
+TLD             REG TERM       RENEWAL TERM
+-----------------------------------------------
+.net.bd         2y, 10y        1y
+.gi             2y, 10y        1y
+.org.gi         2y, 10y        1y
+.hu             2y             1y
+.tm             10y            1y, 2y, 5y     
+```
+
+### 7. Function Deprecations
+
+Reported to and confirmed by WHMCS (-> #CORE-17038). The [developer documentation for Registrar Modules](https://developers.whmcs.com/domain-registrars/domain-information/) is pointing out function `GetDomainInformation` to be integrated instead of the deprecated functions `GetNameservers` and `GetRegistrarLock`. We just run into issues after removing these deprecated functions and re-alived them again. Find the whole related issues and topic documented here. This isn't affecting you as reseller or your customers. But, when patched by WHMCS, would increase the performance of our integration.
+
+### 8. localAPI GetTLDPricing
+
+Reported to and confirmed by WHMCS (-> #CORE-16920). This API Command is not returning prices that are set to 0.00. Not affecting our Integration, just something we addressed to WHMCS.
+
+### 9. localAPI DomainRequestEPP
+
+Reported to WHMCS, but not confirmed as bug. So let us see it as strange behavior. The epp code returned has to be html decoded. Not affecting our Integration.
