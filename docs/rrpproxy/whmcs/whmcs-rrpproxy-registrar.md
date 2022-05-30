@@ -376,6 +376,9 @@ This role user will only be able to execute the WHMCS needed commands.
   - Price
 - Login to your WHMCS Backend and replace your RRPproxy username with your new user.
 
+If there's any of the above permissions not available for selection, please reach out to support.
+If it is still not working, please try again after activating "Rights required for webinterface usage" as well in the above mentioned Control Panel.
+
 ### 2-Factour Authentication
 
 WHMCS itself does **not** support using 2-Factor Authentication (2FA) for Registrar Modules. So having 2FA activated for your user and using it in WHMCS simply does **not** work. If you've set up a restrictive role user as described above and you're using that one in your registrar configuration, then you can activate 2FA for your account (!!!not for your restrictive role user!!!).

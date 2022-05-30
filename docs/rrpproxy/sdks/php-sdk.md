@@ -22,7 +22,7 @@ This module is a connector library for the insanely fast HEXONET and RRPproxy Ba
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
 - [UML Diagram]({{ 'docs/rrpproxy/sdks#uml-diagram' | relative_url }})
-- [Class Documenation](//rawgit.com/centralnic-reseller/php-sdk/master/build/api/index.html)
+- [Class Documenation](//centralnic-reseller.github.io/php-sdk/)
 - [API Documentation]({{ 'docs/rrpproxy/api-documentation' | relative_url }})
 
 ## Requirements
