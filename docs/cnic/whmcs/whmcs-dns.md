@@ -3,7 +3,7 @@ layout: default
 title: DNS Addon
 parent: WHMCS
 grand_parent: All Brands
-nav_order: 2
+nav_order: 3
 showtoc: 1
 ---
 
