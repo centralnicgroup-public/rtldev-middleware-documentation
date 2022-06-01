@@ -8,57 +8,32 @@ Get in touch with us, if you are interested in this Tool to get your Domain Port
 
 This tool is made for migrations at point of domain renewal to minimize costs and for optional customer communication within the migration process to avoid transfer rejections.
 
-It cancels the domain renewal and instead initiates the Migration / Transfer. Still, the domain renewal order itself is left in WHMCS and is used for invoicing the transfer. **Only Domains in Status `Active`, `Expired` and `Grace Period (Expired)` are considered by the migration tool.** For all other cases the renewal will be processed. You can [configure](#configure-renew-if-expired) if you want to migrate or to renew domains with status `Expired` and `Grace Period (Expired)`.
-
-Our Migration Tool will load the EPP / Authorization Code from db table `mig_domains` with fallback to the losing registrar's module. Lookup from DB Table is useful in case a losing registrar doesn't provide it in real time over `GetEPPCode` method e.g. Enom. So, for such registrars ensure that this table exists and is prefilled with EPP Codes accordingly, see [this section](#configure-epp-authorization-codes).
-Last step is to initiate the transfer using the gaining registrar's module.
-In addition this tool can care about informing your clients by mail about the process, see below. If a domain is locked, it will be unlocked for the transfer process automatically.
-
-Here a high-level process flow diagram on how it works:
-
-[![processflow]({{ 'assets/images/whmcs/migration/processflow.png' | relative_url }})]({{ 'assets/images/whmcs/migration/processflow.png' | relative_url }})
-
-## Current Version
-
-We won't offer our module in public actually to avoid unwanted access.
-So, please have regularly an eye on this section to identify if there's an update available.
-
-_Latest version_: v1.1.1
-
-## Some Impressions
-
-Error output in Domain Details in Admin Area:
-
-![adminareaerror]({{ 'assets/images/whmcs/migration/domain_renewal_message.png' | relative_url }})
-
 ## Features
 
+- Migrate from different registrars to one or multiple registrar brands of the CentralNic Group PLC ([HEXONET](https://hexonet.net/), [RRPproxy](https://rrpproxy.net/), [TPP Wholesale](https://tppwholesale.com.au/), [internet.bs](https://internet.bs/)) in parallel
+- Migrate all TLDs or just a subset of TLDs per losing registrar
+- Bulk transfer for domains that can be transferred for free (0Y period) e.g. .qa, .ae, .es, .au, ...
 - User Interface for configuration and management of domain migrations
-- Using default WHMCS logging mechanisms
 - Support for WHMCS Notification System allows for flexible notifications
 - Email Notifications to your WHMCS Administrators (or custom email address) about the migration process
-- Migrate from different registrars to one or multiple registrar brands of the CentralNic Group PLC (HEXONET, RRPproxy, TPP Wholesale, internet.bs) in parallel
-- Migrate all TLDs or just a subset of TLDs per losing registrar
+- Fully customizable Customer Notification over Email - language and tld-specific Email-Templates supported!
+
+## Benefits
+
 - Saving costs: Migrate at the point of domain renewal
 - Fully automated, you just need to spend time on installation, configuration and checking logs
-- Fully customizable Customer Notification over Email - language and tld-specific Email-Templates supported!
-- Configurable Option: Renew expired domains at the current registrar instead of migrating them
-- Customizable error / success messages
-- Bulk transfer for domains that can be transferred for free (0Y period) e.g. .qa, .ae, .es, .au, ...
 
-## Known Problems
+## How it works
 
-Find here some cases brought up to our hands:
+The module intercepts domain renewals, and if a [configuration mapping](#define-mappings) matches, it aborts the renewal and initiates the Migration / Transfer to the gaining registry instead. Still, the domain renewal order itself is left in WHMCS and is used for invoicing the transfer.
 
-- **resellerclubcrm** module ending in an PHP Error - backtrace is pointing to language files.
-  Even though this got escalated to the Module Devs, they just provided a workaround and not a new release. So fyi:
-  Edit the file `$YOUR_WHMCS_INSTANCE/modules/addons/resellerclubmods_core/modlang/English_admin_lcdrm.php` and insert above the line 25 the below code:
+By default, **Only Domains in Status `Active`, `Expired` and `Grace Period (Expired)` are considered by the migration tool.** For all other cases the renewal will be processed normally. You can [configure](#addon-configuration) the module to also ignore domains in `Expired` and `Grace Period (Expired)` status.
 
-  ```php
-  $_ADMINLANG = array();
-  ```
+The necessary [EPP/Authorization codes](#eppauthorization-codes) are retrieved either from the configuration or dynamically through the losing registrar's module.
 
-  Such manual changes will be lost when upgrading your resellerclub core parts.
+If a domain is locked, it will be unlocked for the transfer process automatically.
+
+In addition this tool can [inform your clients](#email-notifications) by mail about the process.
 
 ## Migration Best Practices
 
@@ -72,7 +47,7 @@ Best case would be to have a development / QA system that is connected to the OT
 
 Premium Domains: As of a bug WHMCS solved with v7.8, any premium domain registered before v7.8 has incomplete data in the database and therefore a renewal won't be working. This also applies when trying to transfer. Please get in touch with us.
 
-## Preparations
+## Installation
 
 **Don't touch files where the filename starts with `dist.*`. That are default files and templates, partially used as fallback or within automated tests. Follow the below instructions to get this tool correctly up and running.**
 
@@ -80,14 +55,13 @@ Premium Domains: As of a bug WHMCS solved with v7.8, any premium domain register
 
 Re-Configure WHMCS in direction of the gaining registrar:
 
-- ensure the gaining registrar's registrar module is installed, activated, configured and working!
-- ensure the Configuration in Domain Pricing Section is already re-configured in direction of the gaining registrar. Ensure ALL TLDs that are assigned to the losing registrar and [whitelisted for migration](#configure-list-of-tlds-to-migrate) are reassigned to the gaining registrar!
+- Ensure the gaining registrar's registrar module is installed, activated, configured and working!
+- Ensure the Configuration in Domain Pricing Section is already re-configured in direction of the gaining registrar. Ensure ALL TLDs that are assigned to the losing registrar and [whitelisted for migration](#define-mappings) are reassigned to the gaining registrar!
 
 ### Installation / Upgrade
 
-Copy the `modules` folder into your WHMCS root.
-
-In your WHMCS Admin Area, go to `Configuration > System Settings > Addon Modules`, then click on `Activate` next to the `CentralNic Migration Wizard` listing.
+1. Copy the `modules` folder into your WHMCS root.
+2. In your WHMCS Admin Area, go to `Configuration > System Settings > Addon Modules`, then click on `Activate` next to the `CNIC Migrator` listing.
 
 ## Configuration
 
@@ -109,79 +83,25 @@ In the WHMCS `Addon Modules` page, you can configure some basic settings for the
 
 ### Define mappings
 
-In the WHMCS Admin Area, navigate to `Addons > CentralNic Migration Wizard`, then click on the `Mappings` tab.
+In the WHMCS Admin Area, navigate to `Addons > CNIC Migrator`, then click on the `Mappings` tab.
 
-![adminareaerror]({{ 'assets/images/whmcs/migration/mappings.png' | relative_url }})
+![adminareaerror]({{ 'assets/images/whmcs/cnic-migration/mappings.png' | relative_url }})
 
 Here you can define your desired mappings, specifying the desired losing and gaining registrars, any specific TLD, and wether the migrator should automatically retrieve the EPP auth codes via the losing registrar's WHMCS module.
 
-## Logging
+### EPP/Authorization Codes
 
-If logging is enabled in the addon settings, it will happen in a variety of ways.
+The migrator will attempt to retrieve the EPP code automatically via the losing registrar's module.
 
-### Addon Logging
+Some registrars however, do not support this functionality. Their module will return an error, but send the code out to the current registrant's email address instead. So, not reliable for real-time processing. A good example is the registrar Enom.
 
-In the `Logs` tab, you will find detailed logs about each transfer or renewal process initiated by the addon.
+As a workaround, you should get hold of the EPP codes manually (for example by requesting it and having your customer send you the code they recieve via e-mail). Then, you can specify those EPP codes beforehand in the `EPP Codes` tab in the Addon.
 
-![adminareaerror]({{ 'assets/images/whmcs/migration/logs.png' | relative_url }})
+![adminareaerror]({{ 'assets/images/whmcs/cnic-migration/epp.png' | relative_url }})
 
-The table is entirely searchable and sortable, and can be exported as CSV or Excel file if desired.
+When initiating a transfer, the migration addon will first check if any EPP code has been specified for the related domain, and then fallback to the losing registrar's registrar module functionality, if enabled in the mappings.
 
-### System Activity Log
-
-In addition to the addon logging, some basic logging will be done in the WHMCS System Activity log. The messages will be prefixed by `[cnicmigration]`.
-
-### WHMCS Notification System
-
-1. In the WHMCS Admin Area, navigate to `System Settings > Notifications`, then click on `Create New Notification Rule`.
-
-![adminareaerror]({{ 'assets/images/whmcs/migration/notifications.png' | relative_url }})
-
-2. Give it a name and select the `API > Custom API Trigger`event.
-3. Set the `Trigger Identifier` to `Exact Match` with `cnic.migration.log` as value.
-4. Last but not least, select and configure the desired notification provider.
-
-## Error Messages
-
-### Transfer not initiated
-
-Whenever our Migration Tool is running into an error, it still aborts the renewal. Still the transfer is then not initiated as of the error occurred. This will be shown to your clients when it comes to the Domain Synchronization Mail.
-
-You can configure the feedback messages in the language files, for example `modules/addons/cnicmigration/lang/english.php`
-
-```php
-$_ADDONLANG = [
-    "defaultErrorMsg" => "Domain Migration to the new subcontractor open. Don't renew the domain.",
-];
-```
-
-The migration tool will append an error identifier to make it more transparent which kind of error might have happened, e.g. `Domain Migration to the new subcontractor. Don't renew the domain.[ERROR_CONFIG]`.
-
-- `[ERROR_CONFIG:...some reason...]`: Configuration file `migration/configuration.json` couldn't be loaded (missing or invalid json). Further Details provided.
-- `[ERROR_DOMAIN_DATA]`: Domain Data couldn't be loaded over WHMCS - should never happen
-- `[ERROR_AUTH_CODE:...some reason...]`: Getting the EPP/Authorization code of the domain did not work. Further Details provided.
-- `[ERROR_REG_MODULE]`: Loading the gaining registrar's registrar module failed or the module is not activated or not integrating the `TransferDomain` method
-- `[ERROR_TRANSFER_FAIL:...some reason...]`: Initiating the Transfer failed. Further Details provided.
-
-### Transfer initiated
-
-Whenever our Migration Tool was able to initiate a Transfer in direction of the gaining Registrar, it will still abort the Renewal as this is the idea behind the migration approach. You can customize the message used to cancel the Renewal in WHMCS and to display in Domain Synchronization Report in the language files, for example `modules/addons/cnicmigration/lang/english.php`
-
-```php
-$_ADDONLANG = [
-    "defaultSuccessMsg" => "Domain Migration to the new subcontractor initiated. Don't renew the domain.",
-];
-```
-
-In our logs it will show like:
-
-- `[INIT_TRANSFER_SUCCESS]`: Initiating the Transfer succeeded.
-
-Even though we are talking about a success message here, it will still be displayed as an Error Result by WHMCS. We can't change this.
-
-## Mail-out and Templates
-
-### (De-)Activate Mail-out
+## Email Notifications
 
 This migration tool also takes care about sending emails to your clients explaining them what is going on to avoid domain transfer rejections as far as possible.
 This is by default turned off to leave you the possibility to reach out to your customers using a different way.
@@ -189,24 +109,14 @@ Still, you can turn that on to let this migration tool do that work. This can be
 
 By default this tool is also sending mails to you, the reseller, to allow a bit of monitoring. This can also be turned off over `Send mails to admins` setting.
 
-### Prepare Email Templates
-
-Add customized messages to the `migration/templates` folder by creating a copy of the dist files files and provide the appropriate filename over configuration setting `file` in `configuration.json`.
-
-What does that mean? Navigate to folder `migration/templates` and create a copy of each standard file e.g.
-
-- `dist.tpl_client_default_english.tpl ----> tpl_client_default_english.tpl`
-- `dist.tpl_client_com_english.tpl ----> tpl_client_com_english.tpl`
-- etc.
-
-This is to avoid upgrade issues in future as upgrading will just overwrite the `dist.*` files and not your custom files.
-In the `file` configuration settings, do not provide a path - just the filename.
-
 ### Client Email Templates
 
-This migration tool comes with a `default` email template in english that will be used for mail-out to **your clients**. You can define there more languages, customized subjects and messages, as well as TLD-specific messages. Later, you can check the `System Email Message Log` in WHMCS for mails sent to your clients and view them.
+This migration tool comes with a `default` email template in english that will be used for mail-out to **your clients**. You can define more languages, customized subjects and messages, as well as TLD-specific messages. Later, you can check the `System Email Message Log` in WHMCS for mails sent to your clients and view them.
 
 The `default` configuration entry is always used as fallback, see below. **Important is to have that empty string array key entry which represents the case "no language set"**. Without this entry the email template won't work in WHMCS as WHMCS by default selects email templates using language filter set to empty string.
+
+The configuration file `dist.configuration.json` contains the mappings to the email templates.
+Here is an example:
 
 ```json
 {
@@ -246,9 +156,18 @@ The `default` configuration entry is always used as fallback, see below. **Impor
 }
 ```
 
+### Email Templates Customization
+
+How to proceed:
+
+1. Rename all `templates/email/dist.*.tpl` files by removing the `dist.` at the front, e.g. `dist.tpl_client_default_english.tpl ----> tpl_client_default_english.tpl`.
+2. Rename `dist.configuration.json` to `configuration.json`. This is to avoid upgrade issues in future as upgrading will just overwrite the `dist.*` files and not your custom files.
+3. Adapt the `file` entries in `configuration.json` (do not provide a path - just the filename)
+4. Modify the .tpl files at your discretion.
+
 NOTE: There's no need to provide a full HTML template structure including head and body in the template files, just the HTML code part you need.
 
-Even though the templates are HTML files, they are finally processed in WHMCS as Smarty templates and allow therefore the use of variables. This follows the principles of Smarty Syntax to use e.g. `{$someVariable}`.
+Even though the templates are HTML files, they are finally processed in WHMCS as [Smarty](https://www.smarty.net/docs/en/) templates and allow therefore the use of variables. This follows the principles of Smarty Syntax to use e.g. `{$someVariable}`.
 
 The following variable names are available for the client email templates:
 
@@ -264,29 +183,76 @@ The following variable names are available for the client email templates:
 
 If you need something in addition, let us know.
 
-## Renew expired Domains
+## Logging
 
-If you prefer renewing already expired domain names at the current registrar instead of migrating it to the new registrar, enable the `Renew if expired` setting in the addon configuration.
-This covers expired domain names where the status still allows a renewal (`Expired` and `Grace Period (Expired)`). See this diagram that explains it the best:
+If logging is enabled in the addon settings, it will happen in a variety of ways.
 
-!['gtld lifecycle']({{ 'assets/images/whmcs/migration/gtld-lifecycle.jpg' | relative_url }})
+### Addon Logging
 
-When disabled, expired domains will be migrated. This is the default.
+In the `Logs` tab, you will find detailed logs about each transfer or renewal process initiated by the addon.
 
-## EPP/Authorization Codes
+![adminareaerror]({{ 'assets/images/whmcs/cnic-migration/logs.png' | relative_url }})
 
-As you've already read, we use the `GetEPPCode` method of the losing registrar's registrar module to get the valid code to initiate the Transfer, if enabled in the corresponding mapping. But for some registrars, this doesn't work as they are then returning an error to WHMCS, but still they send the code out to the current registrant's email address.
-So, not reliable for real-time processing. A good example is the registrar Enom.
+The table is entirely searchable and sortable, and can be exported as CSV or Excel file if desired.
 
-As a workaround, you can insert them in the `EPP Codes` tab in the Addon.
+### System Activity Log
 
-![adminareaerror]({{ 'assets/images/whmcs/migration/epp.png' | relative_url }})
+In addition to the addon logging, some basic logging will be done in the WHMCS System Activity log. The messages will be prefixed by `[cnicmigration]`.
 
-When initiating a transfer, the migration addon will first check if any EPP code has been specified for the related domain, and then fallback to the losing registrar's registrar module functionality, if enabled in the mappings.
+### WHMCS Notification System
 
-## Config Validation
+1. In the WHMCS Admin Area, navigate to `System Settings > Notifications`, then click on `Create New Notification Rule`.
+  ![adminareaerror]({{ 'assets/images/whmcs/cnic-migration/notifications.png' | relative_url }})
+2. Give it a name and select the `API > Custom API Trigger`event.
+3. Set the `Trigger Identifier` to `Exact Match` with `cnic.migration.log` as value.
+4. Last but not least, select and configure the desired notification provider.
 
-We have worked on a JSON Schema that is used for validation at runtime. Whenever a domain renewal reaches our migration tool, `migration/configuration.json` is being validated. If invalid, you'll see the appropriate error output in domain details.
+## Feedback Messages
+
+### Transfer initiated
+
+Whenever our Migration Tool was able to initiate a Transfer in direction of the gaining Registrar, it will still abort the Renewal as this is the idea behind the migration approach. You can customize the message used to cancel the Renewal in WHMCS and to display in Domain Synchronization Report in the language files, for example `modules/addons/cnicmigration/lang/english.php`
+
+```php
+$_ADDONLANG = [
+    "defaultSuccessMsg" => "Domain Migration to the new subcontractor initiated. Don't renew the domain.",
+];
+```
+
+In our logs it will show like:
+
+- `[INIT_TRANSFER_SUCCESS]`: Initiating the Transfer succeeded.
+
+Even though we are talking about a success message here, it will still be displayed as an Error Result by WHMCS. We can't change this.
+
+### Transfer skipped
+
+Wherever a domain is not being transferred and instead still renewed at its current registrar, this could have one of the following reasons that are being logged:
+
+- `[SKIP_DOMAIN_STATUS]`: the domain status did not allow a transfer
+- `[SKIP_DOMAIN_EXPIRED]`: the domain is expired and the addon is configured to renew expired domains at their current registrar
+- `[SKIP_NO_MATCH]`: the registrar and/or tld are not configured for migration (see [Define mappings](#define-mappings))
+- `[SKIP_MANUAL_RENEW]`: the domain was manually renewed at the current registrar
+
+### Transfer not initiated
+
+Whenever our Migration Tool is running into an error, it still aborts the renewal. Still the transfer is then not initiated as of the error occurred. This will be shown to your clients when it comes to the Domain Synchronization Mail.
+
+You can configure the feedback messages in the language files, for example `modules/addons/cnicmigration/lang/english.php`
+
+```php
+$_ADDONLANG = [
+    "defaultErrorMsg" => "Domain Migration to the new subcontractor open. Don't renew the domain.",
+];
+```
+
+The migration tool will append an error identifier to make it more transparent which kind of error might have happened, e.g. `Domain Migration to the new subcontractor. Don't renew the domain.[ERROR_CONFIG]`.
+
+- `[ERROR_CONFIG:...some reason...]`: Configuration file `migration/configuration.json` couldn't be loaded (missing or invalid json). Further Details provided.
+- `[ERROR_DOMAIN_DATA]`: Domain Data couldn't be loaded over WHMCS - should never happen
+- `[ERROR_AUTH_CODE:...some reason...]`: Getting the EPP/Authorization code of the domain did not work. Further Details provided.
+- `[ERROR_REG_MODULE]`: Loading the gaining registrar's registrar module failed or the module is not activated or not integrating the `TransferDomain` method
+- `[ERROR_TRANSFER_FAIL:...some reason...]`: Initiating the Transfer failed. Further Details provided.
 
 ## Uninstall
 
@@ -296,3 +262,21 @@ After Migration has finished - this might take a while of course, cleanup as fol
 - Delete the folder `modules/addons/cnicmigration`
 
 ... et voila!
+
+## Troubleshooting
+
+...
+
+## Known Problems
+
+Find here some cases brought up to our hands:
+
+- **resellerclubcrm** module ending in an PHP Error - backtrace is pointing to language files.
+  Even though this got escalated to the Module Devs, they just provided a workaround and not a new release. So fyi:
+  Edit the file `$YOUR_WHMCS_INSTANCE/modules/addons/resellerclubmods_core/modlang/English_admin_lcdrm.php` and insert above the line 25 the below code:
+
+  ```php
+  $_ADMINLANG = array();
+  ```
+
+  Such manual changes will be lost when upgrading your resellerclub core parts.
