@@ -1,15 +1,14 @@
-
 - name: HEXONET
   features:
     - name: "Leading WHMCS Integration"
       url: whmcs/
-      items:  
+      items:
         - name: Registrar Module
           url: whmcs-ispapi-registrar/
         - name: Domain Search
           url: whmcs-ispapi-domainchecker/
         - name: SSL Certs
-          url: whmcs/whmcs-ispapi-ssl/
+          url: whmcs-ssl/
         - name: Migration Tool
           url: whmcs-migration/
         - name: Domain Importer
@@ -28,9 +27,11 @@
   features:
     - name: "WHMCS Integration"
       url: whmcs/
-      items:  
+      items:
         - name: Registrar Module
           url: whmcs-rrpproxy-registrar/
+        - name: SSL Certs
+          url: whmcs-ssl/
         - name: Migration Tool
           url: whmcs-migration/
         - name: Domain Importer
@@ -38,7 +39,7 @@
         - name: DNS Addon
           url: whmcs-dns/
     - name: "cPanel Integration"
-      url: cpanel/    
+      url: cpanel/
     - name: "Self-Development Kits"
       url: "sdks/"
   github: "//github.com/rrpproxy/"
@@ -48,7 +49,7 @@
   features:
     - name: "WHMCS Integration"
       url: whmcs/
-      items:  
+      items:
         - name: Registrar Module
           url: /cnic/whmcs#tpp-wholesale
         - name: Migration Tool
@@ -59,7 +60,7 @@
   features:
     - name: "WHMCS Integration"
       url: whmcs/
-      items:  
+      items:
         - name: Registrar Module
           url: /cnic/whmcs#partnergate
         - name: Migration Tool
@@ -70,7 +71,7 @@
   features:
     - name: "WHMCS Integration"
       url: whmcs/
-      items:  
+      items:
         - name: Registrar Module
           url: /cnic/whmcs#internetbs
         - name: Migration Tool
@@ -82,7 +83,7 @@
   features:
     - name: "WHMCS Integration"
       url: whmcs/
-      items:  
+      items:
         - name: Registrar Module
           url: /cnic/whmcs#instra
         - name: Migration Tool

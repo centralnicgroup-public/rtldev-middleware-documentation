@@ -1,5 +1,7 @@
 # DNS Addon
 
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
+
 WHMCS Addon for automatic DNS zone creation upon domain registration.
 
 ## Introduction

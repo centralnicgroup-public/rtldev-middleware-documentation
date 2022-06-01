@@ -265,10 +265,6 @@ After Migration has finished - this might take a while of course, cleanup as fol
 
 ## Troubleshooting
 
-...
-
-## Known Problems
-
 Find here some cases brought up to our hands:
 
 - **resellerclubcrm** module ending in an PHP Error - backtrace is pointing to language files.
