@@ -7,4 +7,5 @@ assets/css/just-the-docs-dark.scss
 assets/js/vendor/lunr.min.js
 assets/js/search-data.json
 assets/js/just-the-docs.js
+assets/js/zzzz-search-data.json
 *.md
