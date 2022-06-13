@@ -24,18 +24,18 @@ jobs:
         --volume="${{ github.workspace }}:/srv/jekyll" \
         jekyll/builder:${{ matrix.jekyll-version }} /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install && bundle exec jekyll build && bundle exec rake search:init"
 
-  assets:
-    name: Test CSS and JS
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [lts/*]
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        check-latest: true
-    - run: npm ci
-    - run: npm test
+  #assets:
+  #  name: Test CSS and JS
+  #  runs-on: ubuntu-latest
+  #  strategy:
+  #    matrix:
+  #      node-version: [lts/*]
+  #  steps:
+  #  - uses: actions/checkout@v3
+  #  - name: Use Node.js ${{ matrix.node-version }}
+  #    uses: actions/setup-node@v3
+  #    with:
+  #      node-version: ${{ matrix.node-version }}
+  #      check-latest: true
+  #  - run: npm ci
+  #  - run: npm test
