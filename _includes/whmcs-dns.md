@@ -18,17 +18,20 @@ For example, you might want to direct that to a default website. Or, if the doma
 - Supports A, AAAA, MX, MXE, CNAME, TXT and SRV records
 - Supports WHMCS specific URL and FRAME record types for the website redirection feature
 
+## Requirements
+
+- WHMCS version 8.0 or higher
+  For the latest WHMCS minimum system requirements, please refer to [WHMCS System Requirements](//docs.whmcs.com/System_Requirements) page.
+- PHP 7.4 or higher
+- One of the following registrar modules installed and enabled:
+  - ISPAPI
+  - RRPproxy
+  
+  This addon only works with those registrar modules.
+
 ## Installation
 
 Available for download [here](http://github.com/centralnic-reseller/whmcs-dns/raw/master/whmcs-cnic-dns-latest.zip).
-
-### Prerequisites
-
-Make sure you have one of the following registrar modules enabled:
-
-- ISPAPI
-- RRPproxy
-  This addon only works with those registrar modules.
 
 ### Copy files
 
