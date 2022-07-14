@@ -222,7 +222,7 @@ In order to activate that you have to update the clientareadomaindns.tpl file in
 
 In this file you will find 2 `<select>` tags. In the first you will have to add the following code:
 
-`<option value="SRV"{if $dnsrecord.type eq "SRV"} selected="selected"{/if} >SRV</option>`
+`<option value="SRV"{if $dnsrecord.type eq "SRV"} selected="selected"{/if}>SRV</option>`
 
 In the second you should add:
 
