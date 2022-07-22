@@ -921,11 +921,29 @@ WHMCS isn't offering a Domain Add-On to cover Local Presence Services. This woul
 
 Importing TLD Settings and Prices using WHMCS' Feature "Registrar TLD Sync" got released, but without the option to automatically schedule it via cron. A [Feature Request](https://requests.whmcs.com/idea/make-registrar-tld-sync-tool-automatable-with-cron-job) has been addressed to WHMCS.
 
-### 7. Registrar TLD Sync Imports
+### 7. Importing TLD registration terms and renewal terms
 
-WHMCS and its Pricing Import are not flexible enough. Registrars distinguish between supported Registration Terms, Renewal Terms and Transfer Terms where the Pricing Import is only allowing for specifying a single list of supported terms. So, what to import in case these lists differ completely? A [Feature Request](https://requests.whmcs.com/idea/registrar-tld-sync-to-support-different-list-of-terms) has been addressed to WHMCS.
+For some registries, registration terms do not match renewal terms (such as in the below table).
 
-This issue isn't actually affecting the HEXONET integration, just fyi.
+```bash
+TLD      REGISTRATION TERM (years)  RENEWAL TERM (years)
+---------------------------------------------------------
+.as      1,2,3,4,5,6,7,8,9,10       1,2,3,4,5,6,7,8,9
+.au      1,2,3,4,5                  1,2,3,4
+.com.au  1,2,3,4,5                  1,2,3,4
+.com.my  1,2,3,4,5,6,7,8,9,10       1,2,3,4,5
+.id.au   1,2,3,4,5                  1,2,3,4
+.my      1,2,3,4,5,6,7,8,9,10       1,2,3,4,5
+.net.au  1,2,3,4,5                  1,2,3,4
+.org.au  1,2,3,4,5                  1,2,3,4
+.tm      10                         1,2,5
+```
+
+Although this is supported by CentralNic (both RRPproxy and Hexonet), WHMCS does not have enough flexibility to support this, as it assumes that registries will offer matching terms for both registration and renewal, and so is unable to distinguish between available registration terms and renewal terms within the Registrar TLD Sync Feature. You see registration terms listed that are partially not supported as renewal period.
+
+A [Feature Request](//requests.whmcs.com/idea/registrar-tld-sync-to-support-different-list-of-terms) has been raised with WHMCS to address this issue.
+
+Until WHMCS addresses this deficiency, the workaround is to manually reconfigure these TLDs after import.
 
 ### 8. Function Deprecations
 
