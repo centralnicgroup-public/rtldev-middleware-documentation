@@ -2,16 +2,16 @@
 layout: default
 title: Registrar Module
 parent: WHMCS
-grand_parent: RRPproxy
+grand_parent: CentralNic Resellers
 nav_order: 2
 showtoc: 1
 ---
 
-# RRPproxy Registrar Module
+# CentralNic Resellers Registrar Module
 
 [![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
-This Repository covers the updated WHMCS Registrar Module of RRPproxy. Source code and latest package version are stable. Just the documentation is to be seen as WIP.
+This Repository covers the updated WHMCS Registrar Module of CentralNic Resellers. Source code and latest package version are stable. Just the documentation is to be seen as WIP.
 
 A Registrar Module connects WHMCS to the Domain Registrar's System.
 
@@ -56,36 +56,36 @@ We have a very short release cycle and can release patches and new features quic
 
 Back to topic, here the steps described in short about how to start with us using WHMCS.
 
-## RRPproxy™ - About us
+## CentralNic Resellers™ - About us
 
-RRPproxy™ your instrument for a successful reselling business.
+CentralNic Resellers™ your instrument for a successful reselling business.
 
-RRPproxy is one of the leading reseller platforms worldwide for domains and internet related services. Our products are all resalable and can be easily implemented into your system through various API gateways and web interface. Manage your customers within our advanced subreseller system and benefit from further reselling features such as a SMS tool and a billing engine.
+CentralNic Resellers is one of the leading reseller platforms worldwide for domains and internet related services. Our products are all resalable and can be easily implemented into your system through various API gateways and web interface. Manage your customers within our advanced subreseller system and benefit from further reselling features such as a SMS tool and a billing engine.
 
 ## Migrating
 
 ### From another Registrar
 
-If you have doubts related to prices, please contact our [Sales Department](//www.rrpproxy.net/Contact/Sales).
-We are highly interested in helping you getting your domain portfolio migrated to us - just get in touch with us [here](//www.rrpproxy.net/Contact/Contact_Form). We are experienced with migrations and have tools ready for this.
+If you have doubts related to prices, please contact our [Sales Department](//www.CentralNicResellers.com/).
+We are highly interested in helping you getting your domain portfolio migrated to us - just get in touch with us [here](//www.CentralNicResellers.com). We are experienced with migrations and have tools ready for this.
 
 **The customer is king**, is a principle to which we ascribe.
 
-### RRPproxy Module Migration
+### CentralNic Resellers Module Migration
 
-Some of our customers started with the RRPproxy module as it is shipped with WHMCS. This Registrar Module is the maintained official version of the RRPproxy Module.
+Some of our customers started with the CentralNic Resellers module as it is shipped with WHMCS. This Registrar Module is the maintained official version of the CentralNic Resellers Module.
 The module configuration page will automatically detect the need for a migration and provide a button to get this covered with a single click. Ensure first to have that module correctly configured and to have it up and running!
 It will do the following actions:
 
 - Reconfigure Domain Pricing from `rrpproxy` to `keysystems`, which is the internal name of this module.
-- Reconfigure `rrpproxy` to `keysystems` of all domain names related to Registrar `RRPproxy`.
+- Reconfigure `rrpproxy` to `keysystems` of all domain names related to Registrar `CentralNic Resellers`.
 - Deactivate the old module.
 
 ![image]({{ 'assets/images/whmcs/rrpproxy-registrar/migrate.png' | relative_url }})
 
 - Ensure to check the Additional Domain Fields setup for TLDs offered over us. Read more about that [here](#additional-domain-fields)
 
-## Create a RRPproxy Account
+## Create a CentralNic Resellers Account
 
 We have two systems:
 
@@ -131,7 +131,7 @@ If you're upgrading regularly and keeping all our modules / addons / widgets upd
 
 ### Installation
 
-Even though a `RRPproxy` Module is shipped with WHMCS, we highly recommend downloading and installing our white label module `RRPproxy/Key-Systems` which is the official maintained version and providing you latest features and patches. Available for download [here](//github.com/rrpproxy/whmcs-rrpproxy-registrar/releases).
+Even though a `CentralNic Resellers` Module is shipped with WHMCS, we highly recommend downloading and installing our white label module `CentralNic Resellers/Key-Systems` which is the official maintained version and providing you latest features and patches. Available for download [here](//github.com/rrpproxy/whmcs-rrpproxy-registrar/releases).
 
 - Download the ZIP archive and extract it to your HDD
 - Copy the contents of folder e.g. `whmcs-rrpproxy-registrar-1.0.0/install/modules/registrars` to the appropriate/matching folder of your WHMCS instance `modules/registrars`.
@@ -155,12 +155,12 @@ For non cPanel users: check location `/var/www/whmcs` (default path) or eventual
 
 Note: Feel free to add yourself as Watcher to that github repository by clicking on the `Watch` button at the top of the page and then choose `Releases Only`.
 We are aware of that installation and upgrade effort of our module is something we need to minimize. We have projects in queue to achieve that and to cover a lot more.
-If you already used the RRPproxy Registrar Module, read [here](#rrpproxy-module-migration) on how to migrate to the RRPproxy/Key-Systems Registrar Module.
+If you already used the CentralNic Resellers Registrar Module, read [here](#rrpproxy-module-migration) on how to migrate to the CentralNic Resellers/Key-Systems Registrar Module.
 
 ## Module Configuration
 
 Now, navigate in your WHMCS instance to `Setup > Products/Services > Domain Registrars`.
-Find the `RRPproxy/Key-Systems` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
+Find the `CentralNic Resellers/Key-Systems` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
 
 ![configuration]({{ 'assets/images/whmcs/rrpproxy-registrar/config.png' | relative_url }})
 
@@ -200,7 +200,7 @@ NOTE: Even though IDN Domains were just officially fully supported since [WHMCS 
 
 ## NS & DNS Management
 
-If you want to use DNS, URL or Email forwarding, domains must resolve to the RRPproxy nameserver cluster (\*_ns1.dnsres.net, ns2.dnsres.net, ns3.dnsres.net_).
+If you want to use DNS, URL or Email forwarding, domains must resolve to the CentralNic Resellers nameserver cluster (\*_ns1.dnsres.net, ns2.dnsres.net, ns3.dnsres.net_).
 
 You can enter them in `Setup > General Settings > Domains` as **Default Nameservers** for your customers:
 
@@ -242,7 +242,7 @@ Now you are ready to support SRV records!
 
 In order to activate this feature, within the WHMCS Admin area, go to
 
-`Setup > Products/Services > Domain Registrars > RRPproxy`
+`Setup > Products/Services > Domain Registrars > CentralNic Resellers`
 
 and activate the **DNSSEC** checkbox.
 
@@ -255,7 +255,7 @@ This feature allows your customers to add DS and KEY records and set the maxSigL
 
 The registration of some domain extensions requires sometimes additional domain fields (e.g. Legal Type and CIRA Agreement for .CA domain).
 
-In order to provide this additional fields on the registration page and map them with our module, you have to inject our RRPproxy specific configuration in the **$additionaldomainfields** array.
+In order to provide this additional fields on the registration page and map them with our module, you have to inject our CentralNic Resellers specific configuration in the **$additionaldomainfields** array.
 
 To add new additional domains fields, copy the additionalfields.php file provided by our module the /resources/domains/ directory.
 
@@ -300,12 +300,12 @@ Find [here](//docs.whmcs.com/Crons) the full technical chapter about WHMCS Crons
 
 ## Lookup Provider
 
-The RRPproxy lookup provider yields high-performance availability checks of the domains using our fast API. For the domains that are not supported by RRPproxy, the lookup fallbacks to WHOIS. In order to utilize this feature, you just have to choose RRPproxy in the lookup provider suggestions.
+The CentralNic Resellers lookup provider yields high-performance availability checks of the domains using our fast API. For the domains that are not supported by CentralNic Resellers, the lookup fallbacks to WHOIS. In order to utilize this feature, you just have to choose CentralNic Resellers in the lookup provider suggestions.
 
 ![rrpproxy_as_lookup]({{ 'assets/images/whmcs/rrpproxy-registrar/lookup.png' | relative_url }})
 
 **NOTE:** Since WHMCS 7.10, you can define a list of TLDs that have to be checked over the Lookup Provider.
-We suggest to select _ALL_ TLDs you want to offer, even if you are not offering them over RRPproxy.
+We suggest to select _ALL_ TLDs you want to offer, even if you are not offering them over CentralNic Resellers.
 
 **Search example**:
 
@@ -361,7 +361,7 @@ This role user will only be able to execute the WHMCS needed commands.
 
 ### Restrictive User Role
 
-- Login to the RRPproxy [Control Panel](//wi.rrpproxy.net/)
+- Login to the CentralNic Resellers [Control Panel](//wi.rrpproxy.net/)
 - Click on your username (top right)
 - Click on 'User management' from the dropdown menu
 - Create a new user by clicking on "Create new User"
@@ -374,7 +374,7 @@ This role user will only be able to execute the WHMCS needed commands.
   - Nameserver
 - Give the following locations read only permissions:
   - Price
-- Login to your WHMCS Backend and replace your RRPproxy username with your new user.
+- Login to your WHMCS Backend and replace your CentralNic Resellers username with your new user.
 
 If there's any of the above permissions not available for selection, please reach out to support.
 If it is still not working, please try again after activating "Rights required for webinterface usage" as well in the above mentioned Control Panel.
@@ -395,7 +395,7 @@ You can do that for your account by logging in to our control panel ([OT&E](//wi
 
 ## Final steps
 
-As the RRPproxy system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the RRPproxy Control Panel [LIVE System](//wi.rrpproxy.net/). Click on `Account Balance`, then `Charge your account`.
+As the CentralNic Resellers system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the CentralNic Resellers Control Panel [LIVE System](//wi.rrpproxy.net/). Click on `Account Balance`, then `Charge your account`.
 
 ## Known Issues
 
@@ -439,7 +439,7 @@ TLD      REGISTRATION TERM (years)  RENEWAL TERM (years)
 .tm      10                         1,2,5
 ```
 
-Although this is supported by CentralNic (both RRPproxy and Hexonet), WHMCS does not have enough flexibility to support this, as it assumes that registries will offer matching terms for both registration and renewal, and so is unable to distinguish between available registration terms and renewal terms within the Registrar TLD Sync Feature. You see registration terms listed that are partially not supported as renewal period.
+Although this is supported by CentralNic (both CentralNic Resellers and Hexonet), WHMCS does not have enough flexibility to support this, as it assumes that registries will offer matching terms for both registration and renewal, and so is unable to distinguish between available registration terms and renewal terms within the Registrar TLD Sync Feature. You see registration terms listed that are partially not supported as renewal period.
 
 A [Feature Request](//requests.whmcs.com/idea/registrar-tld-sync-to-support-different-list-of-terms) has been raised with WHMCS to address this issue.
 
