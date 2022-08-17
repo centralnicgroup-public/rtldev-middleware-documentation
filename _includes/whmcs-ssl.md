@@ -45,7 +45,7 @@ The CentralNic SSL Module supports the following functions and features:
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](//github.com/entralnic-reseller/whmcs-ssl/raw/master/whmcs-ssl-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/centralnic-reseller/whmcs-ssl/raw/master/whmcs-ssl-latest.zip).
 
 Copy files from the zip archive to your WHMCS installation root directory, while keeping the folder structure intact.
 
