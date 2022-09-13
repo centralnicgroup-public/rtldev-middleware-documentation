@@ -1,4 +1,5 @@
-FROM ruby:2.7
+ARG VARIANT=2.7
+FROM ruby:${VARIANT}
 
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
@@ -11,3 +12,4 @@ RUN gem install bundler
 RUN bundle install
 
 EXPOSE 4000
+VOLUME [ "/usr/src/app" ]

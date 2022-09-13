@@ -443,13 +443,19 @@ NOTE: Ensure to separate your account id and the user role id by "!" as shown in
 
   ```bash
   ping api.ispapi.net
+  ping api-ote.ispapi.net
   ```
 
 * Ensure to have the Requirements of our Module fulfilled: curl, php-curl have to be installed and working.
   You can test it with the following command from Shell:
   
   ```bash
-  curl -k -d 's_login=test.user&s_pw=test.passw0rd&s_entity=1234&command=statusaccount' https://api.ispapi.net/api/call.cgi
+  # test with our demo user (OT&E System)
+  curl -k -d 's_login=test.user&s_pw=test.passw0rd&s_entity=1234&command=statusaccount' https://api-ote.ispapi.net/api/call.cgi
+  # test with your credentials in LIVE System
+  # s_login -> your user name
+  # s_pw -> your passw0rd
+  curl -k -d 's_login=...&s_pw=...&s_entity=54cd&command=statusaccount' https://api.ispapi.net/api/call.cgi
   ```
 
   You should get something like:
@@ -485,7 +491,7 @@ NOTE: Ensure to separate your account id and the user role id by "!" as shown in
 * you probably mixup using OT&E system (TestMode checked) with using your production system credentials or vice versa. if you use your production account, ensure to have TestMode unchecked (and vice versa).
 * 2-Factor authentication is active - which can't be supported in WHMCS. detailed read [here](//github.com/hexonet/whmcs-ispapi-registrar/issues/128). Deactivate it, or better create a restrictive role user as described [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar/#hexonet-account-hardening' | relative_url }}).
 * the public ip-address used by your WHMCS system needs to be white-listed in case you have ip restrictions configured in our control panel. Find your Server IP address listed next to the error output.
-* the api node has to be reachable, not blocked by a firewall. We connect to `https://api.ispapi.net`. This means outgoing connection to that url/domain name using port 443 has to be allowed.
+* the api node has to be reachable, not blocked by a firewall. We connect to `https://api.ispapi.net` (LIVE System) and to `https://api-ote.ispapi.net` (OT&E System). This means outgoing connection to that url/domain name using port 443 has to be allowed.
 * up to now unconfirmed: special characters in your password could be a reason. change your password. We will check this and if confirmed, it will also be fixed in the next releases.
 
 Why can't we provide a specific reason for you? To harden our authentication process against hackers, we don't provide information about why it is exactly failing.

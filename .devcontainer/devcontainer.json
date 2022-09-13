@@ -1,0 +1,7 @@
+{
+  "name": "CNR Docs",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "jekyll",
+  "workspaceFolder": "/usr/src/app",
+  "shutdownAction": "stopCompose"
+}
