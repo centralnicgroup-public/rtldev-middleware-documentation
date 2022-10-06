@@ -705,7 +705,7 @@ Therefore, unavailable for Organizations:
 
 ## Specials
 
-{% include whmcs-widget-overview.md %}
+{% include whmcs-dashboard-widget.md %}
 
 ### Translations
 
