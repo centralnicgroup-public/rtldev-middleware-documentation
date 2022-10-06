@@ -1,9 +1,9 @@
 ---
 layout: default
-title: RRPproxy
+title: CentralNic Reseller
 nav_order: 4
 has_children: true
-permalink: /docs/rrpproxy
+permalink: /docs/cnr
 ---
 
 # About RRPproxy

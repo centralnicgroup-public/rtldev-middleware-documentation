@@ -1,10 +1,10 @@
 ---
 layout: default
 title: SDKs
-parent: RRPproxy
+parent: CentralNic Reseller
 nav_order: 5
 has_children: true
-permalink: /docs/rrpproxy/sdks/
+permalink: /docs/cnr/sdks/
 showtoc: 0
 ---
 

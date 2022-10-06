@@ -1,7 +1,7 @@
 ---
 layout: default
 title: API Documentation
-parent: RRPproxy
+parent: CentralNic Reseller
 nav_order: 6
 showtoc: 0
 ---
