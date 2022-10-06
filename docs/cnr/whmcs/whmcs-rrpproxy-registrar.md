@@ -330,7 +330,7 @@ This functionality is compatible with the WHMCS API “domaintoggleidprotect” 
 
 ## Specials
 
-{% include whmcs-widget-overview.md %}
+{% include whmcs-dashboard-widget.md %}
 
 ### UTF-8 Support
 
