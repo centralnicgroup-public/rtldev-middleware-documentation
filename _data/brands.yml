@@ -23,26 +23,16 @@
       url: "sdks/"
   github: "//github.com/hexonet/"
 
-- name: RRPproxy
+- name: CentralNic Reseller
+  url: "https://centralnic-reseller.com/"
   features:
-    - name: "WHMCS Integration"
-      url: whmcs/
-      items:
-        - name: Registrar Module
-          url: whmcs-rrpproxy-registrar/
-        - name: SSL Certs
-          url: whmcs-ssl/
-        - name: Migration Tool
-          url: whmcs-migration/
-        - name: Domain Importer
-          url: whmcs-domainimporter/
-        - name: DNS Addon
-          url: whmcs-dns/
+    - name: "Leading WHMCS Integration"
+      url: /cnr/whmcs/
     - name: "cPanel Integration"
-      url: cpanel/
+      url: /cnr/cpanel/
     - name: "Self-Development Kits"
-      url: "sdks/"
-  github: "//github.com/rrpproxy/"
+      url: /cnr/sdks/
+  github: "//github.com/centralnicgroup-opensource/"
 
 - name: TPP Wholesale
   url: "https://www.tppwholesale.com.au/"

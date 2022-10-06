@@ -3,8 +3,8 @@ layout: default
 title: cPanel
 nav_order: 2
 has_children: false
-parent: RRPproxy
-permalink: /docs/rrpproxy/cpanel/
+parent: CentralNic Reseller
+permalink: /docs/cnr/cpanel/
 showtoc: 0
 ---
 

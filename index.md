@@ -25,15 +25,20 @@ Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools
           {% for item in feat.items %}
             {% capture fc %}{{ item.url | slice: 0 }}{% endcapture %}
             {% if fc == "/" %}
-            {% capture item_url %}docs{{ item.url }}{% endcapture %}
+              {% capture item_url %}docs{{ item.url }}{% endcapture %}
             {% else %}
-            {% capture item_url %}docs/{{ brand.name | downcase | replace: " ", "" }}/{{ feat.url }}{{ item.url }}{% endcapture %}
+              {% capture item_url %}docs/{{ brand.name | downcase | replace: " ", "" }}/{{ feat.url }}{{ item.url }}{% endcapture %}
             {% endif %}
             <li><a href="{{ item_url | relative_url }}">{{ item.name }}</a></li>
           {% endfor %}
         </ul>
         {% else %}
-        {% capture feat_url %}docs/{{ brand.name | downcase }}/{{ feat.url }}{% endcapture %}
+          {% capture fc %}{{ feat.url | slice: 0 }}{% endcapture %}
+          {% if fc == "/" %}
+            {% capture feat_url %}docs{{ feat.url }}{% endcapture %}
+          {% else %}
+            {% capture feat_url %}docs/{{ brand.name | downcase }}/{{ feat.url }}{% endcapture %}
+          {% endif %}        
         <span class="brand-feature"><a href="{{ feat_url }}">{{ feat.name }}</a></span>
         {% endif %}
       {% endfor %}

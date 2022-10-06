@@ -2,7 +2,7 @@
 layout: default
 title: PHP SDK
 parent: SDKs
-grand_parent: RRPproxy
+grand_parent: CentralNic Reseller
 nav_order: 2
 showtoc: 1
 ---

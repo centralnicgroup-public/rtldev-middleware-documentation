@@ -2,7 +2,7 @@
 layout: default
 title: DNS Addon
 parent: WHMCS
-grand_parent: RRPproxy
+grand_parent: CentralNic Reseller
 nav_order: 4
 showtoc: 1
 ---
