@@ -37,6 +37,9 @@ A Registrar Module connects WHMCS to the Domain Registrar's System.
 - WHOIS Privacy / ID Protection
 - Bulk Update Operations
 - OT&E testing environment
+- [Dashboard Widget](#dashboard-widget)
+  - Account Balance Overview
+  - Version Check
 
 **Not yet supported**:
 
@@ -326,6 +329,8 @@ This functionality is compatible with the WHMCS API “domaintoggleidprotect” 
 > If the ID Protection flag gets disabled in the Admin area, clients will not be able to re-enable WHOIS Privacy themselves, but it can only be re-enabled by an admin!
 
 ## Specials
+
+{% include whmcs-widget-overview.md %}
 
 ### UTF-8 Support
 

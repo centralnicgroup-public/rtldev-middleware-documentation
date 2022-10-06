@@ -71,6 +71,9 @@ Back to topic, here the steps describing how to start with us using WHMCS.
 - [Web Apps](#web-apps-support) (G Suite, ...)
 - [Proxy Server Support](#module-configuration)
 - [1-Click Migration](#hexonet-module-migration) from WHMCS' built-in HEXONET Module
+- [Dashboard Widget](#dashboard-widget)
+  - Account Balance Overview
+  - Version Check
 
 ## Requirements
 
@@ -701,6 +704,8 @@ Therefore, unavailable for Organizations:
 ![.CA Whois Privacy Service unsupported for Organizations]({{ 'assets/images/whmcs/ispapi-registrar/ca_registrant_whois_privacy2.png' | relative_url }})
 
 ## Specials
+
+{% include whmcs-widget-overview.md %}
 
 ### Translations
 
