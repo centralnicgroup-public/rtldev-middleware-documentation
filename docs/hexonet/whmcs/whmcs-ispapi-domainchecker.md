@@ -49,8 +49,7 @@ The ISPAPI DomainChecker addon supports the following functions and features:
   * Premium domains with markup prices
 * Add or Remove domains to the cart instantly in the search results
 * Supports multiple currencies
-* Support for English and German. (If any other language is required, please contact
-us)
+* **UPDATE** Language Support for: Arabic, English, German, Portuguese. (If any other language is required, let us know)
 * Ajax driven search (no page reload)
 * Easy to install and use
 
@@ -149,6 +148,20 @@ In that overview you can:
 * add a new category
 * delete a category
 * see TLDs that are not assigned to a category
+
+#### Translations
+
+Translate your TLD Categories by:
+
+* Add the respective language file under `/lang/overrides`. Well described [here](//developers.whmcs.com/languages/overrides/).
+* Add your translation per Category
+
+e.g. for file `/lang/overrides/german.php`
+
+```php
+$_LANG['domainTldCategory']['Popular'] = "Beliebt";
+$_LANG['domainTldCategory']['Arts and Entertainment'] = "Kunst und Unterhaltung";
+```
 
 ### Redirect the WHMCS Search
 
