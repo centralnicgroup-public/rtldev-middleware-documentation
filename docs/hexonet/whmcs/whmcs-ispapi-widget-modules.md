@@ -31,7 +31,7 @@ If the module version number is displayed in green, then you are running the lat
 In order to run the ISPAPI Backorder Addon, your WHMCS installation must meet the following requirements:
 
 * WHMCS version 7.0 or higher
-* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Widget does not support the WHMCS built-in HEXONET provider module!
+* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our Widget does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
   * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
   * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
@@ -40,7 +40,7 @@ For the latest WHMCS minimum system requirements, please refer to the WHMCS Syst
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](//github.com/hexonet/whmcs-ispapi-widget-modules/raw/master/whmcs-ispapi-widget-modules-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 Copy the contents of the downloaded archive to your WHMCS directory, while keeping the folder structure intact.
 

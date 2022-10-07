@@ -18,6 +18,6 @@ Former Authors:
 - **Anthony Schneider** - [anthonyschn](//github.com/anthonyschn), Several ISPAPI Modules for WHMCS
 - **Rashad Albo Jamara** - [Rashad-J](//github.com/rashad-j), ISPAPI Command line Client
 - **Tulasi Seelamkurthi** - [tulsi91](//github.com/tulsi91), Several ISPAPI Modules for WHMCS
-- **Zoltan Egresi** - [egresi](//github.com/egresi), RRPproxy Registrar Module for WHMCS
+- **Zoltan Egresi** - [egresi](//github.com/egresi), CentralNic Reseller Registrar Module for WHMCS
 
 Thanks so much for your past Contributions and handing over your Modules! Thanks for the Trust.

@@ -10,7 +10,7 @@ This tool is made for migrations at point of domain renewal to minimize costs an
 
 ## Features
 
-- Migrate from different registrars to one or multiple registrar brands of the CentralNic Group PLC ([HEXONET](https://hexonet.net/), [RRPproxy](https://rrpproxy.net/), [TPP Wholesale](https://tppwholesale.com.au/), [internet.bs](https://internet.bs/)) in parallel
+- Migrate from different registrars to one or multiple registrar brands of the CentralNic Group PLC ([HEXONET](https://hexonet.net/), [CentralNic Reseller](//www.centralnicreseller.com/), [TPP Wholesale](https://tppwholesale.com.au/), [internet.bs](https://internet.bs/)) in parallel
 - Migrate all TLDs or just a subset of TLDs per losing registrar
 - Bulk transfer for domains that can be transferred for free (0Y period) e.g. .qa, .ae, .es, .au, ...
 - User Interface for configuration and management of domain migrations
@@ -60,8 +60,9 @@ Re-Configure WHMCS in direction of the gaining registrar:
 
 ### Installation / Upgrade
 
-1. Copy the `modules` folder into your WHMCS root.
-2. In your WHMCS Admin Area, go to `Configuration > System Settings > Addon Modules`, then click on `Activate` next to the `CNIC Migrator` listing.
+1. Download the ZIP archive including the latest release version [Click here to download](//drive.google.com/file/d/11GVg57RhVx7ddFJK8RzH09FNIS5khujq/view).
+2. Copy the `modules` folder into your WHMCS root.
+3. In your WHMCS Admin Area, go to `Configuration > System Settings > Addon Modules`, then click on `Activate` next to the `CNIC Migrator` listing.
 
 ## Configuration
 

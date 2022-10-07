@@ -2,7 +2,7 @@
 
 [![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
-WHMCS Provisioning Module and Addon for HEXONET & RRPproxy SSL certificates
+WHMCS Provisioning Module and Addon for HEXONET & CentralNic Reseller SSL certificates
 
 ## Introduction
 
@@ -10,13 +10,13 @@ The CentralNic SSL Module is a combination of an addon and a provisioning module
 
 The SSL addon provides a user friendly interface to automatically import SSL certificates as WHMCS products. In addition, it gives the possibility to update prices based on current cost and configurable margins.
 
-The SSL provisioning module connects to the configured registrar module and allows you to register and maintain SSL certificates over HEXONET or RRPproxy.
+The SSL provisioning module connects to the configured registrar module and allows you to register and maintain SSL certificates over HEXONET or CentralNic Reseller.
 
 ## Supported Features
 
 The CentralNic SSL Module supports the following functions and features:
 
-- Support for the CentralNic brands [HEXONET](//hexonet.net) and [RRPproxy](//rrpproxy.net)
+- Support for the CentralNic brands [HEXONET](//hexonet.net) and [CentralNic Reseller](//www.centralnicreseller.com)
 - SSL Provisioning Module
   - Support for both productive and test (OT&E) environments
   - Create, renew and revoke certificates
@@ -32,20 +32,20 @@ The CentralNic SSL Module supports the following functions and features:
 
 - WHMCS version 8.0 or higher
   For the latest WHMCS minimum system requirements, please refer to [WHMCS System Requirements](//docs.whmcs.com/System_Requirements) page.
-  *If you wish to use this module on older WHMCS versions, please use [Version 8.0](//github.com/centralnic-reseller/whmcs-ssl/releases) or earlier*
+  *If you wish to use this module on older WHMCS versions, please use [Version 8.0](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases) or earlier*
 - PHP 7.4 or higher
 - For HEXONET:
-  - Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our SSL Cert Module does not support the WHMCS built-in HEXONET provider module!
+  - Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our SSL Cert Module does not support the WHMCS built-in HEXONET provider module!
   - **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
     - [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
     - [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
-- For RRPproxy:
-  - Latest **RRPproxy Registrar Module**. This module can be downloaded [here](//github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip). Our SSL Cert Module does not support the WHMCS built-in RRPproxy provider module!
-  - **RRPproxy Live or Test Account** must be configured in the RRPproxy Registrar Module. Account creation is always free: [Register](//www.rrpproxy.net/Register)
+- For CentralNic Reseller:
+  - Latest **CentralNic Reseller Registrar Module**. This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our SSL Cert Module does not support the WHMCS built-in CentralNic Reseller provider module!
+  - **CentralNic Reseller Live or Test Account** must be configured in the CentralNic Reseller Registrar Module. Account creation is always free: [Register](//www.centralnicreseller.com)
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](//github.com/centralnic-reseller/whmcs-ssl/raw/master/whmcs-ssl-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 Copy files from the zip archive to your WHMCS installation root directory, while keeping the folder structure intact.
 
@@ -128,8 +128,8 @@ Within the WHMCS Admin area, navigate to `Setup > System Settings > Products/Ser
 5. Open the `Module Settings` tab.
    - Enter Certificate Class.
      - For HEXONET: refer to [this article](//wiki.hexonet.net/wiki/SSL) for a list of possible certificate classes
-     - For RRPproxy:
-       1. Log into your [Web Interface](//wi.rrpproxy.net/)
+     - For CentralNic Reseller:
+       1. Log into your [Web Interface](//account.centralnicreseller.com/)
        2. In the Menu, open `SSL > Certificate Prices`
        3. The value shown in the `Type` column would be the certificate class you need to specify
    - Set “Automatically setup the product as soon as the first payment is received” to ensure the certificate is paid for before registration.

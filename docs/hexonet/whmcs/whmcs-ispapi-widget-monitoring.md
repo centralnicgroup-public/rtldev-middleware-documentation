@@ -36,7 +36,7 @@ If there's something missing, let us know and we will extend.
 
 * Having Javascript activated in Browser.
 * WHMCS version 7.0 or higher
-* Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Widget does not support the WHMCS built-in HEXONET provider module!
+* Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our Widget does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
   * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
   * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)

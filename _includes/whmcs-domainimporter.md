@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Domain Importer Addon provides a user-friendly interface allowing for importing your existing Domain Portfolio from HEXONET / RRPproxy into your WHMCS system.
+The Domain Importer Addon provides a user-friendly interface allowing for importing your existing Domain Portfolio from HEXONET / CentralNic Reseller into your WHMCS system.
 
 The Addon automatically creates new clients out of the registrant contact assigned to the domains if not yet existing. Alternatively you can also specify a single Client Account that is then used as Import Target. Provide Domain Names to Import by copy'n'paste.
 
@@ -10,7 +10,7 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 
 ## Features
 
-- Domain Import from [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip) / [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) Registrar System
+- Domain Import from [HEXONET](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip) / [CentralNic Reseller](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip) Registrar System
 - Regular Domain Imports
 - IDN Domain Imports (IDN Language auto-detection, if supported)
 - Premium Domain Imports
@@ -24,8 +24,8 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 
 | Registrar                                                                                                       | Supported | Add. Fields | IDNs  | Premium Domains |
 | --------------------------------------------------------------------------------------------------------------- | --------- | ----------- | ----- | --------------- |
-| [HEXONET](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip)             | YES       | YES         | YES   | YES             |
-| [RRPproxy](https://github.com/rrpproxy/whmcs-rrpproxy-registrar/raw/master/whmcs-rrpproxy-registrar-latest.zip) | YES       | NO          | YES\* | NO              |
+| [HEXONET](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip)             | YES       | YES         | YES   | YES             |
+| [CentralNic Reseller](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip) | YES       | NO          | YES\* | NO              |
 | ~~TPP Wholesale~~                                                                                               | NO        | NO          | NO    | NO              |
 | ~~internet.bs~~                                                                                                 | NO        | NO          | NO    | NO              |
 | ~~PartnerGate~~                                                                                                 | NO        | NO          | NO    | NO              |
@@ -61,7 +61,7 @@ Care about:
 
 ### Download & Unpack
 
-Download the ZIP archive including the latest release version [here](//github.com/centralnic-reseller/whmcs-domainimporter/raw/master/whmcs-cnic-domainimport-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 Copy the zip archive's contents to your WHMCS System's root folder.
 

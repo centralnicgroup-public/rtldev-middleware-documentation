@@ -2,7 +2,7 @@
 
 >>>>> **Web Hosting Automation Made Easy**
 
-WHMCS (Web Host Manager Complete Solution) is an all-in-one domain provisioning, client management, billing/invoicing, and client support solution for any business selling through a website. WHMCS has become the World Leader in this market. By coupling WHMCS with one of CentralNic Brand's Registrar Module - namely HEXONET, RRPproxy, internet.bs and TPP WholeSale, anyone can start reselling hundreds of profitable domain name extensions (TLDs) quickly and in ease.
+WHMCS (Web Host Manager Complete Solution) is an all-in-one domain provisioning, client management, billing/invoicing, and client support solution for any business selling through a website. WHMCS has become the World Leader in this market. By coupling WHMCS with one of CentralNic Brand's Registrar Module - namely HEXONET, CentralNic Reseller, internet.bs and TPP WholeSale, anyone can start reselling hundreds of profitable domain name extensions (TLDs) quickly and in ease.
 
 WHMCS allows to send high quality professional looking invoices to customers with its billing functionality. This functionality is no obstacle when it comes to deal with different currencies and tax support. It combines a lot other great features such as automated reminders for unpaid invoices, setting up late fees rules, supporting several payment gateways and many more.
 
@@ -33,13 +33,13 @@ Our Reputation is speaking - just check the WHMCS Community Board e.g. [here](//
 
 We are doing our best to push your business to satisfaction. We don't care about your number of domains - customer is king!
 
-### RRPproxy / Key-Systems
+### CentralNic Reseller / Key-Systems
 
-RRPproxy is one of the leading reseller platforms worldwide for domains and internet related services. RRPproxy’s products are designed for resale and can be easily integrated into retail systems through various API gateways and web interfaces. Customer management is easy through an advanced subreseller system, an SMS tool and an integrated billing engine.
+CentralNic Reseller is one of the leading reseller platforms worldwide for domains and internet related services. CentralNic Reseller’s products are designed for resale and can be easily integrated into retail systems through various API gateways and web interfaces. Customer management is easy through an advanced subreseller system, an SMS tool and an integrated billing engine.
 
-The Team at HEXONET also maintains its own version of the RRPproxy Registrar Module (aka. `Key-Systems`) which should be used _instead_ of the WHMCS built-in Module. The above information applies also here, except the availability of additional Modules and Widgets.
+The Team at HEXONET also maintains its own version of the CentralNic Reseller Registrar Module (aka. `Key-Systems`) which should be used _instead_ of the WHMCS built-in Module. The above information applies also here, except the availability of additional Modules and Widgets.
 
-The RRPproxy Registrar Module does **not** support Premium Domain Names right now, use the [HEXONET]({{ "docs/cnic/whmcs/#hexonet--ispapi" | relative_url }}) one instead.
+The CentralNic Reseller Registrar Module does **not** support Premium Domain Names right now, use the [HEXONET]({{ "docs/cnic/whmcs/#hexonet--ispapi" | relative_url }}) one instead.
 
 ### TPP WholeSale
 

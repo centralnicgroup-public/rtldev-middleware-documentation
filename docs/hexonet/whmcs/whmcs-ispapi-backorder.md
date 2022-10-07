@@ -48,7 +48,7 @@ In order to run the ISPAPI Backorder Addon, your WHMCS installation must meet th
 
 * WHMCS version 7.0 or higher
 * PHP with ZIP Extension (php-zip)
-* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Backorder Module does not support the WHMCS built-in HEXONET provider module!
+* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our Backorder Module does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
   * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
   * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)

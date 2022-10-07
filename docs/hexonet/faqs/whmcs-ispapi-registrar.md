@@ -383,7 +383,7 @@ This is a known issue for .com/.net/.cc/.tv domain names with active WHOIS priva
 
 When transferring domains to HEXONET, our backend system cannot fetch contact data out of whois data as there, no data is provided by the registry. In addition, the registry doesn't provide any other possibility to lookup contact data. Because of this, transferred domains have no/invalid contact data assigned. This requires a contact data update before you can continue with any other update in whmcs like nameserver update or DNS changes.
 
-To cover this in a semi-automated way we have recently applied changes to the ISPAPI registrar module. It identifies such cases in the `_Sync` method and auto-updates such problematic domain cases using the whmcs client data. So, we suggest you upgrade to the latest release available [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip).
+To cover this in a semi-automated way we have recently applied changes to the ISPAPI registrar module. It identifies such cases in the `_Sync` method and auto-updates such problematic domain cases using the whmcs client data. So, we suggest you upgrade to the latest release available [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 That said, it is not a WHMCS issue in general, just something that affects the transfer process because of introduced GDPR (at registry side, probably enforced by ICANN).
 
@@ -556,7 +556,7 @@ In order to display the accurate results for your domain name, you must configur
 
 ### 55 Do you support TLD & Pricing Sync mechanism shipped with WHMCS 7.10?
 
-Simple Answer: Yes, available [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Integrated since v2.5.0. Feel free to forward further related question to us.
+Simple Answer: Yes, available [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Integrated since v2.5.0. Feel free to forward further related question to us.
 Documentation around that topic:
 
 * [Registrar TLD Sync](//docs.whmcs.com/Registrar_TLD_Sync)
