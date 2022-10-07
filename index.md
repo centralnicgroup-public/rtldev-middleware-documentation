@@ -17,7 +17,12 @@ Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools
       {% capture logo %}assets/images/brands/{{ brand.name | downcase | remove:" " }}.png{% endcapture %}
       <img class="card-logo" src="{{ logo | relative_url }}" alt="{{ brand.name }}" />
     </div>
-    <div class="card-body">
+    <div class="card-body" {% if brand.height %}style="min-height:{{ brand.height }}px"{% endif %}>
+      {% if brand.subtitle %}
+      <h6 class="card-subtitle mb-2 text-muted text-center">
+      {{ brand.subtitle }}
+      </h6>
+      {% endif %}
       {% for feat in brand.features %}
         {% if feat.items %}
         <span class="brand-feature">{{ feat.name }}</span>

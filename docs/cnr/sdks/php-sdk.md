@@ -15,15 +15,15 @@ aka. [**centralnic-reseller/php-sdk**](//packagist.org/packages/centralnic-resel
 [![PHP from Packagist](//img.shields.io/packagist/php-v/centralnic-reseller/php-sdk.svg)](//packagist.org/packages/centralnic-reseller/php-sdk)
 [![Packagist](//img.shields.io/packagist/v/centralnic-reseller/php-sdk.svg)](//packagist.org/packages/centralnic-reseller/php-sdk)
 
-This module is a connector library for the insanely fast HEXONET and RRPproxy Backend API. Do not hesitate to reach out.
+This module is a connector library for the insanely fast HEXONET and CentralNic Reseller Backend API. Do not hesitate to reach out.
 
 ## Resources
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
-- [UML Diagram]({{ 'docs/rrpproxy/sdks#uml-diagram' | relative_url }})
+- [UML Diagram]({{ 'docs/cnr/sdks#uml-diagram' | relative_url }})
 - [Class Documenation](//centralnic-reseller.github.io/php-sdk/)
-- [API Documentation]({{ 'docs/rrpproxy/api-documentation' | relative_url }})
+- [API Documentation]({{ 'docs/cnr/api-documentation' | relative_url }})
 
 ## Requirements
 
@@ -64,7 +64,7 @@ sudo service apache2 restart
 
 ### 2 - Apache Configuration
 
-An example Apache configuration with binding to localhost,  example for **RRPproxy**:
+An example Apache configuration with binding to localhost,  example for **CentralNic Reseller**:
 
 ```bash
 <VirtualHost 127.0.0.1:80>
@@ -103,7 +103,7 @@ Example for **HEXONET**:
 After saving your configuration changes please restart the Apache webserver.
 If you want to connect to the OT&E System, please use the below URLs
 
-- RRPproxy: "https://api-ote.rrpproxy.net/api/call.cgi"
+- CentralNic Reseller: "https://api-ote.rrpproxy.net/api/call.cgi"
 - HEXONET: "https://api-ote.ispapi.net/api/call.cgi"
 
 respectively.
@@ -111,11 +111,11 @@ respectively.
 ### 3 - Implementation
 
 In the below example, please specify your registrar of interest.
-Actually supported: RRPproxy, HEXONET
+Actually supported: CentralNic Reseller, HEXONET
 
 ```php
 $cl = CF::getClient([
-    "registrar" => "RRPproxy"
+    "registrar" => "CNR"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->useHighPerformanceConnectionSetup()//Default Connection Setup would be used otherwise by default
@@ -123,23 +123,23 @@ $cl->useOTESystem()//LIVE System would be used otherwise by default
 $r = $cl->request(["COMMAND" => "StatusAccount"]);
 ```
 
-So, what happens in code behind the scenes? We communicate with localhost (so our proxy setup) that passes the requests to the RRPproxy API.
+So, what happens in code behind the scenes? We communicate with localhost (so our proxy setup) that passes the requests to the CentralNic Reseller API.
 Of course we can't activate this setup by default as it is based on Steps 1 and 2. Otherwise connecting to our API wouldn't work.
 
 Just in case the above port or ip address can't be used, use function setURL instead to set a different URL / Port.
 `http://127.0.0.1/api/call.cgi` is the default URL for the High Performance Proxy Setup.
 e.g. `$cl->setURL("http://127.0.0.1:8765/api/call.cgi");` would change the port. Configure that port also in the Apache Configuration (-> Step 2)!
 
-Don't use `https` for that setup as it leads to slowing things down as of the https `overhead` of securing the connection. In this setup we just connect to localhost, so no direct outgoing network traffic using `http`. The apache configuration finally takes care passing it to `https` for the final communication to the RRPproxy API.
+Don't use `https` for that setup as it leads to slowing things down as of the https `overhead` of securing the connection. In this setup we just connect to localhost, so no direct outgoing network traffic using `http`. The apache configuration finally takes care passing it to `https` for the final communication to the CentralNic Reseller API.
 
 ## Customize Logging / Outputs
 
-When having the debug mode activated \CNIC\RRPproxy\Logger will be used for doing outputs.
+When having the debug mode activated \CNIC\CNR\Logger will be used for doing outputs.
 Of course it could be of interest for integrators to look for a way of getting this replaced by a custom mechanism like forwarding things to a 3rd-party software, logging into file or whatever.
 
 ```php
 $cl = CF::getClient([
-    "registrar" => "RRPproxy"
+    "registrar" => "CNR"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->enableDebugMode()//activate debug outputs
@@ -152,15 +152,15 @@ NOTE: Find an interface for your custom logger class implementation under `\CNIC
 
 ## Usage Examples
 
-Please have an eye on our [API documentation]({{ 'docs/rrpproxy/api-documentation/' | relative_url }}). Here you can find information on available Commands and their response data.
+Please have an eye on our [API documentation]({{ 'docs/cnr/api-documentation/' | relative_url }}). Here you can find information on available Commands and their response data.
 
 ### API Communication, Session
 
-Available since version 4.x! Actually not working for RRPproxy!
+Available since version 4.x! Actually not working for CentralNic Reseller!
 
 ```php
 $cl = CF::getClient([
-    "registrar" => "RRPproxy"
+    "registrar" => "CNR"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->setCredentials("<your account id>", "<your password>");
@@ -213,7 +213,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 // --- SESSIONLESS API COMMUNICATION ---
 $cl = CF::getClient([
-    "registrar" => "RRPproxy"
+    "registrar" => "CNR"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    // ->setRemoteIPAddress("1.2.3.4:80"); // provide ip address used for active ip filter
@@ -232,7 +232,7 @@ Use the below to improve code a bit:
 require __DIR__ . '/vendor/autoload.php';
 
 $cl = CF::getClient([
-    "registrar" => "RRPproxy"
+    "registrar" => "CNR"
 ]);
 $cl->useOTESystem()
    ->setCredentials("<your account id>", "<your password>");
@@ -249,7 +249,7 @@ instead of:
 require __DIR__ . '/vendor/autoload.php';
 
 $cl = CF::getClient([
-    "registrar" => "RRPproxy"
+    "registrar" => "CNR"
 ]);
 $cl->useOTESystem()
    ->setCredentials("<your account id>", "<your password>");

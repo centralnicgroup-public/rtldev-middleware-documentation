@@ -11,7 +11,7 @@ showtoc: 1
 
 [![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
-> **DEPRECATION NOTICE: As of our Integration of the [TLD & Pricing Sync]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#55-do-you-support-tld--pricing-sync-mechanism-shipped-with-whmcs-710' | relative_url }}) Feature available since WHMCS 7.10, this project will no longer be maintained. Download the new version of our Registrar Module [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip) to benefit of that new Feature.**
+> **DEPRECATION NOTICE: As of our Integration of the [TLD & Pricing Sync]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#55-do-you-support-tld--pricing-sync-mechanism-shipped-with-whmcs-710' | relative_url }}) Feature available since WHMCS 7.10, this project will no longer be maintained. Download the new version of our Registrar Module [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip) to benefit of that new Feature.**
 
 This Repository covers the WHMCS Pricing Importer Add-on of HEXONET. It provides the following features in WHMCS:
 
@@ -40,7 +40,7 @@ This Repository covers the WHMCS Pricing Importer Add-on of HEXONET. It provides
 ## Requirements
 
 * WHMCS version 7.0 or higher
-* Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Importer Module does not support the WHMCS built-in HEXONET provider module!
+* Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our Importer Module does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
   * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
   * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
@@ -49,7 +49,7 @@ For the latest WHMCS minimum system requirements, please refer to the WHMCS Syst
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](//github.com/hexonet/whmcs-ispapi-pricingimporter/raw/master/whmcs-ispapi-pricingimporter-latest.zip).
+Download the ZIP archive including the latest release version [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 Copy all files from the `install/` subdirectory to your WHMCS installation root directory ($YOUR_WHMCS_ROOT), while keeping the folder structure intact.
 

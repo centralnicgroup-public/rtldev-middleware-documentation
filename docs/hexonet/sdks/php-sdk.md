@@ -15,7 +15,7 @@ aka. [**centralnic-reseller/php-sdk**](//packagist.org/packages/centralnic-resel
 [![PHP from Packagist](//img.shields.io/packagist/php-v/centralnic-reseller/php-sdk.svg)](//packagist.org/packages/centralnic-reseller/php-sdk)
 [![Packagist](//img.shields.io/packagist/v/centralnic-reseller/php-sdk.svg)](//packagist.org/packages/centralnic-reseller/php-sdk)
 
-This module is a connector library for the insanely fast HEXONET and RRPproxy Backend API. Do not hesitate to reach out.
+This module is a connector library for the insanely fast HEXONET and CentralNic Reseller Backend API. Do not hesitate to reach out.
 
 ## Resources
 
@@ -90,7 +90,7 @@ After saving your configuration changes please restart the Apache webserver.
 ### 3 - Implementation
 
 In the below example, please specify your registrar of interest.
-Actually supported: RRPproxy, HEXONET
+Actually supported: CentralNic Reseller, HEXONET
 
 ```php
 $cl = CF::getClient([
@@ -135,7 +135,7 @@ Please have an eye on our [API documentation]({{ 'docs/hexonet/api-documentation
 
 ### API Communication, Session
 
-Available since version 4.x! Actually not working for RRPproxy!
+Available since version 4.x! Actually not working for CentralNic Reseller!
 
 ```php
 $cl = CF::getClient([

@@ -12,7 +12,7 @@ For example, you might want to direct that to a default website. Or, if the doma
 ## Features
 
 - Manage DNS zones for your domains at CentralNic brands
-- Currenctly supported registrar modules: ISPAPI and RRPproxy
+- Currenctly supported registrar modules: ISPAPI and CentralNic Reseller
 - Define a global zone, to be applied to all new domain registrations
 - Define zones for specific hosting products, to be applied when registering a domain belonging to a hosting product
 - Supports A, AAAA, MX, MXE, CNAME, TXT and SRV records
@@ -25,13 +25,13 @@ For example, you might want to direct that to a default website. Or, if the doma
 - PHP 7.4 or higher
 - One of the following registrar modules installed and enabled:
   - ISPAPI
-  - RRPproxy
+  - CentralNic Reseller
   
   This addon only works with those registrar modules.
 
 ## Installation
 
-Available for download [here](http://github.com/centralnic-reseller/whmcs-dns/raw/master/whmcs-cnic-dns-latest.zip).
+Available for download [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 ### Copy files
 

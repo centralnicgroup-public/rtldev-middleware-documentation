@@ -1,4 +1,19 @@
+- name: CentralNic Reseller
+  height: 300
+  url: "https://www.centralnicreseller.com/"
+  subtitle: "(formerly RRPproxy)"
+  features:
+    - name: "Leading WHMCS Integration"
+      url: /cnr/whmcs/
+    - name: "cPanel Integration"
+      url: /cnr/cpanel/
+    - name: "Self-Development Kits"
+      url: /cnr/sdks/
+  github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
+
 - name: HEXONET
+  url: https://www.hexonet.net
+  height: 300
   features:
     - name: "Leading WHMCS Integration"
       url: whmcs/
@@ -21,18 +36,7 @@
       url: "dnscontrol/"
     - name: "Self-Development Kits"
       url: "sdks/"
-  github: "//github.com/hexonet/"
-
-- name: CentralNic Reseller
-  url: "https://centralnic-reseller.com/"
-  features:
-    - name: "Leading WHMCS Integration"
-      url: /cnr/whmcs/
-    - name: "cPanel Integration"
-      url: /cnr/cpanel/
-    - name: "Self-Development Kits"
-      url: /cnr/sdks/
-  github: "//github.com/centralnicgroup-opensource/"
+  github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
 
 - name: TPP Wholesale
   url: "https://www.tppwholesale.com.au/"

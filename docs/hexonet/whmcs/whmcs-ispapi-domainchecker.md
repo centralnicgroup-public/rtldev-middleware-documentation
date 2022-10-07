@@ -60,12 +60,12 @@ The ISPAPI DomainChecker addon supports the following functions and features:
 In order to run the ISPAPI DomainChecker Add-On, your WHMCS installation must meet the following requirements:
 
 * **WHMCS version 7.2.0** or higher must be installed. (We recommend always using the latest version of WHMCS)
-* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/hexonet/whmcs-ispapi-registrar/raw/master/whmcs-ispapi-registrar-latest.zip). Our Domain Search Addon does not support the WHMCS built-in HEXONET provider module!
+* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our Domain Search Addon does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
   * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
   * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
 * having URL Rewrite enabled in the web server and one of the url rewrite solutions applied (see section 3 e)
-* **ISPAPI Domainchecker Add-On**: downloadable [here](//github.com/hexonet/whmcs-ispapi-domainchecker/raw/master/whmcs-ispapi-domainchecker-latest.zip).
+* **ISPAPI Domainchecker Add-On**: downloadable [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 | Domainchecker version | ISPAPI Registrar Module version | WHMCS version |
 |-----------------------|---------------------------------|---------------|
