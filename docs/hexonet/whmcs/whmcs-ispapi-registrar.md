@@ -250,7 +250,7 @@ Activate `High-Performance Setup` if you want to activate the High-Performance P
 
 If you want to offer our Web Apps to your customers, activate the `Offer Web Apps` checkbox. Find further details documented below.
 
-Now, press Save and voilà. If you're getting a green message - you're connected. Otherwise, you have to investigate further as described [here]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#49-login-failed-in-registrar-module' | relative_url }}).
+Now, press Save and voilà. If you're getting a green message - you're connected. Otherwise, you have to investigate further as described [here]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#39-login-failed-in-registrar-module' | relative_url }}).
 
 ### High-Performance Setup
 
