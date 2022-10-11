@@ -53,7 +53,9 @@
 
 .brands .card .card-body .card-subtitle {
   margin-top: -1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 0.75rem;
+  font-size: x-small;
 }
 
 .brands .card .card-footer {
@@ -85,7 +87,7 @@ a:hover {
 .search-input,
 .main-header,
 body {
-  background-color: $hx-lt-100  !important;
+  background-color: $hx-lt-100 !important;
 }
 
 .main-header {
@@ -93,7 +95,7 @@ body {
 }
 
 .side-bar .site-title {
-  color: $body-heading-color  !important;
+  color: $body-heading-color !important;
   font-weight: bold;
   font-size: 18px !important;
 }
@@ -114,8 +116,14 @@ body {
   font-size: 13px !important;
 }
 
+.side-bar .nav-list .nav-list-item .nav-list-subtitle {
+  display: block;
+  line-height: 0.5rem;
+  font-size: x-small;
+}
+
 .side-bar .nav-list .nav-list-item .nav-list-link.active {
-  color: $hx-fc-000  !important;
+  color: $hx-fc-000 !important;
   font-weight: 600;
   text-decoration: none;
 }

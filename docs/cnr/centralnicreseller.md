@@ -1,7 +1,7 @@
 ---
 layout: default
 title: CentralNic Reseller
-subtitle: (formerly RRPproxy)
+subtitle: (fka. RRPproxy)
 nav_order: 3
 has_children: true
 permalink: /docs/cnr
