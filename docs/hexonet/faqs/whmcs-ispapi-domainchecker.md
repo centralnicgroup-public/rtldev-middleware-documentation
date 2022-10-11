@@ -28,19 +28,18 @@ UPDATE: Since v11.2.0 of our domainchecker the TLDs in the categories are auto-s
 
 In our suggestion engine (our API) .com and .net have by default a high weight. If you want to get other results, we suggest to create a custom category with the TLDs you want to see (without .com/.net). Mark that category as active by default and any other category as inactive. This can be done by using the domainchecker addon backend. In addition the client can use two further settings to influence the results: `Use my IP Address` and `Use language`. These can be accessed over the Settings icon located in the search label input field.
 
-### 5. Some Icons and Texts are not displayed on frontend-side - is that a bug?
+In the lookup provider settings and on client-side of our addon, we also provide a setting for suppressing .com / .net as workaround.
 
-Please verify that you have the Six template in use (or at least one that is 100% compatible with it). Our modules are 100% compatible with the default WHMCS templates. This might be an issue of your template that you need to review.
-
-### 6. How to use this module together with the Module "Geolocation Hook for WHMCS"
+### 5. How to use this module together with the Module "Geolocation Hook for WHMCS"
 
 This is a module developed by ModulesGarden that is using a Geo-IP-DB for visitor localization to automatically switch the active currency to the configured/matching one for that region even though another currency is configured as default currency in WHMCS.
 The only thing you need to care about is to add the domainchecker.php and/or mydomainchecker.php to the allowed scripts configuration.
 Read [here](//www.docs.modulesgarden.com/Geolocation_Hook_For_WHMCS), section `Configuration`, Head Line `5. Selecting Pages`.
 
-### 7. Your availability Check is slow!
+### 6. Your availability Check is slow!
 
 We can ensure it is not! There are several things you can review in your WHMCS Instance where we know such issues have their origin in:
+
 a) Deinstall / Disable all Add-Ons in WHMCS you really don't need! Your general page load / response increases with each installed addon.
 b) Network / Firewall issue - check how long it takes to ping "api.ispapi.net". One known customer issue related to hardware firewall appliances and Linux (e.g CentOs/CloudLinux):
 
@@ -58,70 +57,4 @@ c) If you have a lot currencies defined - this might be a historical reason rela
 
 Page load shouldn't take longer than 1s average. The most pages are even faster: about 500 to 800 ms. Give the guide ["Maximising_Performance"](//docs.whmcs.com/Maximising_Performance) a detailed read. Used Hard- and Software is definitely affecting performance. MySQL vs. Maria DB, Apache vs. Nginx.
 
-### 8. Why is Premium Renewal Cost Price shown as 0.00
-
-This had been a bug in WHMCS Core until they fixed it around v7.8. You can fix it by inserting "registrarRenewalCostPrice" for your domain name into table tbldomain_extra with the cost you would have to pay at HEXONET. You can find it out in our [Control Panel](//account.hexonet.net) by navigating to "API Access" which is listed on your Dashboard. There just paste the below command for your domain name and execute it:
-
-```
-COMMAND = QueryDomainList
-VERSION = 2
-DOMAIN = awesome.build
-PROPERTIES = price
-NOTOTAL = 1
-```
-
-This will return the below - column RENEWALGROSSPRICE covers what you need. As we provide the registrar premium prices to WHMCS' order process in the currency set in your API account, you don't have to worry about a recalculating it at this point. Just use the price returned.
-
-```
-{
-    "PROPERTY": {
-        "VAT": [
-            "19.00"
-        ],
-        "RENEWALGROSSPRICE": [
-            "1955.25"
-        ],
-        "RENEWALPRICE": [
-            "1643.07"
-        ],
-        "CURRENCY": [
-            "EUR"
-        ],
-        "SUBCLASS": [
-            "PREMIUM_BUILD_B"
-        ],
-        "REPOSITORY": [
-            "ARI-OTE-1API1"
-        ],
-        "FIRST": [
-            "0"
-        ],
-        "OBJECTID": [
-            "awesome.build"
-        ],
-        "DESCRIPTION": [
-            "awesome.build"
-        ],
-        "COUNT": [
-            "1"
-        ],
-        "LAST": [
-            "0"
-        ],
-        "OBJECTCLASS": [
-            "DOMAIN"
-        ],
-        "LIMIT": [
-            "10000"
-        ]
-    },
-    "DESCRIPTION": "Command completed successfully",
-    "CODE": "200",
-    "QUEUETIME": "0",
-    "RUNTIME": "0.014"
-}
-```
-
-We will check if we can provide you some tooling for this, but until now - please use this approach. If you need further assistance to this, just ask, we are always open to help.
-
-Related WHMCS Bugs: v7.8 #CORE-12479, #CORE-13117
+d) Check the High-Performance Proxy Setup Feature of our ISPAPI Registrar Module, in case you're using Apache as Webserver. This can lead to a huge improvement for HTTP Communication. Find it in the registrar module settings. Ensure to read the there linked documentation before activating the setting.
