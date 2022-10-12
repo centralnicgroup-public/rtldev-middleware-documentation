@@ -812,7 +812,6 @@ QueryDNSZoneRRList():ALLOW
 QueryDNSZoneStats():ALLOW
 QueryDomainList():ALLOW
 QueryDomainOptions():ALLOW
-QueryDomainPendingRegistrantVerificationList():ALLOW
 QueryDomainRepositoryInfo():ALLOW
 QueryDomainSuggestionList():ALLOW
 QueryDomainWhoisInfo():ALLOW
@@ -825,6 +824,7 @@ QuerySSLCertDCVEmailAddressList():ALLOW
 QueryUserObjectStatistics():ALLOW
 RenewDomain():ALLOW
 RequestDomainAuthInfo():ALLOW
+ResendDomainRegistrantVerificationEmail():ALLOW
 ResendDomainTransferConfirmationEmails():ALLOW
 ResendSSLCertEmail():ALLOW
 RestoreDomain():ALLOW
