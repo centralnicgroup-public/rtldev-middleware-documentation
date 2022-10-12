@@ -79,7 +79,8 @@ Back to topic, here the steps describing how to start with us using WHMCS.
 
 We encourage our Resellers to stick on the latest WHMCS release for security reasons and to benefit of latest features and patches.
 
-- WHMCS 7.6+ or 8.x
+- WHMCS <7.8: our module in version 5.1.12
+- WHMCS >= 7.8 / better >=8: our latest module version
 - Installed and working: curl, php-curl
 
 For the latest WHMCS minimum system requirements, please refer to [System_Requirements](//docs.whmcs.com/System_Requirements).
