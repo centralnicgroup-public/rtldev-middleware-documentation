@@ -1,5 +1,5 @@
 ARG VARIANT=2.7
-FROM ruby:${VARIANT}
+FROM mcr.microsoft.com/vscode/devcontainers/ruby:latest
 
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
