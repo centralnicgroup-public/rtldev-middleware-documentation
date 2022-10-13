@@ -51,13 +51,13 @@ For the latest WHMCS minimum system requirements, please refer to the WHMCS Syst
 
 Download the ZIP archive including the latest release version [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
-Copy all files from the `install/` subdirectory to your WHMCS installation root directory ($YOUR_WHMCS_ROOT), while keeping the folder structure intact.
-
-e.g.
-
-`install/modules/addons/ispapidpi/ispapidpi.php` => `$YOUR_WHMCS_ROOT/modules/addons/ispapidpi/ispapidpi.php`
+Extract all files from the zip archive to your WHMCS installation root directory ($YOUR_WHMCS_ROOT), while keeping the folder structure intact.
 
 Deactivate and activate the module after upgrading to the new version in your WHMCS.
+
+### Upgrading
+
+{% include whmcs-bundle-upgrade.md %}
 
 ## Setting max_input_vars
 

@@ -29,13 +29,13 @@ For example, you might want to direct that to a default website. Or, if the doma
   
   This addon only works with those registrar modules.
 
-## Installation
+## Installation / Upgrade
 
 Available for download [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
-### Copy files
+### Extract files
 
-Copy the cnicdns folder to the WHMCS `modules/addons/` directory.
+Extract the zip contents to the root folder of your installed WHMCS instance.
 
 ### Addon activation
 
@@ -44,10 +44,9 @@ Copy the cnicdns folder to the WHMCS `modules/addons/` directory.
 - Find `CentralNic DNS` and click on `Activate`
 - Click on `Configure` and make sure to configure Access Control as needed
 
-## Upgrade
+### Upgrading
 
-- Replace the files in the WHMCS `modules/addons/cnicdns/` directory.
-- Open the addon in the WHMCS Admin Area
+{% include whmcs-bundle-upgrade.md %}
 
 ## Usage
 

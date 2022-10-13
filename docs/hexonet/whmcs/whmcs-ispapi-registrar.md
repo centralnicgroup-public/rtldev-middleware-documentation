@@ -113,28 +113,14 @@ Please follow the below instructions to get this covered:
 
 Note: The renewal mode setting is only applied to new domain registrations in your account. If you already have domains registered previously in your account, ensure to reconfigure also their renewal mode to `expire`.
 
-## Upgrading our Module
-
-**IMPORTANT** Ensure to read the [Release Notes](//github.com/hexonet/whmcs-ispapi-registrar/releases) carefully before Upgrading! Our Release numbers follow [semantic versioning](//semver.org/) and thus we follow the version syntax: MAJOR.MINOR.PATCH. Please ensure to backup your current version's folder to have a fallback possibility you can use, just in case there's something wrong with our new version.
-
-![Semantic Versioning]({{ 'assets/images/semver.png' | relative_url }})
-
-You can always upgrade without worries if the PATCH or MINOR version have just changed.
-If the MAJOR version has changed, check the release notes to avoid unexpected issues as a new MAJOR version comes always with breaking changes or at least with a new module behavior.
-
-Follow the installations steps below and consider the provided release notes for the MAJOR version upgrade. In detail: if you're upgrading from 1.x.y to 4.x.y, ensure to check **ALL Major Version Release Notes** up to the version you're upgrading too. In this example, check the release notes for 2.0.0, 3.0.0 and 4.0.0.
-
-If you're upgrading regularly and keeping all our modules / addons / widgets updated, you run in less upgrade effort than doing multiple major version number steps. You can add/subscribe yourself to release notifications in our github repositories to get informed about new releases.
-
-## Installing our Module
+## Installation / Upgrade
 
 Firstly, we want to point you to the setting `max_input_vars` of your php.ini. You need to update this setting to `10000` to get WHMCS' Registrar TLD Sync / Pricing Import up and working. This is not something special related to our integration but of WHMCS Core. Let me point to the [PHP Docs](https://www.php.net/manual/en/info.configuration.php#ini.max-input-vars) and [this feature request](https://requests.whmcs.com/idea/do-not-use-post-form-data-on-pages-that-could-have-large-amout-of-data) addressed to WHMCS as well.
 
 The `HEXONET` Module that is shipped with WHMCS is maintained by the WHMCS Core Team and as Pull Requests took to long, we decided to work on our own Module Version. We highly recommend downloading and installing our white label module `HEXONET/ispapi` which is our maintained version and providing you latest features and patches. Available for download [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
-- When upgrading: Backup your current module version (folder `modules/registrars/ispapi`) and then delete that folder
 - Download the ZIP archive and extract it to your HDD
-- Copy the folder `modules` into the root directory of your WHMCS instance
+- Extract the zip archive into the root directory of your WHMCS instance
 - If you want to use our Transliteration, please copy the folder `includes` into the root directory of your WHMCS instance. Our Transliteration just cares about replacing Greek characters with Greeklish ones in contact data and replacing HTML Entities with their related character pendant.
 - Care about creating language override files for our translation files or just include them in existing files - read below.
 
@@ -188,6 +174,10 @@ Note: Feel free to add yourself as Watcher to that github repository by clicking
 We are aware of that installation and upgrade effort of our module is something we need to minimize. We have projects in queue to achieve that and to cover a lot more.
 
 Before we continue, we want to point you to the Section [**Migrating**](#migrating-from-hexonet-registrar-module) if you have already started with the HEXONET Module that is shipped with WHMCS. Switching Domains to our ISPAPI Registrar Module can be done in ease at this point.
+
+### Upgrading
+
+{% include whmcs-bundle-upgrade.md %}
 
 ## Module Updates Subscription
 
@@ -877,7 +867,7 @@ Create a restrictive Role User by:
 
 FYI: Further documentation about securing your WHMCS installation, can be found in the `Post Installation Suggested Steps` section of the [WHMCS Installation Guide](//docs.whmcs.com/Installing_WHMCS#Post_Installation_Suggested_Steps).
 
-### 2-Factour Authentication
+### 2-Factor Authentication
 
 WHMCS itself does **not** support using 2-Factor Authentication (2FA) for Registrar Modules. So having 2FA activated for your user and using it in WHMCS simply does **not** work. If you've set up a restrictive User Role as described above and you're using that one in your registrar configuration, then you can activate 2FA for your account (!!!not for your restrictive User Role!!!).
 

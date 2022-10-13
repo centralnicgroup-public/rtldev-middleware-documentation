@@ -47,17 +47,11 @@ The CentralNic SSL Module supports the following functions and features:
 
 Download the ZIP archive including the latest release version [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
-Copy files from the zip archive to your WHMCS installation root directory, while keeping the folder structure intact.
+Extract/copy all contents from the zip archive to your WHMCS installation root directory, while keeping the folder structure intact.
 
-e.g.
+### Upgrading
 
-     addons/cnicssl_addon
-     => <YOUR_WHMCS_ROOT>/modules/addons/cnicssl_addon
-
-     servers/cnicssl
-     => <YOUR_WHMCS_ROOT>/modules/servers/cnicssl
-
-**For an update**, additionally go to `Setup > Addon Modules > CNIC SSL Addon > Configure` and click on the “Save Changes” button.
+{% include whmcs-bundle-upgrade.md %}
 
 ## SSL Addon
 
