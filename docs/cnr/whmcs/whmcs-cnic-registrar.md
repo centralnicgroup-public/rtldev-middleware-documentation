@@ -123,14 +123,7 @@ E.g.
 
 ### Upgrading
 
-**IMPORTANT** Ensure to read the [Release Notes](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases) carefully before Upgrading! Our Release numbers follow [semantic versioning](//semver.org/) and thus we follow the version syntax: MAJOR.MINOR.PATCH.
-
-You can always upgrade without worries if the PATCH or MINOR version have just changed.
-If the MAJOR version has changed, check the release notes to avoid unexpected issues as a new MAJOR version comes always with breaking changes or at least with a new module behavior.
-
-Follow the installation steps below and consider the provided release notes for the MAJOR version upgrade. In detail: if you're upgrading from 1.x.y to 4.x.y, ensure to check ALL major version release notes up to the version you're upgrading too. In this example, check the release notes for 2.0.0, 3.0.0 and 4.0.0.
-
-If you're upgrading regularly and keeping all our modules / addons / widgets updated, you run in less upgrade effort than doing multiple major version number steps. You can add/subscribe yourself to release notifications in our github repositories to get informed about new releases.
+{% include whmcs-bundle-upgrade.md %}
 
 ### Installation
 
@@ -153,12 +146,6 @@ For non cPanel users: check location `/var/www/whmcs` (default path) or eventual
 
 ![cpanel 1]({{ 'assets/images/whmcs/cnic-registrar/cpanel1.png' | relative_url }})
 ![cpanel 2]({{ 'assets/images/whmcs/cnic-registrar/cpanel2.png' | relative_url }})
-
-**NOTE: If you're upgrading** - please first delete the `modules/registrars/keysystems` folder in your WHMCS instance first.
-
-Note: Feel free to add yourself as Watcher to that github repository by clicking on the `Watch` button at the top of the page and then choose `Releases Only`.
-We are aware of that installation and upgrade effort of our module is something we need to minimize. We have projects in queue to achieve that and to cover a lot more.
-If you already used the CentralNic Reseller Registrar Module, read [here](#centralnic-reseller-module-migration) on how to migrate to the CentralNic Reseller/Key-Systems Registrar Module.
 
 ## Module Configuration
 

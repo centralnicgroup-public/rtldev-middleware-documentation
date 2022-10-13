@@ -82,7 +82,9 @@ We started gathering this information starting with v10.0.0 of the domainchecker
 
 **For a new installation**, unzip the downloaded file and upload the content of the “install” folder to your WHMCS root directory.  
 
-**For an update**, first remove the old folder of our domainchecker module, then unzip the downloaded file and upload the content of the “install” folder to your WHMCS root directory. Then go to `Setup > Addon Modules > ISPAPI HP DomainChecker > Configure` and click on the “Save Changes” button.
+### Upgrading
+
+{% include whmcs-bundle-upgrade.md %}
 
 **NOTE**: The WHMCS root directory is the folder which contains the “configuration.php” file.
 

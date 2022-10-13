@@ -52,12 +52,15 @@ Care about:
 - Domain Add-On Pricing Configuration
 - Assign Domain Add-Ons to the TLDs of interest that support them
 
-## Installation
-
+## Installation / Upgrade
 ### Requirements
 
 - WHMCS version 8.0 or higher
 - Find the supported Registrar Modules linked above.
+
+### Upgrading
+
+{% include whmcs-bundle-upgrade.md %}
 
 ### Download & Unpack
 
