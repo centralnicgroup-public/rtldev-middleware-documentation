@@ -3,11 +3,11 @@ layout: default
 title: Registrar Module
 parent: WHMCS
 grand_parent: CentralNic Reseller
-nav_order: 2
+nav_order: 1
 showtoc: 1
 ---
 
-# CentralNic Reseller Registrar Module (formerly RRPproxy) 
+# CentralNic Reseller Registrar Module<br/>(fka. RRPproxy) 
 
 [![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 

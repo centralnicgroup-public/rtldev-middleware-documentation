@@ -3,7 +3,7 @@ layout: default
 title: ~~Pricing Import~~
 parent: WHMCS
 grand_parent: HEXONET
-nav_order: 11
+nav_order: 10
 showtoc: 1
 ---
 

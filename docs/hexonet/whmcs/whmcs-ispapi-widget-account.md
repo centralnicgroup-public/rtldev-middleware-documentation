@@ -3,7 +3,7 @@ layout: default
 title: ~~Account Widget~~
 parent: WHMCS
 grand_parent: HEXONET
-nav_order: 12
+nav_order: 8
 showtoc: 1
 ---
 

@@ -56,9 +56,9 @@
       url: whmcs/
       items:
         - name: Registrar Module
-          url: /cnic/whmcs#tpp-wholesale
+          url: /all/whmcs/#tpp-wholesale
         - name: Migration Tool
-          url: /cnic/whmcs/whmcs-migration/
+          url: /all/whmcs/whmcs-migration/
 
 - name: PartnerGate
   url: "https://www.partnergate.com/"
@@ -67,9 +67,9 @@
       url: whmcs/
       items:
         - name: Registrar Module
-          url: /cnic/whmcs#partnergate
+          url: /all/whmcs/#partnergate
         - name: Migration Tool
-          url: /cnic/whmcs/whmcs-migration/
+          url: /all/whmcs/whmcs-migration/
 
 - name: internet.bs
   url: "https://internetbs.net/"
@@ -78,9 +78,9 @@
       url: whmcs/
       items:
         - name: Registrar Module
-          url: /cnic/whmcs#internetbs
+          url: /all/whmcs/#internetbs
         - name: Migration Tool
-          url: /cnic/whmcs/whmcs-migration/
+          url: /all/whmcs/whmcs-migration/
   github: "//github.com/internetbs/"
 
 - name: Instra
@@ -90,6 +90,6 @@
       url: whmcs/
       items:
         - name: Registrar Module
-          url: /cnic/whmcs#instra
+          url: /all/whmcs/#instra
         - name: Migration Tool
-          url: /cnic/whmcs/whmcs-migration/
+          url: /all/whmcs/whmcs-migration/
