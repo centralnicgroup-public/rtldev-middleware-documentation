@@ -39,7 +39,7 @@ CentralNic Reseller is one of the leading reseller platforms worldwide for domai
 
 The Team at HEXONET also maintains its own version of the CentralNic Reseller Registrar Module (aka. `Key-Systems`) which should be used _instead_ of the WHMCS built-in Module. The above information applies also here, except the availability of additional Modules and Widgets.
 
-The CentralNic Reseller Registrar Module does **not** support Premium Domain Names right now, use the [HEXONET]({{ "docs/cnic/whmcs/#hexonet--ispapi" | relative_url }}) one instead.
+The CentralNic Reseller Registrar Module does **not** support Premium Domain Names right now, use the [HEXONET]({{ "docs/all/whmcs/#hexonet--ispapi" | relative_url }}) one instead.
 
 ### TPP WholeSale
 

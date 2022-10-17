@@ -3,7 +3,7 @@ layout: default
 title: Registrar Module
 parent: WHMCS
 grand_parent: HEXONET
-nav_order: 2
+nav_order: 1
 showtoc: 1
 ---
 

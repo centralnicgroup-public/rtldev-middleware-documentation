@@ -3,7 +3,7 @@ layout: default
 title: ~~Modules Widget~~
 parent: WHMCS
 grand_parent: HEXONET
-nav_order: 13
+nav_order: 9
 showtoc: 1
 ---
 
