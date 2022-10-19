@@ -69,8 +69,8 @@ CentralNic Reseller is one of the leading reseller platforms worldwide for domai
 
 ### From another Registrar
 
-If you have doubts related to prices, please contact our [Sales Department](//www.CentralNicResellers.com/).
-We are highly interested in helping you getting your domain portfolio migrated to us - just get in touch with us [here](//www.CentralNicResellers.com). We are experienced with migrations and have tools ready for this.
+If you have doubts related to prices, please contact our [Sales Department](//www.centralnicreseller.com/en/contact).
+We are highly interested in helping you getting your domain portfolio migrated to us - just get in touch with us [here](//www.centralnicreseller.com/en/contact). We are experienced with migrations and have tools ready for this.
 
 **The customer is king**, is a principle to which we ascribe.
 
@@ -97,7 +97,7 @@ We have two systems:
 
 The OT&E system is thought for integration tests and everything you're doing there is for free - but ordered products are then also not existing in reality. With an OT&E account, all functionality and transactional processes can be tested thoroughly. The LIVE system corresponds to the real world system and comes with costs for ordered products and services.
 
-Signup can be done [here](//www.centralnicreseller.com).
+Signup can be done [here](//www.centralnicreseller.com/en/sign-up).
 
 Your account will then be used in WHMCS for ordering our products and services and for managing them.
 The creation of your account is completely free of charge.
@@ -106,7 +106,7 @@ Once your account is created, a confirmation email with connection information w
 
 ## Domain Renewal Mode
 
-Please visit our own Frontend that we offer our customers for free here: [LIVE System](//account.centralnicreseller.com/) or [OT&E System](//account-ote.centralnicreseller.com/).
+Please visit our own Frontend that we offer our customers for free here: [LIVE System](//www.centralnicreseller.com/en/sign-in) or [OT&E System](//account-ote.centralnicreseller.com/).
 
 Click on your user name at top right and navigate to `Settings > System > Account Policy > Renewalmode`. Here select 'Auto Expire' and press 'Save changes'.
 
@@ -119,7 +119,9 @@ Copy all files from the extracted archive to your WHMCS directory, while keeping
 
 E.g.
 
-`modules/registrars/keysystems/ => $YOUR_WHMCS_ROOT/modules/registrars/keysystems/`
+`modules/ => $YOUR_WHMCS_ROOT/modules/`
+`resources/ => $YOUR_WHMCS_ROOT/resources/`
+`includes/ => $YOUR_WHMCS_ROOT/includes/`
 
 ### Upgrading
 
@@ -353,7 +355,7 @@ This role user will only be able to execute the WHMCS needed commands.
 
 ### Restrictive User Role
 
-- Login to the CentralNic Reseller [Control Panel](//account.centralnicreseller.com/)
+- Login to the CentralNic Reseller [Control Panel](//www.centralnicreseller.com/en/sign-in)
 - Click on your username (top right)
 - Click on 'User management' from the dropdown menu
 - Create a new user by clicking on "Create new User"
@@ -375,7 +377,7 @@ If it is still not working, please try again after activating "Rights required f
 
 WHMCS itself does **not** support using 2-Factor Authentication (2FA) for Registrar Modules. So having 2FA activated for your user and using it in WHMCS simply does **not** work. If you've set up a restrictive role user as described above and you're using that one in your registrar configuration, then you can activate 2FA for your account (!!!not for your restrictive role user!!!).
 
-You can activate 2FA by logging in to our control panel ([OT&E](//account-ote.centralnicreseller.com), [LIVE](//account.centralnicreseller.com)). Then click on your user name at the top right of the page and then navigate to `Passwords and Security`. There, click on `Enable Two-Factor Authentication` and follow that wizard.
+You can activate 2FA by logging in to our control panel ([OT&E](//account-ote.centralnicreseller.com), [LIVE](//www.centralnicreseller.com/en/sign-in)). Then click on your user name at the top right of the page and then navigate to `Passwords and Security`. There, click on `Enable Two-Factor Authentication` and follow that wizard.
 
 If you lost your 2FA device / code generator, contact our support - see the footer of this page.
 
@@ -383,11 +385,11 @@ If you lost your 2FA device / code generator, contact our support - see the foot
 
 You can activate IP Restrictions for both: your account and the above described role user. Find instructions on how to do that for the restrictive role user as described [here](#restrictive-user-role).
 
-You can do that for your account by logging in to our control panel ([OT&E](//account-ote.centralnicreseller.com), [LIVE](//account.centralnicreseller.com)). Then click on your user name at the top right of the page and then navigate to `Passwords and Security`. There, click on `Restrict API Access to Whitelist` and fill out the form.
+You can do that for your account by logging in to our control panel ([OT&E](//account-ote.centralnicreseller.com), [LIVE](//www.centralnicreseller.com/en/sign-in)). Then click on your user name at the top right of the page and then navigate to `Passwords and Security`. There, click on `Restrict API Access to Whitelist` and fill out the form.
 
 ## Final steps
 
-As the CentralNic Reseller system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the CentralNic Reseller Control Panel [LIVE System](//account.centralnicreseller.com/). Click on `Account Balance`, then `Charge your account`.
+As the CentralNic Reseller system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the CentralNic Reseller Control Panel [LIVE System](//www.centralnicreseller.com/en/sign-in). Click on `Account Balance`, then `Charge your account`.
 
 ## Known Issues
 

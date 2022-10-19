@@ -19,7 +19,7 @@ Firstly, follow the below steps to ensure your WHMCS System is correctly set up 
 * **WHMCS >=7.8**: Use the latest version of our ispapi registrar module. Ensure not having a custom configuration file in place: `/resources/domains/additionalfields.php`
 * **WHMCS <7.8**:  Use v5.1.12 of our registrar module. Ensure to have a custom configuration file in place: `/resources/domains/additionalfields.php`.
 
-For building up the custom configuration file, refer to our sample file [here](//github.com/hexonet/whmcs-ispapi-registrar/blob/master/registrars/ispapi/additionaldomainfields_sample.php). This is as mentioned only required for WHMCS Version lower than 7.8 (and when not using our latest registrar module version - lower than v6).
+For building up the custom configuration file, refer to our sample file [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/blob/archive/ispapi/additionaldomainfields_sample.php). This is as mentioned only required for WHMCS Version lower than 7.8 (and when not using our latest registrar module version - lower than v6).
 
 NOTE: Our latest ISPAPI Registrar Module Version comes with translation files that need a special one-time installation step. Read about it [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar#installing-our-module' | relative_url }}).
 
@@ -374,7 +374,7 @@ NOTE: Ensure to separate your account id and the user role id by "!" as shown in
   EOF
   ```
 
-* php-curl correctly installed? Find a test script [here](//raw.githubusercontent.com/hexonet/whmcs-ispapi-registrar/master/scripts/test.curl.php). Download and execute it via command line:
+* php-curl correctly installed? Find a test script [here](//raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/ispapi/test.curl.php). Download and execute it via command line:
   
   ```bash
   php test.curl.php

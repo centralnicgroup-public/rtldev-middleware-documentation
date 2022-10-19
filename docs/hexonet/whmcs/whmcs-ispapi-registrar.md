@@ -557,7 +557,7 @@ In order to provide this additional fields on the registration page and map them
 
 ### Our Configuration Sample
 
-If you want to customize an additional domain field configuration, just copy the code of the appropriate domain extension out of [our sample file](//raw.githubusercontent.com/hexonet/whmcs-ispapi-registrar/master/modules/registrars/ispapi/additionaldomainfields_sample.php) and add it into the above mentioned file.
+If you want to customize an additional domain field configuration, just copy the code of the appropriate domain extension out of [our sample file](//raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/ispapi/additionaldomainfields_sample.php) and add it into the above mentioned file.
 
 ### Auto-prefill fields
 
