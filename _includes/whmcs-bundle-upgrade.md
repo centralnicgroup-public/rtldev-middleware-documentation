@@ -9,6 +9,8 @@
     * `modules/addons/cnicssl_addon`
     * `modules/addons/ispapidomaincheck`
     * `modules/servers/cnicssl`
+    * `modules/widgets/ispapi*.php // just delete these ones if present`
+    * `modules/widgets/hexonet_summary.php // just delete this one if present`
     * `resources/cnic` 
     
     And then delete these folders from your WHMCS instance.
