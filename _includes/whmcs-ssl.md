@@ -57,11 +57,13 @@ Extract/copy all contents from the zip archive to your WHMCS installation root d
 
 ### Addon Activation
 
-Within the WHMCS Admin area, go to `Setup > Addon Modules`
+- **For users with WHMCS version 8.0+**, Navigate to `WHMCS Admin Area` > `System Settings` > `Addon Modules`
+
+- **For users with WHMCS version 7.3+**, In the WHMCS Admin area, go to `Setup` > `Addon Modules`
 
 ![Configuration]({{ 'assets/images/whmcs/cnic-ssl/configuration.png' | relative_url }})
 
-1. Activate the CNIC SSL Addon
+1. Activate the `CNIC SSL Addon`
 2. Choose the registrar you want to use (additional module and accounts required! see [Requirements](#requirements))
 3. Give the module “Full Administrator” Access Control right.
 4. Save changes

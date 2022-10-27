@@ -92,7 +92,9 @@ We started gathering this information starting with v10.0.0 of the domainchecker
 
 ### Addon Activation
 
-Within the WHMCS Admin area, go to `Setup > Addon Modules`
+- **For users with WHMCS version 8.0+**, Navigate to `WHMCS Admin Area` > `System Settings` > `Addon Modules`
+
+- **For users with WHMCS version 7.3+**, In the WHMCS Admin area, go to `Setup` > `Addon Modules`
 
 ![configuration]({{ 'assets/images/whmcs/ispapi-domainchecker/configuration.png' | relative_url }})
 
