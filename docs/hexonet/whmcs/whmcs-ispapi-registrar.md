@@ -200,7 +200,15 @@ In addition:
 
 ## Module Configuration
 
-Now, navigate in your WHMCS instance to `Setup > Products/Services > Domain Registrars`.
+* **For users with WHMCS version 8+**, Navigate to `WHMCS Admin Panel > System Settings > Domain Registrars`.
+Find the `HEXONET` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
+
+![configuration]({{ 'assets/images/whmcs/modules-config/step-1-domain-registrars.jpg' | relative_url }})
+![configuration]({{ 'assets/images/whmcs/modules-config/step-2-domain-registrars.jpg' | relative_url }})
+![configuration]({{ 'assets/images/whmcs/modules-config/step-3-domain-registrars.jpg' | relative_url }})
+![configuration]({{ 'assets/images/whmcs/modules-config/step-4-ispapi-domain-registrars.jpg' | relative_url }})
+
+* **For users with WHMCS version 7.3+**, Navigate in your WHMCS instance to `Setup > Products/Services > Domain Registrars`.
 There, ensure to have the `HEXONET` module **deactivated**.
 Find the `HEXONET/ispapi` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
 

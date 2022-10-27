@@ -151,8 +151,16 @@ For non cPanel users: check location `/var/www/whmcs` (default path) or eventual
 
 ## Module Configuration
 
-Now, navigate in your WHMCS instance to `Setup > Products/Services > Domain Registrars`.
-Find the `CentralNic Reseller/Key-Systems` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
+* **For users with WHMCS version 8+**, Navigate to `WHMCS Admin Panel > System Settings > Domain Registrars`.
+Find the `CentralNic Reseller` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
+
+![configuration]({{ 'assets/images/whmcs/modules-config/step-1-domain-registrars.jpg' | relative_url }})
+![configuration]({{ 'assets/images/whmcs/modules-config/step-2-domain-registrars.jpg' | relative_url }})
+![configuration]({{ 'assets/images/whmcs/modules-config/step-3-domain-registrars.jpg' | relative_url }})
+![configuration]({{ 'assets/images/whmcs/modules-config/step-4-cnic-domain-registrars.jpg' | relative_url }})
+
+* **For users with WHMCS version 7.3+**, Navigate in your WHMCS instance to `Setup > Products/Services > Domain Registrars`.
+Find the `CentralNic Reseller` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
 
 ![configuration]({{ 'assets/images/whmcs/cnic-registrar/config.png' | relative_url }})
 
@@ -161,7 +169,7 @@ Activate `TestMode` by activating the checkbox in case you want to use the OT&E 
 
 If you want to offer secure DNS / DNSSec, feel also free to activate the checkbox for `DNSSEC`. Find further details documented [here](#ns--dns-management).
 
-Now, press Save and voilà.
+Now, press Save and voilà. :tada:
 
 ### Domain Contact Verification
 
