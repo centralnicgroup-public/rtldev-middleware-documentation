@@ -95,19 +95,13 @@ In `case max_input_vars` is set too low, we will display an error message. Nothi
 
 ### Addon activation
 
-Within the WHMCS Admin area, go to
+- **For users with WHMCS version 8.0+**, Navigate to `WHMCS Admin Area` > `System Settings` > `Addon Modules`
 
-`Setup > Addon Modules`
+- **For users with WHMCS version 7.3+**, In the WHMCS Admin area, go to `Setup` > `Addon Modules`
 
 ![configuration]({{ 'assets/images/whmcs/ispapi-pricingimporter/configuration.png' | relative_url }})
 
-Activate the ISPAPI Pricing Importer Addon, fill your admin username and give the module “Full Administrator” Access Control right.
-
-### Addon configuration
-
-Within the WHMCS Admin area, go to
-
-`Addons > ISPAPI Pricing Importer`
+Activate the `ISPAPI Pricing Importer` Addon, fill your admin username and give the module "Full Administrator" Access Control right.
 
 **You are now ready to quickly update your pricing list.**
 

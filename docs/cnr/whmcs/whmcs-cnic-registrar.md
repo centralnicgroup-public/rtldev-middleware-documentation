@@ -151,7 +151,7 @@ For non cPanel users: check location `/var/www/whmcs` (default path) or eventual
 
 ## Module Configuration
 
-* **For users with WHMCS version 8+**, Navigate to `WHMCS Admin Panel > System Settings > Domain Registrars`.
+- **For users with WHMCS version 8.0+**, Navigate to `WHMCS Admin Panel` > `System Settings` > `Domain Registrars`.
 Find the `CentralNic Reseller` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
 
 ![configuration]({{ 'assets/images/whmcs/modules-config/step-1-domain-registrars.jpg' | relative_url }})
@@ -159,7 +159,7 @@ Find the `CentralNic Reseller` Module in the list and activate it. If you're not
 ![configuration]({{ 'assets/images/whmcs/modules-config/step-3-domain-registrars.jpg' | relative_url }})
 ![configuration]({{ 'assets/images/whmcs/modules-config/step-4-cnic-domain-registrars.jpg' | relative_url }})
 
-* **For users with WHMCS version 7.3+**, Navigate in your WHMCS instance to `Setup > Products/Services > Domain Registrars`.
+- **For users with WHMCS version 7.3+**, Navigate in your WHMCS instance to `Setup` > `Products/Services` > `Domain Registrars`.
 Find the `CentralNic Reseller` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
 
 ![configuration]({{ 'assets/images/whmcs/cnic-registrar/config.png' | relative_url }})

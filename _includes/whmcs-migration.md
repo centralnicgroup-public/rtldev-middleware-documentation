@@ -70,7 +70,11 @@ Re-Configure WHMCS in direction of the gaining registrar:
 
 ### Addon configuration
 
-In the WHMCS `Addon Modules` page, you can configure some basic settings for the addon.
+- **For users with WHMCS version 8.0+**, Navigate to `WHMCS Admin Area` > `System Settings` > `Addon Modules`
+
+- **For users with WHMCS version 7.3+**, In the WHMCS Admin area, go to `Setup` > `Addon Modules`
+
+Activate the `CNIC Migrator` Add-on, give the module "Full Administrator" Access Control right.
 
 | Setting                   | Default                                     | Description                                                                     |
 | ------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------- |

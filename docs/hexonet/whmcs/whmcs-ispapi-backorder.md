@@ -68,7 +68,9 @@ After that, deactivate the module and re-activate it again as explained below.
 
 ### Addon Activation
 
-In the WHMCS Admin area, go to `Setup  =>  Addon Modules`
+- **For users with WHMCS version 8.0+**, Navigate to `WHMCS Admin Area` > `System Settings` > `Addon Modules`
+
+- **For users with WHMCS version 7.3+**, In the WHMCS Admin area, go to `Setup` > `Addon Modules`
 
 Activate the ISPAPI Backorder Addon and give the module “Full Administrator” Access Control rights.
 

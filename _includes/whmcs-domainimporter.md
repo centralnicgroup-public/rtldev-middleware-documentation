@@ -74,11 +74,13 @@ Now you can activate this addon by navigating to `Setup > Addon Modules > CNIC D
 
 ### Addon Activation
 
-Within the WHMCS Admin area, go to `Setup > Addon Modules`
+- **For users with WHMCS version 8.0+**, Navigate to `WHMCS Admin Area` > `System Settings` > `Addon Modules`
+
+- **For users with WHMCS version 7.3+**, In the WHMCS Admin area, go to `Setup` > `Addon Modules`
 
 ![configuration]({{ 'assets/images/whmcs/cnic-domainimporter/configuration.png' | relative_url }})
 
-Activate the "CNIC Domain Importer" Add-on, give the module "Full Administrator" Access Control right.
+Activate the `CNIC Domain Importer` Add-on, give the module "Full Administrator" Access Control right.
 
 ## Import Wizard
 

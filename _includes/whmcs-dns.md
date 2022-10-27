@@ -39,8 +39,8 @@ Extract the zip contents to the root folder of your installed WHMCS instance.
 
 ### Addon activation
 
-- Open the WHMCS Admin Area
-- Navigate to `System Settings` > `Addon Modules`
+- **For users with WHMCS version 8.0+**, Open the WHMCS Admin Area navigate to `System Settings` > `Addon Modules`
+- **For users with WHMCS version 7.3+**, In the WHMCS Admin area, go to `Setup` > `Addon Modules`
 - Find `CentralNic DNS` and click on `Activate`
 - Click on `Configure` and make sure to configure Access Control as needed
 
