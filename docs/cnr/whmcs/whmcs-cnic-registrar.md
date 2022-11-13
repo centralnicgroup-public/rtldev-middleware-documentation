@@ -7,7 +7,7 @@ nav_order: 1
 showtoc: 1
 ---
 
-# CentralNic Reseller Registrar Module<br/>(fka. RRPproxy) 
+# CentralNic Reseller Registrar Module<br/>(fka. RRPproxy)
 
 [![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
 
@@ -87,6 +87,13 @@ It will do the following actions:
 ![image]({{ 'assets/images/whmcs/cnic-registrar/migrate.png' | relative_url }})
 
 - Ensure to check the Additional Domain Fields setup for TLDs offered over us. Read more about that [here](#additional-domain-fields)
+
+### Migrating Lookup Provider
+
+If you were using the lookup provider funcionality with any previous module, you must upgrade it manually.
+
+- Go to WHMCS System Settings > Domain Pricing
+- Change the Lookup Provider to CentralNic Reseller
 
 ## Create a CentralNic Reseller Account
 
