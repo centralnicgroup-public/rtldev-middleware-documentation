@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: CentralNic Documentation
 description: Full Documentation of CentralNic Reseller-Division Tools and 3rd-party Software Integrations.
-baseurl: "/centralnic-reseller" # the subpath of your site, e.g. /blog
+baseurl: "/rtldev-middleware-documentation" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty

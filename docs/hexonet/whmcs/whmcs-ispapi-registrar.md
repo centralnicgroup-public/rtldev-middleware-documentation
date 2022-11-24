@@ -497,8 +497,8 @@ WHMCS doesn't allow SRV records. Our module makes it possible! We have WHMCS tem
 
 Find the Template File for
 
-- the Six Theme [here](https://raw.githubusercontent.com/centralnic-reseller/templates-six/master/clientareadomaindns.tpl)
-- the Twenty-One [here](https://raw.githubusercontent.com/centralnic-reseller/templates-twenty-one/master/clientareadomaindns.tpl).
+- the Six Theme [here](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-templates-six/master/clientareadomaindns.tpl)
+- the Twenty-One [here](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-templates-twenty-one/master/clientareadomaindns.tpl).
 
 First make a backup of the `clientaredomaindns.tpl` template file of your current theme in use.
 Then replace it with our template file.

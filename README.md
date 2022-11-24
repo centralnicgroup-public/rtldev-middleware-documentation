@@ -2,7 +2,7 @@
 
 This is just a repository covering all our documentation.
 
-Find it accessible [here](https://centralnic-reseller.github.io/centralnic-reseller/).
+Find it accessible [here](https://centralnicgroup-public.github.io/rtldev-middleware-documentation/).
 
 Status: WIP!
 
