@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   jekyll:
-    container_name: dstack-cnrdocks
+    container_name: dstack-cnrdocs
     restart: always
     hostname: localhost
     build:
