@@ -55,7 +55,7 @@ The Team at PartnerGate has its custom Registrar Module for WHMCS. Contact their
 
 Internet.bs markets domain reseller services to the professional internet services segment, such as hosting and web design companies. It provides a range of popular domain extensions at highly competitive prices. Target customers typically require “trade” pricing and sophisticated tools for managing large domain name portfolios on behalf of third parties.
 
-The Team at internet.bs maintains its own version of the internet.bs Registrar Module (aka `ibs`) which should be used _instead_ of the WHMCS built-in Module. Find it [here](//github.com/internetbs/whmcs-internetbs-registrar).
+The Team at internet.bs maintains its own version of the internet.bs Registrar Module (aka `ibs`) which should be used _instead_ of the WHMCS built-in Module. Find it [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs-internetbs-registrar).
 
 ### instra
 

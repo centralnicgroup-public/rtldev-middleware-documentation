@@ -81,7 +81,7 @@
           url: /all/whmcs/#internetbs
         - name: Migration Tool
           url: /all/whmcs/whmcs-migration/
-  github: "//github.com/internetbs/"
+  github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs-internetbs-registrar/"
 
 - name: Instra
   url: "https://www.instra.com/"
