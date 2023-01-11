@@ -1,15 +1,16 @@
-ARG VARIANT=2.7
-FROM mcr.microsoft.com/vscode/devcontainers/ruby:latest
+# [Choice] Debian OS version (use bullseye on local arm64/Apple Silicon): bullseye, buster
+ARG VARIANT="3.1-bullseye"
+FROM mcr.microsoft.com/vscode/devcontainers/jekyll:${VARIANT}
 
-ENV LC_ALL C.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US.UTF-8
+# [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
+ENV GEM_HOME=/tmp \
+    GEM_PATH=$GEM_HOME;$GEM_PATH \
+    LANG=en_US.UTF-8 \
+    LANGUAGE=en_US:en \
+    TZ=Etc/UTC \
+    LC_ALL=en_US.UTF-8 \
+    LANG=en_US.UTF-8 \
+    LANGUAGE=en_US
 
-COPY Gemfile just-the-docs.gemspec ./
-RUN gem install bundler
-RUN bundle install
-
-WORKDIR /usr/src/app
-
-EXPOSE 4000
-VOLUME [ "/usr/src/app" ]
+ARG NODE_VERSION="none"
+#RUN if [ "${NODE_VERSION}" != "none" ]; ./usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1; fi
