@@ -8,7 +8,7 @@
   flex-grow: 1;
   height: $sp-10;
   padding: $sp-2;
-  transition: padding linear #{$transition-duration / 2};
+  transition: padding linear #{calc($transition-duration / 2)};
 
   @include mq(md) {
     position: relative !important;
@@ -26,7 +26,7 @@
   overflow: hidden;
   border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
-  transition: height linear #{$transition-duration / 2};
+  transition: height linear #{calc($transition-duration / 2)};
 
   @include mq(md) {
     position: absolute;
@@ -61,13 +61,13 @@
     padding-left: #{$gutter-spacing + $sp-5};
     font-size: 14px;
     background-color: $body-background-color;
-    transition: padding-left linear #{$transition-duration / 2};
+    transition: padding-left linear #{calc($transition-duration / 2)};
   }
 
   &:focus {
     outline: 0;
 
-    + .search-label .search-icon {
+    +.search-label .search-icon {
       color: $link-color;
     }
   }
@@ -81,7 +81,7 @@
 
   @include mq(md) {
     padding-left: $gutter-spacing;
-    transition: padding-left linear #{$transition-duration / 2};
+    transition: padding-left linear #{calc($transition-duration / 2)};
   }
 
   .search-icon {
@@ -216,7 +216,7 @@
   }
 }
 
-.search-result-preview + .search-result-preview {
+.search-result-preview+.search-result-preview {
   margin-top: $sp-1;
 }
 
@@ -241,7 +241,7 @@
   height: $sp-9;
   background-color: $search-background-color;
   border: 1px solid rgba($link-color, 0.3);
-  border-radius: #{$sp-9 / 2};
+  border-radius: #{calc($sp-9 / 2)};
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   align-items: center;
   justify-content: center;
