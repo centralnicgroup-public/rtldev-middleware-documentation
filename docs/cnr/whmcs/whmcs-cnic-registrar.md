@@ -9,8 +9,6 @@ showtoc: 1
 
 # CentralNic Reseller Registrar Module<br/>(fka. RRPproxy)
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-
 This Repository covers the updated WHMCS Registrar Module of CentralNic Reseller. Source code and latest package version are stable. Just the documentation is to be seen as WIP.
 
 A Registrar Module connects WHMCS to the Domain Registrar's System.

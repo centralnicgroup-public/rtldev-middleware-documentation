@@ -9,8 +9,6 @@ showtoc: 1
 
 # ISPAPI Monitoring Widget
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-
 This Repository covers the WHMCS "ISPAPI" Dashboard Widget "Monitoring". It provides the following features to WHMCS:
 
 ## Introduction

@@ -9,8 +9,6 @@ showtoc: 1
 
 # ISPAPI Registrar Module
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-
 A Registrar Module connects WHMCS to the Domain Registrar's System. This Documentation covers the HEXONET/ispapi WHMCS Registrar Module maintained by HEXONET's 3rd-party Software Integrations Team.
 
 NOTE: If you experience any issue when using this module, please take a look at the [FAQs]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/' | relative_url }}) or get in touch with our [Support team](#contact-us).
@@ -706,11 +704,15 @@ Therefore, unavailable for Organizations:
 
 {% include whmcs-dashboard-widget.md %}
 
+### Customizing
+
+* Hooks: With [v16.10.0](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases/tag/v16.10.0) we've added a possibility for injecting custom hook logics. Add your custom logic to `/your/path/to/whmcs/resources/hooks_ispapi_custom.php`.
+
 ### Translations
 
 Since Version 6 of our Registrar Module, we have introduced a Translation Mechanism that is allowing us to translate our Module's Texts in Client Area.
 
-Find our translation files in the `lang` folder of our ZIP Archive. As long as you don't have language override files already in use in your system, just copy that folder into your WHMCS System's root directory. Otherwise, please merge our translations into the existing ones. Please cover this step after each module upgrade.
+Find our translation files in the `lang` folder of our ZIP Archive. Read about the installation steps [here](#installation--upgrade). Feel free to support us with missing language files. Contributions are highly welcome!
 
 ### Transliteration
 

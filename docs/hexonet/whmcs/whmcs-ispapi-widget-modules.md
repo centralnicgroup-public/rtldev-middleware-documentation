@@ -9,8 +9,6 @@ showtoc: 1
 
 # ISPAPI Modules Widget
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-
 > **DEPRECATION NOTICE: This project will no longer be maintained seperately, and is now an integrated part of our registrar module. Download the new version of our WHMCS Bundle [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs) to benefit our newly integrated features.**
 
 This Repository covers the WHMCS "ISPAPI" Dashboard Widget "Modules". It provides the following features in WHMCS:

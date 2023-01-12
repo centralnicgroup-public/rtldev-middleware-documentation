@@ -9,8 +9,6 @@ showtoc: 1
 
 # ISPAPI Backorder Module
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-
 This Repository covers the WHMCS Backorder Module of HEXONET. It provides the following features in WHMCS:
 
 ## Introduction

@@ -1,7 +1,5 @@
 # SSL Certificates
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-
 WHMCS Provisioning Module and Addon for HEXONET & CentralNic Reseller SSL certificates
 
 ## Introduction

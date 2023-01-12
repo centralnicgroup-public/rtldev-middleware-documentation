@@ -9,8 +9,6 @@ showtoc: 1
 
 # ISPAPI Domain Search
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-
 This Documentation covers the "ISPAPI" Domain Search Add-On for WHMCS.
 
 ## Introduction
