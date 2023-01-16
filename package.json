@@ -6,6 +6,7 @@
   "license": "MIT",
   "bugs": "https://github.com/just-the-docs/just-the-docs/issues",
   "devDependencies": {
+    "broken-link-checker": "^0.7.8",
     "prettier": "^2.8.3",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
@@ -15,6 +16,7 @@
   "scripts": {
     "test": "stylelint '**/*.scss'",
     "format": "prettier --write '**/*.{scss,js,json}'",
-    "stylelint-check": "stylelint-config-prettier-check"
+    "stylelint-check": "stylelint-config-prettier-check",
+    "deadlinks-check": "blc http://localhost:4000/rtldev-middleware-documentation/ -egfro --filter-level 3"
   }
 }

@@ -1,7 +1,9 @@
 #!/bin/sh
 
-#RUN gem install rubygems-update
-#RUN update_rubygems
+# install npm global deps
+npm ci
+
+# update rubygems and deps
 gem update --system
 gem install bundler jekyll
 

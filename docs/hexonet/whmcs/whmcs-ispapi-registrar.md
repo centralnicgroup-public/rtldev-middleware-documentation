@@ -657,7 +657,7 @@ We are highly interested in helping you getting your domain portfolio migrated t
 
 ### Importing existing Domains
 
-If you started with any other frontend, hosting solution or custom solution and you're already having domains on your account at HEXONET, you can still start with WHMCS. We offer a domain importer addon for free. It imports domains and automatically create clients if not existing in your WHMCS system based on the Registrant Contact Data. Find the Module documented [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-domainimport/' | relative_url }}).
+If you started with any other frontend, hosting solution or custom solution and you're already having domains on your account at HEXONET, you can still start with WHMCS. We offer a domain importer addon for free. It imports domains and automatically create clients if not existing in your WHMCS system based on the Registrant Contact Data. Find the Module documented [here]({{ 'docs/hexonet/whmcs/whmcs-domainimporter/' | relative_url }}).
 
 NOTE: if you import domains with activated trustee service, be aware of that these costs won't be invoiced in WHMCS as WHMCS itself has no built-in support for a trustee service domain addon. Feel free to upvote our feature request for this [here](//requests.whmcs.com/topic/integrate-trustee-service-as-generic-domain-add-on).
 

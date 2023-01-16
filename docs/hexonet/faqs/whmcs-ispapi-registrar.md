@@ -81,7 +81,7 @@ If your domain names are not yet managed by HEXONET, you have two possibilities:
 
 (2) If you have a lot of domains to transfer, you may want to request access to our [Migration & Consolidation Tool](https://drive.google.com/file/d/11GVg57RhVx7ddFJK8RzH09FNIS5khujq/view?usp=sharing) for WHMCS.
 
-If your domain names are already managed by HEXONET, just follow the procedure check our [Domain Importer Addon]({{ 'docs/hexonet/whmcs/whmcs-domainimporter.md' | relative_url }}). Let us also point to the built-in, but manual way of importing single, non-premium domain names to WHMCS. Read [here](//docs.whmcs.com/Migration_Guide#Manual_Entry) for more details.
+If your domain names are already managed by HEXONET, just follow the procedure check our [Domain Importer Addon]({{ 'docs/hexonet/whmcs/whmcs-domainimporter/' | relative_url }}). Let us also point to the built-in, but manual way of importing single, non-premium domain names to WHMCS. Read [here](//docs.whmcs.com/Migration_Guide#Manual_Entry) for more details.
 
 ### 11. Wrong Availability Search Results
 
