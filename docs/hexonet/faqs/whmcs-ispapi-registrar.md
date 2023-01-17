@@ -99,15 +99,15 @@ If your domain names are already managed by HEXONET, just follow the procedure c
 
 ### 12. What's the difference between WHOISTrustee and Trustee?
 
-Some ccTLDs require a local contact in the underlying country. This might require a so-called "local presence / proxy / trustee service". This means registration could require a company/individual to be located in a particular country, or may require an administrative contact with a physical address in that particular country. Using our trustee service (which is NOT free of charge), would allow you to order such a ccTLD domain name if you're not located in a particular country.
+For Domain Registrations, some ccTLDs require a registrant and/or admin contact with local presence/physical address in a particular country. This might require a so-called **local presence / proxy / trustee service**. Using our trustee service (which is NOT free of charge), would allow you to order such a ccTLD domain name if you're not located in that particular country. WHMCS is not supporting this Domain Addon.
 
-The "WHOISTrustee Service" is our ID Protection Service and can be ordered via WHMCS. Read FAQ #13 for more details.
+The **WHOISTrustee Service** is our ID Protection Service and can be ordered via WHMCS. Read FAQ #13 for more details.
 
 ### 13. What's the ID Protection Service?
 
-This service (also known as whois privacy) cloaks your personal or company details from the publicly accessible whois database.
+This service (aka. Whois Privacy / WHOISTrustee Service) cloaks your personal or company details from the publicly accessible whois database.
 
-When you registered a domain you are required to provide accurate contact details which must be verified, these contact detail are then stored in a publicly accessible database called the ‘whois database’. Unfortunately hackers, spammers and fraudsters have been known to use this information to target domain holders. This service protects you from this by acting as a proxy, the detail listed in the whois database rather than being your own are that of our proxy services.
+When registering a domain name, you are enforced providing accurate contact details which must be verified. These contact details are then stored in a publicly accessible database called the ‘whois database’. Unfortunately hackers, spammers and fraudsters have been known to use this information to target domain holders. This service protects you from this by acting as a proxy, the detail listed in the whois database rather than being your own are that of our proxy services.
 
 It is available for the most gTLDs and nTLDs at least, but using the Service got superfluous as of GDPR.
 
