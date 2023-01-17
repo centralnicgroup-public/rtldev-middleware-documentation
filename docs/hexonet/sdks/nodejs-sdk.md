@@ -9,25 +9,25 @@ showtoc: 1
 
 # Node.js SDK
 
-aka. [**@hexonet/ispapi-apiconnector**](//www.npmjs.com/package/@hexonet/ispapi-apiconnector)
+aka. [**@hexonet/ispapi-apiconnector**](https://www.npmjs.com/package/@hexonet/ispapi-apiconnector)
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-[![node](//img.shields.io/node/v/@hexonet/ispapi-apiconnector.svg)](//www.npmjs.com/package/@hexonet/ispapi-apiconnector)
-[![npm version](//img.shields.io/npm/v/@hexonet/ispapi-apiconnector.svg?style=flat)](//www.npmjs.com/package/@hexonet/ispapi-apiconnector)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
+[![node](https://img.shields.io/node/v/@hexonet/ispapi-apiconnector.svg)](https://www.npmjs.com/package/@hexonet/ispapi-apiconnector)
+[![npm version](https://img.shields.io/npm/v/@hexonet/ispapi-apiconnector.svg?style=flat)](https://www.npmjs.com/package/@hexonet/ispapi-apiconnector)
 
-This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](//www.hexonet.net) and do not hesitate to [contact us](//www.hexonet.net/contact).
+This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](https://www.hexonet.net) and do not hesitate to [contact us](https://www.hexonet.net/contact).
 
 ## Resources
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
 * [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
-* [SDK Documentation](//hexonet.github.io/node-sdk/)
+* [SDK Documentation](https://centralnicgroup-opensource.github.io/rtldev-middleware-node-sdk/)
 * [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }})
 
 ## Requirements
 
-* NodeJS >= 9.x. We suggest using [nvm](//github.com/creationix/nvm).
+* NodeJS >= 9.x. We suggest using [nvm](https://github.com/creationix/nvm).
 
 ## Usage Instructions
 
@@ -37,7 +37,7 @@ Use the following command to get our Module installed:
     npm i @hexonet/ispapi-apiconnector@latest --save
 ```
 
-We have also a demo app available showing how to integrate and use our SDK. See [here](//github.com/hexonet/node-sdk-demo). Always ensure to have the latest release version in use.
+We have also a demo app available showing how to integrate and use our SDK. See [here](https://github.com/hexonet/node-sdk-demo). Always ensure to have the latest release version in use.
 
 ### OT&E System
 

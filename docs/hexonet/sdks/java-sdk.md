@@ -9,26 +9,26 @@ showtoc: 1
 
 # Java SDK
 
-aka. [**net.hexonet.apiconnector/java-sdk**](//search.maven.org/search?q=g:net.hexonet.apiconnector)
+aka. [**net.hexonet.apiconnector/java-sdk**](https://search.maven.org/search?q=g:net.hexonet.apiconnector)
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-![Maven metadata URI](//img.shields.io/maven-metadata/v/http/central.maven.org/maven2/net/hexonet/apiconnector/java-sdk/maven-metadata.xml.svg)
-[![Release](//jitpack.io/v/hexonet/java-sdk.svg)](//jitpack.io/#hexonet/java-sdk)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
+![Maven metadata URI](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/net/hexonet/apiconnector/java-sdk/maven-metadata.xml.svg)
+[![Release](https://jitpack.io/v/hexonet/java-sdk.svg)](https://jitpack.io/#hexonet/java-sdk)
 
-This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](//hexonet.net) and do not hesitate to [contact us](//www.hexonet.net/contact).
+This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](https://hexonet.net) and do not hesitate to [contact us](https://www.hexonet.net/contact).
 
 ## Resources
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
 * [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
-* [SDK Documenation](//hexonet.github.io/java-sdk/target/apidocs/net/hexonet/apiconnector/package-summary.html)
+* [SDK Documenation](https://centralnicgroup-opensource.github.io/rtldev-middleware-java-sdk/target/apidocs/index.html)
 * [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }})
 
 ## Requirements
 
 * JDK installed e.g. OpenJDK
-* Having [Maven](//maven.apache.org) up and running. e.g.
+* Having [Maven](https://maven.apache.org) up and running. e.g.
   
   ```bash
   sudo apt install maven
@@ -41,11 +41,11 @@ Our Classes provide further useful Methods for getting the connection configured
   #e.g. export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
   ```
 
-Note: Maven simplifies things, instead you can also manually download our Module from the [Maven Central Registry](//search.maven.org/search?q=g:net.hexonet.apiconnector) (OSSRH) to use it in your Project.
+Note: Maven simplifies things, instead you can also manually download our Module from the [Maven Central Registry](https://search.maven.org/search?q=g:net.hexonet.apiconnector) (OSSRH) to use it in your Project.
 
 ## Usage Instructions
 
-We have also a demo app available showing how to integrate and use our SDK. See [here](//github.com/hexonet/java-sdk-demo).
+We have also a demo app available showing how to integrate and use our SDK. See [here](https://github.com/hexonet/java-sdk-demo).
 
 ### OT&E System
 
@@ -71,7 +71,7 @@ As our package is available on the OSSRH as mentioned above, simply use:
 
 ### Maven + jitpack.io
 
-Standard way based on [jitpack.io](//jitpack.io).
+Standard way based on [jitpack.io](https://jitpack.io).
 Add the following lines to your maven project's pom.xml:
 
 ```xml

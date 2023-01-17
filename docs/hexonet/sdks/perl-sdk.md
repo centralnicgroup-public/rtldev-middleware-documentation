@@ -9,18 +9,18 @@ showtoc: 1
 
 # Perl SDK
 
-aka. [**WebService::Hexonet::Connector**](//metacpan.org/release/HEXONET/WebService-Hexonet-Connector-v2.10.2)
+aka. [**WebService::Hexonet::Connector**](https://metacpan.org/release/HEXONET/WebService-Hexonet-Connector-v2.10.2)
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
 
-This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](//hexonet.net) and do not hesitate to [contact us](//www.hexonet.net/contact).
+This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](https://hexonet.net) and do not hesitate to [contact us](https://www.hexonet.net/contact).
 
 ## Resources
 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
 * [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
-* [Class Documenation](//hexonet.github.io/perl-sdk/)
+* [Class Documenation](https://centralnicgroup-opensource.github.io/rtldev-middleware-perl-sdk/)
 * [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }})
 
 ## Requirements
@@ -30,7 +30,7 @@ Our Classes provide further useful Methods for getting the connection configured
 
 ## Usage Instructions
 
-We have also a demo app available showing how to integrate and use our SDK. See [here](//github.com/hexonet/perl-sdk-demo).
+We have also a demo app available showing how to integrate and use our SDK. See [here](https://github.com/hexonet/perl-sdk-demo).
 
 ### OT&E System
 
@@ -51,7 +51,7 @@ cpanm HEXONET/WebSservice-Hexonet-Connector-v2.0.0.tar.gz
 ```
 
 NOTE: I got this only working by sudo'ing these commands.
-In case you install by filename, please check the [release overview](//github.com/hexonet/perl-sdk/releases) for the most current release and use that version instead.
+In case you install by filename, please check the [release overview](https://github.com/hexonet/perl-sdk/releases) for the most current release and use that version instead.
 
 ## High Performance Proxy Setup
 

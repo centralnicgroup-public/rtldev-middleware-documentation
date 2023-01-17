@@ -10,9 +10,9 @@ showtoc: 0
 
 ## Our Dev Setup
 
-* [Visual Studio Code](//code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 * Git-SCM
-* We use [Virtual Environments](virtual Environments) where possible
+* We use **Virtual Environments** where possible
 
 ## Guide Lines
 
@@ -33,7 +33,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 **NOTE:**
 
-* Please follow [these Commit Message Rules](//github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines). We suggest to use [commitizen](//github.com/commitizen/cz-cli/blob/master/README.md) (nodejs setup required).
+* Please follow [these Commit Message Rules](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines). We suggest to use [commitizen](https://github.com/commitizen/cz-cli/blob/master/README.md) (nodejs setup required).
 * Mark your PR as `Work in Progress` if you're still working on things. This can be achieved by prefixing your PR title with `WIP`.
 
 :thumbsup: **We care then about the rest. Thanks so much for your Contribution!**

@@ -9,11 +9,11 @@ showtoc: 1
 
 # PHP SDK
 
-aka. [**centralnic-reseller/php-sdk**](//packagist.org/packages/centralnic-reseller/php-sdk)
+aka. [**centralnic-reseller/php-sdk**](https://packagist.org/packages/centralnic-reseller/php-sdk)
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-[![PHP from Packagist](//img.shields.io/packagist/php-v/centralnic-reseller/php-sdk.svg)](//packagist.org/packages/centralnic-reseller/php-sdk)
-[![Packagist](//img.shields.io/packagist/v/centralnic-reseller/php-sdk.svg)](//packagist.org/packages/centralnic-reseller/php-sdk)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/centralnic-reseller/php-sdk.svg)](https://packagist.org/packages/centralnic-reseller/php-sdk)
+[![Packagist](https://img.shields.io/packagist/v/centralnic-reseller/php-sdk.svg)](https://packagist.org/packages/centralnic-reseller/php-sdk)
 
 This module is a connector library for the insanely fast HEXONET and CentralNic Reseller Backend API. Do not hesitate to reach out.
 
@@ -22,19 +22,19 @@ This module is a connector library for the insanely fast HEXONET and CentralNic 
 Our Classes provide further useful Methods for getting the connection configured and response data accessed. Have an eye on the Class Documentation and the UML Diagram for further insights. The below Usage Examples show just a subset of possibilities.
 
 - [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
-- [Class Documenation](//centralnicgroup-opensource.github.io/rtldev-middleware-php-sdk/)
+- [Class Documenation](https://centralnicgroup-opensource.github.io/rtldev-middleware-php-sdk/)
 - [API Documentation]({{ 'docs/hexonet/api-documentation' | relative_url }})
 
 ## Requirements
 
 - Installed php (>= v5.6.0) and php-curl
-- Installed [composer](//getcomposer.org/download/).
+- Installed [composer](https://getcomposer.org/download/).
 
 ## Usage Instructions
 
-We have also a demo app available showing how to integrate and use our SDK. See [here](//github.com/centralnic-reseller/php-sdk-demo).
+We have also a demo app available showing how to integrate and use our SDK. See [here](https://github.com/centralnic-reseller/php-sdk-demo).
 
-This module is available on the [PHP Package Registry](//packagist.org/packages/centralnic-reseller/php-sdk).
+This module is available on the [PHP Package Registry](https://packagist.org/packages/centralnic-reseller/php-sdk).
 
 Run `composer require "centralnic-reseller/php-sdk"` to get the latest version downloaded and added to composer.json.
 In your script simply use `require 'vendor/autoload.php';` or `require 'vendor/centralnic-reseller/php-sdk';`

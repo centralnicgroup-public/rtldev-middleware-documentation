@@ -81,7 +81,7 @@ We encourage our Resellers to stick on the latest WHMCS release for security rea
 - WHMCS >= 7.8 / better >=8: our latest module version
 - Installed and working: curl, php-curl
 
-For the latest WHMCS minimum system requirements, please refer to [System_Requirements](//docs.whmcs.com/System_Requirements).
+For the latest WHMCS minimum system requirements, please refer to [System_Requirements](https://docs.whmcs.com/System_Requirements).
 
 ## Create your Account
 
@@ -92,8 +92,8 @@ We have two System Environments:
 
 The OT&E system is thought for Integration Tests and everything you're doing there is for free - but ordered products are then also not existing in real. With an OT&E account, all functionality and transactional processes can be tested thoroughly. The LIVE system corresponds to the real world system and comes with costs for ordered products and services.
 
-LIVE System Signup can be done [here](//www.hexonet.net/cart?signup=true).
-OT&E System Signup can be done [here](//www.hexonet.net/signup-ote).
+LIVE System Signup can be done [here](https://www.hexonet.net/cart?signup=true).
+OT&E System Signup can be done [here](https://www.hexonet.net/signup-ote).
 
 The creation of your account is completely free of charge. Your account will be used in WHMCS for ordering our products and services and for managing them.
 
@@ -104,7 +104,7 @@ Once your Account is created, a confirmation email with connection information w
 By default the Domain Renewal Mode in our Systems is set to "Automatic Renewal". WHMCS comes with its own logic and processes regarding domain management and that's why it is important to change this default behavior accordingly. This is necessary to avoid domains are getting automatically renewed and causing costs for you if your customer is not interested in a renewal. Your customer wouldn't renew then over WHMCS, but our API would do so.
 Please follow the below instructions to get this covered:
 
-- Login to your account here: [LIVE System](//account.hexonet.net) or [OT&E System](//account-ote.hexonet.net/).
+- Login to your account here: [LIVE System](https://account.hexonet.net) or [OT&E System](https://account-ote.hexonet.net/).
 - Click on your user name at top right
 - Navigate to `Products > Domain Name Settings > Renewal Mode for New Domains`
 - Select 'Expire Domain' and press 'Save'
@@ -115,7 +115,7 @@ Note: The renewal mode setting is only applied to new domain registrations in yo
 
 Firstly, we want to point you to the setting `max_input_vars` of your php.ini. You need to update this setting to `10000` to get WHMCS' Registrar TLD Sync / Pricing Import up and working. This is not something special related to our integration but of WHMCS Core. Let me point to the [PHP Docs](https://www.php.net/manual/en/info.configuration.php#ini.max-input-vars) and [this feature request](https://requests.whmcs.com/idea/do-not-use-post-form-data-on-pages-that-could-have-large-amout-of-data) addressed to WHMCS as well.
 
-The `HEXONET` Module that is shipped with WHMCS is maintained by the WHMCS Core Team and as Pull Requests took to long, we decided to work on our own Module Version. We highly recommend downloading and installing our white label module `HEXONET/ispapi` which is our maintained version and providing you latest features and patches. Available for download [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
+The `HEXONET` Module that is shipped with WHMCS is maintained by the WHMCS Core Team and as Pull Requests took to long, we decided to work on our own Module Version. We highly recommend downloading and installing our white label module `HEXONET/ispapi` which is our maintained version and providing you latest features and patches. Available for download [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 - Download the ZIP archive and extract it to your HDD
 - Extract the zip archive into the root directory of your WHMCS instance
@@ -161,7 +161,7 @@ include(implode(DIRECTORY_SEPARATOR, [ ROOTDIR, "modules", "registrars", "ispapi
 If these files already exist, please just copy'n'paste the above related include statements at the end of them.
 If you want to translate into a language that is not yet built-in in our module, we suggest to copy the `/modules/registrars/ispapi/lang/overrides/english.php` to `/lang/overrides/<language>.php` of your WHMCS System, where `<language>` corresponds to the language identifier e.g. `danish` or `dutch` etc. Then translate the contents of that file into the desired language. Just in case a translation is missing, we'll be falling back to english.
 
-For cPanel users: Use [this video](//www.youtube.com/watch?v=SNtldWg_0gY) on how to upload and extract a ZIP archive using your cPanel. Use [this video](//www.youtube.com/watch?v=T7OYIOwyWvU) on how to find the `public_html` folder in your cPanel. In there you'll find a subfolder `gwcorp` or `whmcs` containing again a subfolder `modules` and then the subfolder `registrars`. Please copy the above mentioned folder of our zip archive into that folder.
+For cPanel users: Use [this video](https://www.youtube.com/watch?v=SNtldWg_0gY) on how to upload and extract a ZIP archive using your cPanel. Use [this video](https://www.youtube.com/watch?v=T7OYIOwyWvU) on how to find the `public_html` folder in your cPanel. In there you'll find a subfolder `gwcorp` or `whmcs` containing again a subfolder `modules` and then the subfolder `registrars`. Please copy the above mentioned folder of our zip archive into that folder.
 
 For non cPanel users: check location `/var/www/whmcs` (default path) or eventually `/var/www/html/whmcs`.
 
@@ -303,9 +303,9 @@ Proxy Server: 66.96.200.39
 
 It governs the domain name transfers between ICANN registrars. The Inter-Registrar Transfer Policy (IRTP) includes changes to domain ownership. Small changes to a domain name’s registrar first name, last name, organization, and email address trigger the validation process.
 
-IRTP handling is supported in WHMCS since version 7.6. We have adapted our ISPAPI registrar module to support this accordingly. Read more [here](//docs.whmcs.com/Domain_Contact_Verification) about IRTP handling via WHMCS.
+IRTP handling is supported in WHMCS since version 7.6. We have adapted our ISPAPI registrar module to support this accordingly. Read more [here](https://docs.whmcs.com/Domain_Contact_Verification) about IRTP handling via WHMCS.
 
-Our own related guide about IRTP and how our Backend System API is supporting it, can be found [here](//wiki.hexonet.net/wiki/IRTP).
+Our own related guide about IRTP and how our Backend System API is supporting it, can be found [here](https://wiki.hexonet.net/wiki/IRTP).
 
 We have introduced two options in the registrar module configuration settings. (`<WHMCS admin area> Setup > Products/Services > Domain Registrars > ISPAPI > Configure`)
 
@@ -321,13 +321,13 @@ This is the default and suggested setting. By checking this option you confirm t
 "X-CONFIRM-DA-NEW-REGISTRANT" => 1
 ```
 
-Note: Ensure to have the "gTLD Inter-Registrar Transfer Policy" settings deactivated/removed in our [control panel](//account.hexonet.net/token=qYDCIxFn/#/domain-admin). If you haven't configured this in the past, no worries.
+Note: Ensure to have the "gTLD Inter-Registrar Transfer Policy" settings deactivated/removed in our [control panel](https://account.hexonet.net/token=qYDCIxFn/#/domain-admin). If you haven't configured this in the past, no worries.
 
 **Option Two** (DEPRECATED):
 
 By checking this option you confirm to have obtained verifiable DA (Designated Agent) status to act on behalf of the new registrant of a domain name.
 
-- navigate on the [control panel](//account.hexonet.net/token=qYDCIxFn/#/domain-admin): `Reseller Controls > Product Settings > Domain Settings`. Under the "gTLD Inter-Registrar Transfer Policy" section first read the terms, implement the legal changes, and finally verify your Designated Agent status and your wish to alter the ModifyDomain command for IRTP compliance.
+- navigate on the [control panel](https://account.hexonet.net/token=qYDCIxFn/#/domain-admin): `Reseller Controls > Product Settings > Domain Settings`. Under the "gTLD Inter-Registrar Transfer Policy" section first read the terms, implement the legal changes, and finally verify your Designated Agent status and your wish to alter the ModifyDomain command for IRTP compliance.
 - Whenever your customer evokes a material change of registrant, the Reseller must submit the change as the DA for the new registrant.
 - The prior (old) registrant will always be sent an authorization email, and they will have fourteen (14) days to confirm the change.
 - The opt-out of the sixty (60) days transfer lock is enabled for module Resellers by default. However, if a Reseller wishes to opt-IN (disable the automatic opt-out) to the registrar transfer lock so that they can immediately process Change of Registrant requests with added security (for Change of Registrant when email addresses are not working), resellers can simply enable the checkbox stating "Disable the automatic opt-out. Registrant changes are processed in realtime, but domains will also get transfer-locked for 60 days. Dependant on fallback being enabled.
@@ -335,7 +335,7 @@ By checking this option you confirm to have obtained verifiable DA (Designated A
 ### Web Apps Support
 
 This feature can be enabled in the Registrar Module configuration. When enabled, your customers can connect Web Apps to their domains in case the related DNSZone is managed by HEXONET (Active Addon `DNS Management`).
-For now, we only have integrated `G Suite`, just let us know if further Web Apps are of high demand for you. Here the ones HEXONET in general supports on API-side: [Web Apps](//www.hexonet.net/products/webapps).
+For now, we only have integrated `G Suite`, just let us know if further Web Apps are of high demand for you. Here the ones HEXONET in general supports on API-side: [Web Apps](https://www.hexonet.net/products/webapps).
 
 Here some impressions:
 
@@ -396,7 +396,7 @@ If not configured, a registration attempt may fail as some of the Registries def
 
 For WHMCS < 7.10: Check our [Pricing Importer AddOn]({{ 'docs/hexonet/whmcs/whmcs-ispapi-pricingimporter/' | relative_url }}).
 
-For WHMCS >= 7.10: Use the [Registrar TLD Sync](//docs.whmcs.com/Registrar_TLD_Sync) feature which you can find in the menu Utilities. Read our [FAQ entry 61]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#61-import-prices-with-currency-conversions-and-promotions' | relative_url }}) for details on that feature and [FAQ entry 55]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#55-do-you-support-tld--pricing-sync-mechanism-shipped-with-whmcs-710' | relative_url }}).
+For WHMCS >= 7.10: Use the [Registrar TLD Sync](https://docs.whmcs.com/Registrar_TLD_Sync) feature which you can find in the menu Utilities. Read our [FAQ entry 61]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#61-import-prices-with-currency-conversions-and-promotions' | relative_url }}) for details on that feature and [FAQ entry 55]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/#55-do-you-support-tld--pricing-sync-mechanism-shipped-with-whmcs-710' | relative_url }}).
 
 Both ways support import of IDN TLDs. WHMCS supports IDN TLD Import in `Registrar TLD Sync` since WHMCS 8 our module did allow IDN TLD import already earlier.
 
@@ -408,7 +408,7 @@ In order to support Internationalized Domain Names (IDN) (e.g. v-8.ευ or مو�
 
 `Setup > General Settings > Domains > Allow IDN Domains`
 
-NOTE: Even though WHMCS officially supported IDNs since [WHMCS 8](//docs.whmcs.com/International_Domain_Names), our module is already capable of IDN handling for earlier WHMCS versions.
+NOTE: Even though WHMCS officially supported IDNs since [WHMCS 8](https://docs.whmcs.com/International_Domain_Names), our module is already capable of IDN handling for earlier WHMCS versions.
 
 ## NS & DNS Management
 
@@ -428,7 +428,7 @@ When registering a domain name, a checkbox for this Domain Addon will then be of
 
 ![shoppingcartdns]({{ 'assets/images/whmcs/ispapi-registrar/dnsmanagement.png' | relative_url }})
 
-NOTE: If you plan to offer .DK Domains, please ensure to have your custom nameservers registered at DK Hostmaster first. Read [here](//wiki.hexonet.net/wiki/DK#Nameserver_Validation).
+NOTE: If you plan to offer .DK Domains, please ensure to have your custom nameservers registered at DK Hostmaster first. Read [here](https://wiki.hexonet.net/wiki/DK#Nameserver_Validation).
 
 ### White-label DNS
 
@@ -563,7 +563,7 @@ In order to provide this additional fields on the registration page and map them
 
 ### Our Configuration Sample
 
-If you want to customize an additional domain field configuration, just copy the code of the appropriate domain extension out of [our sample file](//raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/ispapi/additionaldomainfields_sample.php) and add it into the above mentioned file.
+If you want to customize an additional domain field configuration, just copy the code of the appropriate domain extension out of [our sample file](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/ispapi/additionaldomainfields_sample.php) and add it into the above mentioned file.
 
 ### Auto-prefill fields
 
@@ -591,9 +591,9 @@ In case your clients provide their data, it will be pre-filled accordingly.
 
 FYI: When installing WHMCS 7.6 and above, it is already enabled by default - you can skip this section then.
 
-WHMCS comes with some background automation scripts that allow to synchronize data like expiry date and the domain status / transfer status with the one in the registrar system. Ensure to have the WHMCS [Post Installation Steps covered](//docs.whmcs.com/Installing_WHMCS), especially the [Automation Settings](//docs.whmcs.com/Automation_Settings) chapter.
+WHMCS comes with some background automation scripts that allow to synchronize data like expiry date and the domain status / transfer status with the one in the registrar system. Ensure to have the WHMCS [Post Installation Steps covered](https://docs.whmcs.com/Installing_WHMCS), especially the [Automation Settings](https://docs.whmcs.com/Automation_Settings) chapter.
 
-Find [here](//docs.whmcs.com/Domain_Synchronisation) on how to set the **Domain Synchronization** up.
+Find [here](https://docs.whmcs.com/Domain_Synchronisation) on how to set the **Domain Synchronization** up.
 
 If necessary, you can trigger the Domain and Transfer Synchronization also manually from Command Line:
 
@@ -601,7 +601,7 @@ If necessary, you can trigger the Domain and Transfer Synchronization also manua
 
 ... where `$YOUR_WHMCS_CRONS_PATH` is the path to the cron script folder of your WHMCS instance.
 
-Find [here](//docs.whmcs.com/Crons) the full technical chapter about WHMCS Crons and their Options as reference.
+Find [here](https://docs.whmcs.com/Crons) the full technical chapter about WHMCS Crons and their Options as reference.
 
 ## Lookup Provider
 
@@ -650,8 +650,8 @@ The ISPAPI High Performance DomainChecker Module enables extremely fast domain a
 
 ### Migrating your Portfolio
 
-If you have doubts related to prices, please contact our [Sales Department](//www.hexonet.net/contact).
-We are highly interested in helping you getting your domain portfolio migrated to us - just get in touch with us [here](//hexonet.support/). We are experienced with migrations and have Tools ready for this - even an Auto-Migration Tool for WHMCS. Ask for it!
+If you have doubts related to prices, please contact our [Sales Department](https://www.hexonet.net/contact).
+We are highly interested in helping you getting your domain portfolio migrated to us - just get in touch with us [here](https://hexonet.support/). We are experienced with migrations and have Tools ready for this - even an Auto-Migration Tool for WHMCS. Ask for it!
 
 **The customer is king**, is a principle to which we ascribe.
 
@@ -659,9 +659,9 @@ We are highly interested in helping you getting your domain portfolio migrated t
 
 If you started with any other frontend, hosting solution or custom solution and you're already having domains on your account at HEXONET, you can still start with WHMCS. We offer a domain importer addon for free. It imports domains and automatically create clients if not existing in your WHMCS system based on the Registrant Contact Data. Find the Module documented [here]({{ 'docs/hexonet/whmcs/whmcs-domainimporter/' | relative_url }}).
 
-NOTE: if you import domains with activated trustee service, be aware of that these costs won't be invoiced in WHMCS as WHMCS itself has no built-in support for a trustee service domain addon. Feel free to upvote our feature request for this [here](//requests.whmcs.com/topic/integrate-trustee-service-as-generic-domain-add-on).
+NOTE: if you import domains with activated trustee service, be aware of that these costs won't be invoiced in WHMCS as WHMCS itself has no built-in support for a trustee service domain addon. Feel free to upvote our feature request for this [here](https://requests.whmcs.com/topic/integrate-trustee-service-as-generic-domain-add-on).
 
-An alternative manual Way of Importing is described [here](//docs.whmcs.com/Migration_Guide#Adding_Domains).
+An alternative manual Way of Importing is described [here](https://docs.whmcs.com/Migration_Guide#Adding_Domains).
 
 ## WHOIS Privacy Management
 
@@ -706,7 +706,7 @@ Therefore, unavailable for Organizations:
 
 ### Customizing
 
-* Hooks: With [v16.10.0](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases/tag/v16.10.0) we've added a possibility for injecting custom hook logics. Add your custom logic to `/your/path/to/whmcs/resources/hooks_ispapi_custom.php`.
+* Hooks: With [v16.10.0](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases/tag/v16.10.0) we've added a possibility for injecting custom hook logics. Add your custom logic to `/your/path/to/whmcs/resources/hooks_ispapi_custom.php`.
 
 ### Translations
 
@@ -724,7 +724,7 @@ Read [here](https://docs.whmcs.com/Custom_Transliteration) for further Details.
 
 ### WHOIS Servers
 
-WHMCS comes with a default configuration that is not covering all TLDs. We started gathering such cases, feel free to copy the contents of our [sample configuration file](//raw.githubusercontent.com/hexonet/whmcs-ispapi-registrar/master/registrars/ispapi/sample_whois.json) to the [whois.json override file](//docs.whmcs.com/WHOIS_Servers#Customising_WHOIS_Servers). Ensure the final json format is valid using [jsonlint.com](//jsonlint.com)!
+WHMCS comes with a default configuration that is not covering all TLDs. We started gathering such cases, feel free to copy the contents of our [sample configuration file](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/master/modules/registrars/ispapi/sample_whois.json) to the [whois.json override file](https://docs.whmcs.com/WHOIS_Servers#Customising_WHOIS_Servers). Ensure the final json format is valid using [jsonlint.com](https://jsonlint.com)!
 
 NOTE: The above provided configuration is just an example how it might work. We know this .bo WHOIS Server Configuration not being compatible with the possibilities of WHMCS Core.
 
@@ -772,9 +772,9 @@ $additionaldomainfields[".swiss"][] = array(
   - If the Registration **succeeded** the domain will be set to **Active** and the customer will be able to manage it.
   - If the Registration **failed**, the domain will be set to **Cancelled** and you will have to **refund the customer manually**.
 
-In order to work automatically the WHMCS Cron job has to be configured properly. Please have a look at [this page](//docs.whmcs.com/Crons).
+In order to work automatically the WHMCS Cron job has to be configured properly. Please have a look at [this page](https://docs.whmcs.com/Crons).
 
-Further information regarding .SWISS is available in our wiki [here](//wiki.hexonet.net/wiki/SWISS).
+Further information regarding .SWISS is available in our wiki [here](https://wiki.hexonet.net/wiki/SWISS).
 
 ## HEXONET Account Hardening
 
@@ -856,7 +856,7 @@ UpdateDNSZone():ALLOW
 
 Create a restrictive Role User by:
 
-- Login to the HEXONET [Control Panel](//account.hexonet.net)
+- Login to the HEXONET [Control Panel](https://account.hexonet.net)
 - Click on your username (top right)
 - Click on 'Settings', click on 'Share Access' from the dropdown menu
 - Create a new role user by clicking on "New Role User"
@@ -875,13 +875,13 @@ Create a restrictive Role User by:
 
 (_If your Hexonet username is "customer1" and your role user is "whmcs" you have to use the login like this: customer1!whmcs_)
 
-FYI: Further documentation about securing your WHMCS installation, can be found in the `Post Installation Suggested Steps` section of the [WHMCS Installation Guide](//docs.whmcs.com/Installing_WHMCS#Post_Installation_Suggested_Steps).
+FYI: Further documentation about securing your WHMCS installation, can be found in the `Post Installation Suggested Steps` section of the [WHMCS Installation Guide](https://docs.whmcs.com/Installing_WHMCS#Post_Installation_Suggested_Steps).
 
 ### 2-Factor Authentication
 
 WHMCS itself does **not** support using 2-Factor Authentication (2FA) for Registrar Modules. So having 2FA activated for your user and using it in WHMCS simply does **not** work. If you've set up a restrictive User Role as described above and you're using that one in your registrar configuration, then you can activate 2FA for your account (!!!not for your restrictive User Role!!!).
 
-You can activate 2FA by logging in to our control panel ([OT&E](//account-ote.hexonet.net), [LIVE](//account.hexonet.net)). Then click on your user name at the top right of the page and then navigate to `Settings > Security`. There, click on `2-Factor Authentication` and follow that wizard.
+You can activate 2FA by logging in to our control panel ([OT&E](https://account-ote.hexonet.net), [LIVE](https://account.hexonet.net)). Then click on your user name at the top right of the page and then navigate to `Settings > Security`. There, click on `2-Factor Authentication` and follow that wizard.
 
 If you lost your 2FA device / code generator, contact our support - see the footer of this page.
 
@@ -889,13 +889,13 @@ If you lost your 2FA device / code generator, contact our support - see the foot
 
 You can activate IP Restrictions for both: Your account and the above described User Role. Find instructions on how to do that for the restrictive User Role as described [here](#create-a-role-user).
 
-You can do that for your Account by logging in to our Control Panel ([OT&E](//account-ote.hexonet.net), [LIVE](//account.hexonet.net)). Then click on your user name at the top right of the page and then navigate to `Settings > Security`. There, click on `IP Restrictions` and follow that wizard.
+You can do that for your Account by logging in to our Control Panel ([OT&E](https://account-ote.hexonet.net), [LIVE](https://account.hexonet.net)). Then click on your user name at the top right of the page and then navigate to `Settings > Security`. There, click on `IP Restrictions` and follow that wizard.
 
 IMPORTANT: If you're doing something wrong here, like just white-listing your internal server ip address instead of the outgoing one or not white-listing the ip address you are currently using yourself, you might no longer be able to login. It is also possible to add there ip address ranges. We suggest to have someone of your administrative team helping with that to ensure the correct ip addresses being white-listed. If you run into trouble or need help, contact our support - see the footer of this page.
 
 ## Final steps
 
-As the HEXONET system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the HEXONET Control Panel [LIVE System](//account.hexonet.net/). Click on your account name at the top right and then press the button `Add Funds`. If you need funds to be added to your [OT&E Account](//account-ote.hexonet.net), let us know.
+As the HEXONET system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the HEXONET Control Panel [LIVE System](https://account.hexonet.net/). Click on your account name at the top right and then press the button `Add Funds`. If you need funds to be added to your [OT&E Account](https://account-ote.hexonet.net), let us know.
 
 ## Known Issues
 
@@ -947,7 +947,7 @@ TLD      REGISTRATION TERM (years)  RENEWAL TERM (years)
 
 Although this is supported by CentralNic (both CentralNic Reseller and Hexonet), WHMCS does not have enough flexibility to support this, as it assumes that registries will offer matching terms for both registration and renewal, and so is unable to distinguish between available registration terms and renewal terms within the Registrar TLD Sync Feature. You see registration terms listed that are partially not supported as renewal period.
 
-A [Feature Request](//requests.whmcs.com/idea/registrar-tld-sync-to-support-different-list-of-terms) has been raised with WHMCS to address this issue.
+A [Feature Request](https://requests.whmcs.com/idea/registrar-tld-sync-to-support-different-list-of-terms) has been raised with WHMCS to address this issue.
 
 Until WHMCS addresses this deficiency, the workaround is to manually reconfigure these TLDs after import.
 

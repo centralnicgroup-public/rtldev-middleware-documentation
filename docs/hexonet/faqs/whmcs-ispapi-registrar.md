@@ -19,7 +19,7 @@ Firstly, follow the below steps to ensure your WHMCS System is correctly set up 
 * **WHMCS >=7.8**: Use the latest version of our ispapi registrar module. Ensure not having a custom configuration file in place: `/resources/domains/additionalfields.php`
 * **WHMCS <7.8**:  Use v5.1.12 of our registrar module. Ensure to have a custom configuration file in place: `/resources/domains/additionalfields.php`.
 
-For building up the custom configuration file, refer to our sample file [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/blob/archive/ispapi/additionaldomainfields_sample.php). This is as mentioned only required for WHMCS Version lower than 7.8 (and when not using our latest registrar module version - lower than v6).
+For building up the custom configuration file, refer to our sample file [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/blob/archive/ispapi/additionaldomainfields_sample.php). This is as mentioned only required for WHMCS Version lower than 7.8 (and when not using our latest registrar module version - lower than v6).
 
 NOTE: Our latest ISPAPI Registrar Module Version comes with translation files that need a special one-time installation step. Read about it [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar#installing-our-module' | relative_url }}).
 
@@ -32,7 +32,7 @@ The redemption period is nothing but a Restorable period and also we call it a '
 These settings are now part of TLD Import & Pricing Sync Feature of WHMCS v7.10 (aka. Registrar TLD Sync). Find it under `Utitlities > Registrar TLD Sync`. Read [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar#importing-prices' | relative_url }}) on how to import prices using the Registrar TLD Sync Feature of WHMCS. Check also FAQ #32.
 
 *Releases < WHMCS 7.10:*
-You can find the duration of the redemption period on our wiki for each TLD. For example, check 'Deletion Restorable Period' [here](//wiki.hexonet.net/wiki/COM). Pricing can be found in the [control panel](//account.hexonet.net). Navigate under your account > BILLING > Prices & costs > Domains > see 'Restore' column for pricing.
+You can find the duration of the redemption period on our wiki for each TLD. For example, check 'Deletion Restorable Period' [here](https://wiki.hexonet.net/wiki/COM). Pricing can be found in the [control panel](https://account.hexonet.net). Navigate under your account > BILLING > Prices & costs > Domains > see 'Restore' column for pricing.
 
 ### 3. Do you provide these: ID Protection, DNS Management, and Email Forwarding? and their Fees?
 
@@ -62,7 +62,7 @@ As usual via WHMCS' Domain Transfer Process. You eventually need an authorizatio
 
 ### 8. I want to transfer a domain from one customer to another in my WHMCS. How can I initiate this transfer from WHMCS?
 
-You can cover this as described [here](//docs.whmcs.com/Domains_Management#Moving_a_Domain_to_another_Client).
+You can cover this as described [here](https://docs.whmcs.com/Domains_Management#Moving_a_Domain_to_another_Client).
 
 ### 9. Below warning keeps showing up after Domain Registration
 
@@ -79,9 +79,9 @@ If your domain names are not yet managed by HEXONET, you have two possibilities:
 
 (1) Transfer every domain by "Single Transfer" into WHMCS ("Transfer" button on the entry page of your WHMCS instance). This is the best way if you just have a few domains.
 
-(2) If you have a lot of domains to transfer, you may want to request access to our [Migration & Consolidation Tool](https://drive.google.com/file/d/11GVg57RhVx7ddFJK8RzH09FNIS5khujq/view?usp=sharing) for WHMCS.
+(2) If you have a lot of domains to transfer, you may want to use our [Migration & Consolidation Tool]({{ 'docs/hexonet/whmcs/whmcs-migration/' | relative_url }}) for WHMCS.
 
-If your domain names are already managed by HEXONET, just follow the procedure check our [Domain Importer Addon]({{ 'docs/hexonet/whmcs/whmcs-domainimporter/' | relative_url }}). Let us also point to the built-in, but manual way of importing single, non-premium domain names to WHMCS. Read [here](//docs.whmcs.com/Migration_Guide#Manual_Entry) for more details.
+If your domain names are already managed by HEXONET, just follow the procedure check our [Domain Importer Addon]({{ 'docs/hexonet/whmcs/whmcs-domainimporter/' | relative_url }}). Let us also point to the built-in, but manual way of importing single, non-premium domain names to WHMCS. Read [here](https://docs.whmcs.com/Migration_Guide#Manual_Entry) for more details.
 
 ### 11. Wrong Availability Search Results
 
@@ -90,7 +90,7 @@ If your domain names are already managed by HEXONET, just follow the procedure c
 * Ensure to have the latest version of WHMCS and our registrar module in use
 * Check if you're eventually connected to the OT&E System (TestMode activated). Find the Setting in our registrar module settings. In case the TestMode is activated you're connected to our Demo System which is NOT representing the real world, but can be used for integration tests.
 * The TLD is eventually not supported by us - please reach out to us.
-* The Domain Name you provided is eventually not valid. e.g. xxx.pro. The minimum required domain name length for .pro is 4. Some registry provider are in addition restrictive regarding supported characters / IDNs. Check the related TLD in our [wiki](//wiki.hexonet.net/wiki/) to identify if there are such restrictions.
+* The Domain Name you provided is eventually not valid. e.g. xxx.pro. The minimum required domain name length for .pro is 4. Some registry provider are in addition restrictive regarding supported characters / IDNs. Check the related TLD in our [wiki](https://wiki.hexonet.net/wiki/) to identify if there are such restrictions.
 * In case of a Premium Domain Name, ensure that the underlying Currency of the Registry Provider is configured and available in WHMCS. Find the currency out by executing the following command in our Control Panel (`>  'API ACCESS' > enter the command > submit`. Find the currency in the API response. WHMCS enforces the pricing to be returned, which is only possible if the related currency is configured.
 
      COMMAND = CheckDomains
@@ -141,7 +141,7 @@ Check FAQ #32 regarding pricing import issues.
 
 ### 16. SRV Record Support
 
-WHMCS doesn't support this record type yet - upvote the feature request [here](//requests.whmcs.com/topic/add-srv-records-through-dns-management-interface-in-clientarea-in-whmcs).
+WHMCS doesn't support this record type yet - upvote the feature request [here](https://requests.whmcs.com/topic/add-srv-records-through-dns-management-interface-in-clientarea-in-whmcs).
 
 Our ISPAPI registrar module offers support for SRV records in WHMCS. Please read [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar/#srv-records-support' | relative_url }}) for more information.
 
@@ -188,7 +188,7 @@ It is our in-house registrar company, so, that is why it shows up as the officia
 ### 23. How to register .ONG domains via WHMCS
 
 .ONG domain registration is a special case. You need to register .NGO domain to get .ONG domain. Both TLDs are technically bundled. 
-For more information please have a read [here](//wiki.hexonet.net/wiki/NGO).
+For more information please have a read [here](https://wiki.hexonet.net/wiki/NGO).
 
 .ONG domain can automatically be registered when a .NGO domain is registered.
 But .ONG domain cannot be (seen)/maintained in our system. Since .ONG and .NGO are bundled, managing .NGO domain also affects the .ONG domain maintenance automatically.
@@ -221,7 +221,7 @@ The whois URL for .africa provided by WHMCS is outdated. Please create `/resourc
         }
     ]
 
-Note: **DO NOT** modify dist.whois.json. For more information, have a look at [here](//docs.whmcs.com/WHOIS_Servers)
+Note: **DO NOT** modify dist.whois.json. For more information, have a look at [here](https://docs.whmcs.com/WHOIS_Servers)
 
 ### 26. Make error messages customer friendly
 
@@ -247,8 +247,8 @@ Before you can update the nameservers via WHMCS, you need to create the zone at 
 
 For additional information, read:
 
-* [Our WIKI](//wiki.hexonet.net/wiki/DE#Nameserver)
-* [DENIC Nast Tool](//www.denic.de/en/service/tools/nast/)
+* [Our WIKI](https://wiki.hexonet.net/wiki/DE#Nameserver)
+* [DENIC Nast Tool](https://www.denic.de/en/service/tools/nast/)
 
 Once you've created the zone, you will be able to update the nameservers for your domain, even via WHMCS. (Tier-1 support)
 
@@ -270,7 +270,7 @@ There is a limit to the WHMCS cron. Each time it runs it automates (say 50) jobs
 You can also manually execute the crons in your system.
 Eg: `php -q <PATH-TO-YOUR-WHMCS-CRON-FOLDER>/cron.php do --DomainTransferSync`
 
-Read the [WHMCS Docs](//docs.whmcs.com/Crons) for additional information.
+Read the [WHMCS Docs](https://docs.whmcs.com/Crons) for additional information.
 
 ### 31. WHMCS' built-in HEXONET registrar module vs. our ISPAPI registrar module
 
@@ -284,24 +284,24 @@ We highly recommend using our ISPAPI registrar module. In addition, all our addo
 
 Yes, we support this feature since WHMCS 7.10. Please upgrade to the latest registrar module version. Feel free to forward further related question to us. Documentation around that topic:
 
-* [Registrar TLD Sync](//docs.whmcs.com/Registrar_TLD_Sync)
-* [TLD Pricing Sync](//developers.whmcs.com/domain-registrars/tld-pricing-sync/)
+* [Registrar TLD Sync](https://docs.whmcs.com/Registrar_TLD_Sync)
+* [TLD Pricing Sync](https://developers.whmcs.com/domain-registrars/tld-pricing-sync/)
 
 NOTE:
 
 * ensure to increase `max_input_vars` in your php.ini to `10000` as a lot data is being submitted by whmcs
-* IDN TLDs are not considered as WHMCS doesn't officially support them
-* Although we also return if the TLD requires EPP/Auth-Code for transfer, it doesn't update the setting in section `Domain Pricing`. That's not a bug, that's a feature. In case the EPP code settings got manually configured before, this won't get overwritten. So to activate the sync for EPP code, you'll first have to completely drop your old domain pricing configuration.
+* Although we also return if the TLD requires EPP/Auth-Code for transfer, it doesn't update the setting in section `Domain Pricing`. That's not a bug, that's a feature of WHMCS. In case the EPP code settings got manually configured before, this won't get overwritten. So to activate the sync for EPP code, you'll first have to completely drop your old domain pricing configuration.
 * In the pricing popup you might recognize `-1.00` prices which are placeholders in WHMCS for being disabled. No need to worry if you sell then under your own costs! From WHMCS Support:
 
 > For example, transfers are generally only good for 1 year, so for years 2 and onward the price appears `-1.00`. Likewise if you opt to disable renewals for a certain length, it's perfectly legitimate to do that there as well. In particular, it's very difficult to renew a domain name for 10 years unless you do it at precisely the right time on the day of expiration, so 10 year renewal is frequently disabled with a values of `-1.00`.
 
-* We addressed topics to the WHMCS development team [here](//whmcs.community/topic/298959-developer-documentation-for-registrar-pricing-sync/) that could be improved, have a read. This covers topics you should be aware of before using that feature!
 * Promotions are not part of that pricing sync. We are investigating in that point to find the best way to bring this to WHMCS too.
+* The TLD & Pricing Sync isn't perfect - I see 0Y / costfree transfers still missing and unsupported in WHMCS Core
+* We in general return the registration periods. Some exotic TLDs support those periods just partially or not for renewal. That's the downside of the built-in Importer. It would have been better having the possibility returning registrartion, renewal and transfer periods completely separated to WHMCS. But this isn't desired by WHMCS' Design. We addressed this multiple times.
 
 ### 33. .UK registrar/IPS tag support in WHMCS
 
-For more general information, have a read [here](//wiki.hexonet.net/wiki/CO.UK#TLD_specific).
+For more general information, have a read [here](https://wiki.hexonet.net/wiki/CO.UK#TLD_specific).
 
 First create a transfer request at the gaining registrar. Then request the Domain Release a the loosing registrar by navigating to domain details page in WHMCS' Admin Area (one way: Clients > select your client > Domains > select your domain). There, click on the 'Release Domain' button. A pop up with a text field for Transfer Tag will appear. Specify the registrar tag of the **gaining** registrar in that text field. Click on Submit.
 
@@ -374,7 +374,7 @@ NOTE: Ensure to separate your account id and the user role id by "!" as shown in
   EOF
   ```
 
-* php-curl correctly installed? Find a test script [here](//raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/ispapi/test.curl.php). Download and execute it via command line:
+* php-curl correctly installed? Find a test script [here](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/ispapi/test.curl.php). Download and execute it via command line:
   
   ```bash
   php test.curl.php
@@ -387,7 +387,7 @@ NOTE: Ensure to separate your account id and the user role id by "!" as shown in
 
 * username or password could be wrong
 * you probably mixup using OT&E system (TestMode checked) with using your production system credentials or vice versa. if you use your production account, ensure to have TestMode unchecked (and vice versa).
-* 2-Factor authentication is active - which can't be supported in WHMCS. detailed read [here](//github.com/hexonet/whmcs-ispapi-registrar/issues/128). Deactivate it, or better create a restrictive role user as described [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar/#hexonet-account-hardening' | relative_url }}).
+* 2-Factor authentication is active - which can't be supported in WHMCS. detailed read [here](https://github.com/hexonet/whmcs-ispapi-registrar/issues/128). Deactivate it, or better create a restrictive role user as described [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar/#hexonet-account-hardening' | relative_url }}).
 * the public ip-address used by your WHMCS system needs to be white-listed in case you have ip restrictions configured in our control panel. Find your Server IP address listed next to the error output.
 * the api node has to be reachable, not blocked by a firewall. We connect to `https://api.ispapi.net` (LIVE System) and to `https://api-ote.ispapi.net` (OT&E System). This means outgoing connection to that url/domain name using port 443 has to be allowed.
 * up to now unconfirmed: special characters in your password could be a reason. change your password. We will check this and if confirmed, it will also be fixed in the next releases.

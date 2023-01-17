@@ -58,12 +58,12 @@ The ISPAPI DomainChecker addon supports the following functions and features:
 In order to run the ISPAPI DomainChecker Add-On, your WHMCS installation must meet the following requirements:
 
 * **WHMCS version 7.2.0** or higher must be installed. (We recommend always using the latest version of WHMCS)
-* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our Domain Search Addon does not support the WHMCS built-in HEXONET provider module!
+* **ISPAPI Registrar Module** This module can be downloaded [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our Domain Search Addon does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
-  * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
-  * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
+  * [OT&E (Test System) Account](https://www.hexonet.net/signup-ote)
+  * [LIVE (Real World System) Account](https://www.hexonet.net/cart?signup=true)
 * having URL Rewrite enabled in the web server and one of the url rewrite solutions applied (see section 3 e)
-* **ISPAPI Domainchecker Add-On**: downloadable [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
+* **ISPAPI Domainchecker Add-On**: downloadable [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 | Domainchecker version | ISPAPI Registrar Module version | WHMCS version |
 |-----------------------|---------------------------------|---------------|
@@ -139,7 +139,7 @@ In order to configure your Categories, go to `Addons > ISPAPI HP DomainChecker`
 This Import use the prices configured in the "Domain Pricing" page as base and considers the categories defined by WHMCS and also the configured order of the domain extensions. If you did not know about it: You can drag'n'drop the rows of the "Domain Pricing" page. Remember to configure each currency accordingly.
 Also note that IDN extensions have to be configured there in IDN format, not in punycode.
 
-If you want to customize the WHMCS default categories, read [this](//docs.whmcs.com/Domain_Categories).
+If you want to customize the WHMCS default categories, read [this](https://docs.whmcs.com/Domain_Categories).
 
 ![backend-overview]({{ 'assets/images/whmcs/ispapi-domainchecker/aa_categories_800px_lossy.gif' | relative_url }})
 
@@ -155,7 +155,7 @@ In that overview you can:
 
 Translate your TLD Categories by:
 
-* Add the respective language file under `/lang/overrides`. Well described [here](//developers.whmcs.com/languages/overrides/).
+* Add the respective language file under `/lang/overrides`. Well described [here](https://developers.whmcs.com/languages/overrides/).
 * Add your translation per Category
 
 e.g. for file `/lang/overrides/german.php`
@@ -176,7 +176,7 @@ For getting the native WHMCS Domain Search replaced with our Module, there are t
 > service apache2 restart
 ```
 
-NOTE: With Apache 2.4 things have changed. Please check [the Apache2 Upgrade Guide](//httpd.apache.org/docs/current/upgrading.html) for differences between 2.2 and 2.4++ configurations and how to review / clean them up.
+NOTE: With Apache 2.4 things have changed. Please check [the Apache2 Upgrade Guide](https://httpd.apache.org/docs/current/upgrading.html) for differences between 2.2 and 2.4++ configurations and how to review / clean them up.
 
 #### By Apache Configuration
 

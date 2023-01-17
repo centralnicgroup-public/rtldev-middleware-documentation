@@ -26,5 +26,5 @@
 - name: API Docs
   icon": gift
   about: Layout for license &amp; credits page. Consectetuer adipiscing elit.
-  github: //github.com/hexonet/hexonet-api-documentation
+  github: https://github.com/centralnicgroup-public/hexonet-api-documentation/tree/master/API
   prio: 6

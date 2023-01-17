@@ -9,18 +9,18 @@ showtoc: 1
 
 # Python SDK
 
-aka. [**hexonet.apiconnector**](//pypi.org/project/hexonet.apiconnector/)
+aka. [**hexonet.apiconnector**](https://pypi.org/project/hexonet.apiconnector/)
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-[![PyPI - Python Version](//img.shields.io/pypi/pyversions/hexonet.apiconnector.svg)](//www.python.org/)
-[![PyPI](//img.shields.io/pypi/v/hexonet.apiconnector.svg)](//pypi.org/project/hexonet.apiconnector/)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hexonet.apiconnector.svg)](https://www.python.org/)
+[![PyPI](https://img.shields.io/pypi/v/hexonet.apiconnector.svg)](https://pypi.org/project/hexonet.apiconnector/)
 
-This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](//hexonet.net) and do not hesitate to [contact us](//www.hexonet.net/contact).
+This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](https://hexonet.net) and do not hesitate to [contact us](https://www.hexonet.net/contact).
 
 ## Resources
 
 * [UML Diagram]({{ 'docs/hexonet/sdks#uml-diagram' | relative_url }})
-* [Class Documentation](//hexonet-python-sdk.readthedocs.io/en/latest/#sdk-documentation)
+* [Class Documentation](https://centralnicgroup-opensource.github.io/rtldev-middleware-python-sdk/docs/_build/html/api.html)
 * [API Documentation]({{ 'docs/hexonet/api-documentation/' | relative_url }})
 
 ## Requirements
@@ -37,7 +37,7 @@ pip install hexonet.apiconnector
 
 The connector library is now installed.
 
-We have also a demo app available showing how to integrate and use our SDK. See [here](//github.com/hexonet/python-sdk-demo). Always ensure to have the latest release version in use.
+We have also a demo app available showing how to integrate and use our SDK. See [here](https://github.com/hexonet/python-sdk-demo). Always ensure to have the latest release version in use.
 
 ### OT&E System
 
@@ -131,4 +131,4 @@ NOTE: Find an example for a custom logger class implementation in `hexonet/apico
 
 ## Usage Examples
 
-All you need to know, can be found [here](//hexonet-python-sdk.readthedocs.io/en/latest/#usage-guide).
+All you need to know, can be found [here](https://centralnicgroup-opensource.github.io/rtldev-middleware-python-sdk/).

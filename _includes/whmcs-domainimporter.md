@@ -10,7 +10,7 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 
 ## Features
 
-- Domain Import from [HEXONET](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip) / [CentralNic Reseller](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip) Registrar System
+- Domain Import from [HEXONET or CentralNic Reseller](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip)
 - Regular Domain Imports
 - IDN Domain Imports (IDN Language auto-detection, if supported)
 - Premium Domain Imports
@@ -24,8 +24,8 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 
 | Registrar                                                                                                       | Supported | Add. Fields | IDNs  | Premium Domains |
 | --------------------------------------------------------------------------------------------------------------- | --------- | ----------- | ----- | --------------- |
-| [HEXONET](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip)             | YES       | YES         | YES   | YES             |
-| [CentralNic Reseller](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip) | YES       | NO          | YES\* | NO              |
+| [HEXONET](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip)             | YES       | YES         | YES   | YES             |
+| [CentralNic Reseller](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip) | YES       | NO          | YES\* | NO              |
 | ~~TPP Wholesale~~                                                                                               | NO        | NO          | NO    | NO              |
 | ~~internet.bs~~                                                                                                 | NO        | NO          | NO    | NO              |
 | ~~PartnerGate~~                                                                                                 | NO        | NO          | NO    | NO              |
@@ -37,7 +37,7 @@ NOTE: Import of additional domain fields is uncritical, nice to have.
 
 ## Incompatibility Notice
 
-In case you have domains with active **Trustee Service** / **Local Presence Service**, be aware of that WHMCS itself doesn't support this Domain Addon. This finally means that such costs can't be invoiced in WHMCS. There's an open feature request you can upvote [here](//requests.whmcs.com/topic/integrate-trustee-service-as-generic-domain-add-on) to get it finally considered for integration in WHMCS.
+In case you have domains with active **Trustee Service** / **Local Presence Service**, be aware of that WHMCS itself doesn't support this Domain Addon. This finally means that such costs can't be invoiced in WHMCS. There's an open feature request you can upvote [here](https://requests.whmcs.com/topic/integrate-trustee-service-as-generic-domain-add-on) to get it finally considered for integration in WHMCS.
 
 Still, these domains are included in the import, but highlighted as follows:
 
@@ -64,7 +64,7 @@ Care about:
 
 ### Download & Unpack
 
-Download the ZIP archive including the latest release version [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
+Download the ZIP archive including the latest release version [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 Copy the zip archive's contents to your WHMCS System's root folder.
 

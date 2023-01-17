@@ -19,7 +19,7 @@ For example, you might want to direct that to a default website. Or, if the doma
 ## Requirements
 
 - WHMCS version 8.0 or higher
-  For the latest WHMCS minimum system requirements, please refer to [WHMCS System Requirements](//docs.whmcs.com/System_Requirements) page.
+  For the latest WHMCS minimum system requirements, please refer to [WHMCS System Requirements](https://docs.whmcs.com/System_Requirements) page.
 - PHP 7.4 or higher
 - One of the following registrar modules installed and enabled:
   - ISPAPI
@@ -29,7 +29,7 @@ For example, you might want to direct that to a default website. Or, if the doma
 
 ## Installation / Upgrade
 
-Available for download [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
+Available for download [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 ### Extract files
 

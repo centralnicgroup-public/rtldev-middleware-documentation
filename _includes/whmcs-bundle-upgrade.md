@@ -17,7 +17,7 @@
 
 2. Extract the zip archive into the root folder of your WHMCS instance. (Upgrade completed! :tada:)
 <hr>
-**IMPORTANT** Ensure to read the [Release Notes](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases) carefully before Upgrading! Our Release numbers follow [semantic versioning](//semver.org/) and thus we follow the version syntax: MAJOR.MINOR.PATCH. Please ensure to backup your current version's folder to have a fallback possibility you can use, just in case there's something wrong with our new version.
+**IMPORTANT** Ensure to read the [Release Notes](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases) carefully before Upgrading! Our Release numbers follow [semantic versioning](https://semver.org/) and thus we follow the version syntax: MAJOR.MINOR.PATCH. Please ensure to backup your current version's folder to have a fallback possibility you can use, just in case there's something wrong with our new version.
 
 ![Semantic Versioning]({{ 'assets/images/semver.png' | relative_url }})
 

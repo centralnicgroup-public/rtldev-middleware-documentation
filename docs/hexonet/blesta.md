@@ -8,11 +8,11 @@ showtoc: 1
 
 # Blesta
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
 
 Blesta is an all-in-one domain provisioning, client management, billing/invoicing, and client support solution for any business selling through a website. By coupling Blesta with the HEXONET Registrar Module, anyone can start reselling hundreds of profitable domain name extensions (TLDs) quickly and in ease.
 
-If you have not yet Blesta set up, please follow their [Installation Guide](//docs.blesta.com/display/user/Installing+Blesta) which explains the Installation Process completely and well. System Requirements can be found [here](//docs.blesta.com/display/user/Requirements).
+If you have not yet Blesta set up, please follow their [Installation Guide](https://docs.blesta.com/display/user/Installing+Blesta) which explains the Installation Process completely and well. System Requirements can be found [here](https://docs.blesta.com/display/user/Requirements).
 
 ## Module Installation
 
@@ -26,7 +26,7 @@ E.g.
 ### Set up a Cron Job
 
 In order to automate tasks within Blesta, a cron job must be created.
-More information on how to set up the cron job, can be found here [(section 4)](//docs.blesta.com/display/user/Installing+Blesta)
+More information on how to set up the cron job, can be found here [(section 4)](https://docs.blesta.com/display/user/Installing+Blesta)
 
 ## Module Configuration
 
@@ -35,9 +35,9 @@ More information on how to set up the cron job, can be found here [(section 4)](
 In the Blesta Admin area, go to
 `Settings > Modules > Available`
 
-Install the new registrar ”**ISPAPI vx.y.z**”, and enter your HEXONET credentials. You can create your account [here](//www.hexonet.net/sign-up)
+Install the new registrar ”**ISPAPI vx.y.z**”, and enter your HEXONET credentials. You can create your account [here](https://www.hexonet.net/sign-up)
 
-If you want to use the “TestMode”, you have to create your OT&E account [here](//www.hexonet.net/signup-ote)
+If you want to use the “TestMode”, you have to create your OT&E account [here](https://www.hexonet.net/signup-ote)
 
 To enter your credentials, go to
 
@@ -53,7 +53,7 @@ You can add multiple accounts there. Check ‘Sandbox’ if it represents your O
 
 Inter-Registrar Transfer Policy (IRTP). It governs the domain name transfers between ICANN registrars. The IRTP includes changes to domain ownership. Small changes to a domain name’s registrar first name, last name, organization, and email address trigger the validation process.
 
-Have a read more about IRTP [here](//wiki.hexonet.net/wiki/IRTP)
+Have a read more about IRTP [here](https://wiki.hexonet.net/wiki/IRTP)
 
 At the moment this feature is **not** supported by Blesta. In order to make it possible for our customers to trigger the validation process, we provide the following procedure:
 
@@ -69,7 +69,7 @@ At the moment this feature is **not** supported by Blesta. In order to make it p
 
 ## Reselling with Blesta
 
-This [link](//docs.blesta.com/display/user/Selling+Domains) provides general information on how you can sell domains using Blesta and a registrar module.
+This [link](https://docs.blesta.com/pages/viewpage.action?pageId=2621862) provides general information on how you can sell domains using Blesta and a registrar module.
 
 In the following, you will find example configuration settings for our ISPAPI registrar module in Blesta.
 
@@ -123,7 +123,7 @@ Set ‘Type’ to ‘Domain and Other’ for selling domains in the order form.
 
 ### Template
 
-Select a template of your choice. Template selection and configuration of other available options are described [here](//docs.blesta.com/display/user/Selling+Domains) in more details in the section ‘Create an order form > Basic’.
+Select a template of your choice. Template selection and configuration of other available options are described [here](https://docs.blesta.com/pages/viewpage.action?pageId=2621862) in more details in the section ‘Create an order form > Basic’.
 
 ![OrderFormTemplate]({{ 'assets/images/blesta/order_form_template.png' | relative_url }})
 
@@ -137,7 +137,7 @@ In our example, we are only focusing on selling domains, so that we do not assig
 
 ### Currencies and Gateways
 
-See the [Blesta documentation](//docs.blesta.com/display/user/Selling+Domains).
+See the [Blesta documentation](https://docs.blesta.com/pages/viewpage.action?pageId=2621862).
 
 ![OrderFormCurrenciesGateways]({{ 'assets/images/blesta/order_form_currencies_gateways.png' | relative_url }})
 

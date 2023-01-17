@@ -17,6 +17,6 @@
     "test": "stylelint '**/*.scss'",
     "format": "prettier --write '**/*.{scss,js,json}'",
     "stylelint-check": "stylelint-config-prettier-check",
-    "deadlinks-check": "blc http://localhost:4000/rtldev-middleware-documentation/ -egfro --filter-level 3"
+    "deadlinks-check": "blc http://0.0.0.0:4000/rtldev-middleware-documentation/ -gfro --filter-level 3 >deadlinks.txt"
   }
 }

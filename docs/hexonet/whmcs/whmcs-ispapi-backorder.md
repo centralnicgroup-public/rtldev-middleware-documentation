@@ -20,7 +20,7 @@ The ISPAPI Backorder Addon for WHMCS allows any reseller to quickly and easily o
 ## Supported Features
 
 * High Performance Drop-Catching Technology
-* Supports gTLDs / nTLDs / ccTLDs listed [here](//www.hexonet.net/de/backorder#backorder-list)
+* Supports gTLDs / nTLDs / ccTLDs listed [here](https://www.hexonet.net/de/backorder#backorder-list)
 * Commissions paid to Resellers for successful Backorders
 * Backorders are free to place and the Backorder fee is paid only on successful Registration
 * Multiple Currencies supported
@@ -46,17 +46,17 @@ In order to run the ISPAPI Backorder Addon, your WHMCS installation must meet th
 
 * WHMCS version 7.0 or higher
 * PHP with ZIP Extension (php-zip)
-* **ISPAPI Registrar Module** This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our Backorder Module does not support the WHMCS built-in HEXONET provider module!
+* **ISPAPI Registrar Module** This module can be downloaded [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our Backorder Module does not support the WHMCS built-in HEXONET provider module!
 * **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
-  * [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
-  * [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
+  * [OT&E (Test System) Account](https://www.hexonet.net/signup-ote)
+  * [LIVE (Real World System) Account](https://www.hexonet.net/cart?signup=true)
 * Server timezone should be set to UTC
 
-For the latest WHMCS minimum System Requirements, please refer to the WHMCS System Requirements Documentation, [here](//docs.whmcs.com/System_Requirements)
+For the latest WHMCS minimum System Requirements, please refer to the WHMCS System Requirements Documentation, [here](https://docs.whmcs.com/System_Requirements)
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](//github.com/hexonet/whmcs-ispapi-backorder/raw/master/whmcs-ispapi-backorder-latest.zip).
+Download the ZIP archive including the latest release version [here](https://github.com/hexonet/whmcs-ispapi-backorder/raw/master/whmcs-ispapi-backorder-latest.zip).
 
 Copy the whole “ispapibackorder” directory to the “modules/addons/” directory.
 

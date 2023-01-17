@@ -6,9 +6,9 @@ WHMCS (Web Host Manager Complete Solution) is an all-in-one domain provisioning,
 
 WHMCS allows to send high quality professional looking invoices to customers with its billing functionality. This functionality is no obstacle when it comes to deal with different currencies and tax support. It combines a lot other great features such as automated reminders for unpaid invoices, setting up late fees rules, supporting several payment gateways and many more.
 
-WHMCS can be accessed using two APIs - an [Internal API](//developers.whmcs.com/api/internal-api/) and an [External API](//developers.whmcs.com/api/getting-started/). Thus, it allows users flexible ways to perform all necessary Operations. Regarding Domain Registrars, WHMCS comes with a regularly triggered [Domain Synchronization Process](//docs.whmcs.com/Domain_Synchronisation) that cares about keeping the Status and the Expiry Date of a Domain in Sync with the underlying Registrar's System by invoking the Registrar's Module Integration for this Process. 50 Domains are covered per run and only Domains in Status `Pending Transfer` and `Active` are considered.
+WHMCS can be accessed using two APIs - an [Internal API](https://developers.whmcs.com/api/internal-api/) and an [External API](https://developers.whmcs.com/api/getting-started/). Thus, it allows users flexible ways to perform all necessary Operations. Regarding Domain Registrars, WHMCS comes with a regularly triggered [Domain Synchronization Process](https://docs.whmcs.com/Domain_Synchronisation) that cares about keeping the Status and the Expiry Date of a Domain in Sync with the underlying Registrar's System by invoking the Registrar's Module Integration for this Process. 50 Domains are covered per run and only Domains in Status `Pending Transfer` and `Active` are considered.
 
-If you have not yet WHMCS set up, please follow their [Installation Guide](//docs.whmcs.com/Installing_WHMCS) which explains the Installation Process completely and well. System Requirements can be found [here](//docs.whmcs.com/System_Requirements) - there you'll also find notes about the support of specific platforms like Windows. You should be aware of all that.
+If you have not yet WHMCS set up, please follow their [Installation Guide](https://docs.whmcs.com/Installing_WHMCS) which explains the Installation Process completely and well. System Requirements can be found [here](https://docs.whmcs.com/System_Requirements) - there you'll also find notes about the support of specific platforms like Windows. You should be aware of all that.
 
 ## Why WHMCS
 
@@ -21,7 +21,7 @@ If you have not yet WHMCS set up, please follow their [Installation Guide](//doc
 
 ## CentralNic Brands
 
-Find further information [here](//www.centralnicgroup.com/reseller/) and some notes about the WHMCS Integrations below:
+Find further information [here](https://www.centralnicgroup.com/reseller/) and some notes about the WHMCS Integrations below:
 
 ### HEXONET / ISPAPI
 
@@ -29,7 +29,7 @@ The Team at HEXONET is the WHMCS Lead in the CentralNic Group and maintains its 
 
 HEXONET offers additional Provisioning Modules for WHMCS that allow for reselling of further Products like SSL Certs, DNS, and Domain Backorders. Also, we have Add-Ons and Widgets in our Portfolio which can be flexibly combined with each other and which offer a certain added value. Like Importing Domains, Module Version Overview etc.
 
-Our Reputation is speaking - just check the WHMCS Community Board e.g. [here](//whmcs.community/topic/301180-who-is-the-best-domain-registrar-for-resellers-today/).
+Our Reputation is speaking - just check the WHMCS Community Board e.g. [here](https://whmcs.community/topic/301180-who-is-the-best-domain-registrar-for-resellers-today/).
 
 We are doing our best to push your business to satisfaction. We don't care about your number of domains - customer is king!
 
@@ -43,7 +43,7 @@ The CentralNic Reseller Registrar Module does **not** support Premium Domain Nam
 
 ### TPP WholeSale
 
-The TPP WholeSale Registrar Module is shipped with WHMCS. The Team at TPP maintains its own version of this Registrar Module which should be used _instead_ of the WHMCS built-in Module. Find it [here](//tppwholesale.com.au/download/tppwregistrar.zip).
+The TPP WholeSale Registrar Module is shipped with WHMCS. The Team at TPP maintains its own version of this Registrar Module which should be used _instead_ of the WHMCS built-in Module. Find it [here](https://tppwholesale.com.au/download/tppwregistrar.zip).
 
 ### PartnerGate
 
@@ -55,12 +55,12 @@ The Team at PartnerGate has its custom Registrar Module for WHMCS. Contact their
 
 Internet.bs markets domain reseller services to the professional internet services segment, such as hosting and web design companies. It provides a range of popular domain extensions at highly competitive prices. Target customers typically require “trade” pricing and sophisticated tools for managing large domain name portfolios on behalf of third parties.
 
-The Team at internet.bs maintains its own version of the internet.bs Registrar Module (aka `ibs`) which should be used _instead_ of the WHMCS built-in Module. Find it [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs-internetbs-registrar).
+The Team at internet.bs maintains its own version of the internet.bs Registrar Module (aka `ibs`) which should be used _instead_ of the WHMCS built-in Module. Find it [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs-internetbs-registrar).
 
 ### instra
 
 Instra focuses on resellers and self-serve mid-cap corporate customers. It provides a full suite of domain extensions as well as corporate focused business products such as Domain Trustee services, dedicated account management and expert support.
 
-The instra Registrar Module for WHMCS can be obtained from the [instra team](//www.instra.com/).
+The instra Registrar Module for WHMCS can be obtained from the [instra team](https://www.instra.com/).
 
 {: .fs-6 .fw-300 }

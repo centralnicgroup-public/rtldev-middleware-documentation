@@ -8,11 +8,11 @@ showtoc: 1
 
 # Command Line Client
 
-[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](//opensource.org/licenses/MIT)
-[![PyPI - Python Version](//img.shields.io/pypi/pyversions/hexonet.ispapicli.svg)](//www.python.org/)
-[![PyPI](//img.shields.io/pypi/v/hexonet.ispapicli.svg)](//pypi.org/project/hexonet.ispapicli/)
+[![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hexonet.ispapicli.svg)](https://www.python.org/)
+[![PyPI](https://img.shields.io/pypi/v/hexonet.ispapicli.svg)](https://pypi.org/project/hexonet.ispapicli/)
 
-aka. [**hexonet.ispapicli**](//pypi.org/project/hexonet.ispapicli/)
+aka. [**hexonet.ispapicli**](https://pypi.org/project/hexonet.ispapicli/)
 
 ## Introduction
 
@@ -168,7 +168,7 @@ This Tool is available for several operating systems: Windows, macOS / OS X, and
 
 ### Executable Version
 
-- To download a portable and executable version of this tool, check out the [Release Overview](//github.com/hexonet/ispapicli/releases). 
+- To download a portable and executable version of this tool, check out the [Release Overview](https://github.com/hexonet/ispapicli/releases). 
 - To create a portable/executable file on Windows or macOS, do the following steps:
 
   1. Go to your cloned folder

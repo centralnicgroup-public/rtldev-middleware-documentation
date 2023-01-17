@@ -14,7 +14,7 @@ The SSL provisioning module connects to the configured registrar module and allo
 
 The CentralNic SSL Module supports the following functions and features:
 
-- Support for the CentralNic brands [HEXONET](//hexonet.net) and [CentralNic Reseller](//www.centralnicreseller.com)
+- Support for the CentralNic brands [HEXONET](https://www.hexonet.net) and [CentralNic Reseller](https://www.centralnicreseller.com)
 - SSL Provisioning Module
   - Support for both productive and test (OT&E) environments
   - Create, renew and revoke certificates
@@ -29,21 +29,21 @@ The CentralNic SSL Module supports the following functions and features:
 ## Requirements
 
 - WHMCS version 8.0 or higher
-  For the latest WHMCS minimum system requirements, please refer to [WHMCS System Requirements](//docs.whmcs.com/System_Requirements) page.
-  *If you wish to use this module on older WHMCS versions, please use [Version 8.0](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases) or earlier*
+  For the latest WHMCS minimum system requirements, please refer to [WHMCS System Requirements](https://docs.whmcs.com/System_Requirements) page.
+  *If you wish to use this module on older WHMCS versions, please use [Version 8.0](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases) or earlier*
 - PHP 7.4 or higher
 - For HEXONET:
-  - Latest **ISPAPI Registrar Module**. This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our SSL Cert Module does not support the WHMCS built-in HEXONET provider module!
+  - Latest **ISPAPI Registrar Module**. This module can be downloaded [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our SSL Cert Module does not support the WHMCS built-in HEXONET provider module!
   - **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
-    - [OT&E (Test System) Account](//www.hexonet.net/signup-ote)
-    - [LIVE (Real World System) Account](//www.hexonet.net/cart?signup=true)
+    - [OT&E (Test System) Account](https://www.hexonet.net/signup-ote)
+    - [LIVE (Real World System) Account](https://www.hexonet.net/cart?signup=true)
 - For CentralNic Reseller:
-  - Latest **CentralNic Reseller Registrar Module**. This module can be downloaded [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our SSL Cert Module does not support the WHMCS built-in CentralNic Reseller provider module!
-  - **CentralNic Reseller Live or Test Account** must be configured in the CentralNic Reseller Registrar Module. Account creation is always free: [Register](//www.centralnicreseller.com)
+  - Latest **CentralNic Reseller Registrar Module**. This module can be downloaded [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our SSL Cert Module does not support the WHMCS built-in CentralNic Reseller provider module!
+  - **CentralNic Reseller Live or Test Account** must be configured in the CentralNic Reseller Registrar Module. Account creation is always free: [Register](https://www.centralnicreseller.com)
 
 ## Installation / Upgrade
 
-Download the ZIP archive including the latest release version [here](//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
+Download the ZIP archive including the latest release version [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip).
 
 Extract/copy all contents from the zip archive to your WHMCS installation root directory, while keeping the folder structure intact.
 
@@ -121,9 +121,9 @@ Within the WHMCS Admin area, navigate to `Setup > System Settings > Products/Ser
 
 5. Open the `Module Settings` tab.
    - Enter Certificate Class.
-     - For HEXONET: refer to [this article](//wiki.hexonet.net/wiki/SSL) for a list of possible certificate classes
+     - For HEXONET: refer to [this article](https://wiki.hexonet.net/wiki/SSL) for a list of possible certificate classes
      - For CentralNic Reseller:
-       1. Log into your [Web Interface](//account.centralnicreseller.com/)
+       1. Log into your [Web Interface](https://account.centralnicreseller.com/)
        2. In the Menu, open `SSL > Certificate Prices`
        3. The value shown in the `Type` column would be the certificate class you need to specify
    - Set “Automatically setup the product as soon as the first payment is received” to ensure the certificate is paid for before registration.
