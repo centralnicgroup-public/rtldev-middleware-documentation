@@ -10,6 +10,8 @@
       "NODE_VERSION": "lts/*"
     }
   },
+  // startup jekyll server
+  "postStartCommand": "nohup /post-start.sh",
 
   // Set *default* container specific settings.json values on container create.
   "settings": {},
