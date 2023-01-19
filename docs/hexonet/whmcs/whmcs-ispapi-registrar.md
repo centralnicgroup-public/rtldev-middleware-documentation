@@ -32,7 +32,7 @@ Back to topic, here the steps describing how to start with us using WHMCS.
   - [Fully Translated](#installing-our-module) (AR, DE, EN, FR)
   - [Customizable Translations](#installing-our-module)
   - Automatic [Pre-Fill](#auto-prefill-fields) and Completion
-  - Built-in, No Configurations required!
+  - Built-in - No Configuration File required!
 - [Premium Domains](#premium-domains)
 - [Domain & Transfer Synchronization](#automation-settings)
   - Configurable: [Auto-Suspension after Expiration](#module-configuration)
@@ -898,9 +898,9 @@ IMPORTANT: If you're doing something wrong here, like just white-listing your in
 
 As the HEXONET system is a pre-paid system, you have to add funds to your account to be able to order products and services. For doing this login in to the HEXONET Control Panel [LIVE System](https://account.hexonet.net/). Click on your account name at the top right and then press the button `Add Funds`. If you need funds to be added to your [OT&E Account](https://account-ote.hexonet.net), let us know.
 
-## Known Issues
+## Known WHMCS Issues
 
-Find below some collection of incompatibilities of / with WHMCS.
+Find below some collection of topics related to Incompatibilities, Bugs, Requested Features and special Behavior of WHMCS worth to know.
 
 ### 1. Change of Registrant
 
