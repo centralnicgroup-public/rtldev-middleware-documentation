@@ -552,14 +552,15 @@ This might be necessary in case of multi-year Restores where the Restore Period 
 
 ## Additional Domain Fields
 
-**NOTE**: Since Version 6 of our Registrar Module, no need to worry about this configuration section any longer.
+> **NOTE**: Since Version 6 of our Registrar Module, no need to worry about this configuration section any longer. We recommend removing an existing configuration file. You can skip this section then.
 
 The registration of some domain extensions requires sometimes additional domain fields (e.g. Legal Type and CIRA Agreement for .CA domain).
 
-In order to provide this additional fields on the registration page and map them with our module, you have to inject our HEXONET specific configuration in the **$additionaldomainfields** array.
+In order to provide this additional fields on the registration page and map them with our module, it is about sharing with WHMCS that there are such fields for the specific TLD. Therefore, our HEXONET specific configuration needs to be injected.
 
-> Prior to WHMCS 7.0, this file was located at /includes/additionaldomainfields.php
-> From WHMCS 7.0 on, to add new additional domains fields, create a new file named additionalfields.php within the /resources/domains/ directory.
+> _Prior to WHMCS 7.0_, create the file `/includes/additionaldomainfields.php`.
+
+> _From WHMCS 7.0 on_, create the file `/resources/domains/additionalfields.php`.
 
 ### Our Configuration Sample
 
@@ -752,7 +753,7 @@ $additionaldomainfields[".swiss"][] = array(
           "Name" => "Enterprise ID",
           "Type" => "text",
           "Required" => true,
-        "Description" => "(must be CHE followed by 9 digits)",
+          "Description" => "(must be CHE followed by 9 digits)",
           "Ispapi-Name" => "X-SWISS-REGISTRANT-ENTERPRISE-ID",
 );
 $additionaldomainfields[".swiss"][] = array(

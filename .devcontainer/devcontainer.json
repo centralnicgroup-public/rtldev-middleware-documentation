@@ -11,7 +11,7 @@
     }
   },
   // startup jekyll server
-  "postStartCommand": "nohup /post-start.sh",
+  "postStartCommand": "/post-start.sh",
 
   // Set *default* container specific settings.json values on container create.
   "settings": {},
