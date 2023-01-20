@@ -8,7 +8,7 @@
   @extend .flag-icon-background;
   position: relative;
   display: inline-block;
-  width: calc(4 / 3) * 1em;
+  width: (4 / 3) * 1em;
   line-height: 1em;
 
   &:before {
