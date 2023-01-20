@@ -233,3 +233,31 @@ URL: `www.yoursite.com/domainchecker.php?search=test.com&cat=5,6,7,8`
 | lang        | ISO 639-1 | two character language codes, lowercase     | Domain Name Suggestions |
 | showtaken   | 0 or 1    | visibility of taken domain names            | All Modes               |
 | showpremium | 0 or 1    | visibility of premium domains names         | All Modes               |
+
+## Customizing
+
+We are aware of that with the encryption of our Module, upgrading and customizing is now impossible.
+The next major version of our domain search for WHMCS will be addressing this.
+
+One important step will be rewriting in direction of a very clean app structure coming with a fully customizable theme.
+
+Find below some built-in features that we already made available to you:
+
+### Subscribe to Search Requests
+
+If you're looking for subscribing to search requests and logging them to a custom location, find the solution below.
+
+Firstly, add a file to `/path/to/your/whmcs/resources/ispapi_dc_custom_functions.php`.
+In that file implement the function `ispapi_logsearch` as follows:
+
+```php
+<?php
+
+function ispapi_logsearch($domains, $timestamp, $ip)
+{
+    // your logic here
+    // remember: anything added here will be slowing down processing search requests
+}
+```
+
+We'll consider adding a better possibility when rewriting the domain search.
