@@ -1,0 +1,24 @@
+name: Generate Raw Documentation
+
+on: push
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate Documentation
+        uses: actions/jekyll-build-pages@v1
+
+      - name: Update Urls Path
+        run: |
+          sudo -u root bash -c 'chown -R runner:docker _site'
+          ./.devcontainer/regenerate-urls.sh
+
+      - name: Upload Generated Documentation (zip)
+        uses: actions/upload-artifact@v3
+        with:
+          path: _site/
+          name: raw-documentation
+          retention-days: 90

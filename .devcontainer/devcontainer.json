@@ -12,13 +12,12 @@
   },
   // startup jekyll server
   "postStartCommand": "/post-start.sh",
-
   // Set *default* container specific settings.json values on container create.
   "settings": {},
-
   // Add the IDs of extensions you want installed when the container is created.
-  "extensions": ["GitHub.vscode-pull-request-github"],
-
+  "extensions": [
+    "GitHub.vscode-pull-request-github"
+  ],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [
     // Jekyll server
@@ -26,7 +25,6 @@
     // Live reload server
     35729
   ],
-
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode"
 }
