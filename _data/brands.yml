@@ -56,7 +56,7 @@
       url: whmcs/
       items:
         - name: Registrar Module
-          url: /all/whmcs/#tpp-wholesale
+          url: /all/whmcs#tpp-wholesale
         - name: Migration Tool
           url: /all/whmcs/whmcs-migration/
 
