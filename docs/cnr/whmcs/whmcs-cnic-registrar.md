@@ -26,6 +26,8 @@ A Registrar Module connects WHMCS to the Domain Registrar's System.
   - Child Nameserver Management (Add, Modify, Delete)
   - Explicit Deletions in Admin panel
 - Domain Renewal
+- Premium Domains
+- Domain & Transfer Synchronization
 - IDNs Support (using idn_to_ascii)
 - TLD Pricing Sync (since WHMCS 7.10)
 - KeyDNS Management
