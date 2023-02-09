@@ -12,7 +12,7 @@ showtoc: 1
 aka. **github.com/hexonet/go-sdk**
 
 [![License: MIT]({{ 'assets/images/License-MIT-blue.svg' | relative_url }})](https://opensource.org/licenses/MIT)
-[![GoDoc](https://godoc.org/github.com/hexonet/go-sdk?status.svg)](https://godoc.org/github.com/hexonet/go-sdk)
+[![GoDoc](https://pkg.go.dev/badge/github.com/hexonet/go-sdk?utm_source=godoc)](https://godoc.org/github.com/hexonet/go-sdk)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hexonet/go-sdk)](https://goreportcard.com/report/github.com/hexonet/go-sdk)
 
 This module is a connector library for the insanely fast HEXONET Backend API. For further informations visit our [homepage](https://hexonet.net) and do not hesitate to [contact us](https://www.hexonet.net/contact).

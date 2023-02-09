@@ -13,10 +13,14 @@
     "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-prettier": "^2.0.0"
   },
+  "overrides": {
+    "robots-txt-guard": "^1.0.2"
+  },
   "scripts": {
     "test": "stylelint '**/*.scss'",
     "format": "prettier --write '**/*.{scss,js,json}'",
     "stylelint-check": "stylelint-config-prettier-check",
-    "deadlinks-check": "blc http://0.0.0.0:4000/rtldev-middleware-documentation/ -gfro --filter-level 3 >deadlinks.txt"
+    "deadlinks-check": "blc http://0.0.0.0:4000/rtldev-middleware-documentation/ -gfro --filter-level 3 >deadlinks.txt",
+    "deadlinks-check2": "blc http://0.0.0.0:4000/rtldev-middleware-documentation/ -gfro --filter-level 3"
   }
 }
