@@ -120,12 +120,12 @@ uts46.convert(['öbb.at', 'xn--fa-hia.de']) // { IDN: ['öbb.at', 'faß.de'], PC
 
 ### Using it in-browser
 
-Use file `uts46bundle.js` (or the minified variant) as JavaScript include. The Tool will then be available as ispapiIdnconverter object in Javascript.
+Use file `dist/index.bundle.js` as JavaScript include. The Tool will then be available as `idnaUts46` object in Javascript.
+
+An ESM variant is available under `dist/index.esm.js` and can probably be loaded via import statement on demand or via HTML script tag with type "module".
 
 ## Known issues
 
 It also does not try to implement the Bidi and contextual rules for validation:
-these do not affect any mapping of the domain names; instead, they restrict the
-set of valid domain names. Since registrars shouldn't be accepting these names
-in the first place, a domain that violates these rules will simply fail to
+these do not affect any mapping of the domain names; instead, they restrict the set of valid domain names. Since registrars shouldn't be accepting these names in the first place, a domain that violates these rules will simply fail to
 resolve.
