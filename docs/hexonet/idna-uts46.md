@@ -33,6 +33,16 @@ the full mapping for these strings, as defined by
     npm i idna-uts46-hx@latest --save
 ```
 
+```js
+import { convert, toAscii, toUnicode } from 'idna-uts46-hx';
+```
+
+### Using it in-browser
+
+Use file `dist/index.bundle.js` as JavaScript include. The Tool will then be available as `idnaUts46` object in Javascript with the methods of the `uts46` library demonstrated below. That's the older way, we recommend using it in the modern way:
+
+An ESM variant is available under `dist/index.esm.js` and can probably be loaded via import statement on demand or via HTML script tag with type "module" and used as shown at top.
+
 ## Usage Examples
 
 We provide only documentation and examples for the latest release.
@@ -117,12 +127,6 @@ where it makes sense as this is dependent on the domain extension / TLD.
 uts46.convert('xn-bb-eka.at') // { IDN: 'öbb.at', PC: 'xn-bb-eka.at' }
 uts46.convert(['öbb.at', 'xn--fa-hia.de']) // { IDN: ['öbb.at', 'faß.de'], PC: ['xn-bb-eka.at', 'xn--fa-hia.de'] }
 ```
-
-### Using it in-browser
-
-Use file `dist/index.bundle.js` as JavaScript include. The Tool will then be available as `idnaUts46` object in Javascript.
-
-An ESM variant is available under `dist/index.esm.js` and can probably be loaded via import statement on demand or via HTML script tag with type "module".
 
 ## Known issues
 
