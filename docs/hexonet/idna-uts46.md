@@ -29,19 +29,73 @@ the full mapping for these strings, as defined by
 
 ## Usage Instructions
 
+### NodeJS
+
 ```bash
     npm i idna-uts46-hx@latest --save
 ```
 
+FYI: The default format of the plugin is ESM!
+
 ```js
 import { convert, toAscii, toUnicode } from 'idna-uts46-hx';
+console.dir(convert(fußball.com));
+console.dir(convert(fußball.de));
+console.dir(convert([fußball.de, fußball.com]));
+// ...
+```
+
+```js
+import * as uts46 from 'idna-uts46-hx';
+console.dir(uts46.convert(fußball.com));
+console.dir(uts46.convert(fußball.de));
+console.dir(uts46.convert([fußball.de, fußball.com]));
+// ...
 ```
 
 ### Using it in-browser
 
-Use file `dist/index.bundle.js` as JavaScript include. The Tool will then be available as `idnaUts46` object in Javascript with the methods of the `uts46` library demonstrated below. That's the older way, we recommend using it in the modern way:
+#### Installation
 
-An ESM variant is available under `dist/index.esm.js` and can probably be loaded via import statement on demand or via HTML script tag with type "module" and used as shown at top.
+You can rely on the github raw files
+
+* CJS: [https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-idna-uts46/master/dist/index.bundle.js](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-idna-uts46/master/dist/index.bundle.js)
+* ESM: [https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-idna-uts46/master/dist/index.mjs](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-idna-uts46/master/dist/index.mjs)
+
+NOTE: The above is linking to master which is updating with each release and could come with breaking changes. Feel free to replace `master` in the urls with the tag/version of choice e.g. `v5.0.5`.
+
+... or installing it also via npm and using the files from `node_modules` folder:
+
+* CJS: `node_modules/idna-uts46-hx/dist/index.bundle.js`
+* ESM: `node_modules/idna-uts46-hx/dist/index.mjs`
+
+You can copy those files just over for using them as static files under `/public` in your project.
+
+#### HTML / IFEE
+
+NOTE: you have to define the path for attribute `src` accordingly!
+
+```html
+<script src="index.bundle.js">
+    const uts46 = idnaUts46;
+    console.dir(uts46.convert(fußball.com));
+    console.dir(uts46.convert(fußball.de));
+    console.dir(uts46.convert([fußball.de, fußball.com]));
+</script>
+```
+
+#### HTML / ESM
+
+NOTE: you have to define the path for `from` accordingly!
+
+```html
+<script type="module">
+    import * as uts46 from "idna-uts46-hx/dist/index.mjs"
+    console.dir(uts46.convert(fußball.com));
+    console.dir(uts46.convert(fußball.de));
+    console.dir(uts46.convert([fußball.de, fußball.com]));
+</script>
+```
 
 ## Usage Examples
 
