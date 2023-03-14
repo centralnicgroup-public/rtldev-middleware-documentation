@@ -5,7 +5,7 @@
     "assets/css/just-the-docs-dark.scss",
     "_sass/vendor/**/*.scss"
   ],
-  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-standard-scss"],
   "plugins": ["stylelint-prettier"],
   "rules": {
     "prettier/prettier": true
