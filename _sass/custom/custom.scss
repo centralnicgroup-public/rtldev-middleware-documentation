@@ -2,7 +2,8 @@
   font-family: "noto_sansregular";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/notosans-regular-webfont.eot?#iefix") format("embedded-opentype"),
+  src: url("../fonts/notosans-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
     url("../fonts/notosans-regular-webfont.woff2") format("woff2"),
     url("../fonts/notosans-regular-webfont.woff") format("woff");
 }
@@ -143,14 +144,16 @@ body {
   padding-top: 1rem;
 }
 
-.side-bar #toc-list .nav-list-item>.nav-list {
+.side-bar #toc-list .nav-list-item > .nav-list {
   display: block;
 }
 
 .nav-list .nav-list-item .nav-list-link:hover,
 .nav-list .nav-list-item .nav-list-link.active {
-  background-image: linear-gradient(-90deg,
-      #ebebeb 0%,
-      rgba(200, 200, 200, 0.8) 80%,
-      rgba(235, 235, 235, 0) 100%);
+  background-image: linear-gradient(
+    -90deg,
+    #ebebeb 0%,
+    rgba(200, 200, 200, 0.8) 80%,
+    rgba(235, 235, 235, 0) 100%
+  );
 }

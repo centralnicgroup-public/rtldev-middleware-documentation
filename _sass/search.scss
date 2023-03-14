@@ -67,7 +67,7 @@
   &:focus {
     outline: 0;
 
-    +.search-label .search-icon {
+    + .search-label .search-icon {
       color: $link-color;
     }
   }
@@ -216,7 +216,7 @@
   }
 }
 
-.search-result-preview+.search-result-preview {
+.search-result-preview + .search-result-preview {
   margin-top: $sp-1;
 }
 
