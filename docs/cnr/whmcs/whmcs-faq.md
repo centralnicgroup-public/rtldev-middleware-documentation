@@ -82,4 +82,6 @@ If this works, you should see a similar response as shown in the previous point.
 
 * check if `TestMode` is turned on in the registrar module settings and if this is desired. If so, you're connecting to the OT&E system, otherwise to the Live System. Ensure to enter your credentials also in the right fields as we offer totally separated password fields for the LIVE System and OT&E System.
 
+* You configured IP Whitelist is not including the ip address(es) of your WHMCS Server. This only applies in case such an IP Whitelisting is in place.
+
 Again, please reach out to us via Support Ticket if you need further assistance.
