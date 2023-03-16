@@ -3,7 +3,7 @@ layout: default
 title: Registrar Module
 parent: WHMCS
 grand_parent: CentralNic Reseller
-nav_order: 1
+nav_order: 2
 showtoc: 1
 ---
 

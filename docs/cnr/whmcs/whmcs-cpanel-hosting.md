@@ -3,7 +3,7 @@ layout: default
 title: cPanel Hosting Addon
 grand_parent: CentralNic Reseller
 parent: WHMCS
-nav_order: 5
+nav_order: 6
 showtoc: 0
 ---
 
