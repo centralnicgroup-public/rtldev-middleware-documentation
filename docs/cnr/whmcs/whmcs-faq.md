@@ -73,7 +73,15 @@ EOF
 Find a test script [here](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/cnic/test.curl.php). Download and execute it via command line:
 
 ```bash
-php test.curl.php
+# Test Connectivity with OTE System
+php test.curl.php OTE "<your username>" "<your password>"
+# e.g.
+# php test.curl.php OTE "testuser" "gre§$Tgagr"
+
+# Test Connectivity with LIVE System
+php test.curl.php LIVE "<your username>" "<your password>"
+# e.g.
+# php test.curl.php LIVE "testuser" "gre§$Tgagr"
 ```
 
 If this works, you should see a similar response as shown in the previous point.
