@@ -56,9 +56,10 @@
       url: whmcs/
       items:
         - name: Registrar Module
-          url: /all/whmcs#tpp-wholesale
+          url: /tppwholesale/whmcs-tpp-registrar/
         - name: Migration Tool
-          url: /all/whmcs/whmcs-migration/
+          url: /tppwholesale/whmcs-migration/
+  github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
 
 - name: PartnerGate
   url: "https://www.partnergate.com/"
@@ -78,10 +79,10 @@
       url: whmcs/
       items:
         - name: Registrar Module
-          url: /all/whmcs/#internetbs
+          url: /internetbs/whmcs-ibs-registrar/
         - name: Migration Tool
-          url: /all/whmcs/whmcs-migration/
-  github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs-internetbs-registrar/"
+          url: /internetbs/whmcs-migration/
+  github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
 
 - name: Instra
   url: "https://www.instra.com/"

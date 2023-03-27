@@ -9,7 +9,7 @@ showtoc: 1
 
 # ISPAPI Registrar Module
 
-A Registrar Module connects WHMCS to the Domain Registrar's System. This Documentation covers the HEXONET/ispapi WHMCS Registrar Module maintained by HEXONET's 3rd-party Software Integrations Team.
+A Registrar Module connects WHMCS to the Domain Registrar's System. This Documentation covers the HEXONET/ispapi WHMCS Registrar Module maintained by CentralNic's 3rd-party Software Integrations Team.
 
 NOTE: If you experience any issue when using this module, please take a look at the [FAQs]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/' | relative_url }}) or get in touch with our [Support team](#contact-us).
 
