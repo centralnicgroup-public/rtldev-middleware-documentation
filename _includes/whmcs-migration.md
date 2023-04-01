@@ -62,7 +62,7 @@ Re-Configure WHMCS in direction of the gaining registrar:
 - Ensure the gaining registrar's registrar module is installed, activated, configured and working!
 - Ensure the Configuration in Domain Pricing Section is already re-configured in direction of the gaining registrar. Ensure ALL TLDs that are assigned to the losing registrar and [whitelisted for migration](#define-mappings) are reassigned to the gaining registrar!
 
-### Upgrading 
+### Upgrading
 
 {% include whmcs-bundle-upgrade.md %}
 
@@ -283,3 +283,14 @@ Find here some cases brought up to our hands:
   ```
 
   Such manual changes will be lost when upgrading your resellerclub core parts.
+- **Illegal mix of collations** error when opening the addon in the WHMCS Admin Area.
+  This can happen on older WHMCS installations where database updates between WHMCS upgrades did not go smoothly, leaving some tables in a different collation.
+  To solve this issue, it is necessary to convert the affected tables to the correct default collation, with a command like this:
+
+  ```sql
+  ALTER TABLE tblexample CONVERT TO CHARACTER SET utf8 COLLATE collation_name;
+  ```
+
+  Where `tblexample` should be replaced by the affected table, and `collation_name` should be the deffault collation. The default collation should be the first one listed in the error message, and it usually is `utf8_unicode_ci`.
+  **IMPORTANT**: please backup your database befor making any changes!
+  More information can be found in [this WHMCS article](https://help.whmcs.com/m/updating/l/1040457-troubleshooting-a-blank-admin-dashboard-after-updating)
