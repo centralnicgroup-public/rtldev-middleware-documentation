@@ -139,17 +139,9 @@ E.g.
 Even though a `CentralNic Reseller` Module is shipped with WHMCS, we highly recommend downloading and installing our white label module `CentralNic Reseller/Key-Systems` which is the official maintained version and providing you latest features and patches. Available for download [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases).
 
 - Download the ZIP archive and extract it to your HDD
-- Copy the contents of folder e.g. `whmcs-cnic-bundle/install/modules/registrars` to the appropriate/matching folder of your WHMCS instance `modules/registrars`.
+- Copy the contents of folder e.g. `whmcs-cnic-bundle` to the root folder of your WHMCS instance `modules/registrars`.
 
-For non-technicians the above step covers in detail:
-
-1. Navigate to the extracted folder of that zip archive. Where you will find a sub folder named like `whmcs-registrar-registrar-1.0.0`. Go into that folder.
-2. Below that sub folder, you again find a sub folder named `install`. Go into that folder.
-3. Below that sub folder, you again find a sub folder named `modules`. Go into that folder.
-4. Below that sub folder, you again find a sub folder named `registrars`. Go into that folder.
-5. Here you'll find a sub folder named `keysystems`. Copy that folder into the sub folder `/modules/registrars` of your WHMCS installation.
-
-For cPanel users: Use [this video](https://www.youtube.com/watch?v=SNtldWg_0gY) on how to upload and extract a ZIP archive using your cPanel. Use [this video](https://www.youtube.com/watch?v=T7OYIOwyWvU) on how to find the `public_html` folder in your cPanel. In there you'll find a subfolder `gwcorp` or `whmcs` containing again a subfolder `modules` and then the subfolder `registrars`. Please copy the above mentioned folder of our zip archive into that folder.
+For cPanel users: Use [this video](https://www.youtube.com/watch?v=SNtldWg_0gY) on how to upload and extract a ZIP archive using your cPanel. Use [this video](https://www.youtube.com/watch?v=T7OYIOwyWvU) on how to find the `public_html` folder in your cPanel. In there you'll find a subfolder `gwcorp` or `whmcs` containing again a subfolder. Please copy the above mentioned folder structure (eveything that you find in folder `whmcs-cnic-bundle`) into here.
 
 For non cPanel users: check location `/var/www/whmcs` (default path) or eventually `/var/www/html/whmcs`.
 
