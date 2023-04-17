@@ -8,7 +8,7 @@
   "devDependencies": {
     "broken-link-checker": "^0.7.8",
     "prettier": "^2.8.7",
-    "stylelint": "^15.4.0",
+    "stylelint": "^15.5.0",
     "stylelint-config-standard-scss": "^8.0.0",
     "stylelint-prettier": "^3.0.0"
   },
