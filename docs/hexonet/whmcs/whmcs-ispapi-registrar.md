@@ -99,17 +99,37 @@ The creation of your account is completely free of charge. Your account will be 
 
 Once your Account is created, a confirmation email with connection information will be provided to you by mail.
 
-## Domain Renewal Mode
+## Domain Renewal Mode (Preventing Automatic Domain Renewal)
 
-By default the Domain Renewal Mode in our Systems is set to "Automatic Renewal". WHMCS comes with its own logic and processes regarding domain management and that's why it is important to change this default behavior accordingly. This is necessary to avoid domains are getting automatically renewed and causing costs for you if your customer is not interested in a renewal. Your customer wouldn't renew then over WHMCS, but our API would do so.
-Please follow the below instructions to get this covered:
+To avoid automatic renewal of domains that your customers do not wish to renew, it's important to change the default behavior of the Domain Renewal Mode in our systems. By default, it is set to "Automatic Renewal". Here are the steps to change it:
 
-- Login to your account here: [LIVE System](https://account.hexonet.net) or [OT&E System](https://account-ote.hexonet.net/).
-- Click on your user name at top right
-- Navigate to `Products > Domain Name Settings > Renewal Mode for New Domains`
-- Select 'Expire Domain' and press 'Save'
+1. Log in to your account at [LIVE System](https://account.hexonet.net) or [OT&E System](https://account-ote.hexonet.net).
+2. Click on your username at the top right of the page.
+3. Navigate to Products > Domain Name Settings > Renewal Mode for New Domains.
+4. Select "Expire Domain" and click "Save".
 
-Note: The renewal mode setting is only applied to new domain registrations in your account. If you already have domains registered previously in your account, ensure to reconfigure also their renewal mode to `expire`.
+Note: The renewal mode setting only applies to new domain registrations in your account. If you have previously registered domains in your account, make sure to reconfigure their renewal mode and disable automatic domain renewals.
+
+To update the renewal mode for existing domains:
+
+1. Login to your account at [LIVE System](https://account.hexonet.net) or [OT&E System](https://account-ote.hexonet.net).
+2. Navigate to Dashboard > Domains.
+5. On the Domain Names Overview page, select all domains you wish to update.
+6. Use the "Bulk" dropdown field to update their renewal mode.
+7. Click the "Auto Renew" button to disable automatic domain renewals.
+
+For reference, please see the screenshots below. 
+
+Changing default settings:
+![domainrenewals]({{ 'assets/images/whmcs/ispapi-registrar/ispapi-renewal-mode-expire-1.png' | relative_url }})
+![domainrenewals]({{ 'assets/images/whmcs/ispapi-registrar/ispapi-renewal-mode-expire-2.png' | relative_url }})
+
+To update the renewal mode for existing domains:
+![domainrenewals]({{ 'assets/images/whmcs/ispapi-registrar/ispapi-renewal-mode-0.png' | relative_url }})
+![domainrenewals]({{ 'assets/images/whmcs/ispapi-registrar/ispapi-renewal-mode-1.png' | relative_url }})
+![domainrenewals]({{ 'assets/images/whmcs/ispapi-registrar/ispapi-renewal-mode-2.png' | relative_url }})
+![domainrenewals]({{ 'assets/images/whmcs/ispapi-registrar/ispapi-renewal-mode-3.png' | relative_url }})
+![domainrenewals]({{ 'assets/images/whmcs/ispapi-registrar/ispapi-renewal-mode-4.png' | relative_url }})
 
 ## Installation / Upgrade
 

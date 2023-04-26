@@ -170,9 +170,13 @@ Once the transfer is successful, you might need to renew (if applicable, asap). 
 
 When switching your HEXONET account's setting to AUTOEXPIRE, ensure to manually set all existing domains to AUTOEXPIRE as well. The global setting just applies to new domain registrations, not to your existing portfolio. In addition, Automatic Renewal might be enabled for this domain in WHMCS.
 
+For more information please have a read [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar/#domain-renewal-mode-preventing-automatic-domain-renewal' | relative_url }}) .
+
 ### 20. Changing Auto-Renewal in WHMCS isn't reflected in your API
 
 That are totally different settings / topics as WHMCS has its own built-in processes and data layer. Ensure to have your global account setting for domain renewals at HEXONET set to AUTOEXPIRE (when changing this, update existing domain names as well in that direction). Using the Auto-Renewal function in WHMCS then works as expected (enabled / disabled).
+
+For more information please have a read [here]({{ 'docs/hexonet/whmcs/whmcs-ispapi-registrar/#domain-renewal-mode-preventing-automatic-domain-renewal' | relative_url }}) .
 
 ### 21. Registrar "1API GmbH" shown in public whois as registrar instead of HEXONET
 
