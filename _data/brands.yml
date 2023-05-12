@@ -49,6 +49,18 @@
       url: "dnscontrol/"
   github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
 
+- name: internet.bs
+  url: "https://internetbs.net/"
+  features:
+    - name: "WHMCS Integration"
+      url: whmcs/
+      items:
+        - name: Registrar Module
+          url: /internetbs/whmcs/whmcs-ibs-registrar/
+        - name: Migration Tool
+          url: /internetbs/whmcs/whmcs-migration/
+  github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
+
 - name: TPP Wholesale
   url: "https://www.tppwholesale.com.au/"
   features:
@@ -56,9 +68,9 @@
       url: whmcs/
       items:
         - name: Registrar Module
-          url: /tppwholesale/whmcs-tpp-registrar/
+          url: /tppwholesale/whmcs/whmcs-tpp-registrar/
         - name: Migration Tool
-          url: /tppwholesale/whmcs-migration/
+          url: /tppwholesale/whmcs/whmcs-migration/
   github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
 
 - name: PartnerGate
@@ -71,18 +83,6 @@
           url: /all/whmcs/#partnergate
         - name: Migration Tool
           url: /all/whmcs/whmcs-migration/
-
-- name: internet.bs
-  url: "https://internetbs.net/"
-  features:
-    - name: "WHMCS Integration"
-      url: whmcs/
-      items:
-        - name: Registrar Module
-          url: /ibs/whmcs-ibs-registrar/
-        - name: Migration Tool
-          url: /ibs/whmcs-migration/
-  github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
 
 - name: Instra
   url: "https://www.instra.com/"
