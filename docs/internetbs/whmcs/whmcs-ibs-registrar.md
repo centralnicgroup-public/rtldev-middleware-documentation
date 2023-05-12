@@ -66,10 +66,9 @@ To install our module please download the latest version from [here](https://git
 
 ## Additional Fields
 
-WHMCS provides a way to define additional fields that are needed for some TLDs. We add those for our module via file `/resources/domains/additionalfields.php`. Initially, this file is not present and has to be created as follows:
+WHMCS provides a way to define additional fields that are needed for some TLDs. We add those for our module via file `/resources/domains/dist.additionalfields.php`. Add the below at the end of the file, if not yet present.
 
 ```php
-<?php
 include(ROOTDIR."/modules/registrars/ibs/ibs_additionaldomainfields.php");
 ```
 
@@ -78,6 +77,9 @@ Unfortunately we do not yet have support for all TLDs that have additional field
 From the TLDs that require additional data we currently support: .co.uk, .org.uk, .me.uk, .uk, .eu, .be, .asia, .fr, .re, .pm, .tf, .wf, .yt, .it, .de, .nl, .tel, .us
 
 **NOTE**: If you want to offer .it domain names, please copy the file itterms.html (or itterms-it.html for the italian variant, please rename it then) to the root of your WHMCS installation. Find the files under `modules/registrars/ibs`.
+
+**NOTE**: The above way via `/resources/domains/dist.additionalfields.php` is not a recommended way, still suggested by our documentation since years.
+We will rewrite that mechanism to a future-safe way. Just a matter of time and priorities. Also, please keep in mind that you have to apply the current solution after each WHMCS upgrade again.
 
 ## Localization support
 

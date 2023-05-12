@@ -79,9 +79,9 @@
       url: whmcs/
       items:
         - name: Registrar Module
-          url: /internetbs/whmcs-ibs-registrar/
+          url: /ibs/whmcs-ibs-registrar/
         - name: Migration Tool
-          url: /internetbs/whmcs-migration/
+          url: /ibs/whmcs-migration/
   github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
 
 - name: Instra
