@@ -222,29 +222,13 @@ If you plan to use CentralNic Reseller's KeyDNS, ensure to activate checkbox `DN
 
 When registering a domain name, a checkbox for this Domain Addon will then be offered to your customers. When used, it finally allows managing resource records for that domain name over WHMCS.
 
-### SRV Records support
+### Additional DNS Records support
 
-WHMCS doesn't allow SRV records. Our module makes it possible!
+WHMCS only supports a few DNS record types out of the box. The pretty common SRV record, for example, is not supported.
+Our module comes with a tempalte that adds support for quite a few other record types.
 
-In order to activate that you have to update the clientareadomaindns.tpl file in your template directory.
-
-In this file you will find 2 `<select>` tags. In the first you will have to add the following code:
-
-`<option value="SRV"{if $dnsrecord.type eq "SRV"} selected="selected"{/if}>SRV</option>`
-
-In the second you should add:
-
-`<option value="SRV">SRV</option>`
-
-Between the 2 tags, there is an if statement, here you have to replace
-
-`{if $dnsrecord.type eq "MX"}`
-
-with
-
-`{if $dnsrecord.type eq "MX" || $dnsrecord.type eq "SRV"}`
-
-Now you are ready to support SRV records!
+Have a look in the `templates` directory in our module bundle, and you will find adapted `clientareadomaindns.tpl` files based on the WHMCS twentyone and six templates.
+You can either replace your template file with our variant, or use our child templates instead.
 
 ### DNSSEC Management
 
