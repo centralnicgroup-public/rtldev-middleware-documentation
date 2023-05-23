@@ -170,7 +170,16 @@ If you want to offer secure DNS / DNSSec, feel also free to activate the checkbo
 
 Now, press Save and voilà. :tada:
 
-### Domain Contact Verification
+### Renewal Protection
+
+The option is useful if for whatever reason you have some domains that have been renewed multiple times by mistake in the past, or if your default renewal policy is set to AUTORENEW, which we do not recommend. The proper setting would be AUTOEXPIRE.
+
+If the option is enabled, upon renewal the current due date for the domain is retrieved from WHMCS. If the domain expiration date is already greater than the next due date, then the renewal will be skipped. So the due date in WHMCS will be increased by one year, but the domain will not be renewed because it already expires after the next due date.
+The next year, the renewal should be processed normally, as it will be aligned.
+
+When a renewal is skipped, it is logged in the WHMCS activity log, plus an email is sent to admins with the subject "CentralNic Reseller Renewal Skipped".
+
+## Domain Contact Verification
 
 It governs the domain name transfers between ICANN registrars. The Inter-Registrar Transfer Policy (IRTP) includes changes to domain ownership. Small changes to a domain name’s registrar first name, last name, organization, and email address trigger the validation process.
 
