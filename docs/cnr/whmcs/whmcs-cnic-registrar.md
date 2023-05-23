@@ -41,10 +41,6 @@ A Registrar Module connects WHMCS to the Domain Registrar's System.
   - Account Balance Overview
   - Version Check
 
-**Not yet supported**:
-
-- Premium Domains
-
 ## Requirements
 
 - WHMCS 7.6+ or 8.x
