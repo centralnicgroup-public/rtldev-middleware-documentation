@@ -10,6 +10,7 @@ permalink: /
 Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools.
 
 <!-- markdownlint-disable -->
+<!-- https://shopify.github.io/liquid/ -->
 <div class="brands">
   {% for brand in site.data.brands %}
   <div class="card">
@@ -42,8 +43,13 @@ Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools
           {% if fc == "/" %}
             {% capture feat_url %}docs{{ feat.url }}{% endcapture %}
           {% else %}
-            {% capture feat_url %}docs/{{ brand.name | downcase }}/{{ feat.url }}{% endcapture %}
-          {% endif %}        
+            {% capture fc %}{{ feat.url | slice: 0, 4 }}{% endcapture %}
+            {% if fc != "http" %}
+              {% capture feat_url %}docs/{{ brand.name | downcase }}/{{ feat.url }}{% endcapture %}
+            {% else %}
+              {% capture feat_url %}{{ feat.url }}{% endcapture %}
+            {% endif %}
+          {% endif %}      
         <span class="brand-feature"><a href="{{ feat_url }}">{{ feat.name }}</a></span>
         {% endif %}
       {% endfor %}
