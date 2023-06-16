@@ -7,12 +7,13 @@
     * `modules/addons/cnicdomainimport`
     * `modules/addons/cnicmigration`
     * `modules/addons/cnicssl_addon`
-    * `modules/addons/ispapidomaincheck`
+    * `modules/addons/cnicdomainsearch`
     * `modules/servers/cnicssl`
     * `modules/widgets/ispapi*.php // just delete these ones if present`
     * `modules/widgets/hexonet_summary.php // just delete this one if present`
+    * `modules/addons/ispapidomaincheck (old domain search)`
     * `resources/cnic` 
-    
+
     And then delete these folders from your WHMCS instance.
 
 2. Extract the zip archive into the root folder of your WHMCS instance. (Upgrade completed! :tada:)

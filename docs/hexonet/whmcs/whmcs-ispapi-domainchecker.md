@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Domain Search
+title: Domain Checker (old)
 parent: WHMCS
 grand_parent: HEXONET
 nav_order: 3
 showtoc: 1
 ---
 
-# ISPAPI Domain Search
+# ISPAPI Domain Search (Old)
 
 This Documentation covers the "ISPAPI" Domain Search Add-On for WHMCS.
 

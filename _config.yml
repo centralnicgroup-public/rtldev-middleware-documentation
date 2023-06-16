@@ -99,12 +99,15 @@ color_scheme: light
 plugins:
   - jekyll-seo-tag
   - jemoji
+  - open-uri
 
 markdown: kramdown
 kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: false
+
+require: open-uri
 
 compress_html:
   clippings: all
