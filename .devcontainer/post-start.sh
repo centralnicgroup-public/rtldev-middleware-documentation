@@ -18,4 +18,4 @@ if [ -f Gemfile ]; then
     bundle install
 fi
 
-bundle exec jekyll serve -H 0.0.0.0 -t
+bundle exec jekyll serve -H 127.0.0.1 -t
