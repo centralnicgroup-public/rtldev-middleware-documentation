@@ -4,7 +4,7 @@ require 'uri'
 module Jekyll
   module UrlFileContentsFilter
     def url_file_contents(url)
-      Net::HTTP.get(URI.parse(url))
+      Net::HTTP.get(URI(url))
     end
   end
 end
