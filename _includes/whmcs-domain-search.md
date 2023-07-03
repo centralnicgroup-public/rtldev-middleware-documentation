@@ -1,4 +1,4 @@
-{% assign url = "https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/.htaccess_sample" %}
+{% assign url = "https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/.htaccess_sample"  %}
 {% assign htaccess_content = url | url_file_contents %}
 
 # CNIC Domain Search
