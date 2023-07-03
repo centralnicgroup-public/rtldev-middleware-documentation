@@ -19,6 +19,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "rake", ">= 12.3.1", "< 13.1.0"
   spec.add_runtime_dependency "jemoji", ">= 0.12.0"
   spec.add_runtime_dependency "webrick", ">= 1.7"
-  spec.add_runtime_dependency "open-uri", "~> 0.3.0"
 
 end
