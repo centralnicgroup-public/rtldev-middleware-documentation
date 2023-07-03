@@ -219,19 +219,15 @@ You can make your URLs more user-friendly and remove the .php extension by using
 - Create a new file (if not exists otherwise modify it) in the root directory of your WHMCS installation and name it ".htaccess" (including the leading dot).
 - Add the following code to the .htaccess file: 
     ```apache
-    RewriteEngine on
-    RewriteBase /
-    RewriteRule ^domainchecker.php$ mydomainsearch.php [L,QSA,NC]
+        RewriteEngine On
+        RewriteBase /
+
+        RewriteCond %{REQUEST_METHOD} POST
+        RewriteCond %{THE_REQUEST} ^POST\ /domainchecker\.php
+        RewriteRule ^domainchecker\.php$ /mydomainsearch\.php [P]
     ```
 - Save the changes to the .htaccess file.
 
-If you want a user friendly URL without .php extension in the link follow this example:
-```apache
-RewriteEngine On
-RewriteBase /
-RewriteRule ^domain-search$ /mydomainsearch.php [L,QSA,NC]
-RewriteRule ^domainchecker\.php$ domain-search [R=301,L,QSA,NC]
-```
 In this example, the URL "domain-search" will be internally rewritten to "mydomainsearch.php" while keeping the user-friendly URL intact. Additionally, if someone tries to access "domainchecker.php," it will automatically redirect to "domain-search."
 
 Remember to replace "domain-search" with your desired user-friendly name for the search engine.
