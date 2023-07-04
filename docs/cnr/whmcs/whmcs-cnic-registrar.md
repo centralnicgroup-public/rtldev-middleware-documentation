@@ -43,7 +43,7 @@ A Registrar Module connects WHMCS to the Domain Registrar's System.
 
 ## Requirements
 
-- WHMCS 7.6+ or 8.x
+- WHMCS 7.10+ or 8.x
 - installed and working: curl, php-curl
 
 For the latest WHMCS minimum system requirements, please refer to [System_Requirements](https://docs.whmcs.com/System_Requirements).
@@ -144,6 +144,26 @@ For non cPanel users: check location `/var/www/whmcs` (default path) or eventual
 ![cpanel 1]({{ 'assets/images/whmcs/cnic-registrar/cpanel1.png' | relative_url }})
 ![cpanel 2]({{ 'assets/images/whmcs/cnic-registrar/cpanel2.png' | relative_url }})
 
+## WHMCS Themes
+
+We extended the WHMCS Themes `six` and `twenty-one` for a better user experience. The themes are included in the software bundle, we recommend using one of them or applying our changes to your custom theme. We improved the below in that way in WHMCS:
+
+* Additional Fields included in the Client Area's Contact Information Page
+* DNS Management: Added more supported Resource Records
+
+We wrapped our changes with inline comments allowing you to identify our changes and to take these over to your custom theme in ease.
+
+e.g.
+
+```html
+<!-- CNIC: Add support for ALIAS, CAA RRs: Start -->
+<option value="ALIAS"{if $dnsrecord.type eq "ALIAS"} selected="selected"{/if}>ALIAS</option>
+<option value="CAA"{if $dnsrecord.type eq "CAA"} selected="selected"{/if}>CAA</option>
+<!-- CNIC: Add support for ALIAS, CAA RRs: End -->
+```
+
+Hope that helps!
+
 ## Module Configuration
 
 - **For users with WHMCS version 8.0+**, Navigate to `WHMCS Admin Panel` > `System Settings` > `Domain Registrars`.
@@ -154,7 +174,7 @@ Find the `CentralNic Reseller` Module in the list and activate it. If you're not
 ![configuration]({{ 'assets/images/whmcs/modules-config/step-3-domain-registrars.jpg' | relative_url }})
 ![configuration]({{ 'assets/images/whmcs/modules-config/step-4-cnic-domain-registrars.jpg' | relative_url }})
 
-- **For users with WHMCS version 7.3+**, Navigate in your WHMCS instance to `Setup` > `Products/Services` > `Domain Registrars`.
+- **For users with WHMCS version 7.10+**, Navigate in your WHMCS instance to `Setup` > `Products/Services` > `Domain Registrars`.
 Find the `CentralNic Reseller` Module in the list and activate it. If you're not able to find that Module in the list, something went wrong with the Module Installation - please check this part again please.
 
 ![configuration]({{ 'assets/images/whmcs/cnic-registrar/config.png' | relative_url }})
@@ -326,6 +346,8 @@ For registries that don't support umlauts, some characters will be mapped automa
 ### Change of Registrant
 
 The change of Registrant of .IT .CH .SE .SG .LI TLDs requires a special procedure called TRADE. This function is called automatically when necessary when you alter contact data.
+
+NOTE: The Contact Update via WHMCS' Admin Area is a two-step procedure. Firstly, update the additional domain fields with the new values and save. Secondly, click on "Modify Contact Information", review the data and save. The new values of the additional fields are then considered. Via Client Area, we realized a one-step process. Check the WHMCS Themes section for more related information.
 
 ### .SWISS Registrations
 
