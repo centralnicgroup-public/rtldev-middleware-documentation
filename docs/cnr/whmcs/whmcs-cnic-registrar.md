@@ -82,8 +82,6 @@ It will do the following actions:
 
 ![image]({{ 'assets/images/whmcs/cnic-registrar/migrate.png' | relative_url }})
 
-- Ensure to check the Additional Domain Fields setup for TLDs offered over us. Read more about that [here](#additional-domain-fields)
-
 ### Migrating Lookup Provider
 
 If you were using the lookup provider funcionality with any previous module, you must upgrade it manually.
@@ -263,31 +261,18 @@ This feature allows your customers to add DS and KEY records and set the maxSigL
 
 The registration of some domain extensions requires sometimes additional domain fields (e.g. Legal Type and CIRA Agreement for .CA domain).
 
+**BEFORE BUNDLE VERSION 19**
+
 In order to provide this additional fields on the registration page and map them with our module, you have to inject our CentralNic Reseller specific configuration in the **$additionaldomainfields** array.
 
 To add new additional domains fields, copy the additionalfields.php file provided by our module the /resources/domains/ directory.
 
-### Auto-prefill fields
+**BUNDLE VERSION 19 AND LATER**
 
-For some of the additional domain fields, it makes sense to prefill them with data out of client details:
+No need for a custom additional domain fields configuration. Feel free to clean up previous configurations related to TLDs offered over us.
+We ship with a new mechanism which is API-driven and therefore directly connected to the CentralNic Reseller API. It is providing the additional domain fields fully auto-generated and cares for considering them in the API Requests accordingly. By this approach, we were able to introduce full translation support via Language Override Files which is not possible via WHMCS Core built-in possibilities. Also, we expect the support effort to dramatically decrease and we added a automatic prefilling mechanism for VATID, Legal Type and Country and Language related fields. If you notice a field that could be automatically filled with data, let us know.
 
-- VAT ID input fields
-- DK Hostmaster User ID input fields
-- .CA: Contact Language (X-CA-LANGUAGE)
-
-Let us know if you need other fields also being prefilled.
-
-**DK Hostmaster User ID**:
-
-Create a new custom field through `Setup > Client Custom Fields` using the below configuration:
-
-**Field Name**: DK-Hostmaster User ID
-
-**Field Type**: Text Box
-
-No further configuration settings necessary.
-
-In case your clients provide their data, it will be pre-filled accordingly.
+If you're interested in adding your custom translation, add domains with TLDs of interests to your Shopping Cart and switch to the Shopping Cart Item's Configuration. There, add `&showtranslationkeys=1` to the URL and press enter. Instead of the texts, you'll now see the Translation Keys which can be used in the Language Override files for adding your custom translations. If you remove that URL parameter again, texts will be displayed as usual. The fallback will always be our default english texts in case a translation is not present. It allows for translating step by step.
 
 ## Automation Settings
 
