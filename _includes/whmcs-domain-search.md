@@ -1,6 +1,3 @@
-{% assign url = "https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/.htaccess_sample"  %}
-{% assign htaccess_content = url | url_file_contents %}
-
 # CNIC Domain Search
 
 This Documentation covers the CNIC Domain Search Add-On for WHMCS.
@@ -235,7 +232,20 @@ Remember to replace "domain-search" with your desired user-friendly name for the
 ### Sample up-to dated .htaccess configuration
 
 ```apache
-{{ htaccess_content }}
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_METHOD} POST
+RewriteCond %{THE_REQUEST} ^POST\ /domainchecker\.php
+RewriteRule ^domainchecker\.php$ /mydomainsearch\.php [P]
+
+# Uncomment the following lines to enable static file caching
+#<IfModule mod_expires.c>
+#    ExpiresActive On
+#    <FilesMatch "(?i)^resources/cnic/templates/cnicdomainsearch/.*\.(html|css|json|png|jpe?g|gif)$">
+#        ExpiresDefault "access plus 1 month"
+#    </FilesMatch>
+#</IfModule>
 ```
 
 Note: Ensure that your web server is configured to consider .htaccess files. For Apache, you can use the "AllowOverride FileInfo" configuration. Avoid using "AllowOverride All" as it may introduce security risks.
