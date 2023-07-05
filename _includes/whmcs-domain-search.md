@@ -203,50 +203,50 @@ NOTE: With Apache 2.4 things have changed. Please check [the Apache2 Upgrade Gui
 To redirect the WHMCS domainchecker.php to mydomainsearch.php, add the following Apache configuration into your `<VirtualHost>` section:  
 
 ```apache
-RewriteEngine on 
-RewriteRule /domainchecker.php /mydomainsearch.php
-```
-
-#### By .htaccess File
-##### How to Create User-Friendly URLs with .htaccess
-
-You can make your URLs more user-friendly and remove the .php extension by using the .htaccess file in your WHMCS installation. The following steps will guide you through the process:
-
-- Open your preferred text editor.
-- Create a new file (if not exists otherwise modify it) in the root directory of your WHMCS installation and name it ".htaccess" (including the leading dot).
-- Add the following code to the .htaccess file: 
-    ```apache
-        RewriteEngine On
-        RewriteBase /
-
-        RewriteCond %{REQUEST_METHOD} POST
-        RewriteCond %{THE_REQUEST} ^POST\ /domainchecker\.php
-        RewriteRule ^domainchecker\.php$ /mydomainsearch\.php [P]
-    ```
-- Save the changes to the .htaccess file.
-
-In this example, the URL "domain-search" will be internally rewritten to "mydomainsearch.php" while keeping the user-friendly URL intact. Additionally, if someone tries to access "domainchecker.php," it will automatically redirect to "domain-search."
-
-Remember to replace "domain-search" with your desired user-friendly name for the search engine.
-
-### Sample up-to dated .htaccess configuration
-
-```apache
 RewriteEngine On
 RewriteBase /
 
 RewriteCond %{REQUEST_METHOD} POST
 RewriteCond %{THE_REQUEST} ^POST\ /domainchecker\.php
 RewriteRule ^domainchecker\.php$ /mydomainsearch\.php [P]
-
-# Uncomment the following lines to enable static file caching
-#<IfModule mod_expires.c>
-#    ExpiresActive On
-#    <FilesMatch "(?i)^resources/cnic/templates/cnicdomainsearch/.*\.(html|css|json|png|jpe?g|gif)$">
-#        ExpiresDefault "access plus 1 month"
-#    </FilesMatch>
-#</IfModule>
 ```
+
+#### By .htaccess File
+
+***To set the CNIC Domain Search Engine Add-On as the default domain search for WHMCS, please follow these steps:***
+
+- Open your preferred text editor.
+- If the file ".htaccess" doesn't already exist in the root directory of your WHMCS installation, create a new  file and name it ".htaccess" (including the leading dot).
+- Copy and paste the following code into the .htaccess file:
+    ```apache
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{REQUEST_METHOD} POST
+    RewriteCond %{THE_REQUEST} ^POST\ /domainchecker\.php
+    RewriteRule ^domainchecker\.php$ /mydomainsearch\.php [P]
+    ```
+- Save the changes to the .htaccess file.
+
+By adding this code to the .htaccess file, you will set the CNIC Domain Search Engine Add-On as the default domain search for WHMCS. Ensure that you save the modified .htaccess file to activate the changes.
+
+***To enable static file caching, please follow these steps:***
+
+- Locate the .htaccess file in your website's root directory.
+- Open the .htaccess file using a text editor.
+- Add the following code to the file:
+    ```apache
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        <FilesMatch "(?i)^resources/cnic/templates/cnicdomainsearch/.*\.(html|css|json|png|jpe?g|gif)$">
+            ExpiresDefault "access plus 1 month"
+        </FilesMatch>
+    </IfModule>
+    ```
+- Save the changes to the .htaccess file.
+- Refresh your website to apply the caching settings.
+
+By adding this code to the .htaccess file, your website will benefit from static file caching for the search engine addon, which can improve its performance and load times.
 
 Note: Ensure that your web server is configured to consider .htaccess files. For Apache, you can use the "AllowOverride FileInfo" configuration. Avoid using "AllowOverride All" as it may introduce security risks.
 
