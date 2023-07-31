@@ -13,6 +13,7 @@ For example, you might want to direct that to a default website. Or, if the doma
 - Currenctly supported registrar modules: ISPAPI and CentralNic Reseller
 - Define a global zone, to be applied to all new domain registrations
 - Define zones for specific hosting products, to be applied when registering a domain belonging to a hosting product
+- Manually bulk apply any template to a select number of domains
 - Supports A, AAAA, MX, MXE, CNAME, TXT and SRV records
 - Supports WHMCS specific URL and FRAME record types for the website redirection feature
 
@@ -56,6 +57,7 @@ Extract the zip contents to the root folder of your installed WHMCS instance.
 
 ### Create a zone template
 
+- Select the `Templates` tab
 - Click on the `Add` button
 - A modal will appear
 
@@ -69,7 +71,7 @@ Fill out the form:
 - `Instructions`: clicking here will show hints for the template syntax
 - `Set as global default`: if enabled, the template will act as default for any domain.
 
-### Zone syntax
+#### Zone syntax
 
 Write one record per line in this format:
 
@@ -92,8 +94,21 @@ mail A 127.0.0.1
 @ MX mail.@ 10
 ```
 
-### Behavior
+### Bulk apply a template
 
-The decision making process that establishes if and which zone template will be applied to a domain, follows this flow chart:
+- Select the `Bulk Apply` tab
+- A table will appear with all active domains that have DNS management enabled and are assigned to a supported registrar module
+- Tick the checkboxes next to all domains you wish to apply a template to
+- Click on the `Apply` button
+- A modal will appear in which you can select the template you wish to apply
+- Click on `Apply` in the modal
+- You can now track the progress for each domain in the modal box
+- Should any error occur, you may consult the WHMCS Activity Log by selecting the `Logs` tab
+
+![apply]({{ 'assets/images/whmcs/cnic-dns/apply.png' | relative_url }})
+
+## Behavior
+
+The decision making process that establishes if and which zone template will be automatically applied to a domain, follows this flow chart:
 
 ![behavior]({{ 'assets/images/whmcs/cnic-dns/behavior.png' | relative_url }})
