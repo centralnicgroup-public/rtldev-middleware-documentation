@@ -54,7 +54,7 @@ Back to topic, here the steps describing how to start with us using WHMCS.
   - [IRTP / Domain Contact Verification](#domain-contact-verification)
   - [Whois Output Settings](#whois-output-settings)
   - [ERRP Settings](#errp-settings)
-  - Private Nameserver Registration & Management
+  - Private Nameserver Registration & [Management](#private-nameserver-management)
   - Get EPP Code
   - [TLD-specific free Whois Privacy for Individuals](#tld-specific-whois-privacy) (.ca, .se, .nz)
 - Domain Addons
@@ -62,7 +62,7 @@ Back to topic, here the steps describing how to start with us using WHMCS.
   - [URL Forwarding](#ns--dns-management)
   - [WHOIS Privacy / ID Protection](#whois-privacy-management)
 - [DNS Management](#ns--dns-management)
-  - Record-Types: A, AAAA, MX, MXE, CNAME, TXT, [SRV](#srv-records)
+  - Record-Types: A, AAAA, MX, MXE, CNAME, TXT, [SRV, ...](#extended-resource-records)
   - [DNSSEC / SecDNS Management](#dnssec-management)
 - [Translation Support](#installing-our-module)
 - [Sandbox Environment Support](#module-configuration)
@@ -192,6 +192,18 @@ Note: Feel free to add yourself as Watcher to that github repository by clicking
 We are aware of that installation and upgrade effort of our module is something we need to minimize. We have projects in queue to achieve that and to cover a lot more.
 
 Before we continue, we want to point you to the Section [**Migrating**](#migrating-from-hexonet-registrar-module) if you have already started with the HEXONET Module that is shipped with WHMCS. Switching Domains to our ISPAPI Registrar Module can be done in ease at this point.
+
+### Child Themes
+
+Since v19 of our Software Bundle and WHMCS 8, we started shipping with Child Themes. So, custom template changes that help us making an impact to the World of WHMCS. Find here a list of template files and why we touched them:
+
+- `clientareadomaindns.tpl`: We made plenty of more resource records available. In addition, we added the output for the real error message if a DNS Update fails which WHMCS Core wouldn't be showing. Also, you'll see a success message in case the update succeeded which WHMCS isn't doing natively as well.
+- `clientareadomainregisterns.tpl`: We added the output of the existing private nameservers and moved the deletion part to that list for a better user experience. Not natively available in WHMCS.
+- `clientaredomaincontactinfo.tpl`: Added the output of additional domain fields at the bottom of the page. This allows sending additional domain fields together with the contact data update which is necessary for some TLDs if it comes to an owner change or an update of these additional fields is necessary. This isn't available in WHMCS natively at all which makes contact updates often to a support matter otherwise. The reason why we were looking for a stable way for improving this.
+- `includes/alert.tpl`: Extended for the registrar specific error message output in DNS Management.
+
+The template files can be found either under `/templates/cnic-six` or `/templates/cnic-twenty-one`. In case there's something not working, let us know.
+Custom changes are wrapped with comments and can therefore be easily taken over to your theme. Please ensure having this step done otherwise, especially in the DNS Management Section, it comes to undesired issues (WHMCS will map natively unsupported records to `A` records in the view and will submit them as such).
 
 ### Upgrading
 
@@ -503,25 +515,20 @@ Finally ensure to have this set of nameservers configured as Default Nameservers
 **NOTE:**
 
 - WHMCS is nowhere listing already existing private nameservers, still you recognize such a list in the screenshots.
-  This is something our ISPAPI Registrar Module is injecting which is working with the Six and the Twenty-One Template.
-  Let us know, if it is incompatible with your custom template, we will extend then (or temporarily switch to twenty-one).
+  This is something our ISPAPI Registrar Module is making available - just update your Theme accordingly. Check the `clientareadomainregisterns.tpl` file which is available either under `/templates/cnic-six` or `/templates/cnic-twenty-one`. Custom Changes are nicely wrapped with comments so that you can easily identify and take them over.
 - It may take a while (few hours) until these changes have been announced. Please be a bit patient.
 
 If this is still not working as expected, please reach out to us.
 
-### SRV Records
+### Extended Resource Records
 
-WHMCS doesn't allow SRV records. Our module makes it possible! We have WHMCS templates customized to introduce the SRV Resource Record to WHMCS.
+WHMCS doesn't allow for SRV, TLSA, ... records. Our module makes it possible! We have WHMCS templates customized to introduce more Resource Record to WHMCS plus an additional input field to allow for providing the TTL. A default TTL can be configured via Registrar Module Configuration setting.
 
-Find the Template File for
+Find the Template File `clientareadomaindns.tpl` and `includes/alert.tpl` as part of our Software Bundle under `/templates/cnic-six` and `/templates/cnic-twenty-one`. 
 
-- the Six Theme [here](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-templates-six/master/clientareadomaindns.tpl)
-- the Twenty-One [here](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-templates-twenty-one/master/clientareadomaindns.tpl).
+First make a backup of those template files of your current theme in use. Then extend it with the changes of our template files. We usually nicely wrap changes we applied by comments so that it is easier for you to identify them and to take them over.
 
-First make a backup of the `clientaredomaindns.tpl` template file of your current theme in use.
-Then replace it with our template file.
-
-Voilà, now you are ready to support SRV records!
+Voilà, now you are ready to support more resource records and the TTL field!
 
 ### DNSSEC Management
 
@@ -572,13 +579,11 @@ This might be necessary in case of multi-year Restores where the Restore Period 
 
 ## Additional Domain Fields
 
-> **NOTE**: Since Version 6 of our Registrar Module, no need to worry about this configuration section any longer. We recommend removing an existing configuration file. You can skip this section then.
+> **NOTE**: Since Version 6 of our Registrar Module, no need to worry about this configuration section any longer. We recommend removing the existing custom configuration file (`/resources/domains/additionalfields.php`). Then, please take over changes to your theme to get the additional domain fields also shown on the contact information page in your WHMCS' client area. Find the theme file `clientareadomaincontactinfo.tpl` either under `/templates/cnic-six` or `/templates/cnic-twenty-one`. Custom changes are nicely wrapped by comments and thus easy to get identified and taken over.  **You can skip this entire section then**. 
 
-The registration of some domain extensions requires sometimes additional domain fields (e.g. Legal Type and CIRA Agreement for .CA domain).
+The registration of some domain extensions requires additional domain fields (e.g. Legal Type and CIRA Agreement for .CA domain).
 
-In order to provide this additional fields on the registration page and map them with our module, it is about sharing with WHMCS that there are such fields for the specific TLD. Therefore, our HEXONET specific configuration needs to be injected.
-
-> _Prior to WHMCS 7.0_, create the file `/includes/additionaldomainfields.php`.
+In order to provide these additional fields on the registration page and map them with our module, it is about sharing with WHMCS that there are such fields for the specific TLD. Therefore, our HEXONET specific configuration needs to be injected.
 
 > _From WHMCS 7.0 on_, create the file `/resources/domains/additionalfields.php`.
 

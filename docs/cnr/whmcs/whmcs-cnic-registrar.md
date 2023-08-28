@@ -124,6 +124,18 @@ E.g.
 `resources/ => $YOUR_WHMCS_ROOT/resources/`
 `includes/ => $YOUR_WHMCS_ROOT/includes/`
 
+### Child Themes
+
+Since v19 of our Software Bundle and WHMCS 8, we started shipping with Child Themes. So, custom template changes that help us making an impact to the World of WHMCS. Find here a list of template files and why we touched them:
+
+- `clientareadomaindns.tpl`: We made plenty of more resource records available. In addition, we added the output for the real error message if a DNS Update fails which WHMCS Core wouldn't be showing. Also, you'll see a success message in case the update succeeded which WHMCS isn't doing natively as well.
+- `clientareadomainregisterns.tpl`: We added the output of the existing private nameservers and moved the deletion part to that list for a better user experience. Not natively available in WHMCS.
+- `clientaredomaincontactinfo.tpl`: Added the output of additional domain fields at the bottom of the page. This allows sending additional domain fields together with the contact data update which is necessary for some TLDs if it comes to an owner change or an update of these additional fields is necessary. This isn't available in WHMCS natively at all which makes contact updates often to a support matter otherwise. The reason why we were looking for a stable way for improving this.
+- `includes/alert.tpl`: Extended for the registrar specific error message output in DNS Management.
+
+The template files can be found either under `/templates/cnic-six` or `/templates/cnic-twenty-one`. In case there's something not working, let us know.
+Custom changes are wrapped with comments and can therefore be easily taken over to your theme. Please ensure having this step done otherwise, especially in the DNS Management Section, it comes to undesired issues (WHMCS will map natively unsupported records to `A` records in the view and will submit them as such).
+
 ### Upgrading
 
 {% include whmcs-bundle-upgrade.md %}
@@ -241,8 +253,7 @@ When registering a domain name, a checkbox for this Domain Addon will then be of
 WHMCS only supports a few DNS record types out of the box. The pretty common SRV record, for example, is not supported.
 Our module comes with a tempalte that adds support for quite a few other record types.
 
-Have a look in the `templates` directory in our module bundle, and you will find adapted `clientareadomaindns.tpl` files based on the WHMCS twentyone and six templates.
-You can either replace your template file with our variant, or use our child templates instead.
+Have a look in the `templates` directory in our module bundle, and you will find adapted `clientareadomaindns.tpl` files based on the WHMCS twentyone and six templates. You can either replace your template file with our variant, or use our child theme instead.
 
 ### DNSSEC Management
 
