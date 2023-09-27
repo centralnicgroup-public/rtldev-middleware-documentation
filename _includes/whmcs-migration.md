@@ -51,8 +51,6 @@ Premium Domains: As of a bug WHMCS solved with v7.8, any premium domain register
 
 **Don't touch files where the filename starts with `dist.*`. That are default files and templates, partially used as fallback or within automated tests. Follow the below instructions to get this tool correctly up and running.**
 
-{% include whmcs-bundle-upgrade.md %}
-
 Finally, navigate to `Configuration > System Settings > Addon Modules` in your WHMCS Admin Area, then click on `Activate` next to the `CNIC Migrator` listing.
 
 ### Re-Configure WHMCS
@@ -94,7 +92,7 @@ In the WHMCS Admin Area, navigate to `Addons > CNIC Migrator`, then click on the
 
 ![adminareaerror]({{ 'assets/images/whmcs/cnic-migration/mappings.png' | relative_url }})
 
-Here you can define your desired mappings, specifying the desired losing and gaining registrars, any specific TLD, and wether the migrator should automatically retrieve the EPP auth codes via the losing registrar's WHMCS module.
+Here you can define your desired mappings, specifying the desired losing and gaining registrars, any specific TLD, and wether the migrator should automatically retrieve the EPP auth codes via the losing registrar's WHMCS module. You can also specify which e-mail template you want to use for client notifications.
 
 ### EPP/Authorization Codes
 
@@ -103,6 +101,7 @@ The migrator will attempt to retrieve the EPP code automatically via the losing 
 Some registrars however, do not support this functionality. Their module will return an error, but send the code out to the current registrant's email address instead. So, not reliable for real-time processing. A good example is the registrar Enom.
 
 As a workaround, you should get hold of the EPP codes manually (for example by requesting it and having your customer send you the code they recieve via e-mail). Then, you can specify those EPP codes beforehand in the `EPP Codes` tab in the Addon.
+You may also upload a CSV file containing a list of domains with their respective EPP codes.
 
 ![adminareaerror]({{ 'assets/images/whmcs/cnic-migration/epp.png' | relative_url }})
 
@@ -118,64 +117,23 @@ By default this tool is also sending mails to you, the reseller, to allow a bit 
 
 ### Client Email Templates
 
-This migration tool comes with a `default` email template in english that will be used for mail-out to **your clients**. You can define more languages, customized subjects and messages, as well as TLD-specific messages. Later, you can check the `System Email Message Log` in WHMCS for mails sent to your clients and view them.
+This migration tool comes with a `MIGRATION_DEFAULT` email template in english that will be used for mail-out to **your clients**.
+When adding a new mapping, or editing an existing one, you can select the `*Generate new*` option, which will generate a new template.
 
-The `default` configuration entry is always used as fallback, see below. **Important is to have that empty string array key entry which represents the case "no language set"**. Without this entry the email template won't work in WHMCS as WHMCS by default selects email templates using language filter set to empty string.
+You may customize and translate any template via the WHMCS built-in Email Templates functionality.
 
-The configuration file `dist.configuration.json` contains the mappings to the email templates.
-Here is an example:
-
-```json
-{
-  "templates": {
-    "default": {
-      // <-- the default configuration entry
-      "": {
-        // <-- this one is important, just reuse the english template
-        "subject": "{$resellerLabel}: Change of domain provider for your domain {$domain_name}",
-        "file": "tpl_client_default_english.tpl"
-      },
-      "english": {
-        "subject": "{$resellerLabel}: Change of domain provider for your domain {$domain_name}",
-        "file": "tpl_client_default_english.tpl"
-      },
-      "french": {
-        "subject": "{$resellerLabel}: Changement de fournisseur de domaine pour votre domaine {$domain_name}",
-        "file": "tpl_client_default_french.tpl"
-      }
-    },
-    "com": {
-      "": {
-        // <-- this one is important, just reuse the english template
-        "subject": "{$resellerLabel}: Change of domain provider for your .COM domain {$domain_name}",
-        "file": "tpl_client_com_english.tpl"
-      },
-      "english": {
-        "subject": "{$resellerLabel}: Change of domain provider for your .COM domain {$domain_name}",
-        "file": "tpl_client_com_english.tpl"
-      },
-      "french": {
-        "subject": "{$resellerLabel}: Changement de fournisseur de domaine pour votre .COM domaine {$domain_name}",
-        "file": "tpl_client_com_french.tpl"
-      }
-    }
-  }
-}
-```
+Later, you can check the `System Email Message Log` in WHMCS for mails sent to your clients and view them.
 
 ### Email Templates Customization
 
 How to proceed:
 
-1. Rename all `templates/email/dist.*.tpl` files by removing the `dist.` at the front, e.g. `dist.tpl_client_default_english.tpl ----> tpl_client_default_english.tpl`.
-2. Rename `dist.configuration.json` to `configuration.json`. This is to avoid upgrade issues in future as upgrading will just overwrite the `dist.*` files and not your custom files.
-3. Adapt the `file` entries in `configuration.json` (do not provide a path - just the filename)
-4. Modify the .tpl files at your discretion.
+1. In the WHMCS Admin Area, go to `System Settings`
+2. Open the `Email Templates` page
+3. You will find the templates in the `Domain Messages` section and marked as `CUSTOM`.
+4. Edit the template you want to customize.
 
-NOTE: There's no need to provide a full HTML template structure including head and body in the template files, just the HTML code part you need.
-
-Even though the templates are HTML files, they are finally processed in WHMCS as [Smarty](https://www.smarty.net/docs/en/) templates and allow therefore the use of variables. This follows the principles of Smarty Syntax to use e.g. `{$someVariable}`.
-
+The templates allow the use of variables. This follows the principles of Smarty Syntax to use e.g. `{$someVariable}`.
 The following variable names are available for the client email templates:
 
 - `{$id}`: The internal ID of your domain in WHMCS (indexed no.)
@@ -255,7 +213,7 @@ $_ADDONLANG = [
 
 The migration tool will append an error identifier to make it more transparent which kind of error might have happened, e.g. `Domain Migration to the new subcontractor. Don't renew the domain.[ERROR_CONFIG]`.
 
-- `[ERROR_CONFIG:...some reason...]`: Configuration file `migration/configuration.json` couldn't be loaded (missing or invalid json). Further Details provided.
+- `[ERROR_CONFIG:...some reason...]`: Issue with module configuration. Further Details provided.
 - `[ERROR_DOMAIN_DATA]`: Domain Data couldn't be loaded over WHMCS - should never happen
 - `[ERROR_AUTH_CODE:...some reason...]`: Getting the EPP/Authorization code of the domain did not work. Further Details provided.
 - `[ERROR_REG_MODULE]`: Loading the gaining registrar's registrar module failed or the module is not activated or not integrating the `TransferDomain` method
