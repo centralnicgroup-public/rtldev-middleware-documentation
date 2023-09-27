@@ -10,7 +10,7 @@ This tool is made for migrations at point of domain renewal to minimize costs an
 
 ## Features
 
-- Migrate from different registrars to one or multiple registrar brands of the CentralNic Group PLC ([HEXONET](https://hexonet.net/), [CentralNic Reseller](https://www.centralnicreseller.com/), [TPP Wholesale](https://tppwholesale.com.au/), [internet.bs](https://internet.bs/)) in parallel
+- Migrate from different registrars to one or multiple registrar brands of the Team Internet Group PLC ([HEXONET](https://hexonet.net/), [CentralNic Reseller](https://www.centralnicreseller.com/), [TPP Wholesale](https://tppwholesale.com.au/), [internet.bs](https://internet.bs/)) in parallel
 - Migrate all TLDs or just a subset of TLDs per losing registrar
 - Bulk transfer for domains that can be transferred for free (0Y period) e.g. .qa, .ae, .es, .au, ...
 - User Interface for configuration and management of domain migrations

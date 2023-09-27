@@ -14,7 +14,7 @@ Welcome to the documentation for the new CNIC Domain Search add-on! This powerfu
 
 - **Domain Name Suggestion Engine:** A built-in suggestion engine provides helpful suggestions during searches, enhancing the user experience.
 
-- **High-Speed API Availability Checks:** The add-on connects to your configured **{{ page.grand_parent }}** registrar module to perform high-speed API availability checks, ensuring fast and accurate results.
+- **High-Speed API Availability Checks:** The add-on connects to your configured **{% if page.grand_parent == "All Brands" %}\*\* All Supported Brands{% else %}{{ page.grand_parent }}{% endif %}** registrar module to perform high-speed API availability checks, ensuring fast and accurate results.
 
 - **Single Page Application:** The CNIC Search Engine is a single page application powered by the LitJS JavaScript library, providing a seamless and responsive user experience.
 
@@ -40,7 +40,7 @@ To successfully run the CNIC Domain Search Add-On, please ensure that your WHMCS
 
 - **WHMCS version 7.8.0 or higher:** Make sure you have WHMCS version 7.8.0 or higher installed. We always recommend using the latest version of WHMCS for optimal performance and security.
 
-- **Required Registrar Module:** This add-on relies on the **{{ page.grand_parent}}** as the domain lookup providers. You can download the necessary modules [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Please note that the WHMCS built-in **{{ page.grand_parent}}** provider modules are not compatible with our Domain Search Add-On.
+- **Required Registrar Module:** This add-on relies on the **{% if page.grand_parent == "All Brands" %}\*\* All Supported Brands{% else %}{{ page.grand_parent }}{% endif %}** as the domain lookup providers. You can download the necessary modules [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Please note that the WHMCS built-in **{% if page.grand_parent == "All Brands" %}\*\* All Supported Brands{% else %}{{ page.grand_parent }}{% endif %}** provider modules are not compatible with our Domain Search Add-On.
 
 - **PHP Version Requirement**: Make sure your server meets the minimum requirement of PHP version 7.4 or higher. This add-on relies on PHP 7.4 and above for optimal performance.
 
@@ -74,7 +74,7 @@ Activate the ISPAPI DomainChecker Addon, give the module â€œFull Administratorâ€
 
 Under `Setup > Products/Services > Domain Pricing`, you will be able to configure and select the registrar for all the TLDs you want to sell.
 
-Be aware that high-performance domain availability checks using our registrar API will only be provided with the **{{ page.grand_parent}}** registrar. Just in case we do not support a certain TLD, we fallback to the WHMCS' WHOIS Lookup.
+Be aware that high-performance domain availability checks using our registrar API will only be provided with the **{% if page.grand_parent == "All Brands" %}\*\* All Supported Brands{% else %}{{ page.grand_parent }}{% endif %}** registrar. Just in case we do not support a certain TLD, we fallback to the WHMCS' WHOIS Lookup.
 
 Use the `Registrar TLD Sync` Feature to import our TLDs and Prices which is available since WHMCS v7.10.
 
@@ -371,3 +371,5 @@ To modify the text displayed on the search engine for different languages, follo
 To reflect the changes immediately, make sure to update the version number in the `theme.json` file.
 
 By following these instructions, you can effectively customize the text content in the language file while ensuring the proper functioning of the search engine.
+
+**\*\* Supported Brands: CentralNic Reseller ("CNR") and Hexonet ("ISPAPI")**

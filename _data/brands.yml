@@ -16,10 +16,12 @@
           url: /cnr/whmcs/whmcs-ssl/
         - name: Migration Tool
           url: /cnr/whmcs/whmcs-migration/
-        - name: Domain Importer
-          url: /cnr/whmcs/whmcs-domainimporter/
         - name: DNS Addon
           url: /cnr/whmcs/whmcs-dns/
+        - name: Domain Importer
+          url: /cnr/whmcs/whmcs-domainimporter/
+        - name: Domain Monitoring
+          url: /cnr/whmcs/whmcs-domainmonitoring/
     - name: "Self-Development Kits"
       url: /cnr/sdks/
   github: "//github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/"
@@ -41,10 +43,12 @@
           url: whmcs-ssl/
         - name: Migration Tool
           url: whmcs-migration/
+        - name: DNS Addon
+          url: whmcs-dns/          
         - name: Domain Importer
           url: whmcs-domainimporter/
-        - name: DNS Addon
-          url: whmcs-dns/
+        - name: Domain Monitoring
+          url: whmcs-domainmonitoring/
     - name: "Self-Development Kits"
       url: "sdks/"
     - name: "Blesta Integration"

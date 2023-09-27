@@ -19,7 +19,7 @@
   "scripts": {
     "test": "stylelint '**/*.scss'",
     "format": "prettier --write '**/*.{scss,js,json}'",
-    "deadlinks-check": "blc http://0.0.0.0:4000/rtldev-middleware-documentation/ -gfro --filter-level 3 >deadlinks.txt",
-    "deadlinks-check2": "blc http://0.0.0.0:4000/rtldev-middleware-documentation/ -gfro --filter-level 3"
+    "deadlinks-check": "blc http://localhost:4000/rtldev-middleware-documentation/ -gfro --filter-level 3 >deadlinks.txt",
+    "deadlinks-check2": "blc http://localhost:4000/rtldev-middleware-documentation/ -gfro --filter-level 3"
   }
 }
