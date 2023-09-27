@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: CentralNic Documentation
+title: CentralNic Reseller Documentation
 description: Full Documentation of CentralNic Reseller-Division Tools and 3rd-party Software Integrations.
 baseurl: "/rtldev-middleware-documentation" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -30,7 +30,7 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 # include: ["docs/tests/"]
 
 # Set a path/url to a logo that will be displayed instead of the title
-logo: "/assets/images/cnic-logo.png"
+logo: "/assets/images/team-internet-logo.svg"
 
 # Enable or disable the site search
 # Supports true (default) or false

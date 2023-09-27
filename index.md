@@ -5,7 +5,7 @@ nav_order: 1
 permalink: /
 ---
 
-# CentralNic Group PLC
+# Team Internet Group PLC
 
 Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools.
 

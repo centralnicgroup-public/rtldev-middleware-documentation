@@ -25,7 +25,7 @@ Find further information [here](https://www.centralnicgroup.com/reseller/) and s
 
 ### HEXONET / ISPAPI
 
-The Team at HEXONET is the WHMCS Lead in the CentralNic Group and maintains its own version of the HEXONET Registrar Module (aka. `ISPAPI`) which should be used _instead_ of the WHMCS built-in Module. As we maintain this module, we can ensure that it covers the latest Patches and supports **all** WHMCS Features. In addition we offer a shorter Release Cycle than the one of WHMCS itself. This allows us to immediately work on Patches or new Features and to release independently of WHMCS.
+The Team at HEXONET is the WHMCS Lead in the Team Internet Group and maintains its own version of the HEXONET Registrar Module (aka. `ISPAPI`) which should be used _instead_ of the WHMCS built-in Module. As we maintain this module, we can ensure that it covers the latest Patches and supports **all** WHMCS Features. In addition we offer a shorter Release Cycle than the one of WHMCS itself. This allows us to immediately work on Patches or new Features and to release independently of WHMCS.
 
 HEXONET offers additional Provisioning Modules for WHMCS that allow for reselling of further Products like SSL Certs, DNS, and Domain Backorders. Also, we have Add-Ons and Widgets in our Portfolio which can be flexibly combined with each other and which offer a certain added value. Like Importing Domains, Module Version Overview etc.
 

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Domain Search
+title: Domain Monitoring
 parent: WHMCS
 grand_parent: CentralNic Reseller
-nav_order: 3
+nav_order: 6
 showtoc: 1
 ---
 
-{% include whmcs-domain-search.md %}
+{% include whmcs-domainmonitoring.md %}

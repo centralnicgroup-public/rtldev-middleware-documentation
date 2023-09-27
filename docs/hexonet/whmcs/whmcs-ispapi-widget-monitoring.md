@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Monitoring Widget
+title: ~~Monitoring Widget~~
 parent: WHMCS
 grand_parent: HEXONET
-nav_order: 6
+nav_order: 7
 showtoc: 1
 ---
 

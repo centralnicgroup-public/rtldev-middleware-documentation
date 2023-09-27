@@ -2,8 +2,8 @@
 layout: default
 title: Domain Search
 parent: WHMCS
-grand_parent: HEXONET
-nav_order: 3
+grand_parent: All Brands
+nav_order: 7
 showtoc: 1
 ---
 

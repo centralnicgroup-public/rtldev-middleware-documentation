@@ -8,4 +8,4 @@ permalink: /docs/all
 
 # All Brands
 
-Find here modules and tools that can be used for **ALL** the brands in the CentralNic Group PLC.
+Find here modules and tools that can be used for **ALL** the brands in the Team Internet Group PLC.

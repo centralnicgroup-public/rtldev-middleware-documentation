@@ -8,7 +8,7 @@ permalink: /docs/hexonet
 
 # About HEXONET
 
-Since 1999, HEXONET has been a leading developer and service provider of reseller technologies for the domain industry, including domain backordering. Thousands of resellers, startups and service providers from around the world trust HEXONET as their domain platform provider. In 2019, HEXONET got acquired by the [CentralNic Group PLC](https://www.centralnicgroup.com/reseller/), where we continue our success.
+Since 1999, HEXONET has been a leading developer and service provider of reseller technologies for the domain industry, including domain backordering. Thousands of resellers, startups and service providers from around the world trust HEXONET as their domain platform provider. In 2019, HEXONET got acquired by the [Team Internet Group PLC](https://www.centralnicgroup.com/reseller/), where we continue our success.
 
 Find here all documentation brought together regarding our 3rd-party Software Integrations and Tools.
 
