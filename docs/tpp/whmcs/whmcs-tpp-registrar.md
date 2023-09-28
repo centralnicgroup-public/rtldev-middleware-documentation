@@ -9,7 +9,7 @@ showtoc: 1
 
 # TPP Wholesale Registrar Module
 
-A Registrar Module connects WHMCS to the Domain Registrar's System. This Documentation covers the internet.bs WHMCS Registrar Module maintained by CentralNic's 3rd-party Software Integrations Team.
+A Registrar Module connects WHMCS to the Domain Registrar's System. This Documentation covers the internet.bs WHMCS Registrar Module maintained by Team Internet's Middleware Team.
 
 NOTE: If you experience any issue when using this module, feel free to reach out to our [Support team](#contact-us).
 

@@ -280,7 +280,7 @@ Read the [WHMCS Docs](https://docs.whmcs.com/Crons) for additional information.
 
 The HEXONET registrar module is natively shipped with the WHMCS Software and maintained by the WHMCS.com Team.
 
-The ISPAPI registrar module is not shipped with the WHMCS Software, but available for download at [github](https://github.com/hexonet/whmcs-ispapi-registrar#readme). It is maintained by CentralNic's Middleware Team and coming with the latest features and patches.
+The ISPAPI registrar module is not shipped with the WHMCS Software, but available for download at [github](https://github.com/hexonet/whmcs-ispapi-registrar#readme). It is maintained by Team Internet's Middleware Team and coming with the latest features and patches.
 
 We highly recommend using our ISPAPI registrar module. In addition, all our addon modules are linked to the ISPAPI registrar module to establish a connection between our API and WHMCS. So that you can register and manage HEXONET products in WHMCS. For example, SSL certificates and DNS Zones and RRs, etc.
 

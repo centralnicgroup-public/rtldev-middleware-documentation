@@ -7,7 +7,7 @@ permalink: /
 
 # Team Internet Group PLC
 
-Find below CNIC Brands listed offering 3rd-party Software Integrations and Tools.
+Find below Brands listed offering 3rd-party Software Integrations and Tools.
 
 <!-- markdownlint-disable -->
 <!-- https://shopify.github.io/liquid/ -->

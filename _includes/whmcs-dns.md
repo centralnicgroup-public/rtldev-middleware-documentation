@@ -9,7 +9,7 @@ For example, you might want to direct that to a default website. Or, if the doma
 
 ## Features
 
-- Manage DNS zones for your domains at CentralNic brands
+- Manage DNS zones for your domains you have with our brands
 - Currenctly supported registrar modules: ISPAPI and CentralNic Reseller
 - Define a global zone, to be applied to all new domain registrations
 - Define zones for specific hosting products, to be applied when registering a domain belonging to a hosting product
@@ -40,7 +40,7 @@ Extract the zip contents to the root folder of your installed WHMCS instance.
 
 - **For users with WHMCS version 8.0+**, Open the WHMCS Admin Area navigate to `System Settings` > `Addon Modules`
 - **For users with WHMCS version 7.3+**, In the WHMCS Admin area, go to `Setup` > `Addon Modules`
-- Find `CentralNic DNS` and click on `Activate`
+- Find `CNIC DNS` and click on `Activate`
 - Click on `Configure` and make sure to configure Access Control as needed
 
 ### Upgrading
@@ -50,7 +50,7 @@ Extract the zip contents to the root folder of your installed WHMCS instance.
 ## Usage
 
 - Open the WHMCS Admin Area
-- From the `Addons` menu, select `CentralNic DNS`
+- From the `Addons` menu, select `CNIC DNS`
 - The list of configured zones will appear
 
 ![adminarea]({{ 'assets/images/whmcs/cnic-dns/list.png' | relative_url }})

@@ -4,7 +4,7 @@ WHMCS Provisioning Module and Addon for HEXONET & CentralNic Reseller SSL certif
 
 ## Introduction
 
-The CentralNic SSL Module is a combination of an addon and a provisioning module.
+The CNIC SSL Module is a combination of an addon and a provisioning module.
 
 The SSL addon provides a user friendly interface to automatically import SSL certificates as WHMCS products. In addition, it gives the possibility to update prices based on current cost and configurable margins.
 
@@ -12,9 +12,9 @@ The SSL provisioning module connects to the configured registrar module and allo
 
 ## Supported Features
 
-The CentralNic SSL Module supports the following functions and features:
+The CNIC SSL Module supports the following functions and features:
 
-- Support for the CentralNic brands [HEXONET](https://www.hexonet.net) and [CentralNic Reseller](https://www.centralnicreseller.com)
+- Supported Brands: [HEXONET](https://www.hexonet.net) and [CentralNic Reseller](https://www.centralnicreseller.com)
 - SSL Provisioning Module
   - Support for both productive and test (OT&E) environments
   - Create, renew and revoke certificates
