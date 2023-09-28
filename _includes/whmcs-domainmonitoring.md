@@ -7,7 +7,7 @@ This addon enhances your WHMCS experience by facilitating domain management thro
 
 This addon ensures seamless operation between your WHMCS system and domain services. It primarily focuses on:
 
-1. **Managing Premium Renwal and Transfer Costs**:
+1. **Managing Premium Renewal and Transfer Costs**:
    If you're using WHMCS version 7.8 or earlier, this addon is essential.
 
 2. **Proactively Handling Premium Status Changes**:
