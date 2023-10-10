@@ -48,6 +48,8 @@ To successfully run the CNIC Domain Search Add-On, please ensure that your WHMCS
 
 - **URL Rewrite and Web Server Configuration:** Enable URL Rewrite on your web server and apply one of the recommended URL rewrite solutions (refer to section 3 e) for detailed instructions).
 
+- **Disable Captcha for Shopping Cart Checkout:** This addon does not support captcha validation. Kindly disable System Settings > General Settings > Security > Captcha for Select forms uncheck Shopping Cart Checkout captcha validation.
+
 Ensure that these requirements are met to enjoy the full capabilities of the CNIC Domain Search Add-On.
 
 ## Installation / Upgrade
