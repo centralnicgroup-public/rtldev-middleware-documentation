@@ -31,7 +31,7 @@ The CNIC SSL Module supports the following functions and features:
 - WHMCS version 8.0 or higher
   For the latest WHMCS minimum system requirements, please refer to [WHMCS System Requirements](https://docs.whmcs.com/System_Requirements) page.
   *If you wish to use this module on older WHMCS versions, please use [Version 8.0](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases) or earlier*
-- PHP 7.4 or higher
+- PHP 8 or higher
 - For HEXONET:
   - Latest **ISPAPI Registrar Module**. This module can be downloaded [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our SSL Cert Module does not support the WHMCS built-in HEXONET provider module!
   - **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:

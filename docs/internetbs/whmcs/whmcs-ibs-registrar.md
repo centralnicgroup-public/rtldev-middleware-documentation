@@ -46,7 +46,7 @@ Some features might be not listed here, this section is WIP (2023-03).
 
 We encourage our Resellers to stick on the latest WHMCS release for security reasons and to benefit of latest features and patches.
 
-- WHMCS >= 7.10 / better >=8 plus PHP 7.4++
+- WHMCS >= 7.10 / better >=8 plus PHP 8++
 - Installed and working: curl, php-curl
 
 For the latest WHMCS minimum system requirements, please refer to [System_Requirements](https://docs.whmcs.com/System_Requirements).
