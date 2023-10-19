@@ -1,19 +1,34 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "10:00"
-  open-pull-requests-limit: 10
-- package-ecosystem: bundler
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "10:00"
-  open-pull-requests-limit: 10
+
 - package-ecosystem: "docker"
   directory: "/.devcontainer"
   schedule:
     interval: "daily"
-    time: "10:00"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "fix"
+      prefix-development: "chore"
+      include: "scope"
+
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "fix"
+      prefix-development: "chore"
+      include: "scope"
+
+  - package-ecosystem: "docker"
+    directory: "/.devcontainer"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
