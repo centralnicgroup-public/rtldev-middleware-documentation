@@ -10,7 +10,9 @@ Welcome to the documentation for the new CNIC Domain Search add-on! This powerfu
 
 - **Easy Domain Availability Check:** With just one click, your customers can quickly check the availability of domains.
 
-- **Support for Premium Domains:** The add-on enables support for Premium Domains, including Aftermarket and Registry Premium Domains.
+- **Support for Premium Domains:** The add-on enables support for Premium Domains.
+
+- **Support for Aftermarket Domains:** Explore the World of Aftermarket Domains.
 
 - **Domain Name Suggestion Engine:** A built-in suggestion engine provides helpful suggestions during searches, enhancing the user experience.
 
@@ -82,6 +84,35 @@ Use the `Registrar TLD Sync` Feature to import our TLDs and Prices which is avai
 
 ![domainpricing]({{ 'assets/images/whmcs/ispapi-domainchecker/regular_domain_pricing.png' | relative_url }})
 
+{% if page.grand_parent == "CentralNic Reseller" %}
+### Premium Domains
+
+**Enabling Premium Domain Handling**
+
+To support Premium Domains on WHMCS, ensure that premium domain handling is enabled in your CentralNic Reseller's Account. Follow these steps:
+
+- Navigate to `Settings > System > Premium Domains > Premium handling`.
+
+![premiumdomains]({{ 'assets/images/whmcs/cnic-domain-search/domain-search-premium-cnr.png' | relative_url }})
+{% endif %}
+
+### Aftermarket Domains
+
+**Enabling Aftermarket Domains Feature**
+
+- Navigate to `CNIC Domain Search > Features`.
+- Toggle the Aftermarket option to `ON` to enable support for Aftermarket domains in your Domain Search.
+
+![aftermarket-domains]({{ 'assets/images/whmcs/cnic-domain-search/domain-search-aftermarket-feature.png' | relative_url }})
+
+**Using Aftermarket Domains with WHMCS**
+
+To integrate Aftermarket domains with WHMCS, follow these steps:
+
+- Ensure premium domain support is enabled in WHMCS.
+
+![premium-domains-whmcs]({{ 'assets/images/whmcs/cnic-domain-search/domain-search-premium-domains-toggle.png' | relative_url }})
+
 ### Manage your Settings
 
 To configure your default settings, which will serve as the initial settings for your clients, follow these steps:
@@ -111,6 +142,7 @@ The module offers domain search results based on four different modes:
 2. **Suggestions**: Generate domain name suggestions using our API.
 3. **Transfer**: Take advantage of our unique bulk domain transfer feature.
 4. **Whois**: Perform domain WHOIS lookups using the CNIC Domain Search addon.
+5. **Aftermarket**: Elevate Your Online Brand with Aftermarket Gems!
 
 By managing these settings, you can tailor the functionality and features of the CNIC Domain Search addon to suit your specific requirements.
 
