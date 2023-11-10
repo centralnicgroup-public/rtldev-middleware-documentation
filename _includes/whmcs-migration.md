@@ -1,8 +1,7 @@
 # Migration Addon
 
 WHMCS-based automatic Domain Migration and Consolidation Addon.
-We cover the development over a private github repository and the download is therefore not (yet) available in public.
-Get in touch with us, if you are interested in this Tool to get your Domain Portfolio migrated over.
+The Addon is included in the Software Bundle we offer at github.
 
 ## Introduction
 
@@ -48,6 +47,8 @@ Best case would be to have a development / QA system that is connected to the OT
 Premium Domains: As of a bug WHMCS solved with v7.8, any premium domain registered before v7.8 has incomplete data in the database and therefore a renewal won't be working. This also applies when trying to transfer. Please get in touch with us.
 
 ## Installation / Upgrade
+
+Download available via [WHMCS Marketplace](https://marketplace.whmcs.com/product/6677-centralnic-reseller-software-bundle-for-whmcs) or via [GitHub](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/blob/main/whmcs-cnic-bundle.zip).
 
 **Don't touch files where the filename starts with `dist.*`. That are default files and templates, partially used as fallback or within automated tests. Follow the below instructions to get this tool correctly up and running.**
 
