@@ -74,7 +74,7 @@ That's why we added the below setting for our Registrar Module which is automati
 
 If you prefer not using this automation and doing that step always manually, find the steps below. But then, keep please in mind that you have to apply these changes after each WHMCS upgrade again.
 
-> Add the following line at the end of file `/resources/domains/dist.additionalfields.php`, if not yet present:  `include_once(ROOTDIR."/modules/registrars/ibs/ibs_additionaldomainfields.php");`
+> Add the following line at the end of file `/resources/domains/dist.additionalfields.php`, if not yet present:  `include(ROOTDIR."/modules/registrars/ibs/ibs_additionaldomainfields.php");`
 
 Unfortunately we do not yet have support for all TLDs that have additional fields in our WHMCS module but plan to add it in future releases. Reach out to us if a TLD of interest is missing. From the TLDs that require additional data we currently support: .co.uk, .org.uk, .me.uk, .uk, .eu, .be, .asia, .fr, .re, .pm, .tf, .wf, .yt, .it, .de, .nl, .tel, .us
 
