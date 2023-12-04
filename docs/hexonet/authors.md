@@ -10,7 +10,7 @@ showtoc: 0
 
 All the offered Tools and Modules have been developed by **HEXONET's 3rd-party Software Integrations [Team](https://github.com/orgs/hexonet/teams/hexonet-middleware-team/members)**:
 
-- **Kai Schwarz** - _Chief Development Officer_ - [PapaKai](https://github.com/papakai)
+- **Kai Schwarz** - _Chief Development Officer_ - [KaiSchwarz-cnic](https://github.com/KaiSchwarz-cnic)
 - **Sebastian Vassiliou** - _Freelancer_ - [h9k](https://github.com/h9k)
 
 Former Authors:
