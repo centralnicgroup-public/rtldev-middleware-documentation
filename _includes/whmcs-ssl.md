@@ -19,6 +19,7 @@ The CNIC SSL Module supports the following functions and features:
   - Support for both productive and test (OT&E) environments
   - Create, renew and revoke certificates
   - Support for Email, DNS and File based domain validation methods
+  - Support for certificates with multiple domains (SAN - CentralNic Reseller only)
 - SSL addon
   - Import available SSL certificates
   - Bulk price update by using a profit margin
@@ -50,6 +51,14 @@ Extract/copy all contents from the zip archive to your WHMCS installation root d
 ### Upgrading
 
 {% include whmcs-bundle-upgrade.md %}
+
+### CentralNic Reseller API Upgrade
+
+If you were using an older version of this module and still have legacy certificates, you will need to trigger the certificate migration to the new API v2.
+To check if you have any legacy certificates, log in to your CentralNic Reseller Web Interface and navigatre to `SSL` > `Certificates [LEGACY]`. Please note that only active certificates will be migrated.
+
+To migrate legacy certificates, you must open the `CNIC SSL` Addon. Migration will then happen automatically.
+If you do not have the Addon installed or enabled, please follow the instructions below.
 
 ## SSL Addon
 
@@ -98,6 +107,7 @@ However it is possible to do so manually, if desired.
 Within the WHMCS Admin area, navigate to `Setup > System Settings > Products/Services`
 
 1. Create a new product group. In this example, we will name the new group as “SSL Certificates”.
+
 2. Create a new product.
    - Set Product Type to "Other".
    - Set Product Group as desired.
@@ -125,16 +135,40 @@ Within the WHMCS Admin area, navigate to `Setup > System Settings > Products/Ser
      - For CentralNic Reseller:
        1. Log into your [Web Interface](https://account.centralnicreseller.com/)
        2. In the Menu, open `SSL > Certificate Prices`
-       3. The value shown in the `Type` column would be the certificate class you need to specify
+       3. The value shown in the `Item` column would be the certificate class you need to specify
    - Set “Automatically setup the product as soon as the first payment is received” to ensure the certificate is paid for before registration.
 
      ![Module Settings]({{ 'assets/images/whmcs/cnic-ssl/modulesettings_tab.png' | relative_url }})
 
 6. Click `Save changes`.
 
+### Manually create Configurable Options (CentralNic Reseller only!)
+
+This allows you to offer additional domains (SAN) with an additional fee to your customers.
+
+Within the WHMCS Admin area, navigate to `Setup > System Settings > Configurable Options`
+
+1. Click `Create a New Group`
+   - Give it a name. We recommend somthing like "Certificate name - Options".
+   - Assign it to the desired certificate.
+   - Click `Save changes`.
+
+2. Click `Add New Configurable Option`
+   - Name it "Additional Domains (SAN)" or something similar. This is what the customer will see when ordering.
+   - Set option type to `Quantity`.
+   - Set the maximum allowed additional domains. Most certificates allow up to 24.
+   - Set `Add Option` to the same name you gave above.
+   - Click `Save changes`.
+   - Set the desired annual pricing.
+   - Click `Save changes` again.
+
+     ![pricing tab]({{ 'assets/images/whmcs/cnic-ssl/configurable_options.png' | relative_url }})
+
+3. Close the popup window.
+
 ### Manage imported Prices
 
-Managing imported certificates can be done at `Setup > System Settings > Products/Services`
+Managing imported certificates can be done at `Setup > System Settings > Products/Services` and `Setup > System Settings > Configurable Options`
 
 ![manageimportedcerti]({{ 'assets/images/whmcs/cnic-ssl/manage_imported_certificates.png' | relative_url }})
 
@@ -158,7 +192,7 @@ This is how a client would proceed to order an SSL certificate.
 
    ![buy-cert01]({{ 'assets/images/whmcs/cnic-ssl/buy_a_certificate_01.png' | relative_url }})
 
-5. On this configuration page, the module will prefill the contact information and auto generate a CSR based on the domain provided and your client information. At this point, you are free to alter any information and replace the proposed CSR with your own if you wish.
+5. On this configuration page, the module will prefill the contact information. The customer must provide the CSR required for requesting the certificate. The certificate will be validated to make sure the desired certificate class can be ordered.
 
    ![buycert02]({{ 'assets/images/whmcs/cnic-ssl/buy_a_certificate_02.png' | relative_url }})
 
@@ -173,4 +207,7 @@ This is how a client would proceed to order an SSL certificate.
 
 8. Follow the instructions you will get via e-mail from the Certificate Authority to validate your purchase.
    If you chose `DNS` or `HTTP File` validation, just follow the instructions that are presented to you in the confirmation screen.
+
 9. It might take some minutes after validation until the certificate shows up in the client area
+
+To expedite the validation, the customer may click the `Trigger Validation Check` option in the menu.
