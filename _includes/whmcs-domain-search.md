@@ -221,12 +221,14 @@ RewriteRule ^domainchecker\.php$ /mydomainsearch\.php [P]
 - If the file ".htaccess" doesn't already exist in the root directory of your WHMCS installation, create a new  file and name it ".htaccess" (including the leading dot).
 - Copy and paste the following code into the .htaccess file:
     ```apache
+    <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-
     RewriteCond %{REQUEST_METHOD} POST
     RewriteCond %{THE_REQUEST} ^POST\ /domainchecker\.php
-    RewriteRule ^domainchecker\.php$ /mydomainsearch\.php [P]
+    RewriteRule ^domainchecker\.php$ /mydomainsearch.php [P]
+    RewriteRule ^domainchecker\.php$ /mydomainsearch.php [L,R=301]
+    </IfModule>
     ```
 - Save the changes to the .htaccess file.
 
