@@ -329,6 +329,8 @@ This functionality is compatible with the WHMCS API “domaintoggleidprotect” 
 
 > If the ID Protection flag gets disabled in the Admin area, clients will not be able to re-enable WHOIS Privacy themselves, but it can only be re-enabled by an admin!
 
+{% include whmcs-domain-search-short.md %}
+
 ## Specials
 
 {% include whmcs-dashboard-widget.md %}
