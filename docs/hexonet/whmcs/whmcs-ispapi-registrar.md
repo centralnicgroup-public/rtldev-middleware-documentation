@@ -664,13 +664,7 @@ In order to configure your price markups for premium domains, you can use the â€
 
 ![premium_conf]({{ 'assets/images/whmcs/ispapi-registrar/premium_domains_configuration.png' | relative_url }})
 
-## Better Domain Search
-
-Even though this step is optional, it might be of interest for you!
-
-The ISPAPI High Performance DomainChecker Module enables extremely fast domain availability checks utilizing HEXONET's registrar API. Further more, this module also allows the reseller to sell lucrative premium domain names. Follow [this guide]({{ 'docs/hexonet/whmcs/whmcs-ispapi-domainchecker/' | relative_url }}) to get it up and running.
-
-![ispapi domainchecker]({{ 'assets/images/whmcs/ispapi-registrar/hx_search_800px_lossy.gif' | relative_url }})
+{% include whmcs-domain-search-short.md %}
 
 ## Migrating
 
