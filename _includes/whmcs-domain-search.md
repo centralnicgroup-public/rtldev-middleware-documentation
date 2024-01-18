@@ -34,7 +34,7 @@ Welcome to the documentation for the new CNIC Domain Search add-on! This powerfu
 
 Experience the power and versatility of CNIC Domain Search add-on, and empower your customers with an efficient and personalized domain search experience.
 
-![intro]({{ 'assets/images/whmcs/cnic-domain-search/domain-search-client.png' | relative_url }})
+![intro]({{ 'assets/images/whmcs/cnic-domain-search/domain-search-view.gif' | relative_url }})
 
 ## Requirements
 
