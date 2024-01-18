@@ -1,6 +1,6 @@
 ## Enhanced Domain Search Experience
 
-![CNIC Domain Search Add-On]({{ 'assets/images/whmcs/cnic-domain-search/domain-search-client.png' | relative_url }})
+![CNIC Domain Search Add-On]({{ 'assets/images/whmcs/cnic-domain-search/domain-search-view.gif' | relative_url }})
 
 The Domain Search Add-On enhances the domain search process in WHMCS with a focus on user-friendliness. Users can effortlessly check domain availability, and notable features include support for Premium and Aftermarket Domains, utilizing high-speed API availability checks. The single-page application, powered by the LitJS JavaScript library, ensures a seamless interface. Flexible search filters enable users to refine searches based on criteria like price range and availability.
 
