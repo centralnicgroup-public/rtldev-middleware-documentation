@@ -45,20 +45,22 @@ To install our module please download the latest version from [here](https://git
 1. Extract the entire archive contents to your WHMCS installation's root directory
 2. Login to whmcs Admin area and activate the module.
 3. Configure the Registrar Module as necessary.
-4. Find our additional fields file and instructions [here](#additionalfields).
+4. Find our additional fields file and installation instructions [below](#additionalfields).
 
 ## Additional Fields
 
-WHMCS provides a way to define additional fields that are needed for some TLDs. We add those for our module via file `/resources/domains/additionalfields.php`. Initially, this file is not present and has to be manually created.
+WHMCS provides a way to define additional domain fields that are needed for some TLDs to get domains registered. We add those for our module via file `/resources/domains/additionalfields.php`. Initially, this file is not present and has to be manually created.
 
-Find our example file [here](https://raw.githubusercontent.com/centralnicgroup-opensource/rtldev-middleware-whmcs/archive/tppwregistrar/additionaldomainfields_sample.php). Download it to `/modules/registrars/tppwregistrar`.
+Find our example file as part of our registar module under `modules/registrars/tppwregistrar/additionaldomainfields_sample.php`.
 
-Then create the additional fields configuration file manually as follows:
+Create the additional fields configuration file `/resources/domains/additionalfields.php` manually as follows:
 
 ```php
 <?php
 include(ROOTDIR."/modules/registrars/tppwregistrar/additionaldomainfields_sample.php");
 ```
+
+That's it, voilà.
 
 Unfortunately we do not yet have support for all TLDs that have additional fields in our WHMCS module but plan to add it in future releases.
 
