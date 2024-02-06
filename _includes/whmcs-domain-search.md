@@ -36,15 +36,9 @@ Experience the power and versatility of CNIC Domain Search add-on, and empower y
 
 ![intro]({{ 'assets/images/whmcs/cnic-domain-search/domain-search-view.gif' | relative_url }})
 
-## Requirements
-
-To successfully run the CNIC Domain Search Add-On, please ensure that your WHMCS installation meets the following requirements:
-
-- **WHMCS version 7.8.0 or higher:** Make sure you have WHMCS version 7.8.0 or higher installed. We always recommend using the latest version of WHMCS for optimal performance and security.
+{% include whmcs-system-requirements.md %}
 
 - **Required Registrar Module:** This add-on relies on the **{% if page.grand_parent == "All Brands" %}\*\* All Supported Brands{% else %}{{ page.grand_parent }}{% endif %}** as the domain lookup providers. You can download the necessary modules [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Please note that the WHMCS built-in **{% if page.grand_parent == "All Brands" %}\*\* All Supported Brands{% else %}{{ page.grand_parent }}{% endif %}** provider modules are not compatible with our Domain Search Add-On.
-
-- **PHP Version Requirement**: Make sure your server meets the minimum requirement of PHP 8. This add-on relies this for optimal performance.
 
 - **Live or Test Account:** Configure one or more user accounts in the Registrar Module to enable seamless functionality.
 

@@ -13,13 +13,6 @@ A Registrar Module connects WHMCS to the Domain Registrar's System. This Documen
 
 NOTE: If you experience any issue when using this module, please take a look at the [FAQs]({{ 'docs/hexonet/faqs/whmcs-ispapi-registrar/' | relative_url }}) or get in touch with our [Support team](#contact-us).
 
-## Introduction
-
-Firstly, we want to welcome you on board. We are always interested in making our WHMCS integration and documentation better. So, in case you want to provide us some feedback, you're welcome.
-We have a very short release cycle and can release patches and new features quickly, if necessary.
-
-Back to topic, here the steps describing how to start with us using WHMCS.
-
 ## Supported Features
 
 - [Registrar TLD Sync / Pricing Import](#importing-prices) (WHMCS 7.10 ++)
@@ -73,15 +66,14 @@ Back to topic, here the steps describing how to start with us using WHMCS.
   - Account Balance Overview
   - Version Check
 
-## Requirements
+{% include whmcs-system-requirements.md %}
 
-We encourage our Resellers to stick on the latest WHMCS release for security reasons and to benefit of latest features and patches.
+## Introduction
 
-- WHMCS <7.8: our module in version 5.1.12
-- WHMCS >= 7.8 / better >=8: our latest module version
-- Installed and working: curl, php-curl
+Firstly, we want to welcome you on board. We are always interested in making our WHMCS integration and documentation better. So, in case you want to provide us some feedback, you're welcome.
+We have a very short release cycle and can release patches and new features quickly, if necessary.
 
-For the latest WHMCS minimum system requirements, please refer to [System_Requirements](https://docs.whmcs.com/System_Requirements).
+Back to topic, here the steps describing how to start with us using WHMCS.
 
 ## Create your Account
 

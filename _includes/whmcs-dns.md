@@ -17,16 +17,7 @@ For example, you might want to direct that to a default website. Or, if the doma
 - Supports A, AAAA, MX, MXE, CNAME, TXT and SRV records
 - Supports WHMCS specific URL and FRAME record types for the website redirection feature
 
-## Requirements
-
-- WHMCS version 8
-  For the latest WHMCS minimum system requirements, please refer to [WHMCS System Requirements](https://docs.whmcs.com/System_Requirements) page.
-- PHP 8
-- One of the following registrar modules installed and enabled:
-  - ISPAPI
-  - CentralNic Reseller
-  
-  This addon only works with those registrar modules.
+{% include whmcs-system-requirements.md %}
 
 ## Installation / Upgrade
 
