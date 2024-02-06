@@ -20,6 +20,8 @@ The Domain Importer Addon then finally connects to the respective Registrar Modu
 
 ... and MORE!
 
+{% include whmcs-system-requirements.md %}
+
 ## Registrar Matrix
 
 | Registrar                                                                                                       | Supported | Add. Fields | IDNs  | Premium Domains |
@@ -53,10 +55,6 @@ Care about:
 - Assign Domain Add-Ons to the TLDs of interest that support them
 
 ## Installation / Upgrade
-### Requirements
-
-- WHMCS version 8.0 or higher
-- Find the supported Registrar Modules linked above.
 
 ### Upgrading
 

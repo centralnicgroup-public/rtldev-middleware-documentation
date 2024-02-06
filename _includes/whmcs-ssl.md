@@ -27,18 +27,15 @@ The CNIC SSL Module supports the following functions and features:
   - Import product logos and descriptions
   - Unified handling of different certificate providers
 
-## Requirements
+{% include whmcs-system-requirements.md %}
 
-- WHMCS version 8.0 or higher
-  For the latest WHMCS minimum system requirements, please refer to [WHMCS System Requirements](https://docs.whmcs.com/System_Requirements) page.
-  *If you wish to use this module on older WHMCS versions, please use [Version 8.0](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/releases) or earlier*
-- PHP 8 or higher
-- For HEXONET:
+### For HEXONET:
   - Latest **ISPAPI Registrar Module**. This module can be downloaded [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our SSL Cert Module does not support the WHMCS built-in HEXONET provider module!
   - **HEXONET Live or Test Account** must be configured in the ISPAPI Registrar Module. Account creation is always free:
     - [OT&E (Test System) Account](https://www.hexonet.net/signup-ote)
     - [LIVE (Real World System) Account](https://www.hexonet.net/cart?signup=true)
-- For CentralNic Reseller:
+    
+### For CentralNic Reseller:
   - Latest **CentralNic Reseller Registrar Module**. This module can be downloaded [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs/raw/main/whmcs-cnic-bundle.zip). Our SSL Cert Module does not support the WHMCS built-in CentralNic Reseller provider module!
   - **CentralNic Reseller Live or Test Account** must be configured in the CentralNic Reseller Registrar Module. Account creation is always free: [Register](https://www.centralnicreseller.com)
 

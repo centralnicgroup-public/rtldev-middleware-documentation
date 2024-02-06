@@ -41,12 +41,7 @@ A Registrar Module connects WHMCS to the Domain Registrar's System.
   - Account Balance Overview
   - Version Check
 
-## Requirements
-
-- WHMCS 7.10+ or 8.x
-- installed and working: curl, php-curl
-
-For the latest WHMCS minimum system requirements, please refer to [System_Requirements](https://docs.whmcs.com/System_Requirements).
+{% include whmcs-system-requirements.md %}
 
 ## Introduction
 
