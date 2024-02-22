@@ -1,8 +1,8 @@
 ---
 layout: default
 title: IDNA UTS46 for JS
-parent: HEXONET
-nav_order: 6
+parent: CentralNic Reseller
+nav_order: 7
 showtoc: 1
 ---
 
