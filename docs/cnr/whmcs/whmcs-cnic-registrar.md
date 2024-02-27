@@ -330,6 +330,13 @@ This functionality is compatible with the WHMCS API “domaintoggleidprotect” 
 
 {% include whmcs-dashboard-widget.md %}
 
+### Custom Hooks
+
+Feel free to customize our module by WHMCS' built-in hooks. We load `/resources/hooks_cnic_custom.php` file if present.
+If there's anything to improve in that regard, let us know.
+
+By this hook customizing, we are able to offer you an entry point for your ideas. This might help in case we can't add a requested feature for all our Resellers as of Inflexibility of WHMCS. For single WHMCS installation this could be eventually covered by a custom hardcoded hook subscription.
+
 ### UTF-8 Support
 
 The module is able to handle umlauts and special characters in whois data, as long as the respective registry supports it.
