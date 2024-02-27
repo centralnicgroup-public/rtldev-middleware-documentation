@@ -124,6 +124,7 @@ E.g.
 Since v19 of our Software Bundle and WHMCS 8, we started shipping with Child Themes. So, custom template changes that help us making an impact to the World of WHMCS. Find here a list of template files and why we touched them:
 
 - `clientareadomaindns.tpl`: We made plenty of more resource records available. In addition, we added the output for the real error message if a DNS Update fails which WHMCS Core wouldn't be showing. Also, you'll see a success message in case the update succeeded which WHMCS isn't doing natively as well.
+- `clientareadomaindetails.tpl`: We are extending the default error message by a provider-specific one in case the nameserver updates fails.
 - `clientareadomainregisterns.tpl`: We added the output of the existing private nameservers and moved the deletion part to that list for a better user experience. Not natively available in WHMCS.
 - `clientaredomaincontactinfo.tpl`: Added the output of additional domain fields at the bottom of the page. This allows sending additional domain fields together with the contact data update which is necessary for some TLDs if it comes to an owner change or an update of these additional fields is necessary. This isn't available in WHMCS natively at all which makes contact updates often to a support matter otherwise. The reason why we were looking for a stable way for improving this.
 - `includes/alert.tpl`: Extended for the registrar specific error message output in DNS Management.
