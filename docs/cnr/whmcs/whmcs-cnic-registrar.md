@@ -99,6 +99,7 @@ Your account will then be used in WHMCS for ordering our products and services a
 The creation of your account is completely free of charge.
 
 Once your account is created, a confirmation email with connection information will be provided to you via email.
+**Please ensure to configure your TLDs first and accept Terms & Conditions.** This can be done via the CentralNic Reseller Web Frontend.
 
 ## Domain Renewal Mode
 
