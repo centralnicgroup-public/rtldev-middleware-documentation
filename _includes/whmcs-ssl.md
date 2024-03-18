@@ -57,6 +57,18 @@ To check if you have any legacy certificates, log in to your CentralNic Reseller
 To migrate legacy certificates, you must open the `CNIC SSL` Addon. Migration will then happen automatically.
 If you do not have the Addon installed or enabled, please follow the instructions below.
 
+### Grant User Permissions
+
+- **Login** to the CentralNic Reseller Control Panel (OT&E, LIVE).
+- Click on your username (top right).
+- Click on 'User management' from the dropdown menu.
+- Click on the user you use on your WHMCS system to configure its permissions.
+- **Give the following read, write and delete permissions:**
+    
+    - **Hosting** (for CNIC cPanel Hosting Addon - currently available only on demand!)
+
+Please ensure that the specified permissions are granted to the user linked with your WHMCS system.
+
 ## SSL Addon
 
 ### Addon Activation
