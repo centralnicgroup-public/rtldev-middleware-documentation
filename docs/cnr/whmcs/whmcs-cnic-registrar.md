@@ -387,7 +387,9 @@ This role user will only be able to execute the WHMCS needed commands.
   - Domainapplication
   - Nameserver
 - Give the following locations read only permissions:
+  - Account
   - Price
+  - Tool
 - Login to your WHMCS Backend and replace your CentralNic Reseller username with your new user.
 
 If there's any of the above permissions not available for selection, please reach out to support.
