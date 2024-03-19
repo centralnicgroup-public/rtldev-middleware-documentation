@@ -65,7 +65,7 @@ If you do not have the Addon installed or enabled, please follow the instruction
 - Click on the user you use on your WHMCS system to configure its permissions.
 - **Give the following read, write and delete permissions:**
     
-    - **Hosting** (for CNIC cPanel Hosting Addon - currently available only on demand!)
+    - **Certificate** (for CNIC SSL Addon)
 
 Please ensure that the specified permissions are granted to the user linked with your WHMCS system.
 
