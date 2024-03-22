@@ -823,7 +823,7 @@ Create a restrictive Role User by:
   ```text
   Role ID: whmcs
   Password: **********
-  Default Access: Deny
+  Default Access: Allow
   Status: Active
   ```
 
