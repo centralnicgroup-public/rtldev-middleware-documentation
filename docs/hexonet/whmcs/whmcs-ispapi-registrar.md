@@ -796,73 +796,18 @@ This User Role will only be able to execute the white-listed commands.
 
 ### Whitelist API Commands
 
-Here the list of commands ordered by whmcs module, that you need to whitelist - see next section where to paste them.
+Even though we consider this part as optional, it is for some resellers of interest as it further increases the security for your Role User.
 
-**ALL our modules**:
-
-The below list covers all commands you need for all our modules (except deprecated ones).
+Disallow Password changes completely:
 
 ```text
-AddDomain():ALLOW
-AddDomainApplication():ALLOW
-AddNameserver():ALLOW
-CheckAuthentication():ALLOW
-CheckAuthorization():ALLOW
-CheckDomains():ALLOW
-CheckDomainTransfer():ALLOW
-CheckIDNLanguage():ALLOW
-ConvertIDN():ALLOW
-CreateSSLCert():ALLOW
-DeleteDomain():ALLOW
-DeleteNameserver():ALLOW
-DENIC_CreateAuthInfo1():ALLOW
-EndSession():ALLOW
-ExecuteOrder():ALLOW
-GetEnvironment():ALLOW
-GetUserIndex():ALLOW
-ModifyContact():ALLOW
-ModifyDomain():ALLOW
-ModifyNameserver():ALLOW
-ModifyUserPassword():ALLOW
-ParseSSLCertCSR():ALLOW
-PayDomainRenewal():ALLOW
-PushDomain():ALLOW
-QueryDNSZoneRRList():ALLOW
-QueryDNSZoneStats():ALLOW
-QueryDomainList():ALLOW
-QueryDomainOptions():ALLOW
-QueryDomainRepositoryInfo():ALLOW
-QueryDomainSuggestionList():ALLOW
-QueryDomainWhoisInfo():ALLOW
-QueryEnvironmentList():ALLOW
-QueryExchangeRates():ALLOW
-QueryObjectList():ALLOW
-QueryObjectLogList():ALLOW
-QueryOrderList():ALLOW
-QuerySSLCertDCVEmailAddressList():ALLOW
-QueryUserObjectStatistics():ALLOW
-RenewDomain():ALLOW
-RequestDomainAuthInfo():ALLOW
-ResendDomainRegistrantVerificationEmail():ALLOW
-ResendDomainTransferConfirmationEmails():ALLOW
-ResendSSLCertEmail():ALLOW
-RestoreDomain():ALLOW
-SetEnvironment():ALLOW
-StartSession():ALLOW
-StatusAccount():ALLOW
-StatusContact():ALLOW
-StatusDNSZone():ALLOW
-StatusDomain():ALLOW
-StatusDomainApplication():ALLOW
-StatusDomainTrade():ALLOW
-StatusDomainTransfer():ALLOW
-StatusObjectLog():ALLOW
-StatusRoleUser():ALLOW
-StatusSSLCert():ALLOW
-StatusUser():ALLOW
-TradeDomain():ALLOW
-TransferDomain():ALLOW
-UpdateDNSZone():ALLOW
+MODIFYUSERPASSWORD():DENY
+```
+
+Only DENY modifications of OTPSECRET (2FA):
+
+```text
+MODIFYUSERPASSWORD[OTPSECRET=*]:DENY
 ```
 
 ### Create a Role User
