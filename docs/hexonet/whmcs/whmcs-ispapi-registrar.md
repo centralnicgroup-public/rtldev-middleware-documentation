@@ -845,7 +845,7 @@ If you lost your 2FA device / code generator, contact our support - see the foot
 
 ### Activate IP Restrictions
 
-You can activate IP Restrictions for both: Your account and the above described User Role. Find instructions on how to do that for the restrictive User Role as described [here](#create-a-role-user).
+You can activate IP Restrictions for both: Your account and the above described User Role. Find instructions on how to do that for the restrictive User Role as described [here](#create-a-role-user). We recommend doing that.
 
 You can do that for your Account by logging in to our Control Panel ([OT&E](https://account-ote.hexonet.net), [LIVE](https://account.hexonet.net)). Then click on your user name at the top right of the page and then navigate to `Settings > Security`. There, click on `IP Restrictions` and follow that wizard.
 
