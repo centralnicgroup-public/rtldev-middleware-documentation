@@ -827,7 +827,7 @@ Create a restrictive Role User by:
   Status: Active
   ```
 
-- Copy and paste the your desired commands from previous section into the "Access Control" section. Please remove **any** default commands listed in that textarea first.
+- Copy and paste your desired commands from previous section into the "Access Control" section. Please remove **any** default commands listed in that textarea first.
 - [Optional] Continue to the "IP Restrictions" step and enter the outgoing ip address of your server (that runs your WHMCS instance)
 - Login to your WHMCS Backend and replace your Hexonet username with your role user.
 
